@@ -1,0 +1,4 @@
+<form bindsubmit="formSubmit" class="form-submit" id="form" reportSubmit="{{true}}">
+    <slot name="business"></slot>
+    <button class="btn-submit" formType="submit" hoverClass="none" id="form-bnt" plain="{{true}}" style="z-index:{{zIndex?zIndex:5}}"></button>
+</form>

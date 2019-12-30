@@ -1,0 +1,23 @@
+<view class="service-contain" wx:if="{{showModule}}">
+    <view class="service-wrap">
+        <view bindtap="shopServiceTap" class="shopService {{'service-type'+serviceData.length}} {{serviceData.length==index+1?'last-service':'other-service'}}" data-service="{{item}}" wx:if="{{serviceData.length>0}}" wx:for="{{serviceData}}" wx:key="{{index}}">
+            <navigator appId="{{miniData.appId}}" class="serviceType" extraData="{{miniData.extraData}}" hoverClass="none" openType="navigate" path="{{miniData.path}}" target="miniProgram" version="release" wx:if="{{item.serviceName=='orderfood'}}">
+                <view class="service-item">
+                    <image class="servie-icon {{item.serviceName=='queue'?'queue-icon':''}}" src="{{item.iconUrl}}"></image>
+                    <text class="service-name">{{item.title}}</text>
+                    <text class="service-tips" wx:if="{{item.tips}}">{{item.tips}}</text>
+                </view>
+                <view class="info-txt" wx:if="{{item.infoText&&serviceData.length<3}}">{{item.infoText}}</view>
+            </navigator>
+            <view class="serviceType" wx:else>
+                <view class="service-item">
+                    <image class="servie-icon {{item.serviceName=='queue'?'queue-icon':''}} {{item.serviceName=='takeaway'?'take-icon':''}}" src="{{item.iconUrl}}"></image>
+                    <text class="service-name">{{item.title}}</text>
+                    <text class="service-tips" wx:if="{{item.tips}}">{{item.tips}}</text>
+                </view>
+                <view class="info-txt" wx:if="{{item.infoText&&serviceData.length<3}}">{{item.infoText}}</view>
+            </view>
+            <view class="entry entry-icon" wx:if="{{serviceData.length===1}}"></view>
+        </view>
+    </view>
+</view>

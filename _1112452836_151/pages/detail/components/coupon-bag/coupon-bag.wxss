@@ -1,0 +1,189 @@
+.containery {
+    font-size: 28rpx;
+}
+
+.flex {
+    display: -webkit-box;
+    -webkit-justify-content: space-between;
+}
+
+.flex.flex-end {
+    -webkit-box-align: end;
+}
+
+.containery {
+    padding: 16rpx;
+}
+
+.containery .header {
+    color: #999;
+    padding-bottom: 16rpx;
+    margin-bottom: 16rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+.major {
+    -webkit-box-flex: 4;
+}
+
+.minor {
+    -webkit-box-flex: 1;
+}
+
+.attached {
+    border-top: 20rpx solid #eee;
+}
+
+.center-text {
+    display: flex;
+    align-items: center;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+}
+
+.bottom>view {
+    width: 722rpx;
+    opacity: .9;
+}
+
+.coupon-modal {
+    font-size: 28rpx;
+}
+
+.containery {
+    background-color: white;
+    border-top: 2px solid #eee;
+    padding: 16rpx 30rpx;
+}
+
+.containery .flex {
+    -webkit-box-align: center;
+}
+
+image.mark {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 16rpx;
+}
+
+.brief {
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 650rpx;
+}
+
+.title {
+    font-size: 28rpx;
+    color: black;
+}
+
+.title .title-text {
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 480rpx;
+}
+
+.subtitle {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.entry {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAaCAYAAABozQZiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABGUlEQVQ4y6XUT0rDQBiG8aeThRdw4YXeCyiCpk2brtwJnsSdIFatEq2tK9ffVTyACy8gWHAzgSjzT/rtJvT3JO1MMzKzY+AK+AbOJb1SOA64BvaBA2BlZpP/4K/BugKWpQEHXADbQGCcxZJegDYQeDCzOndnJHXAPBB4TAVGw4WZTYE7D/vZAo2kVRJnAhP/FePYB2bAbSAwlrROYh9ogUUgUEvaJHFJIIl9YA7cBAKHWTwILPBb6+fdleDY7PLYRy4D2wisJb3ttFVVBKYOyaa/UAVg6niuh591hbD5e65/3dnMGuA+AKehfxT4rfKvnWUEPsd+1JGZnQBdAM4kPZEYB1wGYJuDPd4LwC4He3wGfAIfwGkpBPgBUQyERVT9t0IAAAAASUVORK5CYII=);
+    width: 15rpx;
+    height: 25rpx;
+    background-size: cover;
+    margin-left: 16rpx;
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0.7;
+    z-index: 1000;
+}
+
+.coupon-modal {
+    position: fixed;
+    bottom: 0;
+    z-index: 1001;
+    background-color: #eee;
+    border-radius: 50rpx 50rpx 0 0;
+    padding: 0 16rpx;
+    width: 722rpx;
+}
+
+.coupon-modal .head {
+    text-align: center;
+    font-size: 40rpx;
+    padding: 30rpx 20rpx;
+}
+
+.coupon-modal .head .major {
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+.coupon-list {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 720rpx;
+}
+
+.coupon-item {
+    margin-bottom: 16rpx;
+}
+
+.coupon-item>view {
+    background-color: white;
+    border-radius: 20rpx;
+    padding: 30rpx 16rpx;
+}
+
+.coupon-item .amount {
+    width: 200rpx;
+    margin-right: 8rpx;
+}
+
+.coupon-item .amount .price,.coupon-item .amount .subtitle {
+    text-align: center;
+}
+
+.coupon-item .bigger {
+    font-size: 50rpx;
+}
+
+.coupon-item .content {
+    height: 66rpx;
+    font-size: 24rpx;
+}
+
+.coupon-item image.settled {
+    width: 125rpx;
+    height: 125rpx;
+}
+
+.coupon-item button.go {
+    background-color: #f63;
+    color: white;
+    font-size: 24rpx;
+    padding: 0 30rpx;
+    border-radius: 30rpx;
+}
+
+.price {
+    color: #f63;
+    font-size: 32rpx;
+}

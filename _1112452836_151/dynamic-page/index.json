@@ -1,0 +1,9 @@
+{
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "dynamic": "../npm/@mtfe/dynamic/dynamic",
+        "exception": "../components/wx-exception/wx-exception",
+        "mina_lazyload_img": "../components/mina_lazyload_img/mina_lazyload_img",
+        "top-parent": "../components/top-parent/top-parent"
+    }
+}

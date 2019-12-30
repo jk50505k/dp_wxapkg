@@ -1,0 +1,180 @@
+<view class="exception" wx:if="{{mapiError&&mapiError.isError}}">
+    <exception bindexceptionevent="mapiErrorHandler" exceptionDetail="{{mapiError}}"></exception>
+</view>
+<view class="shop-head" wx:else>
+    <view class="shopStatus" wx:if="{{headData.statusText}}">{{headData.statusText}}</view>
+    <view class="bigpic" wx:if="{{headData.shopStyle&&headData.shopStyle.picMode=='bigpic'}}">
+        <view class="panelWrap">
+            <view class="launch-wrap">
+                <view catchtap="defaultPicTap" class="pic-count" wx:if="{{headData.showPics}}">
+                    <view class="pic-icon"></view>
+                    <view class="count">{{headData.picCountStr}}</view>
+                </view>
+                <swiper bindchange="bindchange" class="swiper" nextMargin="20rpx" previousMargin="40rpx">
+                    <swiper-item wx:for="{{bigPics}}" wx:key="{{index}}">
+                        <app-launch bind:launcherror="launchAppError" bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+                            <view slot="app-launch">
+                                <view class="img-wrap">
+                                    <image bindtap="previewShopPic" class="picItem fetchImgStart {{headData.doFetch?'fecthImgEnd':''}}" data-index="{{index}}" lazyLoad="{{true}}" mode="aspectFill" src="{{item.url}}" wx:if="{{item.picLoad}}"></image>
+                                    <image bindtap="previewShopPic" class="picItem" data-index="{{index}}" lazyLoad="{{true}}" mode="aspectFill" src="{{defaultPic}}" wx:else></image>
+                                </view>
+                            </view>
+                        </app-launch>
+                    </swiper-item>
+                </swiper>
+            </view>
+            <view class="shop-info">
+                <view class="shopNameWrap">
+                    <text class="shopName">{{headData.name}}{{headData.branchName?'('+headData.branchName+')':''}}</text>
+                    <view bindtap="addToVote" class="addToVote btnBorder" wx:if="{{showAddToVoteBtn}}">加入投票</view>
+                </view>
+                <view class="star-price" wx:if="{{headData.shopPower||headData.shopPower==0}}">
+                    <view class="part-left">
+                        <view class="shopStar big-star star-{{headData.shopPower}}"></view>
+                        <text class="reviews" wx:if="{{headData.voteTotal}}">{{headData.voteTotal}}</text>
+                        <text class="price" wx:if="{{headData.priceText}}">{{headData.priceText}}</text>
+                    </view>
+                    <view class="chain-icon" style="background-image:url({{headData.chainTag}})" wx:if="{{headData.chainTag}}"></view>
+                </view>
+                <view class="middlePanel">
+                    <view class="scoreText" wx:if="{{headData.scoreText}}">
+                        <text>{{headData.scoreText}}</text>
+                    </view>
+                    <view class="regionCategory">
+                        <text class="region" wx:if="{{headData.regionName&&headData.showRegion}}">{{headData.regionName}}</text>
+                        <text class="category" wx:if="{{headData.categoryName}}">{{headData.categoryName}}</text>
+                    </view>
+                </view>
+                <view class="tagPanel" wx:if="{{headData.dishItems&&headData.dishItems.length}}">
+                    <view class="shop-tag" wx:for="{{headData.dishItems}}" wx:key="{{index}}">{{item}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="multipic" wx:elif="{{headData.shopStyle&&headData.shopStyle.picMode=='multipic'}}">
+        <view class="panelWrap">
+            <view class="shopNameWrap">
+                <text class="shopName">{{headData.name}}{{headData.branchName?'('+headData.branchName+')':''}}</text>
+                <view bindtap="addToVote" class="addToVote btnBorder mutlpicAddBtn" wx:if="{{showAddToVoteBtn}}">加入投票</view>
+            </view>
+            <view class="star-price" wx:if="{{headData.shopPower||headData.shopPower==0}}">
+                <view class="part-left">
+                    <view class="shopStar big-star star-{{headData.shopPower}}"></view>
+                    <text class="reviews" wx:if="{{headData.voteTotal}}">{{headData.voteTotal}}</text>
+                    <text class="price" wx:if="{{headData.priceText}}">{{headData.priceText}}</text>
+                </view>
+                <view class="chain-icon" style="background-image:url({{headData.chainTag}})" wx:if="{{headData.chainTag}}"></view>
+            </view>
+            <view class="middlePanel">
+                <view class="scoreText" wx:if="{{headData.scoreText}}">
+                    <text>{{headData.scoreText}}</text>
+                </view>
+                <view class="regionCategory">
+                    <text class="region" wx:if="{{headData.regionName&&headData.showRegion}}">{{headData.regionName}}</text>
+                    <text class="category" wx:if="{{headData.categoryName}}">{{headData.categoryName}}</text>
+                </view>
+            </view>
+            <view class="tagPanel" wx:if="{{headData.dishItems&&headData.dishItems.length}}">
+                <view class="shop-tag" wx:for="{{headData.dishItems}}" wx:key="{{index}}">{{item}}</view>
+            </view>
+            <view class="shopPics">
+                <scroll-view bindscroll="onHorizontalScroll" bindscrolltolower="scrollToRight" class="scrollPics" lowerThreshold="{{-50}}" scrollX="true">
+                    <view class="shopPicsWrap" style="width:{{headData.advancedPics.length*292+80}}rpx">
+                        <app-launch bind:launcherror="launchAppError" bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+                            <view slot="app-launch">
+                                <view class="img-wrap" wx:for="{{headData.advancedPics}}" wx:key="{{index}}">
+                                    <view catchtap="defaultPicTap" class="pic-count" wx:if="{{headData.showPics&&index===0}}">
+                                        <view class="pic-icon"></view>
+                                        <view class="count">{{headData.picCountStr}}</view>
+                                    </view>
+                                    <image catchtap="{{index==0?'defaultPicTap':'previewShopPic'}}" class="shopPicItem fetchImgStart {{headData.doFetch?'fecthImgEnd':''}}" data-index="{{index}}" lazyLoad="{{true}}" mode="aspectFill" src="{{item.thumbUrl}}" wx:if="{{index<3}}"></image>
+                                    <lazy-img bindtap="previewShopPic" class="_lazyLoadImage" data-index="{{index}}" imgClass="{{imgClass}}" imgMode="{{'aspectFill'}}" imgSrc="{{item.thumbUrl}}" wx:else></lazy-img>
+                                </view>
+                                <view bindtap="defaultPicTap" class="see-more">
+                                    <view class="more-bg" wx:if="{{!isAndroid}}"></view>
+                                    <view class="more-txt {{isAndroid?'andriod-more':''}}">{{moreTxt}}</view>
+                                </view>
+                            </view>
+                        </app-launch>
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
+    </view>
+    <view class="shopInfo flatpic" wx:elif="{{headData.shopStyle&&headData.shopStyle.picMode=='flatpic'}}">
+        <view class="panelWrap">
+            <app-launch bind:launcherror="launchAppError" bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+                <view slot="app-launch">
+                    <view bindtap="defaultPicTap" class="wrap-img">
+                        <view class="pic-count" wx:if="{{headData.showPics}}">
+                            <view class="pic-icon"></view>
+                            <view class="count">{{headData.picCountStr}}</view>
+                        </view>
+                        <image binderror="imageError" class="shopPic fetchImgStart {{headData.doFetch?'fecthImgEnd':''}}" lazyLoad="{{true}}" mode="aspectFill" src="{{headData.defaultPic}}"></image>
+                        <image binderror="imageError" class="shopPic listImg listPicStart {{headData.doFetch?'listPicEnd':''}}" lazyLoad="{{true}}" mode="aspectFill" src="{{headData.listPic}}"></image>
+                    </view>
+                </view>
+            </app-launch>
+        </view>
+        <view class="shopNameWrap">
+            <text class="shopName">{{headData.name}}{{headData.branchName?'('+headData.branchName+')':''}}</text>
+            <view bindtap="addToVote" class="addToVote btnBorder" wx:if="{{showAddToVoteBtn}}">加入投票</view>
+        </view>
+        <view class="star-price" wx:if="{{headData.shopPower||headData.shopPower==0}}">
+            <view class="part-left">
+                <view class="shopStar big-star star-{{headData.shopPower}}"></view>
+                <text class="reviews" wx:if="{{headData.voteTotal}}">{{headData.voteTotal}}</text>
+                <text class="price" wx:if="{{headData.priceText}}">{{headData.priceText}}</text>
+            </view>
+            <view class="chain-icon" style="background-image:url({{headData.chainTag}})" wx:if="{{headData.chainTag}}"></view>
+        </view>
+        <view class="middlePanel">
+            <view class="scoreText" wx:if="{{headData.scoreText}}">
+                <text>{{headData.scoreText}}</text>
+            </view>
+            <view class="regionCategory">
+                <text class="region" wx:if="{{headData.regionName&&headData.showRegion}}">{{headData.regionName}}</text>
+                <text class="category" wx:if="{{headData.categoryName}}">{{headData.categoryName}}</text>
+            </view>
+        </view>
+        <view class="tagPanel" wx:if="{{headData.dishItems&&headData.dishItems.length}}">
+            <view class="shop-tag" wx:for="{{headData.dishItems}}" wx:key="{{index}}">{{item}}</view>
+        </view>
+    </view>
+    <view class="shopInfo" wx:else>
+        <view class="topInfo">
+            <app-launch bind:launcherror="launchAppError" bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+                <view slot="app-launch">
+                    <view bindtap="defaultPicTap" class="leftPanel" wx:if="{{headData}}">
+                        <view class="wrap-img">
+                            <image binderror="imageError" class="shopPic fetchImgStart {{headData.doFetch?'fecthImgEnd':''}}" lazyLoad="{{true}}" mode="aspectFill" src="{{headData.defaultPic}}" wx:if="{{headData.defaultPic}}"></image>
+                        </view>
+                        <view class="picCount" wx:if="{{headData.showPics}}">{{headData.picCountStr}}</view>
+                    </view>
+                </view>
+            </app-launch>
+            <view class="rightPanel">
+                <text class="shopName">{{headData.name}}{{headData.branchName?'('+headData.branchName+')':''}}</text>
+                <view class="middlePanel" wx:if="{{headData.shopPower||headData.shopPower==0}}">
+                    <view class="shopStar big-star star-{{headData.shopPower}}"></view>
+                    <text class="reviews" wx:if="{{headData.voteTotal}}">{{headData.voteTotal}}</text>
+                    <text class="price" wx:if="{{headData.priceText}}">{{headData.priceText}}</text>
+                </view>
+                <view class="middlePanel" wx:if="{{headData.scoreText}}">
+                    <text class="scoreText" wx:if="{{headData.scoreText}}">{{headData.scoreText}}</text>
+                </view>
+                <view class="bottomPanel">
+                    <view>
+                        <text class="region" wx:if="{{headData.regionName}}">{{headData.regionName}}</text>
+                        <text class="category" wx:if="{{headData.categoryName}}">{{headData.categoryName}}</text>
+                    </view>
+                    <view class="chain-icon" style="background-image:url({{headData.chainTag}})" wx:if="{{headData.chainTag}}"></view>
+                    <view bindtap="addToVote" class="addToVote btnBorder" wx:if="{{showAddToVoteBtn}}">加入投票</view>
+                </view>
+            </view>
+        </view>
+        <view class="tagPanel" wx:if="{{headData.dishItems&&headData.dishItems.length}}">
+            <view class="shop-tag" wx:for="{{headData.dishItems}}" wx:key="{{index}}">{{item}}</view>
+        </view>
+    </view>
+</view>

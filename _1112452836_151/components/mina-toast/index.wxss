@@ -1,0 +1,17 @@
+.mina-toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    padding: 14rpx 30rpx;
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    border-radius: 8rpx;
+    font-size: 24rpx;
+    z-index: 10000;
+}
+
+.first-line,.sec-line {
+    white-space: nowrap;
+    text-align: center;
+}

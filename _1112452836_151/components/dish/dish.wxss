@@ -1,0 +1,85 @@
+.dishContainer {
+    display: flex;
+    flex-direction: column;
+    width: 520rpx;
+    margin-top: 14rpx;
+    margin-left: 210rpx;
+    position: relative;
+}
+
+.dishContainer:before {
+    content: '';
+    border: solid #e1e1e1;
+    border-width: 1px 0 0 0;
+    border-radius: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.dishContainer .dish-item {
+    display: flex;
+    margin-bottom: 10rpx;
+    padding-top: 14rpx;
+}
+
+.dishContainer .dish-left {
+    display: flex;
+    margin-right: 14rpx;
+}
+
+.dishContainer .dish-image {
+    width: 102rpx;
+    height: 102rpx;
+    border-radius: 0;
+}
+
+.dishContainer .dish-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.dishContainer .dish-title {
+    font-family: PingFangSC-Semibold;
+    font-size: 30rpx;
+    color: #111111;
+}
+
+.dishContainer .dish-recommend {
+    font-family: PingFangSC-Regular;
+    font-size: 24rpx;
+    color: #666666;
+}
+
+.dishContainer .dish-tag-list {
+    display: flex;
+}
+
+.dishContainer .dish-tag {
+    display: flex;
+    align-items: center;
+}
+
+.dishContainer .dish-more {
+    height: 60rpx;
+    width: 510rpx;
+    background-color: #F4F4F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: PingFangSC-Regular;
+    font-size: 26rpx;
+    color: #111111;
+}
+
+.dishContainer .hidden {
+    display: none;
+}

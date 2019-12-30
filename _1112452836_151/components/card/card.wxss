@@ -1,0 +1,363 @@
+@import "../../__wuBaseWxss__/3.wxss";
+
+@import "../../__wuBaseWxss__/4.wxss";
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.top-container {
+    display: flex;
+    min-height: 190rpx;
+}
+
+.top-container .top-left-container {
+    display: flex;
+}
+
+.top-container .top-left-container .image {
+    width: 190rpx;
+    height: 190rpx;
+    margin-right: 20rpx;
+    flex-shrink: 0;
+    border-radius: 0;
+    position: relative;
+}
+
+.top-container .top-left-container .image:before {
+    content: '';
+    border: solid #e1e1e1;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.top-container .top-left-container .adver-tag {
+    width: 40rpx;
+    height: 19rpx;
+    line-height: 19rpx;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    font-size: 14rpx;
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+    padding: 2rpx 2rpx;
+}
+
+.top-container .top-left-container .ios-tag {
+    top: 171rpx;
+    left: 2rpx;
+}
+
+.top-container .top-left-container .ad-tag {
+    top: 170rpx;
+    left: 1rpx;
+}
+
+.top-container .top-right-container {
+    display: flex;
+    min-height: 190rpx;
+}
+
+.top-container .top-right-container .shopInfo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    transition: all 0.1s linear;
+    width: 506rpx;
+}
+
+.top-container .top-right-container .rank-text {
+    display: flex;
+    align-items: center;
+    color: #777777;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.top-container .top-right-container .info {
+    position: relative;
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.top-container .top-right-container .tag-list {
+    height: 39rpx;
+}
+
+.top-container .top-right-container .tag-list .tag-item {
+    height: 37rpx;
+    line-height: 37rpx;
+    display: inline-block;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-right: 12rpx;
+    margin-bottom: 12rpx;
+    color: #666666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 506rpx;
+    padding: 0rpx 12rpx 0rpx 14rpx;
+    position: relative;
+}
+
+.top-container .top-right-container .tag-list .tag-item:before {
+    content: '';
+    border: solid #e1e1e1;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 4rpx;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.top-container .top-right-container .tag-list .important-tag {
+    color: #FF6633;
+}
+
+.top-container .top-right-container .shopName {
+    display: flex;
+    align-items: center;
+    font-family: PingFangSC-Semibold;
+    font-size: 32rpx;
+    color: #111111;
+    text-align: left;
+    height: 45rpx;
+    line-height: 45rpx;
+}
+
+.top-container .top-right-container .shopName .shopNameWrap {
+    margin-right: 4rpx;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.top-container .top-right-container .iconsWrap {
+    display: flex;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    margin-top: 1rpx;
+}
+
+.top-container .top-right-container .starPrice {
+    display: flex;
+    align-items: center;
+    height: 37rpx;
+}
+
+.top-container .top-right-container .star {
+    margin-right: 20rpx;
+}
+
+.top-container .top-right-container .price,.top-container .top-right-container .shop-review {
+    color: #111;
+    font-size: 26rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 6rpx;
+}
+
+.top-container .top-right-container .recommend-reason-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.top-container .top-right-container .other {
+    display: flex;
+    align-items: center;
+    font-size: 26rpx;
+    color: #777;
+    height: 37rpx;
+}
+
+.top-container .top-right-container .region,.top-container .top-right-container .category {
+    margin-right: 20rpx;
+}
+
+.top-container .top-right-container .distance {
+    flex: 1;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rank-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -12rpx;
+    top: 14rpx;
+}
+
+.rank-container .rank-image {
+    height: 38rpx;
+}
+
+.rank-container .rank-mask {
+    width: 72rpx;
+    height: 38rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.rank-container .authority-tri {
+    position: relative;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-width: 0 14rpx 14rpx 0;
+    border-style: solid;
+    border-color: transparent black;
+}
+
+.rank-container .authority-label {
+    font-size: 22rpx;
+    text-align: center;
+    color: #FFFFFF;
+    white-space: nowrap;
+    font-family: sans-serif;
+    padding: 0rpx 16rpx;
+    height: 38rpx;
+    line-height: 38rpx;
+    min-width: 72rpx;
+}
+
+.promoListContainer {
+    font-size: 26rpx;
+    color: #777;
+    overflow: hidden;
+    width: 100%;
+}
+
+.promoListContainer .promoListItem {
+    display: flex;
+    align-items: center;
+}
+
+.promoListContainer .reducePanel {
+    width: 190rpx;
+    margin-right: 20rpx;
+    padding-top: 16rpx;
+    font-size: 0;
+    text-align: right;
+    overflow: hidden;
+}
+
+.promoListContainer .promoPanel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 16rpx;
+    width: 506rpx;
+    padding-right: 14rpx;
+}
+
+.promoListContainer .promoListItem:first-child .promoPanel {
+    position: relative;
+}
+
+.promoListContainer .promoListItem:first-child .promoPanel:before {
+    content: '';
+    border: solid #e1e1e1;
+    border-width: 1px 0 0 0;
+    border-radius: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.promoListContainer .reduceText {
+    display: inline-block;
+    vertical-align: middle;
+    color: #ff6633;
+    font-size: 20rpx;
+    height: 34rpx;
+    line-height: 35rpx;
+    padding: 1rpx 5rpx 0 15rpx;
+    max-width: 140rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-position-x: right;
+    background-image: url('https://www.dpfile.com/app/app-m-module-img/minacard/reduce-text.png');
+}
+
+.promoListContainer .reduceArrow {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url('https://www.dpfile.com/app/app-m-module-img/minacard/reduce-arrow.png');
+    background-repeat: no-repeat;
+    width: 20rpx;
+    height: 34rpx;
+    background-size: contain;
+    background-position-x: left;
+}
+
+.promoListContainer .promoIcon {
+    display: block;
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 10rpx;
+    border-radius: 2rpx;
+}
+
+.promoListContainer .promoText {
+    display: block;
+    flex: 1;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    height: 32rpx;
+    line-height: 34rpx;
+}
+
+.margin-between {
+    margin-top: 14rpx;
+}

@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "优惠券",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "list-view": "../../../../components/list-view/list-view",
+        "coupon-card": "../../components/coupon-card/coupon-card",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

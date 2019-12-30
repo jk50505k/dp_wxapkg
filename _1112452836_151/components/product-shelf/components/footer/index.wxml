@@ -1,0 +1,3 @@
+<view class="shelf-footer {{channel==='dp'?'dp':''}} {{channel==='mt'?'mt':''}}" wx:if="{{moreRedirectText}}">
+    <view bindtap="goToMoreProducts" class="shelf-footer-btn">{{moreRedirectText}}</view>
+</view>

@@ -1,0 +1,19 @@
+<view class="groupItem reviewInfo" style="margin:{{moduleConfig.margin}}" wx:if="{{reviewTags&&reviewTags.length||reviewCount}}">
+    <app-launch bind:launcherror="launchAppError" bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+        <view slot="app-launch">
+            <view class="{{isList?isAndroid?'comment-part part-android':'comment-part':'comment-part detail'}}">
+                <view bindtap="allReviewTap" class="groupTitle" wx:if="{{moduleConfig.showHead}}">
+                    <view class="comment-wrap">
+                        <text class="comment-title">网友点评</text>
+                        <text class="comment-count" wx:if="{{reviewCount}}">({{reviewCount}})</text>
+                    </view>
+                    <view class="entry" wx:if="{{showRightArrow}}"></view>
+                </view>
+                <view class="tags {{isList?'':'shop-tags'}}" wx:if="{{reviewTags&&reviewTags.length}}">
+                    <view catchtap="reviewTagAction" class="{{item.name==hitTag?'tag tag-select':'tag'}}" data-hit="{{item.hit}}" data-index="{{index}}" data-item="{{item}}" data-keyword="{{item.name}}" data-type="{{item.type}}" wx:for="{{reviewTags}}" wx:key="{{index}}">{{item.name}}{{item.hit>0?'('+item.hit+')':''}}
+                        </view>
+                </view>
+            </view>
+        </view>
+    </app-launch>
+</view>

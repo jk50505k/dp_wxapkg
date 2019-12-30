@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "分享红包",
+    "usingComponents": {
+        "banner": "../../components/banner/banner",
+        "account": "../../components/account/account",
+        "activities": "../../components/activities/activities",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

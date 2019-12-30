@@ -1,0 +1,24 @@
+{
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "秒杀详情",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "error": "../components/error/error",
+        "deal-main": "../components/deal-main/deal-main",
+        "deal-menu": "../components/seckill-deal/seckill-deal-menu/deal-menu",
+        "deal-terms": "../components/seckill-deal/seckill-deal-terms/deal-terms",
+        "deal-voucher": "../components/seckill-deal/seckill-deal-voucher/deal-voucher",
+        "deal-poi": "../components/seckill-deal/seckill-deal-poi/deal-poi",
+        "deal-imgs": "../components/seckill-deal/seckill-deal-imgs/deal-imgs",
+        "deal-tips": "../components/seckill-deal/seckill-deal-tips/deal-tips",
+        "deal-btn": "../components/seckill-deal/seckill-deal-btn/deal-btn",
+        "top-parent": "../../../../components/top-parent/top-parent",
+        "review-list": "../../../../components/review-list/review-list",
+        "deal-vouchertag": "../components/seckill-deal/seckill-deal-vouchertag/deal-vouchertag",
+        "brand-title": "../components/seckill-deal/seckill-deal-brandtitle/deal-brandtitle",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

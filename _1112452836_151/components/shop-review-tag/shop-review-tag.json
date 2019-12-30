@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "app-launch": "../app-launch/index"
+    }
+}

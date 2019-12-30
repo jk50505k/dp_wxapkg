@@ -1,0 +1,108 @@
+@import "../../__wuBaseWxss__/1.wxss";
+
+.skeleton {
+    margin: 10px 0 0 0;
+    background: #fff;
+    padding: 20rpx;
+}
+
+.skeleton_title {
+    width: 200rpx;
+    height: 50rpx;
+    margin: 10rpx;
+    border-radius: 0;
+}
+
+.skeleton_wrap {
+    display: flex;
+}
+
+.skeleton_item {
+    flex: 1;
+    margin: 10rpx;
+}
+
+.baseLine {
+    box-sizing: border-box;
+    background-clip: content-box;
+    background-color: #f0f0f0;
+    margin-bottom: 12rpx;
+    height: 44rpx;
+    border-radius: 20rpx;
+}
+
+.groupItem {
+    padding-left: 30rpx;
+    font-size: 28rpx;
+    background-color: #fff;
+}
+
+.groupTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28rpx;
+    color: #111;
+    padding: 30rpx 30rpx 0 0;
+}
+
+.comment-part {
+    background-color: #fff;
+    padding-bottom: 20rpx;
+}
+
+.comment-title {
+    font-size: 38rpx;
+    color: #111;
+    font-weight: bold;
+}
+
+.comment-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.comment-count {
+    font-size: 30rpx;
+    color: #777;
+    padding-left: 10rpx;
+}
+
+.comment-part .groupTitle {
+    border-bottom: none;
+}
+
+.detail {
+    padding-bottom: 0;
+}
+
+.part-android {
+    padding-bottom: 0;
+}
+
+.tags {
+    overflow: hidden;
+    max-height: 178rpx;
+    padding-top: 20rpx;
+    padding-bottom: 16rpx;
+}
+
+.shop-tags {
+    max-height: 110rpx;
+}
+
+.tags .tag {
+    display: inline-block;
+    color: #111;
+    font-size: 26rpx;
+    line-height: 24rpx;
+    padding: 14rpx 26rpx;
+    margin: 0 10rpx 18rpx 0;
+    border-radius: 100rpx;
+    background: rgba(240,240,240,0.7);
+}
+
+.tags .tag-select {
+    color: #f63;
+    border-color: #f63;
+}

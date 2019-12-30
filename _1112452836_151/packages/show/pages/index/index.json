@@ -1,0 +1,7 @@
+{
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "演出",
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

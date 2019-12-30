@@ -1,0 +1,11 @@
+<view bindtap="onTapPage" bindtouchmove="onTouchMovePage" class="{{hasMask?'noScroll':''}}" style="width: 750rpx; margin-bottom:30rpx;">
+    <parent id="topParent">
+        <view wx:if="{{isMapiError&&isInfoError}}">
+            <include src="./page-error.wxml"></include>
+        </view>
+        <view class="detailContainer" wx:else>
+            <include src="./module/index.wxml"></include>
+        </view>
+    </parent>
+</view>
+<include src="./page-module.wxml"></include>

@@ -1,0 +1,718 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/allcategory/allcategory",
+        "pages/ranklist/ranklist",
+        "dynamic-page/index",
+        "pages/wxsearch/wxsearch",
+        "pages/list/list",
+        "pages/search/search",
+        "pages/detail/detail",
+        "pages/shopalbum/shopalbum",
+        "pages/city/city",
+        "pages/login/login",
+        "pages/mobile/mobile",
+        "pages/tuandetail/tuandetail",
+        "pages/ordersubmit/ordersubmit",
+        "pages/orderdetail/orderdetail",
+        "pages/my/my",
+        "pages/myorder/myorder",
+        "pages/coupondetail/coupondetail",
+        "pages/orderfood/orderfood",
+        "pages/webview/webview",
+        "pages/pay/pay",
+        "pages/transfer/transfer",
+        "pages/reviewlist/reviewlist",
+        "pages/branchlist/branchlist",
+        "pages/debug/debug",
+        "pages/group/group",
+        "my/favorite/favorite",
+        "movie/pages/home/index",
+        "movie/pages/cinema/movie",
+        "movie/pages/cinema/cinema",
+        "movie/pages/cinema/seat",
+        "movie/pages/movie/movie",
+        "movie/pages/movie/comment",
+        "movie/pages/movie/photo",
+        "movie/pages/movie/preview",
+        "movie/pages/goods/buy",
+        "movie/pages/goods/order-detail",
+        "movie/pages/goods/order-result",
+        "movie/pages/goods/refund/apply",
+        "movie/pages/goods/refund/detail",
+        "movie/pages/membercard/index",
+        "movie/pages/membercard/status",
+        "movie/pages/order/refund/apply",
+        "movie/pages/order/refund/detail",
+        "movie/pages/order/buy",
+        "movie/pages/order/index",
+        "movie/pages/webview/webview",
+        "movie/pages/order/order",
+        "packages/cosmetology/pages/index/index",
+        "packages/cosmetology/pages/wiki/wiki",
+        "packages/cosmetology/pages/wikidetail/wikidetail",
+        "packages/cosmetology/pages/case/case",
+        "packages/weddetail-wxapp/pages/dress-case-detail/index",
+        "packages/weddetail-wxapp/pages/dress-case-list/index",
+        "packages/weddetail-wxapp/pages/dress-package-detail/index",
+        "packages/weddetail-wxapp/pages/dress-package-list/index",
+        "packages/weddetail-wxapp/pages/reservation-success/index",
+        "packages/wedding-shoot/pages/caseList/index",
+        "packages/wedding-shoot/pages/caseDetail/index",
+        "packages/wedding-shoot/pages/packageList/index",
+        "packages/wedding-shoot/pages/packageDetail/index",
+        "packages/wedding-shoot/pages/videoDetail/index",
+        "packages/video-preview/pages/index/index",
+        "packages/easylife/pages/index/index",
+        "packages/pintuan/pages/index/index",
+        "packages/pintuan/pages/productdetail/productdetail",
+        "packages/pintuan/pages/receiveaddress/receiveaddress",
+        "packages/pintuan/pages/personalcenter/personalcenter",
+        "packages/pintuan/pages/orderdetail/orderdetail",
+        "packages/pintuan/pages/groupdetail/groupdetail",
+        "packages/mtsi/pages/yoda/yoda",
+        "packages/customized-poi/pages/index/index",
+        "packages/category/pages/allcategory/allcategory",
+        "packages/ranklist/pages/index/index",
+        "packages/ranklist/pages/city/city",
+        "packages/show/pages/index/index",
+        "packages/show/pages/list/index",
+        "packages/show/pages/detail/index",
+        "packages/show/pages/search/index",
+        "packages/show/pages/ticket/ticket",
+        "packages/show/pages/order/confirm",
+        "packages/show/pages/seats/area",
+        "packages/show/pages/seats/seats",
+        "packages/show/pages/order/index",
+        "packages/show/pages/webview/webview",
+        "packages/branch/pages/list/list",
+        "packages/account/pages/modifymobile/modifymobile",
+        "packages/basic/pages/city/city",
+        "packages/toutiao/pages/index/index",
+        "packages/toutiao/pages/webview/webview",
+        "packages/ugc/pages/reviewlist/reviewlist",
+        "packages/ugc/pages/shopalbum/shopalbum",
+        "packages/dinedash/pages/index/index",
+        "packages/dinedash/pages/ticket/ticket",
+        "packages/dinedash/pages/detail/detail",
+        "packages/dinedash/pages/myevent/myevent",
+        "packages/dinedash/pages/apply/apply",
+        "packages/dinedash/pages/branch/branch",
+        "packages/dinedash/pages/myprize/myprize",
+        "packages/dinedash/pages/sharepic/sharepic",
+        "packages/indextuan/pages/tuan/tuan",
+        "packages/orderdish/pages/notification-setting/notification-setting",
+        "packages/orderdish/pages/queue-list/queue-list",
+        "packages/orderdish/pages/queue-success/queue-success",
+        "packages/share/pages/share/share",
+        "packages/friends/pages/shopcome/index",
+        "packages/friends/pages/signlist/index",
+        "packages/order/pages/myorder/myorder",
+        "packages/order/pages/coupondetail/coupondetail",
+        "packages/order/pages/payment/payment",
+        "packages/order/pages/mycoupon/mycoupon",
+        "packages/order/pages/couponcenter/couponcenter",
+        "packages/user-setting/pages/UserInfo/UserInfo",
+        "packages/user-setting/pages/UserNickName/UserNickName",
+        "packages/user-setting/pages/UserSign/UserSign",
+        "packages/dinevote/pages/voteindex/voteindex",
+        "packages/dinevote/pages/votelist/votelist",
+        "packages/dinevote/pages/votesearch/votesearch",
+        "packages/dinevote/pages/voteshare/voteshare",
+        "packages/pet/pages/index/index",
+        "packages/pet/pages/wiki/index/index",
+        "packages/pet/pages/wiki/breed/index",
+        "packages/pet/pages/wiki/detail/index",
+        "packages/joy/pages/index/index",
+        "packages/joy/pages/spu/spu",
+        "packages/qrcode-scan-payment/pages/submit/submit",
+        "packages/qrcode-scan-payment/pages/detail/detail",
+        "packages/dzlego/pages/lego/transformer",
+        "packages/search/pages/search/search",
+        "packages/search/pages/list/list",
+        "packages/debug/pages/debug/debug",
+        "packages/hotel/pages/order-create/order-create",
+        "packages/hotel/pages/h5/index",
+        "packages/hotel/pages/poi/poi",
+        "packages/hotel/pages/list/index",
+        "packages/hotel/pages/calendar/index",
+        "packages/hotel/pages/calendar/calendar",
+        "packages/hotel/pages/suggest/index",
+        "packages/hotel/pages/newBuy/buy",
+        "packages/hotel/pages/promotion/index",
+        "packages/hotel/pages/newUseRedPacket/useRedPacket",
+        "packages/hotel/pages/roomPicker/index",
+        "packages/hotel/pages/preference/index",
+        "packages/hotel/pages/orderInfo/orderInfo",
+        "packages/hotel/pages/refund/refund",
+        "packages/hotel/pages/refundprogress/progress",
+        "packages/hotel/pages/order/order",
+        "packages/hotel/pages/poiDetail/index",
+        "packages/hotel/pages/search/index",
+        "packages/hotel/pages/redPacketHelp/redPacketHelp",
+        "packages/hotel/pages/middleware/index",
+        "packages/hotel/pages/poiAlbum/index",
+        "packages/hotel/pages/auth/auth",
+        "packages/hotel-act/pages/share/main",
+        "packages/hotel-act/pages/shareB/main",
+        "packages/hotel-act/pages/shareReal/main",
+        "packages/msdeal/pages/deal-detail/deal-detail",
+        "packages/msdeal/pages/collage-detail/collage-detail",
+        "packages/msdeal/pages/deal-order/deal-order",
+        "packages/msdeal/pages/deal-order-detail/deal-order-detail",
+        "packages/msdeal/pages/maiton-order/maiton-order",
+        "packages/msdeal/pages/maiton-order-detail/maiton-order-detail",
+        "packages/msdeal/pages/maiton-order-succ/maiton-order-succ",
+        "packages/msdeal/pages/seckill-deal/seckill-deal",
+        "packages/msdeal/pages/sec-kill-list/sec-kill-list",
+        "packages/msdeal/pages/search/search",
+        "packages/hongbao/pages/index/index",
+        "packages/hongbao/pages/new/new",
+        "packages/product-shelf/pages/index",
+        "packages/detail/pages/detail/detail",
+        "packages/notedetail/pages/index/index",
+        "packages/notedetail/pages/video-preview/video-preview",
+        "packages/trip/pages/index/index",
+        "packages/trip/pages/search/index",
+        "packages/trip/pages/search-result/search-result",
+        "packages/trip/pages/calendar/calendar",
+        "packages/trip/pages/order/order",
+        "packages/trip/pages/intro/intro",
+        "packages/trip/pages/poilist/poilist",
+        "packages/trip/pages/voucher/index",
+        "packages/trip/pages/webview/index",
+        "packages/trip/pages/ticket-pay/index",
+        "packages/trip/pages/login-middle-page/index",
+        "packages/trip/pages/redirect-middle-page/index",
+        "packages/trip/pages/map-middle-page/index",
+        "packages/trip/pages/wxpay-middle-page/index",
+        "packages/trip/pages/hotel-package/index",
+        "packages/trip/pages/gty-package/gty-package",
+        "packages/trip/mpvue-pages/pages/poi/poi",
+        "packages/trip/mpvue-pages/pages/bargain-detail/bargain-detail",
+        "packages/trip/mpvue-pages/pages/bargain-deal/bargain-deal",
+        "packages/trip/pages/return-to-cash-activity/return-to-cash-activity",
+        "packages/trip/pages/fission-red-envelope/index",
+        "packages/trip/__plugin__/wx56c8f077de74b07c/pages/share/share",
+        "packages/trip/__plugin__/wx56c8f077de74b07c/pages/share-success/share-success",
+        "packages/trip/__plugin__/wx56c8f077de74b07c/pages/about/about",
+        "packages/trip/__plugin__/wx56c8f077de74b07c/pages/error/error",
+        "packages/tuan/pages/orderdetail/orderdetail",
+        "packages/tuan/pages/ordersubmit/ordersubmit",
+        "packages/tuan/pages/tuandetail/tuandetail",
+        "packages/tuan/pages/tuanshoplist/tuanshoplist",
+        "packages/tuan/pages/applyrefund/applyrefund",
+        "packages/user/pages/personal/personal",
+        "packages/user/pages/card/card",
+        "packages/user/pages/nickname/index",
+        "packages/dache/pages/home/index",
+        "packages/node-daily-down-web/pages/main/main",
+        "packages/node-super-card-web/pages/deal_detail/deal_detail",
+        "packages/node-super-card-web/pages/main/main",
+        "dynamic-zhenguo/pages/dynamic-page/index",
+        "dynamic-zhenguo/pages/date-select/date",
+        "packages/hotel-old/pages/coupondetail/coupondetail",
+        "packages/hotel-old/pages/order-create/order-create",
+        "packages/hotel-old/pages/order-create/room-info/room-info",
+        "packages/hotel-old/pages/promotion-list/promotion-list",
+        "packages/hotel-old/pages/suggest/index",
+        "packages/hotel-old/pages/list/index",
+        "packages/hotel-old/pages/calendar/calendar",
+        "packages/hotel-old/pages/dp/city/city",
+        "packages/hotel-old/pages/dp/webview/index",
+        "packages/hotel-old/pages/dp/comment/comment",
+        "packages/hotel-old/pages/dp/recommendShop/recommendShop"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "大众点评",
+        "backgroundColor": "#FFFFFF",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "color": "#777777",
+        "selectedColor": "#ff6633",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "images/home.png",
+                "selectedIconPath": "images/home-on.png"
+            },
+            {
+                "pagePath": "pages/group/group",
+                "text": "找优惠",
+                "iconPath": "images/group.png",
+                "selectedIconPath": "images/group-on.png"
+            },
+            {
+                "pagePath": "pages/ranklist/ranklist",
+                "text": "找好店",
+                "iconPath": "images/rankicon.png",
+                "selectedIconPath": "images/rankicon-on.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "images/myicon.png",
+                "selectedIconPath": "images/myicon-on.png"
+            }
+        ]
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    },
+    "subPackages": [
+        {
+            "root": "my/",
+            "pages": [
+                "my/favorite/favorite"
+            ]
+        },
+        {
+            "root": "movie/",
+            "pages": [
+                "movie/pages/home/index",
+                "movie/pages/cinema/movie",
+                "movie/pages/cinema/cinema",
+                "movie/pages/cinema/seat",
+                "movie/pages/movie/movie",
+                "movie/pages/movie/comment",
+                "movie/pages/movie/photo",
+                "movie/pages/movie/preview",
+                "movie/pages/goods/buy",
+                "movie/pages/goods/order-detail",
+                "movie/pages/goods/order-result",
+                "movie/pages/goods/refund/apply",
+                "movie/pages/goods/refund/detail",
+                "movie/pages/membercard/index",
+                "movie/pages/membercard/status",
+                "movie/pages/order/refund/apply",
+                "movie/pages/order/refund/detail",
+                "movie/pages/order/buy",
+                "movie/pages/order/index",
+                "movie/pages/webview/webview",
+                "movie/pages/order/order"
+            ]
+        },
+        {
+            "root": "packages/cosmetology/",
+            "pages": [
+                "packages/cosmetology/pages/index/index",
+                "packages/cosmetology/pages/wiki/wiki",
+                "packages/cosmetology/pages/wikidetail/wikidetail",
+                "packages/cosmetology/pages/case/case"
+            ]
+        },
+        {
+            "root": "packages/weddetail-wxapp/",
+            "pages": [
+                "packages/weddetail-wxapp/pages/dress-case-detail/index",
+                "packages/weddetail-wxapp/pages/dress-case-list/index",
+                "packages/weddetail-wxapp/pages/dress-package-detail/index",
+                "packages/weddetail-wxapp/pages/dress-package-list/index",
+                "packages/weddetail-wxapp/pages/reservation-success/index"
+            ]
+        },
+        {
+            "root": "packages/wedding-shoot/",
+            "pages": [
+                "packages/wedding-shoot/pages/caseList/index",
+                "packages/wedding-shoot/pages/caseDetail/index",
+                "packages/wedding-shoot/pages/packageList/index",
+                "packages/wedding-shoot/pages/packageDetail/index",
+                "packages/wedding-shoot/pages/videoDetail/index"
+            ]
+        },
+        {
+            "root": "packages/video-preview/",
+            "pages": [
+                "packages/video-preview/pages/index/index"
+            ]
+        },
+        {
+            "root": "packages/easylife/",
+            "pages": [
+                "packages/easylife/pages/index/index"
+            ]
+        },
+        {
+            "root": "packages/pintuan/",
+            "pages": [
+                "packages/pintuan/pages/index/index",
+                "packages/pintuan/pages/productdetail/productdetail",
+                "packages/pintuan/pages/receiveaddress/receiveaddress",
+                "packages/pintuan/pages/personalcenter/personalcenter",
+                "packages/pintuan/pages/orderdetail/orderdetail",
+                "packages/pintuan/pages/groupdetail/groupdetail"
+            ]
+        },
+        {
+            "root": "packages/mtsi/",
+            "pages": [
+                "packages/mtsi/pages/yoda/yoda"
+            ]
+        },
+        {
+            "root": "packages/customized-poi/",
+            "pages": [
+                "packages/customized-poi/pages/index/index"
+            ]
+        },
+        {
+            "root": "packages/category/",
+            "pages": [
+                "packages/category/pages/allcategory/allcategory"
+            ]
+        },
+        {
+            "root": "packages/ranklist/",
+            "pages": [
+                "packages/ranklist/pages/index/index",
+                "packages/ranklist/pages/city/city"
+            ]
+        },
+        {
+            "root": "packages/show/",
+            "pages": [
+                "packages/show/pages/index/index",
+                "packages/show/pages/list/index",
+                "packages/show/pages/detail/index",
+                "packages/show/pages/search/index",
+                "packages/show/pages/ticket/ticket",
+                "packages/show/pages/order/confirm",
+                "packages/show/pages/seats/area",
+                "packages/show/pages/seats/seats",
+                "packages/show/pages/order/index",
+                "packages/show/pages/webview/webview"
+            ]
+        },
+        {
+            "root": "packages/branch/",
+            "pages": [
+                "packages/branch/pages/list/list"
+            ]
+        },
+        {
+            "root": "packages/account/",
+            "pages": [
+                "packages/account/pages/modifymobile/modifymobile"
+            ]
+        },
+        {
+            "root": "packages/basic/",
+            "pages": [
+                "packages/basic/pages/city/city"
+            ]
+        },
+        {
+            "root": "packages/toutiao/",
+            "pages": [
+                "packages/toutiao/pages/index/index",
+                "packages/toutiao/pages/webview/webview"
+            ]
+        },
+        {
+            "root": "packages/ugc/",
+            "pages": [
+                "packages/ugc/pages/reviewlist/reviewlist",
+                "packages/ugc/pages/shopalbum/shopalbum"
+            ]
+        },
+        {
+            "root": "packages/dinedash/",
+            "pages": [
+                "packages/dinedash/pages/index/index",
+                "packages/dinedash/pages/ticket/ticket",
+                "packages/dinedash/pages/detail/detail",
+                "packages/dinedash/pages/myevent/myevent",
+                "packages/dinedash/pages/apply/apply",
+                "packages/dinedash/pages/branch/branch",
+                "packages/dinedash/pages/myprize/myprize",
+                "packages/dinedash/pages/sharepic/sharepic"
+            ]
+        },
+        {
+            "root": "packages/indextuan/",
+            "pages": [
+                "packages/indextuan/pages/tuan/tuan"
+            ]
+        },
+        {
+            "root": "packages/orderdish/",
+            "pages": [
+                "packages/orderdish/pages/notification-setting/notification-setting",
+                "packages/orderdish/pages/queue-list/queue-list",
+                "packages/orderdish/pages/queue-success/queue-success"
+            ]
+        },
+        {
+            "root": "packages/share/",
+            "pages": [
+                "packages/share/pages/share/share"
+            ]
+        },
+        {
+            "root": "packages/friends/",
+            "pages": [
+                "packages/friends/pages/shopcome/index",
+                "packages/friends/pages/signlist/index"
+            ]
+        },
+        {
+            "root": "packages/order/",
+            "pages": [
+                "packages/order/pages/myorder/myorder",
+                "packages/order/pages/coupondetail/coupondetail",
+                "packages/order/pages/payment/payment",
+                "packages/order/pages/mycoupon/mycoupon",
+                "packages/order/pages/couponcenter/couponcenter"
+            ]
+        },
+        {
+            "root": "packages/user-setting/",
+            "pages": [
+                "packages/user-setting/pages/UserInfo/UserInfo",
+                "packages/user-setting/pages/UserNickName/UserNickName",
+                "packages/user-setting/pages/UserSign/UserSign"
+            ]
+        },
+        {
+            "root": "packages/dinevote/",
+            "pages": [
+                "packages/dinevote/pages/voteindex/voteindex",
+                "packages/dinevote/pages/votelist/votelist",
+                "packages/dinevote/pages/votesearch/votesearch",
+                "packages/dinevote/pages/voteshare/voteshare"
+            ]
+        },
+        {
+            "root": "packages/pet/",
+            "pages": [
+                "packages/pet/pages/index/index",
+                "packages/pet/pages/wiki/index/index",
+                "packages/pet/pages/wiki/breed/index",
+                "packages/pet/pages/wiki/detail/index"
+            ]
+        },
+        {
+            "root": "packages/joy/",
+            "pages": [
+                "packages/joy/pages/index/index",
+                "packages/joy/pages/spu/spu"
+            ]
+        },
+        {
+            "root": "packages/qrcode-scan-payment/",
+            "pages": [
+                "packages/qrcode-scan-payment/pages/submit/submit",
+                "packages/qrcode-scan-payment/pages/detail/detail"
+            ]
+        },
+        {
+            "root": "packages/dzlego/",
+            "pages": [
+                "packages/dzlego/pages/lego/transformer"
+            ]
+        },
+        {
+            "root": "packages/search/",
+            "pages": [
+                "packages/search/pages/search/search",
+                "packages/search/pages/list/list"
+            ]
+        },
+        {
+            "root": "packages/debug/",
+            "pages": [
+                "packages/debug/pages/debug/debug"
+            ]
+        },
+        {
+            "root": "packages/hotel/",
+            "pages": [
+                "packages/hotel/pages/order-create/order-create",
+                "packages/hotel/pages/h5/index",
+                "packages/hotel/pages/poi/poi",
+                "packages/hotel/pages/list/index",
+                "packages/hotel/pages/calendar/index",
+                "packages/hotel/pages/calendar/calendar",
+                "packages/hotel/pages/suggest/index",
+                "packages/hotel/pages/newBuy/buy",
+                "packages/hotel/pages/promotion/index",
+                "packages/hotel/pages/newUseRedPacket/useRedPacket",
+                "packages/hotel/pages/roomPicker/index",
+                "packages/hotel/pages/preference/index",
+                "packages/hotel/pages/orderInfo/orderInfo",
+                "packages/hotel/pages/refund/refund",
+                "packages/hotel/pages/refundprogress/progress",
+                "packages/hotel/pages/order/order",
+                "packages/hotel/pages/poiDetail/index",
+                "packages/hotel/pages/search/index",
+                "packages/hotel/pages/redPacketHelp/redPacketHelp",
+                "packages/hotel/pages/middleware/index",
+                "packages/hotel/pages/poiAlbum/index",
+                "packages/hotel/pages/auth/auth"
+            ]
+        },
+        {
+            "root": "packages/hotel-act/",
+            "pages": [
+                "packages/hotel-act/pages/share/main",
+                "packages/hotel-act/pages/shareB/main",
+                "packages/hotel-act/pages/shareReal/main"
+            ]
+        },
+        {
+            "root": "packages/msdeal/",
+            "pages": [
+                "packages/msdeal/pages/deal-detail/deal-detail",
+                "packages/msdeal/pages/collage-detail/collage-detail",
+                "packages/msdeal/pages/deal-order/deal-order",
+                "packages/msdeal/pages/deal-order-detail/deal-order-detail",
+                "packages/msdeal/pages/maiton-order/maiton-order",
+                "packages/msdeal/pages/maiton-order-detail/maiton-order-detail",
+                "packages/msdeal/pages/maiton-order-succ/maiton-order-succ",
+                "packages/msdeal/pages/seckill-deal/seckill-deal",
+                "packages/msdeal/pages/sec-kill-list/sec-kill-list",
+                "packages/msdeal/pages/search/search"
+            ]
+        },
+        {
+            "root": "packages/hongbao/",
+            "pages": [
+                "packages/hongbao/pages/index/index",
+                "packages/hongbao/pages/new/new"
+            ]
+        },
+        {
+            "root": "packages/product-shelf/",
+            "pages": [
+                "packages/product-shelf/pages/index"
+            ]
+        },
+        {
+            "root": "packages/detail/",
+            "pages": [
+                "packages/detail/pages/detail/detail"
+            ]
+        },
+        {
+            "root": "packages/notedetail/",
+            "pages": [
+                "packages/notedetail/pages/index/index",
+                "packages/notedetail/pages/video-preview/video-preview"
+            ]
+        },
+        {
+            "root": "packages/trip/",
+            "plugins": {
+                "goodsSharePlugin": {
+                    "version": "3.2.0",
+                    "provider": "wx56c8f077de74b07c",
+                    "subpackage": "/packages/trip/"
+                }
+            },
+            "pages": [
+                "packages/trip/pages/index/index",
+                "packages/trip/pages/search/index",
+                "packages/trip/pages/search-result/search-result",
+                "packages/trip/pages/calendar/calendar",
+                "packages/trip/pages/order/order",
+                "packages/trip/pages/intro/intro",
+                "packages/trip/pages/poilist/poilist",
+                "packages/trip/pages/voucher/index",
+                "packages/trip/pages/webview/index",
+                "packages/trip/pages/ticket-pay/index",
+                "packages/trip/pages/login-middle-page/index",
+                "packages/trip/pages/redirect-middle-page/index",
+                "packages/trip/pages/map-middle-page/index",
+                "packages/trip/pages/wxpay-middle-page/index",
+                "packages/trip/pages/hotel-package/index",
+                "packages/trip/pages/gty-package/gty-package",
+                "packages/trip/mpvue-pages/pages/poi/poi",
+                "packages/trip/mpvue-pages/pages/bargain-detail/bargain-detail",
+                "packages/trip/mpvue-pages/pages/bargain-deal/bargain-deal",
+                "packages/trip/pages/return-to-cash-activity/return-to-cash-activity",
+                "packages/trip/pages/fission-red-envelope/index",
+                "packages/trip/__plugin__/wx56c8f077de74b07c/pages/share/share",
+                "packages/trip/__plugin__/wx56c8f077de74b07c/pages/share-success/share-success",
+                "packages/trip/__plugin__/wx56c8f077de74b07c/pages/about/about",
+                "packages/trip/__plugin__/wx56c8f077de74b07c/pages/error/error"
+            ]
+        },
+        {
+            "root": "packages/tuan/",
+            "pages": [
+                "packages/tuan/pages/orderdetail/orderdetail",
+                "packages/tuan/pages/ordersubmit/ordersubmit",
+                "packages/tuan/pages/tuandetail/tuandetail",
+                "packages/tuan/pages/tuanshoplist/tuanshoplist",
+                "packages/tuan/pages/applyrefund/applyrefund"
+            ]
+        },
+        {
+            "root": "packages/user/",
+            "pages": [
+                "packages/user/pages/personal/personal",
+                "packages/user/pages/card/card",
+                "packages/user/pages/nickname/index"
+            ]
+        },
+        {
+            "root": "packages/dache/",
+            "pages": [
+                "packages/dache/pages/home/index"
+            ]
+        },
+        {
+            "root": "packages/node-daily-down-web/",
+            "pages": [
+                "packages/node-daily-down-web/pages/main/main"
+            ]
+        },
+        {
+            "root": "packages/node-super-card-web/",
+            "pages": [
+                "packages/node-super-card-web/pages/deal_detail/deal_detail",
+                "packages/node-super-card-web/pages/main/main"
+            ]
+        },
+        {
+            "root": "dynamic-zhenguo/",
+            "pages": [
+                "dynamic-zhenguo/pages/dynamic-page/index",
+                "dynamic-zhenguo/pages/date-select/date"
+            ]
+        },
+        {
+            "root": "packages/hotel-old/",
+            "pages": [
+                "packages/hotel-old/pages/coupondetail/coupondetail",
+                "packages/hotel-old/pages/order-create/order-create",
+                "packages/hotel-old/pages/order-create/room-info/room-info",
+                "packages/hotel-old/pages/promotion-list/promotion-list",
+                "packages/hotel-old/pages/suggest/index",
+                "packages/hotel-old/pages/list/index",
+                "packages/hotel-old/pages/calendar/calendar",
+                "packages/hotel-old/pages/dp/city/city",
+                "packages/hotel-old/pages/dp/webview/index",
+                "packages/hotel-old/pages/dp/comment/comment",
+                "packages/hotel-old/pages/dp/recommendShop/recommendShop"
+            ]
+        }
+    ],
+    "navigateToMiniProgramAppIdList": [
+        "wx0ec340baf7b3ce9f",
+        "wxf49e0ceaceaed8aa",
+        "wxd2dc491d7e28fe28",
+        "wxc147016e2b3bf9d6",
+        "wx7649daed8f2335c4",
+        "wx07dfb5d79541eca9"
+    ],
+    "debug": false
+}

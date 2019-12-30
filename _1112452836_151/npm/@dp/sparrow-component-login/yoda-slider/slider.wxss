@@ -1,0 +1,194 @@
+.slider .code-warpper,.slider .title,.slider-warpper {
+    text-align: center;
+}
+
+.popslider {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0,0,0,.4);
+}
+
+.slider {
+    position: fixed;
+    width: 560rpx;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+    background: #f2f2f2;
+    border-radius: 40rpx;
+    padding: 10rpx;
+    background: #fff;
+}
+
+.slider .slider {
+    overflow: hidden;
+}
+
+.slider .title {
+    margin: 50rpx auto 10rpx;
+    font-size: 44rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+    color: #030303;
+    font-weight: 500;
+}
+
+.slider .mintitle {
+    font-size: 28rpx;
+    color: #777777;
+    text-align: center;
+}
+
+.slider .code-warpper .imgcode {
+    margin-top: 30rpx;
+}
+
+.slider .code-warpper .inputcode {
+    margin-top: 30rpx;
+}
+
+.slider .code-warpper .img {
+    height: 76rpx;
+    width: 181rpx;
+    border: solid #ccc;
+    border-radius: 3rpx;
+    margin: 0rpx auto 10rpx;
+    border: none;
+    display: block;
+}
+
+.slider .code-warpper .ipt {
+    height: 70rpx;
+    width: 450rpx;
+    border: none;
+    background-color: #fff;
+    color: #000000;
+    font-size: 32rpx;
+    margin: 0rpx auto;
+    background: #EEEEEE;
+    border-radius: 100px;
+    text-align: left;
+    padding-left: 30rpx;
+}
+
+.slider .code-warpper .phcolor {
+    color: #bbbbbb;
+}
+
+.slider .code-warpper .btn {
+    margin: 50rpx auto 40rpx;
+    width: 480rpx;
+    border: none;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #ffffff;
+    border-radius: 40rpx;
+    background: #f63;
+}
+
+.slider .close {
+    z-index: 9999;
+    position: absolute;
+    right: -46rpx;
+    top: -46rpx;
+    background: url(https://www.dpfile.com/sc/eleconfig/program_popup/20181212173534sliderclose3x.png) 50% 50% no-repeat;
+    height: 56rpx;
+    width: 56rpx;
+    background-size: 56rpx 56rpx;
+}
+
+.slider .close:hover {
+    background-color: rgba(212,212,212,.2);
+}
+
+.slider-warpper {
+    margin: 80rpx auto;
+    font-size: 16rpx;
+}
+
+.slider-warpper .slider-boxWrapper {
+    margin: 0 30rpx;
+    position: relative;
+    height: 70rpx;
+    width: 480rpx;
+    border: none;
+    z-index: 1;
+    background: #e1e1e1;
+    border-radius: 10rpx;
+}
+
+.slider-warpper .slider-boxWrapper .tip {
+    position: absolute;
+    left: 104rpx;
+    display: block;
+    height: 100rpx;
+    line-height: 100rpx;
+    color: #999;
+    font-size: 32rpx;
+    top: 0;
+    background-size: 100rpx;
+}
+
+.slider-warpper .slider-boxStatic {
+    background-image: url(https://www.dpfile.com/sc/eleconfig/program_popup/20181212172701btnCopy3x.png);
+}
+
+.slider-warpper .slider-boxError {
+    background-image: url(https://p1.meituan.net/travelcube/ef92b23e73e8f50f76c611eb3f66f3801142.png);
+}
+
+.slider-warpper .slider-boxLoading {
+    background-image: url(https://p0.meituan.net/travelcube/382fac50891660bcc9f5a529d64fc9aa1983.png);
+}
+
+.slider-warpper .slider-boxOk {
+    background-image: url(https://p1.meituan.net/travelcube/340b7c3e0023b149d1413c7b77c032171571.png);
+}
+
+.slider-warpper .slider-box,.slider-warpper .slider-boxError,.slider-warpper .slider-boxLoading,.slider-warpper .slider-boxOk,.slider-warpper .slider-boxStatic {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-size: 44rpx;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    width: 70rpx;
+    height: 70rpx;
+    z-index: 2;
+    cursor: move;
+    border-radius: 10rpx;
+    box-shadow: 0 4rpx 20rpx 0 rgba(0,0,0,.12);
+}
+
+.slider-warpper .slider-movingBar {
+    position: absolute;
+    width: 24rpx;
+    height: 70rpx;
+    z-index: 1;
+    background-image: linear-gradient(-90deg,#F63 0,#FF9F62 86%);
+    border-top-left-radius: 10rpx;
+    border-bottom-left-radius: 10rpx;
+    background-repeat: round;
+    background-size: 100% 100%;
+}
+
+.slider-warpper .slider-yodaTip {
+    position: absolute;
+    display: none;
+    top: 72rpx;
+    left: 16rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    text-align: left;
+    font-size: 24rpx;
+    color: #f76120;
+}

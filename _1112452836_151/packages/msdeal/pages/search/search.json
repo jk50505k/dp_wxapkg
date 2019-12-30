@@ -1,0 +1,13 @@
+{
+    "navigationBarTitleText": "大众点评",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "list-view": "../../../../components/list-view/list-view",
+        "midas": "../../../../components/midas/index",
+        "search-entry": "../components/search/search-entry/search-entry",
+        "search-filter": "../components/search/search-filter/search-filter",
+        "shop-item": "../components/search/shop-item/shop-item",
+        "error": "../components/error/error",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

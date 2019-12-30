@@ -1,0 +1,7 @@
+<view class="mainContainer" wx:if="{{show}}">
+    <view class="icon icon-{{exceptionDetail.iconType}}"></view>
+    <view class="desc">{{exceptionDetail.description||exceptionInfo[exceptionDetail.iconType]['description']}}
+  </view>
+    <view bindtap="onTap" class="handler" wx:if="{{exceptionDetail.handlerText||exceptionInfo[exceptionDetail.iconType]['handlerText']}}">{{exceptionDetail.handlerText||exceptionInfo[exceptionDetail.iconType]['handlerText']}}
+  </view>
+</view>

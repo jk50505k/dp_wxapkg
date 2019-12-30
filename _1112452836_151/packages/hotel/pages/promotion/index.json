@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "checkbox-confirm": "./components/checkbox-confirm/confirm",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

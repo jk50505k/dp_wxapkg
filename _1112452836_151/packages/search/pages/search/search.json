@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "大众点评",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "search": "../../components/search/search",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

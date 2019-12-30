@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "我收藏的商户",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "list-filter": "../../components/list-filter/list-filter",
+        "list-view": "../../components/list-view/list-view",
+        "quick-nav": "../../components/quick-nav/quick-nav"
+    }
+}

@@ -1,0 +1,71 @@
+<view class="review-item">
+    <app-launch bind:launcherror="launchAppError" bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp}}" errorParams="{{reviewid:reviewList.reviewId}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+        <view slot="app-launch">
+            <view class="userFace">
+                <view catchtap="navToPersonal" class="userImg">
+                    <image class="userAvatar" lazyLoad="{{true}}" src="{{reviewList.userPhoto}}" wx:if="{{reviewList.userPhoto}}"></image>
+                    <image class="user-vip" lazyLoad="{{true}}" mode="aspectFit" src="{{reviewList.vipLevel}}" wx:if="{{reviewList.vipLevel}}"></image>
+                </view>
+            </view>
+        </view>
+    </app-launch>
+    <view bindtap="jumpToDetail" class="reviewDetail {{lastReview?'lastReview':''}}" data-review="{{reviewList}}" data-reviewid="{{reviewList.reviewId}}" data-url="{{reviewList.url}}">
+        <app-launch bind:launcherror="launchAppError" bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp&&!hasApp}}" errorParams="{{reviewid:reviewList.reviewId}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+            <view slot="app-launch">
+                <view class="userName">
+                    <text catchtap="navToPersonal">{{reviewList.userNickName}}</text>
+                    <image class="userLevel" lazyLoad="{{true}}" mode="aspectFit" src="{{reviewList.userLevelImg}}" wx:if="{{reviewList.userLevelImg}}"></image>
+                    <view class="review-other-info">
+                        <image class="honor-pic" src="{{reviewList.honour}}" wx:if="{{reviewList.honour}}"></image>
+                    </view>
+                </view>
+                <view class="review-lastTime" wx:if="{{reviewList.lastTimeStr||reviewList.platform}}">
+                    <view class="lastTime-left">{{reviewList.lastTimeStr}}</view>
+                    <view class="lastTime-right">{{reviewList.platform===2?'美团网友':''}}</view>
+                </view>
+                <view class="reviewAction">
+                    <text class="actionType" wx:if="{{reviewList.accurateStar>=0}}">打分</text>
+                    <star class="userStar" size="22" star="{{reviewList.accurateStar}}" wx:if="{{reviewList.accurateStar>=0}}"></star>
+                    <text class="expense" wx:if="{{reviewList.avgPriceStr}}">{{reviewList.avgPriceStr}}</text>
+                </view>
+                <view class="reviewText {{!showAllReview?'reviewTruncate':''}} {{config.threeLine}} {{needLogin?'twoLine':''}}">
+                    <rich-text nodes="{{reviewList.reviewTitle.children}}" wx:if="{{reviewList.reviewTitle&&reviewList.reviewTitle.children}}"></rich-text>
+                    <block wx:else>
+                        <view wx:if="{{reviewList.reviewTitle}}">{{reviewList.reviewTitle}}</view>
+                    </block>
+                    <rich-text nodes="{{reviewList.reviewBody.children}}"></rich-text>
+                </view>
+                <view class="impression" wx:if="{{reviewList.impression&&reviewList.impression.length}}">
+                    <text class="label">【印象】</text>
+                    <text class="impressionTitle" wx:for="{{reviewList.impression}}" wx:key="index">{{item}}
+                    </text>
+                </view>
+                <review-dish id="review-dish" lxData="{{lxData}}" reviewDish="{{reviewList.recommend}}" shopId="{{shopId||shopOptions.shopId}}" shopUuid="{{shopUuid||shopOptions.shopUuid}}"></review-dish>
+                <view class="reviewPics" wx:if="{{reviewList.reviewPics&&reviewList.reviewPics.length}}">
+                    <scroll-view bindscroll="onHorizontalScroll" class="scrollPics" scrollX="true">
+                        <view class="reviewPicWrap" style="width:{{reviewList.reviewPics.length*175}}rpx">
+                            <app-launch appConfig="{{appConfig}}" bind:launcherror="launchAppError" bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp}}" errorParams="{{reviewid:reviewList.reviewId}}" hasApp="{{hasApp}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+                                <view slot="app-launch">
+                                    <view class="img-wrap" data-id="{{reviewPicIndex}}" wx:for="{{reviewList.reviewPics}}" wx:for-index="reviewPicIndex" wx:for-item="reviewPic" wx:key="{{reviewPicIndex}}">
+                                        <mina-lazyload-img catchtap="previewImage" class="_lazyLoadImage" data-id="{{reviewPicIndex}}" imgClass="{{imgClass}}" imgMode="{{'aspectFill'}}" imgSrc="{{reviewPic.url}}" wx:if="{{reviewPic.url}}"></mina-lazyload-img>
+                                        <view class="video-play-icon" data-id="{{reviewPicIndex}}" wx:if="{{reviewPic&&reviewPic.type=='video'}}"></view>
+                                    </view>
+                                </view>
+                            </app-launch>
+                        </view>
+                    </scroll-view>
+                </view>
+                <view class="browser-count">
+                    <view class="browser-left">
+                        <text class="flower-browser" wx:if="{{reviewList.browseCountStr}}">{{reviewList.browseCountStr}}</text>
+                        <text class="flower-total" wx:if="{{reviewList.flowerTotalStr}}">{{reviewList.flowerTotalStr}}</text>
+                        <text class="follow-note-no" wx:if="{{reviewList.followNoteNoStr}}">{{reviewList.followNoteNoStr}}</text>
+                    </view>
+                    <view class="browser-right" wx:if="{{reviewList.referTypeText}}">
+                        <text class="refer-text">{{reviewList.referTypeText}}</text>
+                    </view>
+                </view>
+            </view>
+        </app-launch>
+    </view>
+</view>

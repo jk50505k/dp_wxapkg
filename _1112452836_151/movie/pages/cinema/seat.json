@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "选座购票",
+    "usingComponents": {
+        "quick-nav": "../../../components/quick-nav/quick-nav"
+    }
+}

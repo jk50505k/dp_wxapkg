@@ -1,0 +1,18 @@
+<view bindtap="goMaiton" class="content" style="margin:{{moduleConfig.margin}}" wx:if="{{show}}">
+    <view class="up hh l-c">
+        <view class="icon">
+            <image mode="widthFix" src="https://p0.meituan.net/codeman/9d89de156288edd165ac60e6af274c241159.png"></image>
+        </view>
+        <view class="desc">买单</view>
+        <image class="tip-img" src="{{tipImage}}" wx:if="{{showTips}}"></image>
+        <view class="btn hh c-c">{{maitonInfo.title}}</view>
+    </view>
+    <view class="downf {{maitonInfo.orderNumDesc?'min-d':''}}" wx:if="{{maitonInfo.promos&&maitonInfo.promos.length>0}}">
+        <view class="down hh l-c" wx:if="{{item.show}}" wx:for="{{maitonInfo.promos}}" wx:key="index">
+            <view class="dicount">{{item.title||''}}</view>
+            <view class="desc ellipsis">{{item.promoDesc||''}}</view>
+        </view>
+        <view class="sell" wx:if="{{maitonInfo.orderNumDesc}}">{{maitonInfo.orderNumDesc||''}}</view>
+    </view>
+</view>
+<contact-card bind:showpop="showPop" cardData="{{cardData}}" gotoApp="{{gotoApp}}" lxData="{{lxData}}"></contact-card>

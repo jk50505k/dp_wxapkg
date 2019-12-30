@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "大众点评精品拼团",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "product-list": "../../components/product-list/product-list",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

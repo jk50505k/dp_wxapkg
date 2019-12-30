@@ -1,0 +1,6 @@
+<import src="./core.wxml"></import>
+<block wx:if="{{config[0]==='r'&&w.inlineWxss(config[1].wxss,config)}}">
+    <template is="rc0" data="{{c:item,mode:'self',l:0}}" wx:for="{{config[2]}}" wx:key="key"></template>
+</block>
+<template is="rc0" data="{{c:config,mode:mode,l:0}}" wx:elif="{{config}}"></template>
+<wxs module="w" src="inline-wxss.wxs" />

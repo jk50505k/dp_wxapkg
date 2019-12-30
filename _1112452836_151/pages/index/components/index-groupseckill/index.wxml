@@ -1,0 +1,164 @@
+<view class="gs-frame" wx:if="{{showModule}}">
+    <view class="group-s" wx:if="{{showType===1}}">
+        <view class="g-f" wx:if="{{groupSeckillData&&groupSeckillData.groupData&&groupSeckillData.groupData.length>0}}">
+            <view class="title-f">
+                <view class="title hh l-c">
+超值          <text>拼</text>
+团                        </view>
+                <view bindtap="viewToGroupPage" class="more hh l-c" data-type="more">
+                    <view>查看全部</view>
+                    <view class="icon"></view>
+                </view>
+            </view>
+            <view class="card-frame hh l-c">
+                <view bindtap="viewToGroupPage" class="card" data-type="card" wx:if="{{index<2}}" wx:for="{{groupSeckillData.groupData}}" wx:key="{{index}}">
+                    <view class="card-img">
+                        <image mode="widthFix" src="{{item.image}}"></image>
+                    </view>
+                    <view class="card-name ellipsis">{{item.title||''}}</view>
+                    <view class="card-msg hh">
+                        <view class="card-icon">
+                            <image mode="widthFix" src="https://p1.meituan.net/travelcube/3a917a0a37a0d1de808016233825e137963.png"></image>
+                        </view>
+                        <view class="card-poi-name ellipsis {{item.distance?'':'card-long'}}">{{item.shopName||''}}</view>
+                        <view class="card-dis" wx:if="{{item.distance}}">{{item.distance}}</view>
+                    </view>
+                    <view class="card-info hh l-c">
+                        <text class="card-tag" wx:if="{{item.ptNumber}}">{{item.ptNumber}}</text>
+                        <view class="card-tag-temp" wx:else></view>
+                        <view class="card-price hh l-c" wx:if="{{item.price}}">
+                            <view class="rmb">¥</view>
+                            <view class="price">{{item.price}}</view>
+                        </view>
+                        <view class="card-value hh l-c" wx:if="{{item.value}}">
+                            <view class="rmb">¥</view>
+                            <view class="price">{{item.value}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="seckill-s" wx:if="{{showType===2}}">
+        <view class="s-f" wx:if="{{groupSeckillData&&groupSeckillData.seckillData&&groupSeckillData.seckillData.dealList&&groupSeckillData.seckillData.dealList.length>0}}">
+            <view class="title-f hh l-c">
+                <view class="title hh l-c">
+限时          <text>秒</text>
+杀                        </view>
+                <view class="cutdown hh l-c" wx:if="{{cutdownData}}">
+                    <view class="time-f hh c-c">{{cutdownData.hours}}</view>
+                    <view class="time-do">:</view>
+                    <view class="time-f hh c-c">{{cutdownData.mins}}</view>
+                    <view class="time-do">:</view>
+                    <view class="time-f hh c-c">{{cutdownData.secs}}</view>
+                </view>
+                <view class="begin-time-show" wx:if="{{seckillBeginTime}}">{{seckillBeginTime}}开秒
+                </view>
+                <view bindtap="viewToSeckillPage" class="more hh l-c" data-type="more">
+                    <view>查看全部</view>
+                    <view class="icon"></view>
+                </view>
+            </view>
+            <view class="card-frame hh l-c">
+                <view bindtap="viewToSeckillPage" class="card" data-type="card" wx:if="{{index<2}}" wx:for="{{groupSeckillData.seckillData.dealList}}" wx:key="{{index}}">
+                    <view class="card-img">
+                        <image mode="widthFix" src="{{item.image}}"></image>
+                    </view>
+                    <view class="card-name ellipsis">{{item.title||''}}</view>
+                    <view class="card-msg hh">
+                        <view class="card-icon">
+                            <image mode="widthFix" src="https://p1.meituan.net/travelcube/3a917a0a37a0d1de808016233825e137963.png"></image>
+                        </view>
+                        <view class="card-poi-name ellipsis {{item.distance?'':'card-long'}}">{{item.shopName||''}}</view>
+                        <view class="card-dis" wx:if="{{item.distance}}">{{item.distance}}</view>
+                    </view>
+                    <view class="card-info hh l-c">
+                        <text class="card-tag" wx:if="{{item.ptNumber}}">{{item.ptNumber}}</text>
+                        <view class="card-tag-temp" wx:else></view>
+                        <view class="card-price hh l-c" wx:if="{{item.price}}">
+                            <view class="rmb">¥</view>
+                            <view class="price">{{item.price}}</view>
+                        </view>
+                        <view class="card-value hh l-c" wx:if="{{item.value}}">
+                            <view class="rmb">¥</view>
+                            <view class="price">{{item.value}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="group-seckill hh" wx:if="{{showType===3}}">
+        <view class="gs-f" wx:if="{{groupSeckillData&&groupSeckillData.groupData&&groupSeckillData.groupData.length>0}}">
+            <view class="title hh l-c">
+超值        <text>拼</text>
+团                  </view>
+            <view bindtap="viewToGroupPage" class="card" data-type="card" wx:if="{{index===0}}" wx:for="{{groupSeckillData.groupData}}" wx:key="{{index}}">
+                <view class="card-img">
+                    <image mode="widthFix" src="{{item.image}}"></image>
+                </view>
+                <view class="card-name ellipsis">{{item.title||''}}</view>
+                <view class="card-msg hh">
+                    <view class="card-icon">
+                        <image mode="widthFix" src="https://p1.meituan.net/travelcube/3a917a0a37a0d1de808016233825e137963.png"></image>
+                    </view>
+                    <view class="card-poi-name ellipsis {{item.distance?'':'card-long'}}">{{item.shopName||''}}</view>
+                    <view class="card-dis" wx:if="{{item.distance}}">{{item.distance}}</view>
+                </view>
+                <view class="card-info hh l-c">
+                    <text class="card-tag" wx:if="{{item.ptNumber}}">{{item.ptNumber}}</text>
+                    <view class="card-tag-temp" wx:else></view>
+                    <view class="card-price hh l-c" wx:if="{{item.price}}">
+                        <view class="rmb">¥</view>
+                        <view class="price">{{item.price}}</view>
+                    </view>
+                    <view class="card-value hh l-c" wx:if="{{item.value}}">
+                        <view class="rmb">¥</view>
+                        <view class="price">{{item.value}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="gs-f" wx:if="{{groupSeckillData&&groupSeckillData.seckillData&&groupSeckillData.seckillData.dealList&&groupSeckillData.seckillData.dealList.length>0}}">
+            <view class="title-f hh l-c">
+                <view class="title hh l-c">
+限时          <text>秒</text>
+杀                        </view>
+                <view class="cutdown hh l-c" wx:if="{{cutdownData}}">
+                    <view class="time-f hh c-c">{{cutdownData.hours}}</view>
+                    <view class="time-do">:</view>
+                    <view class="time-f hh c-c">{{cutdownData.mins}}</view>
+                    <view class="time-do">:</view>
+                    <view class="time-f hh c-c">{{cutdownData.secs}}</view>
+                </view>
+                <view class="begin-time-show" wx:if="{{seckillBeginTime}}">{{seckillBeginTime}}开秒
+                </view>
+            </view>
+            <view bindtap="viewToSeckillPage" class="card" data-type="card" wx:if="{{index===0}}" wx:for="{{groupSeckillData.seckillData.dealList}}" wx:key="{{index}}">
+                <view class="card-img">
+                    <image mode="widthFix" src="{{item.image}}"></image>
+                </view>
+                <view class="card-name ellipsis">{{item.title||''}}</view>
+                <view class="card-msg hh">
+                    <view class="card-icon">
+                        <image mode="widthFix" src="https://p1.meituan.net/travelcube/3a917a0a37a0d1de808016233825e137963.png"></image>
+                    </view>
+                    <view class="card-poi-name ellipsis {{item.distance?'':'card-long'}}">{{item.shopName||''}}</view>
+                    <view class="card-dis" wx:if="{{item.distance}}">{{item.distance}}</view>
+                </view>
+                <view class="card-info hh l-c">
+                    <text class="card-tag" wx:if="{{item.ptNumber}}">{{item.ptNumber}}</text>
+                    <view class="card-tag-temp" wx:else></view>
+                    <view class="card-price hh l-c" wx:if="{{item.price}}">
+                        <view class="rmb">¥</view>
+                        <view class="price">{{item.price}}</view>
+                    </view>
+                    <view class="card-value hh l-c" wx:if="{{item.value}}">
+                        <view class="rmb">¥</view>
+                        <view class="price">{{item.value}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

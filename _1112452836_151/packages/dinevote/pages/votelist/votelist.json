@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "聚餐投票",
+    "backgroundColor": "#f6f6f6",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

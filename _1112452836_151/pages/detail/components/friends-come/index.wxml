@@ -1,0 +1,16 @@
+<view class="friend-come" style="margin:{{moduleConfig.margin}}" wx:if="{{showModule}}">
+    <view bindtap="allFeedTap" class="head-title groupTitle">
+        <view class="feed-wrap">
+            <text class="title">{{title}}</text>
+            <text class="count">{{count}}</text>
+        </view>
+        <view class="entry"></view>
+    </view>
+    <shop-review bind:horizontalscroll="handleHorizontalScroll" bind:lazyload="handleFindLazyLoadComponents" config="{{config}}" lastReview="{{feedList.length===index+1?true:false}}" lxData="{{lxData}}" reviewCount="{{totalCount}}" reviewList="{{review}}" shopId="{{shopId}}" shopUuid="{{shopUuid}}" wx:for="{{feedList}}" wx:for-item="review" wx:key="{{review.reviewId}}"></shop-review>
+    <view class="view-more" wx:if="{{showBottom}}">
+        <view bindtap="allFeedTap" class="groupTitle down-review-title">
+            <text class="review-title">查看全部关注的人来过</text>
+            <view class="entry"></view>
+        </view>
+    </view>
+</view>

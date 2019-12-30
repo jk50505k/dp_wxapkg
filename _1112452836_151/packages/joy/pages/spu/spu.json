@@ -1,0 +1,14 @@
+{
+    "navigationBarTitleText": "服务介绍",
+    "usingComponents": {
+        "header": "../../components/spu/header/header",
+        "detail": "../../components/spu/detail/detail",
+        "notes": "../../components/spu/notes/notes",
+        "comments": "../../components/spu/comments/comments",
+        "services": "../../components/spu/services/services",
+        "shop": "../../components/spu/shop/shop",
+        "footer": "../../components/spu/footer/footer",
+        "shopReserve": "../../components/spu/shopReserve/shopReserve",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

@@ -1,0 +1,10 @@
+<view>
+    <view wx:if="{{isSupportComponent}}">
+        <login bindloginend="{{loginConfig.onloginHandler}}" cx="{{loginConfig.cx}}" loginDomain="{{loginConfig.domain}}" loginSourceType="{{loginConfig.sourceType}}" loginStep="{{loginConfig.loginStep}}" loginType="{{loginConfig.loginType}}" needLogin="{{loginConfig.needLogin}}" needMerge="{{loginConfig.needMerge}}" openid="{{loginConfig.openId}}" thirdUidInfo="{{loginConfig.thirdUidInfo}}"></login>
+    </view>
+    <view class="container" wx:else>
+        <image class="bg" mode="widthFix" src="http://www.dpfile.com/app/dianping-wxapp/static/images/mobile-bg.46712fdfd4f38c748e3d05aaf8624d96.png"></image>
+        <button bindgetphonenumber="getPhoneNumber" class="btn-mobile" openType="getPhoneNumber" wx:if="{{isLogin}}">微信用户快速登录</button>
+        <view bindtap="login" class="btn-login">输入手机号码登录/注册</view>
+    </view>
+</view>

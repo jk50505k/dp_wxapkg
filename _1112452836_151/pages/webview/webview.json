@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "大众点评小程序",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "webview": "../../components/webview/webview"
+    }
+}

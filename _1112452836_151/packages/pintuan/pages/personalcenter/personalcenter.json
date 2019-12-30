@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "我的拼团",
+    "backgroundColor": "#f6f6f6",
+    "usingComponents": {
+        "coupon": "../../components/coupon/coupon",
+        "product-order": "../../components/product-order/product-order",
+        "modal": "../../components/modal/modal",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

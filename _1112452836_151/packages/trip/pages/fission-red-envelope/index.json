@@ -1,0 +1,16 @@
+{
+    "navigationBarTitleText": "美团门票",
+    "usingComponents": {
+        "header": "./components/header/index",
+        "red-envelope-process": "./components/red-envelope-process/index",
+        "red-envelope-open": "./components/red-envelope-open/index",
+        "red-envelope-invalid": "./components/red-envelope-invalid/index",
+        "red-envelope-single-success": "./components/red-envelope-single-success/index",
+        "red-envelope-success": "./components/red-envelope-success/index",
+        "rule": "./components/rule/index",
+        "pop-red-envelope": "./components/pop-red-envelope/index",
+        "formid-wrap": "../../components/native-com/formid-wrap/formid-wrap",
+        "poi-list": "../../components/native-com/poiList/poiList",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

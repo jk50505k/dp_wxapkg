@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+        "list-view": "../../../../components/list-view/list-view",
+        "shop-card": "../../../../components/shop-card/shop-card",
+        "midas-card": "../../../../components/midas-card/midas-card"
+    }
+}

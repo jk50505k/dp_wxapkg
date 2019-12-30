@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "lazy-img": "../../../../components/mina_lazyload_img/mina_lazyload_img"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "PicassoNode": "../../npm/@dp/picasso-wx-framework/components/PicassoNode/PicassoNode",
+        "TextView": "../../npm/@dp/picasso-wx-framework/components/TextView/TextView",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

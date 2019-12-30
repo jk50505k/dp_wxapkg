@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "商品列表",
+    "usingComponents": {
+        "productShelf": "../../../components/product-shelf/entry/index",
+        "quick-nav": "../../../components/quick-nav/quick-nav"
+    }
+}

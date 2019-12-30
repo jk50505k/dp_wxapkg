@@ -1,0 +1,12 @@
+{
+    "navigationBarTitleText": "选择参与投票的商户",
+    "backgroundColor": "#f6f6f6",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "list-filter": "../../component/list-filter/list-filter",
+        "list-view": "../../../../components/list-view/list-view",
+        "search-entry": "../../../../components/search-entry/search-entry",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

@@ -1,0 +1,72 @@
+<view bindtap="tapCard" class="card-container" data-cardid="{{shopinfo.shopUuid||shopinfo.shopId||shopinfo.id}}" data-scopedatalist="{{shopinfo.scopeDataList}}" data-shopdata="{{shopinfo.navData}}">
+    <view class="top-container">
+        <view class="top-left-container">
+            <mina-image class="image border-image" componentName="midas-card" lazyLoad="true" mode="aspectFill" src="{{shopinfo.image||shopinfo.defaultPic}}" style="border: 4rpx solid {{shopinfo.headerImageBorderColor}}; width: 182rpx; height: 182rpx; background-image: url('{{defaultPic}}')'; background-size: contain; background-repeat: no-repeat;" wx:if="{{shopinfo.headerImageBorderColor}}"></mina-image>
+            <mina-image class="image" componentName="midas-card" lazyLoad="true" mode="aspectFill" src="{{shopinfo.image||shopinfo.defaultPic}}" style="background-image: url('{{defaultPic}}'); background-size: contain; background-repeat: no-repeat;" wx:else></mina-image>
+            <view class="adver-tag {{ios?'ios':'ad'}}-tag" wx:if="{{shopinfo.adShop&&showtag}}">广告</view>
+            <view class="rank-container" wx:if="{{shopinfo.authorityLabel}}">
+                <text class="authority-label" style="background-color: {{shopinfo.authorityLabelColor}}">{{shopinfo.authorityLabel}}
+        </text>
+                <image class="rank-mask" src="http://www.dpfile.com/app/app-m-module-img/minalist/tag.png"></image>
+                <view class="authority-tri"></view>
+            </view>
+            <view class="rank-container" wx:elif="{{shopinfo.authorityIconUrl}}">
+                <image class="rank-image" lazyLoad="true" mode="aspectFill" src="{{shopinfo.authorityIconUrl.url}}" style="width: {{shopinfo.authorityIconUrl.width*2}}rpx;" wx:if="{{shopinfo.authorityIconUrl.url}}"></image>
+                <view class="authority-tri"></view>
+            </view>
+        </view>
+        <view class="top-right-container">
+            <view class="shopInfo">
+                <view class="info" style="height: {{shopinfo.headerImageBorderColor?'186rpx':'190rpx'}}">
+                    <view class="shopName">
+                        <view class="shopNameWrap">
+                            <text>{{shopinfo.title||shopinfo.name||shopinfo.shopName}}</text>
+                            <text wx:if="{{shopinfo.branchName}}">({{shopinfo.branchName}})</text>
+                        </view>
+                        <view class="iconsWrap" wx:if="{{shopinfo.serviceTags&&shopinfo.serviceTags.length>0||shopinfo.tagIcons&&shopinfo.tagIcons.length}}">
+                            <view class="{{service}}-icon" wx:for="{{shopinfo.serviceTags||shopinfo.tagIcons}}" wx:for-index="tagIndex" wx:for-item="service" wx:key="index"></view>
+                        </view>
+                    </view>
+                    <view class="starPrice {{!shopinfo.hasTagList&&!shopinfo.recommendReason?'':'margin-between'}}">
+                        <view class="index-star star star-{{shopinfo.shopPower}}"></view>
+                        <text class="shop-review" wx:if="{{shopinfo.reviewCount}}">{{shopinfo.reviewCount}}</text>
+                        <text class="price" wx:if="{{shopinfo.avgPrice||shopinfo.priceText}}">{{shopinfo.avgPrice||shopinfo.priceText}}</text>
+                    </view>
+                    <view class="other {{!shopinfo.hasTagList&&!shopinfo.recommendReason?'':'margin-between'}}">
+                        <view class="category" wx:if="{{shopinfo.categoryName}}">{{shopinfo.categoryName}}
+            </view>
+                        <view class="region" wx:if="{{shopinfo.regionName}}">{{shopinfo.regionName}}
+            </view>
+                        <view class="distance" wx:if="{{shopinfo.shopPositionInfo&&shopinfo.shopPositionInfo.text||shopinfo.distance}}">{{shopinfo.shopPositionInfo.text||shopinfo.distance}}
+            </view>
+                    </view>
+                    <view class="tag-list {{!shopinfo.hasTagList&&!shopinfo.recommendReason?'':'margin-between'}}" wx:if="{{shopinfo.hasTagList}}">
+                        <view class="tag-item {{ios?'ios-border ios':'ad-border ad'}}-tag-item {{tag.isImportant?'important-tag':''}}" style="font-size: 22rpx;" wx:for="{{shopinfo.tagList}}" wx:for-item="tag" wx:key="{{index}}">{{tag.text}}
+            </view>
+                    </view>
+                    <view class="rank-text {{!shopinfo.hasTagList&&!shopinfo.recommendReason?'':'margin-between'}}" wx:elif="{{!shopinfo.hasTagList&&shopinfo.recommendReason&&shopinfo.recommendReason.text}}">
+                        <image src="{{shopinfo.recommendReason.icon}}" style="height: {{shopinfo.recommendReason.iconHeight||10}}px; width: {{shopinfo.recommendReason.iconWidth||10}}px; margin-right: 10rpx;" wx:if="{{shopinfo.recommendReason.icon}}"></image>
+                        <text class="recommend-reason-text" style="color: {{shopinfo.recommendReason.textColor}}; font-size: {{shopinfo.recommendReason.fontSize||13}}px;">{{shopinfo.recommendReason.text}}
+            </text>
+                    </view>
+                </view>
+                <view class="rank-text {{!shopinfo.hasTagList&&!shopinfo.recommendReason?'':'margin-between'}}" wx:if="{{shopinfo.hasTagList&&shopinfo.recommendReason&&shopinfo.recommendReason.text}}">
+                    <image src="{{shopinfo.recommendReason.icon}}" style="height: {{shopinfo.recommendReason.iconHeight||10}}px; width: {{shopinfo.recommendReason.iconWidth||10}}px; margin-right: 10rpx;" wx:if="{{shopinfo.recommendReason.icon}}"></image>
+                    <text class="recommend-reason-text" style="color: {{shopinfo.recommendReason.textColor}}; font-size: {{shopinfo.recommendReason.fontSize||13}}px;">{{shopinfo.recommendReason.text}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="promoListContainer bottom-container" style="margin-top: {{shopinfo.hasTagList||shopinfo.recommendReason?'14rpx':''}}" wx:if="{{shopinfo.shopDealInfos&&shopinfo.shopDealInfos.length}}">
+        <view class="promoListItem" wx:if="{{promoItem.dealType||promoItem.dealType===0}}" wx:for="{{shopinfo.shopDealInfos}}" wx:for-index="promoIndex" wx:for-item="promoItem" wx:key="{{promoIndex}}">
+            <view class="reducePanel">
+                <text class="reduceText" wx:if="{{promoItem.tagInfo&&promoItem.tagInfo.length}}">{{promoItem.tagInfo[0].text}}</text>
+                <view class="reduceArrow" wx:if="{{promoItem.tagInfo&&promoItem.tagInfo.length}}"></view>
+            </view>
+            <view class="promoPanel">
+                <image class="promoIcon" lazyLoad="true" src="{{promoItem.iconUrl.url}}"></image>
+                <text class="promoText">{{promoItem.dealTitle}}</text>
+            </view>
+        </view>
+    </view>
+</view>

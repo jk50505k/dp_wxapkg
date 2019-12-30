@@ -1,0 +1,24 @@
+<view class="shop-service" slot="shop-service" wx:if="{{shopModules['shop-service']}}">
+    <shop-service id="shop-service" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-service']}}" shopOptions="{{loadOptions}}"></shop-service>
+</view>
+<view class="shop-rank" slot="shop-rank" wx:if="{{shopModules['shop-rank']}}">
+    <shop-rank bind:sharetitle="getShareTitle" bind:shopRankTap="shopRankTap" id="shop-rank" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-rank']}}" shopOptions="{{loadOptions}}"></shop-rank>
+</view>
+<view class="shop-dinevote" slot="shop-dinevote" wx:if="{{shopModules['shop-dinevote']&&shouldShowDinvote}}">
+    <shop-dinevote id="shop-dinevote" moduleConfig="{{shopModules['shop-dinevote']}}" scene="{{scene}}" shopOptions="{{loadOptions}}"></shop-dinevote>
+</view>
+<view class="shop-food-mai" slot="shop-food-mai" wx:if="{{shopModules['shop-food-mai']}}">
+    <shop-food-mai id="shop-food-mai" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-food-mai']}}" shopOptions="{{loadOptions}}"></shop-food-mai>
+</view>
+<view class="shop-life-reserve" slot="shop-life-reserve" wx:if="{{shopModules['shop-life-reserve']}}">
+    <shop-life-reserve bind:hideMask="hideMask" bind:promptMask="promptMask" id="shop-life-reserve" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-life-reserve']}}" shopOptions="{{loadOptions}}"></shop-life-reserve>
+</view>
+<view class="shop-dish" slot="shop-dish" wx:if="{{shopModules['shop-dish']}}">
+    <shop-dish bind:horizontalscroll="onHorizontalScroll" bind:launchtap="launchAppTap" bind:lazyload="findLazyLoadComponents" canLaunchApp="{{canLaunchApp&&shopModules['shop-dish'].launchAppSwitch}}" dishData="{{shopInfo.dishTags}}" hasApp="{{hasApp}}" id="shop-dish" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-dish']}}" needLogin="{{needLogin}}" shopOptions="{{loadOptions}}"></shop-dish>
+</view>
+<view class="shop-ktv-book" slot="shop-ktv-book" wx:if="{{shopModules['shop-ktv-book']}}">
+    <shop-ktv-book bookData="{{bookData}}" id="shop-ktv-book" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-ktv-book']}}" shopOptions="{{loadOptions}}"></shop-ktv-book>
+</view>
+<view class="vote-bar" slot="vote-bar">
+    <vote-bar bind:addToVote="addToVote" bind:handleVoteList="handleVoteList" id="vote-bar" shopOptions="{{loadOptions}}" shopIntro="{{shopIntro}}" shopName="{{shopName}}" showBar="{{false}}" showAddBtn="{{showAddBtn}}" voteShopInfo="{{voteShopInfo}}"></vote-bar>
+</view>

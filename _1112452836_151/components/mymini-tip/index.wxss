@@ -1,0 +1,115 @@
+.mask-tip {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 700;
+}
+
+.arrow,.title,.sub-title,.img,.btn {
+    position: absolute;
+}
+
+.arrow {
+    background-image: url('https://p1.meituan.net/wxfood/5182fb889f0220c73da40bf2f0e49f39950.png');
+    width: 21px;
+    height: 58px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 8px;
+    right: 52px;
+}
+
+.title {
+    background-image: url('https://p0.meituan.net/wxfood/b79d3ef95fa9e6a93f72d3f36f441b6d4325.png');
+    width: 249px;
+    height: 29px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 58px;
+    right: 83px;
+}
+
+.sub-title {
+    background-image: url('https://p0.meituan.net/wxfood/1d6887c5b845b2bd68d3113ca82354e54757.png');
+    width: 292px;
+    height: 22px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 126px;
+    right: 43px;
+}
+
+.img {
+    background-image: url('https://p0.meituan.net/wxfood/e559e82a13939ae3aa23e3f8bfcf23008733.png');
+    width: 232px;
+    height: 138px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 150px;
+    right: 72px;
+}
+
+.btn {
+    background-image: url('https://p1.meituan.net/wxfood/9c0e61726fe3eec4c753be67ff4d21e41604.png');
+    width: 119px;
+    height: 51px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 338px;
+    right: 122px;
+}
+
+.bubble-tip {
+    position: fixed;
+    top: 0;
+    right: 14rpx;
+    z-index: 50;
+}
+
+.disappear {
+    display: none;
+}
+
+.tail {
+    background-image: url('https://p0.meituan.net/wxfood/d3913b576ff255bd5c0fe17eaac98f35268.png');
+    width: 38rpx;
+    height: 10rpx;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 110rpx;
+}
+
+.bubble {
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 2rpx 12rpx 0 rgba(0,0,0,0.5);
+    border-radius: 8rpx;
+    width: 424rpx;
+    height: 106rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24rpx;
+    margin-top: 10rpx;
+}
+
+.bubble-text {
+    flex: 1;
+    font-family: PingFangSC-Medium;
+    font-size: 30rpx;
+    color: #FFFFFF;
+    line-height: 39rpx;
+}
+
+.bubble-btn {
+    background-image: url('https://p0.meituan.net/wxfood/70f659e67c027d95977dc1e42043c710179.png');
+    width: 18rpx;
+    height: 18rpx;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10rpx;
+}

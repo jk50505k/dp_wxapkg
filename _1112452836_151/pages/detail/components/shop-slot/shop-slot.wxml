@@ -1,0 +1,1 @@
+<slot name="{{slot.name}}" wx:if="{{slotItems&&slotItems.length>0}}" wx:for="{{slotItems}}" wx:for-item="slot" wx:key="{{index}}"></slot>

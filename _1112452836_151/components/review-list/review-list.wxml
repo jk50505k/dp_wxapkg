@@ -1,0 +1,20 @@
+<view class="reviewContainer">
+    <view class="reviewWrap" wx:if="{{listView.list&&listView.list.length}}">
+        <shop-review-tag bind:allReviewTap="allReviewTap" bind:clickAllReview="handleAllReview" bind:launchtap="launchAppTap" bind:reviewTagAction="handleClickTag" canLaunchApp="{{canLaunchApp}}" id="review-tag" isList="{{false}}" launchAppUrl="{{launchAppUrl}}" lxData="{{lxData}}" moduleConfig="{{tagConfig}}" needLogin="{{needLogin}}" reviewCount="{{totalCount}}" reviewTags="{{reviewTags}}" shopOptions="{{shopOptions}}"></shop-review-tag>
+        <block wx:for="{{listView.list}}" wx:for-item="review" wx:key="{{review.reviewId}}">
+            <shop-review bind:horizontalscroll="handleHorizontalScroll" bind:launchtap="launchAppTap" bind:lazyload="handleFindLazyLoadComponents" canLaunchApp="{{canLaunchApp}}" id="review-list" lastReview="{{listView.list.length===index+1?true:false}}" lxData="{{lxData}}" needLogin="{{needLogin}}" reviewCount="{{totalCount}}" reviewList="{{review}}" shopOptions="{{shopOptions}}" wx:if="{{needLogin&&index===0}}"></shop-review>
+            <shop-review bind:horizontalscroll="handleHorizontalScroll" bind:launchtap="launchAppTap" bind:lazyload="handleFindLazyLoadComponents" canLaunchApp="{{canLaunchApp}}" hasApp="{{hasApp}}" id="review-list" lastReview="{{listView.list.length===index+1?true:false}}" lxData="{{lxData}}" needLogin="{{needLogin}}" reviewCount="{{totalCount}}" reviewList="{{review}}" shopOptions="{{shopOptions}}" wx:if="{{!needLogin}}"></shop-review>
+        </block>
+        <app-launch bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+            <view slot="app-launch">
+                <view class="more-review" wx:if="{{!reviewListParams.hideFooter}}">
+                    <view bindtap="allReviewTap" class="groupTitle down-review-title" data-type="1">
+                        <text class="review-title">查看全部网友点评</text>
+                        <view class="entry"></view>
+                    </view>
+                    <contact-card cardData="{{cardData}}" gotoApp="{{gotoApp}}" lxData="{{lxData}}"></contact-card>
+                </view>
+            </view>
+        </app-launch>
+    </view>
+</view>

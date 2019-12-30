@@ -1,0 +1,18 @@
+{
+    "navigationBarTitleText": "大众点评酒店",
+    "navigationBarBackgroundColor": "#df3d2f",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "fullDayRoom": "./components/fullDayRoom/index",
+        "hourlyRoom": "./components/hourlyRoom/index",
+        "filterPopup": "../../components/filter-popup/index",
+        "banner": "../../components/banner/banner",
+        "advert": "../../components/advert/advert",
+        "brand": "../../components/brand/brand",
+        "guideAdd": "../../components/guide-add/guide-add",
+        "loginComp": "../../components/login-comp/login-comp",
+        "couponPopup": "../../components/coupon-popup/coupon-popup",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

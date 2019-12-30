@@ -1,0 +1,26 @@
+<view>
+    <view class="quickNav" id="quickNav" style="bottom:{{position&&position.bottom?position.bottom:220}}rpx;right:{{position&&position.right?position.right:30}}rpx" wx:if="{{isShow}}">
+        <view class="{{showContent?'quickNavList':'quickNavList quickListHide'}}" style="height:{{contentHeight}}rpx" wx:if="{{showMore&&!defaultShow}}">
+            <view class="quick-content" wx:if="{{quickConfig&&quickConfig.length}}" wx:for="{{quickConfig}}" wx:for-item="quickItem" wx:key="{{index}}">
+                <view bind:tap="handelTap" class="quick-item" data-name="{{quickItem.name}}" data-type="{{quickItem.type}}" data-url="{{quickItem.url}}" wx:if="{{quickItem.show&&quickItem.type!==1&&quickItem.type!==4}}">
+                    <image class="quick-img" src="{{quickItem.imageUrl}}" wx:if="{{quickItem.imageUrl}}"></image>
+                    <text wx:if="{{quickItem.showName}}">{{quickItem.name}}</text>
+                </view>
+                <button appParameter="{{quickItem.type===1?appUrl:quickItem.appUrl}}" binderror="launchAppError" catch:tap="applxclick" class="launch-app quick-item" openType="launchApp" wx:if="{{(quickItem.type===1||quickItem.type===4)&&quickItem.show&&showApp}}">
+                    <image class="{{quickItem.bigImage?'big-img':'quick-img'}}" src="{{quickItem.imageUrl}}" wx:if="{{quickItem.imageUrl}}"></image>
+                    <text wx:if="{{quickItem.showName}}">{{quickItem.name}}</text>
+                </button>
+            </view>
+        </view>
+        <view catch:tap="showcontent" class="quickCover" wx:if="{{showMore&&!defaultShow}}">
+            <view class="{{!showContent?'cover-txt':'cover-hide'}}">快捷导航</view>
+            <view class="{{!showContent?'':'show-txt'}}"></view>
+        </view>
+        <view class="quickCon quickSingle" wx:if="{{!showMore||defaultShow}}" wx:for="{{defaultConfig}}" wx:for-item="defaultItem" wx:key="{{index}}">
+            <view catch:tap="handelTap" class="cover-txt" data-name="{{quickItem.name}}" data-type="{{defaultItem.type}}" data-url="{{defaultItem.url}}" wx:if="{{defaultItem.show}}">{{defaultItem.name}}</view>
+        </view>
+    </view>
+</view>
+<view class="quick-item" wx:if="{{showBig}}">
+    <app-download bindclose="onPopupClose" hongBaoData="{{hongbaoData}}"></app-download>
+</view>

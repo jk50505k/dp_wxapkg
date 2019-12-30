@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "抵用券使用帮助",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

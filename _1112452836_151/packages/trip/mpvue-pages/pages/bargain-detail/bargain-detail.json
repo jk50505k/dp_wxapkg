@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "景区大砍价",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "formid-wrap": "../../../components/native-com/formid-wrap/formid-wrap",
+        "bargain-share-img": "../../../components/native-com/bargain-share-img/bargain-share-img",
+        "quick-nav": "../../../../../components/quick-nav/quick-nav"
+    }
+}

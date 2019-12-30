@@ -1,0 +1,15 @@
+<view class="dishContainer">
+    <view bindtap="openDish" class="dish-item {{morehidden&&index>1?'hidden':''}}" data-dishid="{{dish.dishID}}" data-shopuuid="{{shopuuid}}" wx:for="{{dishlist}}" wx:for-item="dish" wx:key="{{index}}">
+        <view class="dish-left">
+            <image class="dish-image" lazyLoad="true" mode="aspectFill" src="{{dish.picUrl}}"></image>
+        </view>
+        <view class="dish-right">
+            <view class="dish-title" wx:if="{{dish.title}}">{{dish.title}}</view>
+            <view class="dish-recommend" wx:if="{{dish.recommendInfo}}">{{dish.recommendInfo}}</view>
+            <view class="dish-tag-list" wx:if="{{dish.tagList&&dish.tagList.tagList&&dish.tagList.tagList.length}}">
+                <view class="dish-tag" style="color: {{dishTag.textColor}}; font-size: {{dishTag.fontSize*2||12}}rpx; margin-right: 10rpx;" wx:for="{{dish.tagList.tagList}}" wx:for-item="dishTag" wx:key="dishItem">{{dishTag.text}}</view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="viewMore" class="dish-more {{!morehidden?'hidden':''}}" wx:if="{{dishlist.length>2}}">查看更多</view>
+</view>

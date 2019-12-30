@@ -1,0 +1,6 @@
+<mymini-tip hasPopup="{{hasPopup}}" id="mymini-tip" pageUrl="{{pageUrl}}"></mymini-tip>
+<app-download bindclose="hideMask" bindnoscroll="promptMask"></app-download>
+<view class="canvas-container">
+    <shop-canvas canvasConfig="{{canvasConfig}}" onsavecanvas="saveCanvas"></shop-canvas>
+</view>
+<quick-nav bind:launchtap="launchAppTap" id="quick-nav" launchAppUrl="" lxData="{{lxdata}}" position="{{quickPosition}}" ref="quicknav" scene="{{scene}}" shopOptions="{{loadOptions}}" showMore="{{true}}"></quick-nav>

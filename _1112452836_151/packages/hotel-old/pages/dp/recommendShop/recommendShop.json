@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "附近酒店推荐",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "poi": "../../../components/dp/poi/poi",
+        "quick-nav": "../../../../../components/quick-nav/quick-nav"
+    }
+}

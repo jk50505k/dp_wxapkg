@@ -1,0 +1,54 @@
+<view class="details-mode info-ktvbooking" style="margin:{{moduleConfig.margin}}" wx:if="{{showModule}}">
+    <view class="ktv-bktitle">
+        <view class="booking-icon mark-book"></view>
+        <text class="book-txt">预订</text>
+        <text class="ktv-bktitle-num" wx:if="{{bookData.saleCountInfo}}">{{bookData.saleCountInfo}}</text>
+    </view>
+    <view class="ktv-bk-daytab">
+        <view class="mb-nav-scroll-wrapper">
+            <view class="nav-tab-scroll bottom-line">
+                <view bindtap="selectDate" class="item {{index==bookData.dateIndex?'on':''}} " data-clickType="dateType" data-index="{{index}}" wx:for="{{bookData.ktvBookDates}}" wx:key="{{index}}">
+                    <text class="main">{{item.week}}</text>
+                    <text class="sub">{{item.date}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="ktv-bk-timepanel bottom-line" wx:if="{{bookData.showTimePanel}}">
+        <view class="mb-select-panel">
+            <view bindtap="selectRoomType" class="mb-item-contrain-3 " data-index="{{index}}" wx:for="{{bookData.ktvBookDates[bookData.dateIndex].ktvRoomTypes}}" wx:for-item="type" wx:key="{{index}}">
+                <view class="mb-item {{index==bookData.bookTypeIndex?'mb-selected':''}}">{{type.displayName}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="ktv-bktlist" wx:if="{{bookData.showTimePanel}}">
+        <view class="mb-line-t">
+            <view class="ktv-bkl-wrap">
+                <view class="ktv-bkl-list {{type.status==1?'':'ktv-bkl-saleout'}} {{index>2&&bookData.hideRoomsFlag?'Hide':''}}" wx:for="{{bookData.ktvBookDates[bookData.dateIndex].ktvRoomTypes[bookData.bookTypeIndex].ktvBookRooms}}" wx:for-item="type" wx:key="{{index}}">
+                    <view class="kbl-con">
+                        <text class="kbl-t1">{{type.period}}</text>
+                        <text class="kbl-t2">
+                            <text style="color:{{bookData.richTextStyle[index].typeNameColor}}; font-size: {{bookData.richTextStyle[index].typeNameSize}}">{{bookData.richTextStyle[index].typeName}}</text>
+                            <text style="color:{{bookData.richTextStyle[index].typeTimeColor}}; font-size: {{bookData.richTextStyle[index].typeTimeSize}}">{{bookData.richTextStyle[index].typeTime}}</text>
+                        </text>
+                    </view>
+                    <view class="kbl-price">
+                        <view class="kbl-price-i">
+                            <text class="kbl-p-yan">￥</text>
+{{type.price}}
+                              </view>
+                    </view>
+                    <view bindtap="ktvBookBntTap" class="primary-btn-sm kbl-btn" data-url="{{type.mBookingUrl}}" wx:if="{{type.status==1}}">{{type.buttonName}}</view>
+                    <view class="primary-btn-sm disable-btn kbl-btn" wx:else>{{type.buttonName}}</view>
+                </view>
+                <view bindtap="showMoreRooms" class="toMore" wx:if="{{bookData.showMoreRooms}}">
+更多
+                        <view class="iconOpen"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="empty-timepanel" wx:if="{{!bookData.showTimePanel}}">
+        <view class="kb-tp-empty">今天暂不支持预订哦～</view>
+    </view>
+</view>

@@ -1,0 +1,5 @@
+<view class="poi-activity-banner-component-wrap">
+    <view bind:tap="jumpAdvertise" class="activity-banner" wx:if="{{show}}">
+        <image class="pedicure-activity" src="{{img}}"></image>
+    </view>
+</view>

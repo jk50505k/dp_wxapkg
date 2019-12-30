@@ -1,0 +1,28 @@
+<view class="shop-rank" style="margin:{{moduleConfig.margin}}" wx:if="{{showModule}}">
+    <view bindtap="shopRankTap" class="commonRank" wx:if="{{rankInfo.type1}}">
+        <view class="rank-left">
+            <view class="rank-icon" style="background-image:url({{rankInfo.iconUrl}})"></view>
+            <text class="rankText">{{rankInfo.rankShortName}}</text>
+            <text class="rankNum">第</text>
+            <text class="rankings">{{rankInfo.rankings}}</text>
+            <text class="rankNum">名</text>
+        </view>
+        <view class="entry" wx:if="{{rankInfo.rankUrl}}"></view>
+    </view>
+    <view bindtap="shopRankTap" class="commonRank {{rankInfo.rankType==3?'mustEat':'blackPearl'}}" wx:if="{{rankInfo.type2}}">
+        <view class="rank-left">
+            <view class="{{rankInfo.rankType==3?'musteat-icon':'black-icon'}}" style="background-image:url({{rankInfo.iconUrl}})"></view>
+            <text class="rankText">{{rankInfo.rankName}}</text>
+        </view>
+        <view class="entry" wx:if="{{rankInfo.rankUrl}}"></view>
+    </view>
+    <view bindtap="shopRankTap" class="commonRank" wx:if="{{rankInfo.freeDish}}">
+        <view class="rank-left">
+            <view class="freeDish-icon" style="background-image:url({{rankInfo.iconUrl}})"></view>
+        </view>
+        <view class="rank-right" wx:if="{{rankInfo.rankUrl}}">
+            <view class="productTitle">{{rankInfo.productTitle}}</view>
+            <view class="entry"></view>
+        </view>
+    </view>
+</view>

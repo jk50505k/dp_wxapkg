@@ -1,0 +1,10 @@
+<view class="nebula_star {{classname}} {{isold?'nebula_star_old':''}}">
+    <view class="star_icon">
+        <view class="star star_{{star}}" style="width: {{size}}rpx; height: {{size}}rpx"></view>
+        <view class="star star_{{star}}" style="width: {{size}}rpx; height: {{size}}rpx"></view>
+        <view class="star star_{{star}}" style="width: {{size}}rpx; height: {{size}}rpx"></view>
+        <view class="star star_{{star}}" style="width: {{size}}rpx; height: {{size}}rpx"></view>
+        <view class="star star_{{star}}" style="width: {{size}}rpx; height: {{size}}rpx"></view>
+    </view>
+    <view class="star_score score_{{star}}" style="fontSize: {{fontSize}}rpx;" wx:if="{{score}}">{{score}}</view>
+</view>

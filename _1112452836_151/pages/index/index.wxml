@@ -1,0 +1,33 @@
+<view class="index {{noScroll?'noScroll':''}}">
+    <view class="indexWrap">
+        <view id="header">
+            <view class="header">
+                <view bindtap="changeCity" hoverClass="none" wx:if="{{city&&city.cityName}}">
+                    <view class="city" hoverClass="none">
+                        <view class="lastCityText" wx:if="{{lastCity}}">{{lastCity.cityName}}</view>
+                        <view class="nowCityText" wx:if="{{lastCity}}">{{nowCity.cityName}}</view>
+                        <view class="cityText" wx:if="{{!lastCity}}">{{city.cityName}}</view>
+                        <view class="cityDrop"></view>
+                    </view>
+                </view>
+                <view class="listSearch">
+                    <search-entry bindsearchshow="onSearchShow" style="flex: 1;"></search-entry>
+                </view>
+            </view>
+        </view>
+        <category bindcatefail="onCateFail" bindchangecatestate="onCateChange" bindclose="onPopupClose" bindnoscroll="forbidScroll" id="category" initFinishTime="{{initFinishTime}}" isFirstLoad="{{isFirstLoad}}" options="{{comOptions}}" wx:if="{{!isCategoryError}}"></category>
+        <index-activity id="activity" initFinishTime="{{initFinishTime}}" isFirstLoad="{{isFirstLoad}}" isSupportMiniPro="{{isSupportMiniPro}}" options="{{comOptions}}" wx:if="{{!isCategoryError}}"></index-activity>
+        <exception bindexceptionevent="onExceptionEvent" exceptionDetail="{{categoryError}}" wx:if="{{isCategoryError}}"></exception>
+        <group id="group" initFinishTime="{{initFinishTime}}" isFirstLoad="{{isFirstLoad}}" options="{{groupOptions}}" wx:if="{{!isCategoryError}}"></group>
+        <guess-like bindlistexceptionreload="onListExcReload" id="guess-like" initFinishTime="{{initFinishTime}}" isFirstLoad="{{isFirstLoad}}" lastCity="{{lastCity}}" options="{{guessOptions}}" reachBottom="{{reachBottom}}" wx:if="{{!isCategoryError}}"></guess-like>
+        <view class="cityRefreshTip" wx:if="{{lastCity}}">
+            <text class="cityTip">已为你切换到当前城市:{{city.cityName}}</text>
+        </view>
+    </view>
+    <navigator class="debug" url="/packages/debug/pages/debug/debug" wx:if="{{debug}}">
+        <button size="mini" type="primary">Debug</button>
+    </navigator>
+    <pop-up bindclose="onPopupClose" bindnoscroll="forbidScroll" hasTip="{{hasTip}}" id="popup" isSupportMiniPro="{{isSupportMiniPro}}" options="{{popUpOptions}}" wx:if="{{!isCategoryError}}"></pop-up>
+    <mymini-tip bindclose="onPopupClose" bindnominitip="forbidMiniTip" bindnoscroll="forbidScroll" id="mymini-tip" pageUrl="{{pageUrl}}"></mymini-tip>
+    <app-download bindclose="onPopupClose" bindnoscroll="forbidScroll"></app-download>
+</view>

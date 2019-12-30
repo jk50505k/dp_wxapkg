@@ -1,0 +1,37 @@
+<view class="shelf-content-wrapper">
+    <view bindtap="goToProductDetail" class="shelf-product-item-wrapper" data-product="{{item}}" wx:for="{{products}}" wx:key="index">
+        <view class="product-item-pic-wrapper">
+            <view class="pic-latestSaleDesc" wx:if="{{item.latestSaleDesc}}">
+                <image class="icon-time" src="{{'https://p1.meituan.net/ktv/2f458961-c0bb-45a7-9c59-937a1ec625fe.png@500h_500w_2e_1l'}}"></image>
+                <view class="content">{{item.latestSaleDesc}}</view>
+            </view>
+            <view class="product-item-pic-picDesc" style="background-image:linear-gradient({{item.picDesc.bgBeginColor}}, {{item.picDesc.bgEndColor}}); color: {{item.picDesc.descColor}}" wx:if="{{item.picDesc&&item.picDesc.productPicDesc}}">{{item.picDesc.productPicDesc}}</view>
+            <view class="product-item-pic" style="background:url({{item.productPic}}) no-repeat;background-size: cover;padding-bottom:{{!!picAspectRatio?1/picAspectRatio*100:67}}%"></view>
+        </view>
+        <view class="product-item-content {{item.productLineCount===4?'displayFour':''}} {{item.productLineCount===2?'displayTwo':''}} {{item.productLineCount===5?'displayFive':''}}">
+            <view class="product-item-title-wrapper">{{item.title}}</view>
+            <view class="product-item-subtitle-wrapper {{channel==='dp'?'dp':''}} {{channel==='mt'?'mt':''}}" wx:if="{{item.titleDesc||item.normalTags&&!!item.normalTags.length}}">
+                <view class="product-item-subtitle" wx:if="{{item.titleDesc}}">
+{{item.titleDesc}}
+                      <view class="subtitle-tag" wx:if="{{item.subTitleTags&&item.subTitleTags.desc}}">{{item.subTitleTags.desc}}
+            </view>
+                </view>
+                <view class="product-item-tag-wrapper" wx:else>
+                    <view class="product-item-tag {{tag.highlight?'highlight':''}}" wx:for="{{item.normalTags}}" wx:for-item="tag" wx:key="index">{{tag.desc}}</view>
+                </view>
+            </view>
+            <view class="product-item-price-wrapper {{channel==='dp'?'dp':''}} {{channel==='mt'?'mt':''}}">
+                <view class="product-item-salePrice">
+¥          <view class="product-item-salePrice-span">{{item.salePrice}}</view>
+                </view>
+                <view class="product-item-marketPrice">
+¥          <view class="product-item-marketPrice-span">{{item.marketPrice}}</view>
+                </view>
+                <view class="product-item-price-tag" wx:if="{{item.discountTags&&item.discountTags.desc}}">{{item.discountTags.desc}}</view>
+            </view>
+            <view class="product-item-assist-inform-wrapper">
+                <view class="product-item-saleDesc" wx:if="{{item.saleDesc}}">{{item.saleDesc}}</view>
+            </view>
+        </view>
+    </view>
+</view>

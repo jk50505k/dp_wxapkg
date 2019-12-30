@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "大众点评",
+    "usingComponents": {
+        "petbaike": "./components/petbaike/index",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

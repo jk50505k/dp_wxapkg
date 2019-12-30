@@ -1,0 +1,30 @@
+.shelf-footer-btn {
+    width: 660rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    box-sizing: border-box;
+    border: 2rpx solid;
+    text-align: center;
+    margin: 30rpx auto;
+    font-family: PingFangSC-Regular;
+    font-size: 28rpx;
+    border-radius: 41rpx;
+}
+
+.shelf-footer.dp .shelf-footer-btn {
+    border-color: #ff6633;
+    color: #ff6633;
+    background: url('https://p1.meituan.net/ktv/19eb5a07-0163-43a9-8b22-602ba992087c.png@500h_500w_2e_1l') no-repeat;
+    background-size: 12rpx 22rpx;
+    background-position-y: center;
+    background-position-x: 452rpx;
+}
+
+.shelf-footer.mt .shelf-footer-btn {
+    border-color: #00BBBC;
+    color: #00BBBC;
+    background: url('https://p1.meituan.net/ktv/d5709be4-df65-4f94-bed6-6e692c9588e9.png@500h_500w_2e_1l') no-repeat;
+    background-size: 12rpx 22rpx;
+    background-position-y: center;
+    background-position-x: 452rpx;
+}

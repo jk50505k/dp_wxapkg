@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "ad": "../../../../components/promotion-pop/promotion-pop"
+    }
+}

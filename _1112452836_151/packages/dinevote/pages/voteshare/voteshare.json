@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "聚餐投票",
+    "backgroundColor": "#f6f6f6",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "vote-shop": "../../component/voteshop/voteshop",
+        "quick-nav": "../../component/quick-nav/quick-nav"
+    }
+}

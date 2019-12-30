@@ -1,0 +1,69 @@
+<view class="shop-container {{needborderbottom?'border-bottom':''}} {{card.shopInfo.searchDishList&&card.shopInfo.searchDishList.length?'no-padding-btm':''}}" style="{{needbottom?'margin-bottom:10rpx':''}}" wx:if="{{card.type===1&&card.shopInfo}}">
+    <view class="card-item">
+        <midas sendLoadPoint sendReachPoint adidx="{{idx+1}}" bindclickend="midasCB" callbackParams="{{card.shopInfo.shopUuid||card.shopInfo.shopId||card.shopInfo.id}}" data-url="{{card.shopInfo&&card.shopInfo.navData&&card.shopInfo.navData.url}}" env="{{env}}" feedback="{{card.shopInfo.adInfo&&card.shopInfo.adInfo.feedback}}" wx:if="{{card.shopInfo.adInfo&&card.shopInfo.adInfo.feedback}}">
+            <card catchmytap="catchTap" shopinfo="{{card.shopInfo}}" showtag="{{showtag}}" wx:if="{{card&&card.shopInfo}}"></card>
+        </midas>
+        <dish dishlist="{{card.shopInfo.searchDishList}}" shopuuid="{{card.shopInfo.shopUuid}}" wx:if="{{card.shopInfo.searchDishList&&card.shopInfo.searchDishList.length}}"></dish>
+    </view>
+</view>
+<view class="card-container group-card-container {{needborderbottom?'border-bottom':''}}" style="{{needbottom?'margin-bottom:10rpx':''}}" wx:if="{{card.type===2&&card.groupInfo}}">
+    <view class="card-item">
+        <midas sendLoadPoint sendReachPoint adidx="{{idx+1}}" env="{{env}}" feedback="{{card.groupInfo.feedback}}" jumpLink="{{card.groupInfo.tuanUrl}}" wx:if="{{card.groupInfo.feedback}}">
+            <view class="body-container stretch" data-card-id="{{card.groupInfo.shopUuid}}" data-group-id="{{card.groupInfo.dealgroupid}}" data-url="{{card.groupInfo.tuanUrl}}">
+                <view class="top-container stretch">
+                    <view class="top-left-container">
+                        <mina-image class="image group-image" componentName="midas-card" lazyLoad="true" mode="aspectFill" src="{{card.groupInfo.defaultPic}}" style="background-image: url('{{defaultPic}}')'; background-size: contain; background-repeat: no-repeat;"></mina-image>
+                        <view class="group-pic-tag" style="color:{{card.groupInfo.pictag.color}}" wx:if="{{card.groupInfo.showPicTag&&card.groupInfo.pictag&&card.groupInfo.pictag.tag}}">{{card.groupInfo.pictag.tag}}</view>
+                        <view class="guess-like-adver-tag">广告</view>
+                    </view>
+                    <view class="top-right-container group-top-right-container full">
+                        <view class="group-info stretch">
+                            <view class="info stretch" style="min-height: 190rpx;">
+                                <view class="group-name">
+                                    <view class="group-name-wrap">
+                                        <text>{{card.groupInfo.shopName}}</text>
+                                    </view>
+                                    <view class="group-name-other" wx:if="{{card.groupInfo.item_type_self=='tuan'&&card.groupInfo.itemtag&&card.groupInfo.itemtag.tag}}">
+                                        <text style="color:{{card.groupInfo.itemtag.color}};{{card.groupInfo.itemtag.backgroundColor?'background-color'+card.groupInfo.itemtag.backgroundColor:''}}">{{card.groupInfo.itemtag.tag}} </text>
+                                    </view>
+                                    <view class="group-name-other" wx:elif="{{card.groupInfo.item_type_self=='tuan'&&card.groupInfo.distance}}">{{card.groupInfo.distance}}</view>
+                                </view>
+                                <view class="group-margin-between group-desc" wx:if="{{card.groupInfo.item_type_self=='tuan'&&card.groupInfo.dealGroupTitle}}">{{card.groupInfo.dealGroupTitle}}
+                                </view>
+                                <view class="group-margin-between star-review" wx:if="{{card.groupInfo.item_type_self=='shop'}}">
+                                    <view class="index-star middle-star star-{{card.groupInfo.shopPower}}"></view>
+                                    <view class="review" wx:if="{{card.groupInfo.reviewCount}}">{{card.groupInfo.reviewCount}}</view>
+                                </view>
+                                <view class="group-margin-between type-address" wx:if="{{card.groupInfo.item_type_self=='shop'}}">
+                                    <view class="group-type" wx:if="{{card.groupInfo.shopType}}">{{card.groupInfo.shopType}}</view>
+                                    <view class="group-region" wx:if="{{card.groupInfo.regionName}}">{{card.groupInfo.regionName}}</view>
+                                    <view class="group-distance" wx:if="{{card.groupInfo.distance}}">{{card.groupInfo.distance}}</view>
+                                </view>
+                                <view class="group-margin-between price-sale">
+                                    <view class="group-price">
+                                        <text class="price-label">￥</text>
+                                        <text class="price-now">{{card.groupInfo.dealgroupPrice}}</text>
+                                    </view>
+                                    <view class="price-other" wx:if="{{card.groupInfo.item_type_self=='tuan'}}">
+                                        <text class="price-origin" wx:if="{{card.groupInfo.promovalue}}">{{card.groupInfo.promovalue}}</text>
+                                        <text class="price-origin" wx:elif="{{card.groupInfo.priceextrainfo}}">{{card.groupInfo.priceextrainfo}}</text>
+                                        <view wx:else>
+                                            <text class="price-label-origin">￥</text>
+                                            <text class="price-origin-number">{{card.groupInfo.marketPrice}}</text>
+                                        </view>
+                                    </view>
+                                    <view class="price-other-no-tuan" wx:else>
+                                        <text class="price-label-origin">起</text>
+                                    </view>
+                                    <view class="price-explain" wx:if="{{card.groupInfo.priceexplain&&card.groupInfo.showPromo}}">{{card.groupInfo.priceexplain}}</view>
+                                    <view class="sale-desc" style="color: {{card.groupInfo.salescolor}}" wx:if="{{card.groupInfo.salesdesc}}">{{card.groupInfo.salesdesc}}</view>
+                                </view>
+                                <text class="rec-reason" wx:if="{{card.groupInfo.recreason}}">{{card.groupInfo.recreason}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </midas>
+    </view>
+</view>

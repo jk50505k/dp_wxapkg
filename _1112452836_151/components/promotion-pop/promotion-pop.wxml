@@ -1,0 +1,12 @@
+<view wx:if="{{showModule}}">
+    <scroll-view class="page-promotion"></scroll-view>
+    <view class="promotion-panel">
+        <navigator appId="{{proData.urlData.appId}}" bindtap="_openPromotion" class="promotion" hoverClass="none" path="{{proData.urlData.url}}" target="miniProgram" wx:if="{{isSupportMiniPro&&proData.urlData.appId}}">
+            <mina-image class="promotion-img" componentName="promotion pop" src="{{proData.image}}" wx:if="{{proData.image}}"></mina-image>
+        </navigator>
+        <view bindtap="_openPromotion" class="promotion" hoverClass="none" wx:else>
+            <mina-image class="promotion-img" componentName="promotion pop" src="{{proData.image}}" wx:if="{{proData.image}}"></mina-image>
+        </view>
+        <view bindtap="_closePromotion" class="promotion-close-bnt close-bnt"></view>
+    </view>
+</view>

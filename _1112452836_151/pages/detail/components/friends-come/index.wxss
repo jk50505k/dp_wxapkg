@@ -1,0 +1,68 @@
+@import "../../../../__wuBaseWxss__/1.wxss";
+
+.friend-come {
+    background: #fff;
+}
+
+.down-review-title {
+    border-bottom: none;
+    position: relative;
+}
+
+.down-review-title:before {
+    content: '';
+    border: solid #e1e1e1;
+    border-width: 1px 0 0 0;
+    border-radius: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.feed-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.groupTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 38rpx;
+    color: #111;
+    height: 90rpx;
+    margin-right: 30rpx;
+}
+
+.head-title {
+    padding: 30rpx 0 0 30rpx;
+    height: 40rpx;
+}
+
+.view-more {
+    padding-left: 30rpx;
+}
+
+.review-title {
+    font-size: 32rpx;
+}
+
+.title {
+    font-size: 38rpx;
+    font-weight: bold;
+    color: #111;
+    display: flex;
+    align-items: center;
+}
+
+.count {
+    font-size: 30rpx;
+    color: #777;
+    padding-left: 10rpx;
+}

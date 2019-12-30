@@ -1,0 +1,26 @@
+<shopItem categoryId="{{categoryId}}" class="shop-item-module" data-shopname="{{item.shopName}}" id="{{item.shopId}}" item="{{item}}" parentShop="{{tool.hasBrandShop(item.brandShop)&&hideSpread}}" spreadParentShop="{{tool.hasBrandShop(item.brandShop)&&!hideSpread}}"></shopItem>
+<block wx:if="{{item.brandShop.length}}">
+    <shopItem categoryId="{{categoryId}}" hasBrandShop="{{tool.hasBrandShop(item.brandShop)}}" item="{{brandItem}}" lastChildShop="{{tool.lastChildShop(item.brandShop,brandIndex)}}" wx:if="{{!hideSpread}}" wx:for="{{item.brandShop}}" wx:for-index="brandIndex" wx:for-item="brandItem" wx:key="shopbranditem-{{brandIndex}}"></shopItem>
+    <view bindtap="changeSpread" class="spread-wrap" wx:if="{{hideSpread}}">
+        <view class="spread-btn">展开该品牌更多上榜门户</view>
+        <view class="arrow-down"></view>
+    </view>
+    <view bindtap="changeSpread" class="spread-wrap" wx:if="{{!hideSpread}}">
+        <view class="spread-btn">收起</view>
+        <view class="arrow-up"></view>
+    </view>
+</block>
+<wxs module="tool">
+var filters = ({
+    hasBrandShop: (function(brandShop) {
+        return (brandShop && brandShop.length)
+    }),
+    lastChildShop: (function(brandShop, brandIndex) {
+        return (brandIndex == (brandShop && brandShop.length - 1))
+    }),
+});
+module.exports = ({
+    hasBrandShop: filters.hasBrandShop,
+    lastChildShop: filters.lastChildShop,
+});
+</wxs>

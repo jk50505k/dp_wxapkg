@@ -1,0 +1,28 @@
+<view class="card" wx:if="{{showPop}}">
+    <view class="background">
+        <view class="wrapper">
+            <view class="container">
+                <image bind:tap="close" class="close" src="https://p0.meituan.net/scarlett/d7e2ca94950f11a829869e426ef57ba22829.png"></image>
+                <view class="header" wx:if="{{popData.title&&popData.title.length}}">
+                    <text class="title" style="{{item.style}}" wx:for="{{popData.title}}" wx:key="{{ index }}">{{item.text}}</text>
+                    <view class="subtitle" style="{{popData.subtitle.style}}" wx:if="{{popData.subtitle&&popData.subtitle.text}}">{{popData.subtitle.text}}</view>
+                </view>
+                <view class="content">
+                    <view class="desc" wx:if="{{popData.desc}}">
+                        <view class="desc-left"></view>
+                        <text class="desc-txt">{{popData.desc}}</text>
+                        <view class="desc-right"></view>
+                    </view>
+                    <image class="gif" src="{{popData.img}}" wx:if="{{popData.img}}"></image>
+                </view>
+                <view class="footer-yes" wx:if="{{popData.btnText}}">
+                    <button bindcontact="handleContact" class="yesBtn" hoverClass="none" openType="contact" sendMessageImg="{{popData.shareImg}}" sendMessagePath="{{_cardData}}" sessionFrom="{{_cardData}}" showMessageCard="{{true}}">{{popData.btnText}}</button>
+                </view>
+                <view class="footer-no" wx:if="{{popData.subBtnText}}">
+                    <button bindtap="refuseTap" class="noBtn" hoverClass="none">{{popData.subBtnText}}</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<image bindtap="openPop" class="side-img" src="{{popData.side.image}}" style="{{popData.side.style}}" wx:if="{{popData.side}}"></image>

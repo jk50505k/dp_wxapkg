@@ -1,0 +1,78 @@
+<view class="times-card-container" wx:if="{{showMe}}">
+    <view class="header" wx:if="{{title}}">
+        <view class="icon">卡</view>
+        <view class="title">{{title}}</view>
+    </view>
+    <view class="card-content" wx:if="{{cards.length<2}}">
+        <view bindtap="jump" class="card-content-item" data-jump-url="{{item.redirectUrl}}" wx:for="{{cards}}" wx:key="{{index}}">
+            <view class="times-card" style="background-image:url({{item.backgroundUrl}})">
+                <view class="detail-info">
+                    <view class="title">
+                        <text class="name overflow-fix">{{item.title}}</text>
+                        <text class="limit" wx:if="{{item.cardType==2&&item.promoDesc}}">{{item.promoDesc}}</text>
+                    </view>
+                    <view class="sub-title overflow-fix">{{item.subTitle||''}}</view>
+                    <view class="price" wx:if="{{item.cardType==1}}">
+                        <view class="total-price">{{item.totalPrice}}</view>
+                        <view class="times">/{{item.times}}次</view>
+                        <view class="promo-desc overflow-fix" wx:if="{{item.promoDesc}}">{{item.promoDesc}}</view>
+                        <view class="per-price overflow-fix" wx:if="{{item.marketPriceDesc&&!item.promoDesc}}">{{item.marketPriceDesc}}</view>
+                    </view>
+                    <view class="benefit" wx:if="{{item.cardType==2}}">
+                        <text class="type">{{item.storeCardPBO.storeCardType==1?'充':'充'+item.storeCardPBO.saleAmount+'享'}}</text>
+                        <text class="number">{{item.storeCardPBO.storeCardType==1?item.storeCardPBO.saleAmount:item.storeCardPBO.promoAmount}}</text>
+                        <text class="amount">{{item.storeCardPBO.storeCardType==1?'送'+item.storeCardPBO.promoAmount+'元':'折'}}</text>
+                        <view class="refund" style="margin-left:20rpx">
+                            <text class="icon-refund"></text>
+                            <text>{{item.storeCardPBO.refundDesc}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="card-sell {{item.safeDesc?' flex-end':' flex-center'}}">
+                    <view class="action overflow-fix">{{item.btn.title}}</view>
+                    <view class="sold-count" wx:if="{{item.saleDesc}}">{{item.saleDesc}}</view>
+                </view>
+                <text class="detail-activity" style="background-color:{{item.activityPBO.bgColor}};color:{{item.activityPBO.msgColor}}" wx:if="{{item.activityPBO.eventDesc}}">{{item.activityPBO.eventDesc}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="card-content biserial clearfix" wx:if="{{cards.length>=2}}">
+        <view bindtap="jump" class="card-content-item {{!showMore&&index>1?'Hide':''}}" data-jump-url="{{item.redirectUrl}}" wx:for="{{cards}}" wx:key="{{index}}">
+            <view class="times-card" style="background-image:url({{item.backgroundUrl}})">
+                <view class="detail-info">
+                    <view class="main-title">
+                        <view class="title">
+                            <text class="name overflow-fix">{{item.title}}</text>
+                            <text class="limit" wx:if="{{cards.cardType==2}}">{{item.promoDesc}}</text>
+                        </view>
+                        <text class="icon-arrow" wx:if="{{!item.activityPBO.eventDesc}}"></text>
+                    </view>
+                    <text class="sub-title overflow-fix" wx:if="{{item.subTitle}}">{{item.subTitle}}</text>
+                    <view class="price {{item.subTitle?'':'no-subTitle'}}" wx:if="{{item.cardType==1}}">
+                        <view class="total-price">{{item.totalPrice}}</view>
+                        <view class="times">/{{item.times}}次</view>
+                    </view>
+                    <view class="benefit" wx:if="{{item.cardType==2}}">
+                        <text class="type">{{item.storeCardPBO.storeCardType==1?'充':'充'+item.storeCardPBO.saleAmount+'享'}}</text>
+                        <text class="number">{{item.storeCardPBO.storeCardType==1?item.storeCardPBO.saleAmount:item.storeCardPBO.promoAmount}}</text>
+                        <text class="amount">{{item.storeCardPBO.storeCardType==1?'送'+item.storeCardPBO.promoAmount+'元':'折'}}</text>
+                    </view>
+                </view>
+                <text class="detail-activity" style="background-color:{{item.activityPBO.bgColor}};color:{{item.activityPBO.msgColor}}" wx:if="{{item.activityPBO.eventDesc}}">{{item.activityPBO.eventDesc}}</text>
+            </view>
+            <view class="other">
+                <view class="refund" wx:if="{{item.cardType==2&&item.storeCardPBO.refundDesc}}">
+                    <text class="icon-refund"></text>
+                    <text>{{item.storeCardPBO.refundDesc}}</text>
+                </view>
+                <view wx:if="{{item.cardType==1&&item.marketPriceDesc}}">{{item.marketPriceDesc}}</view>
+                <view wx:if="{{item.saleDesc}}">{{item.saleDesc}}</view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="hanldeClickShowMore" class="see-more" wx:if="{{cards.length-2>0}}">
+        <view class="btn-box">
+{{showMoreBtnText}}      <view class="icon-arrow__down {{showMore?'pack-up':''}}"></view>
+        </view>
+    </view>
+</view>

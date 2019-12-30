@@ -1,0 +1,29 @@
+{
+    "navigationBarTitleText": "景点详情",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "header": "./components/header/header",
+        "appointment": "./components/appointment/appointment",
+        "guidance": "./components/guidance/guidance",
+        "exhibitions": "./components/exhibitions/exhibitions",
+        "quoras": "./components/quoras/quoras",
+        "poi-intro": "./components/poi-intro/poi-intro",
+        "cate-recommends": "./components/cate-recommends/cate-recommends",
+        "poi-card": "../../../components/business-relevant-components/poi-card/poi-card",
+        "shelves": "../../../components/business-relevant-components/shelves/index",
+        "webp-detect": "../../../components/native-com/webp-detect/webp-detect",
+        "component-ugc": "../../../components/native-com/ugc/ugc-list/ugc-list",
+        "ticket-quick-nav": "../../../components/native-com/ticket-quick-nav/ticket-quick-nav",
+        "image-modal": "../../../components/native-com/image-modal/image-modal",
+        "activity-popup": "../../../components/native-com/activityPopup/activityPopup",
+        "formid-wrap": "../../../components/native-com/formid-wrap/formid-wrap",
+        "loading": "../../../components/native-com/loading/loading",
+        "hotel-poi-card": "../../../components/business-relevant-components/hotel-poi-card/index",
+        "goods-share": "../../../components/native-com/goods-share/goods-share",
+        "voucher-banner": "./components/voucher-banner/voucher-banner",
+        "pop-coupon": "./components/pop-coupon/index",
+        "quick-nav": "../../../../../components/quick-nav/quick-nav"
+    }
+}

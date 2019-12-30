@@ -1,0 +1,38 @@
+<view catchtap="showDetailInfoTap" class="module-info" wx:if="{{moduleData.showModule}}">
+    <view class="top-separator-line"></view>
+    <view class="businesshours {{moduleData.hasDetail?'show-right-arrow':'hidden-right-arrow'}}">
+        <view class="businesshours-info">
+            <view class="businesshours-icon"></view>
+            <view class="businesshours-title">{{moduleData.title}}</view>
+        </view>
+        <view class="entry" wx:if="{{moduleData.hasDetail}}"></view>
+    </view>
+    <block wx:if="{{showPop}}">
+        <view catchtap="closeDetailInfoTap" class="popMask"></view>
+        <view animation="{{animationData}}" catchtap="popContentTap" class="popContent {{isIpx?'iphoneX':''}}">
+            <view class="pop-header">
+                <view class="title">{{detailData.title}}</view>
+                <view catchtap="closeDetailInfoTap" class="close-icon"></view>
+            </view>
+            <view class="separator-line-title"></view>
+            <scroll-view scrollY class="scroll-container">
+                <view class="separator-line-time"></view>
+                <view class="detail-time-containner" wx:for="{{detailData.timeList}}" wx:for-index="monthIndex" wx:for-item="month" wx:key="monthKey">
+                    <view class="month-title" wx:if="{{month.title}}">{{month.title}}
+            </view>
+                    <view class="month-containner" wx:for="{{month.dayList}}" wx:for-item="day" wx:key="dayKey">
+                        <view class="dayText {{day.needHighlight?'high-light':'normal'}}">{{day.dayTime}}</view>
+                        <view class="hourText {{day.needHighlight?'high-light':'normal'}}">{{day.hourTime}}</view>
+                        <view class="mealText {{day.needHighlight?'high-light':'normal'}}">{{day.mealTitle}}</view>
+                    </view>
+                    <view class="separator-line-time" wx:if="{{monthIndex!==detailData.timeList.length-1}}"></view>
+                </view>
+                <view class="separator-line-tip" wx:if="{{detailData.timeList.length>0&&(detailData.tipList.length>0||detailData.tipTitle)}}"></view>
+                <view class="warm-tip-containner">
+                    <view class="titleText" wx:if="{{detailData.tipTitle}}">{{detailData.tipTitle}}</view>
+                    <view class="tipText" wx:for="{{detailData.tipList}}" wx:for-item="tip" wx:key="monthKey">{{tip}}</view>
+                </view>
+            </scroll-view>
+        </view>
+    </block>
+</view>

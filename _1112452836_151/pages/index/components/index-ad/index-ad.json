@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "mina-image": "../../../../components/mina-image/index",
+        "midas": "../../../../components/midas/index"
+    }
+}

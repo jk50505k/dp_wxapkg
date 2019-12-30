@@ -1,0 +1,6 @@
+<view class="launch-wrap">
+    <slot name="app-launch"></slot>
+    <button appParameter="{{launchAppUrl}}" binderror="launchAppError" catch:tap="launchAppTap" class="launch-btn" hoverClass="none" openType="launchApp" plain="{{true}}" style="z-index:5" wx:if="{{canLaunchApp}}"></button>
+    <view catch:tap="loginTap" class="login-btn" hoverClass="none" plain="{{true}}" style="z-index:5" wx:if="{{needLogin&&!canLaunchApp}}"></view>
+</view>
+<mina-toast toastConfig="{{toastConfig}}" wx:if="{{toastConfig&&toastConfig.showToast}}"></mina-toast>

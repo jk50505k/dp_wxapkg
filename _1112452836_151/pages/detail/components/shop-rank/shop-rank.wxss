@@ -1,0 +1,103 @@
+@import "../../../../__wuBaseWxss__/1.wxss";
+
+.shop-rank {
+    background: #fff;
+    min-height: 110rpx;
+}
+
+.commonRank {
+    display: flex;
+    align-items: center;
+    height: 110rpx;
+    min-height: 110rpx;
+    justify-content: space-between;
+    padding: 0 30rpx;
+}
+
+.rank-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #333;
+    font-size: 32rpx;
+    max-width: 650rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rank-icon {
+    width: 40rpx;
+    height: 40rpx;
+    background-size: cover;
+}
+
+.musteat-icon {
+    width: 90rpx;
+    height: 28rpx;
+    background-size: cover;
+}
+
+.black-icon {
+    width: 207rpx;
+    height: 31rpx;
+    background-size: cover;
+}
+
+.freeDish-icon {
+    width: 207rpx;
+    height: 31rpx;
+    background-size: cover;
+}
+
+.rankings {
+    color: #ff6633;
+}
+
+.rankText {
+    padding-left: 10rpx;
+}
+
+.mustEat .rankText {
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.blackPearl .rankText {
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.shop-icon {
+    width: 264rpx;
+    height: 36rpx;
+    background-size: auto 36rpx;
+    background-repeat: no-repeat;
+}
+
+.simple-text {
+    font-size: 26rpx;
+    color: #f63;
+    max-width: 340rpx;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 20rpx;
+}
+
+.rank-right {
+    display: flex;
+    align-items: center;
+}
+
+.productTitle {
+    font-size: 26rpx;
+    color: #777777;
+    max-width: 430rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    padding-right: 12rpx;
+}

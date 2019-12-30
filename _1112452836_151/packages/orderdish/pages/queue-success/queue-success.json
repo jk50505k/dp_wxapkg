@@ -1,0 +1,11 @@
+{
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "美团点评智慧餐厅",
+    "backgroundColor": "#000000",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

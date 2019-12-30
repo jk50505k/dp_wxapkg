@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "点评医美整形",
+    "usingComponents": {
+        "case": "../../components/case/case",
+        "star": "../../components/star/star",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

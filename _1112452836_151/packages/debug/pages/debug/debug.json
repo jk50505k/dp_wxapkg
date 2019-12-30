@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "调试面板",
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

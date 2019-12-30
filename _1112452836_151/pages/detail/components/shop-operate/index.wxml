@@ -1,0 +1,6 @@
+<view bindtap="mediumTap" class="medium-operate" style="margin:{{moduleConfig.margin}}" wx:if="{{mediumData.showModule}}">
+    <image class="img" mode="aspectFill" src="{{mediumData.image}}" wx:if="{{mediumData.image}}"></image>
+</view>
+<view wx:if="{{popData.showModule}}">
+    <promotion-pop bindclose="onPopupClose" bindnoscroll="forbidScroll" id="promotion-pop" isSupportMiniPro="{{1}}" promotionData="{{popData}}"></promotion-pop>
+</view>

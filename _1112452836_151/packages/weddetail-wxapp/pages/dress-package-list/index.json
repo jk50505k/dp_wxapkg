@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "套餐列表",
+    "usingComponents": {
+        "cmp": "../../cmp/cmp",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

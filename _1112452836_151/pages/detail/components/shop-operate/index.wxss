@@ -1,0 +1,9 @@
+.medium-operate {
+    width: 750rpx;
+    height: 180rpx;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}

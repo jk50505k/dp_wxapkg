@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "关注的人来过",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "list-view": "../../../../components/list-view/list-view",
+        "parent": "../../../../components/top-parent/top-parent",
+        "exception": "../../../../components/wx-exception/wx-exception",
+        "rich-card": "../../../../components/rich-card/rich-card",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

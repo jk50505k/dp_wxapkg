@@ -1,0 +1,45 @@
+<view class="tuanInfo" style="margin:{{moduleConfig.margin}}" wx:if="{{showModule}}">
+    <rainbow class="rainbow" loadOptions="{{loadOptions}}" rainBowData="{{rainBowData}}"></rainbow>
+    <view class="tuanMain" wx:if="{{showModule}}">
+        <view class="tuanList">
+            <view bindtap="tuanItemTap" class="tuanItem {{index>1&&showClose?'Hide':''}}" data-id="{{item.id}}" data-url="{{item.url}}" wx:for="{{tuanData}}" wx:key="{{index}}">
+                <view class="detail-icon {{item.iconUrl?'group-icon':''}}" wx:if="{{item.dealType==1}}"></view>
+                <view class="detail-icon {{item.iconUrl?'quan-icon':''}}" wx:elif="{{item.dealType==2}}"></view>
+                <view class="detail-icon" wx:else></view>
+                <view class="item-body">
+                    <image class="tagicon" mode="aspectFill" src="{{item.rainbow&&item.rainbow.tagicon}}" wx:if="{{item.rainbow&&item.rainbow.tagicon}}"></image>
+                    <image class="tuanPic lazy-img" lazyLoad="{{true}}" mode="aspectFill" src="{{item.picUrl}}" wx:if="{{item.picUrl}}"></image>
+                    <view class="tuanRightPanel">
+                        <view class="tuanDesc">
+                            <view class="tuanTitle">{{item.title}}</view>
+                        </view>
+                        <view class="tuanSubtitle">
+                            <view class="tuanPrice" wx:if="{{item.price}}">￥{{item.price}}</view>
+                            <view class="tuanPriceOri">
+                                <text class="lineThrough" wx:if="{{item.marketPrice}}">￥{{item.marketPrice}}</text>
+                            </view>
+                            <view class="reduce-label" wx:if="{{item.reduc&&item.reduc.text}}">
+                                <text class="reduce-label-text">{{item.reduc.text}}</text>
+                            </view>
+                            <view catchtap="catchlaunchApp" class="cut-down" data-index="{{index}}" data-url="{{item.url}}" wx:elif="{{item.promo&&isFromApp}}">
+                                <button appParameter="{{item.promo.openAppUrl}}" binderror="launchAppError" class="cut-down-bnt" openType="launchApp">{{item.promo.text}}</button>
+                            </view>
+                        </view>
+                        <view class="zongPintuan" wx:if="{{item.zongPtText}}">
+                            <view class="zongpticon"></view>
+                            <text class="zongpttext">{{item.zongPtText}}</text>
+                        </view>
+                        <view class="tuanSale {{item.ptText?'pintuanSale':''}}">
+                            <text class="pt-text" wx:if="{{item.ptText}}">{{item.ptText}}</text>
+                            <text class="sold">已售{{item.saleCount}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="toMoreOrLess" class="toMore {{showClose?'':'border-top'}}" wx:if="{{toMore}}">
+{{toMoreText}}
+        <view class="{{showClose?'iconOpen':'iconClose'}}"></view>
+    </view>
+</view>

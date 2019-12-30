@@ -1,0 +1,20 @@
+<view wx:for="{{scopeDataList}}" wx:for-item="scopeData" wx:key="index">
+    <wx-scope wx:scope-data="{{...scopeData}}">
+        <view></view>
+    </wx-scope>
+</view>
+<view catchtouchmove="catchTouchmove" class="voteContainerWrap" wx:if="{{showToast}}">
+    <view class="voteContainer">
+        <view class="voteHeader">
+            <view class="voteHeaderText">添加到我创建的投票</view>
+            <view bindtap="closeToast" class="voteHeaderClose"></view>
+        </view>
+        <view class="voteBody voteList {{isIpx?'iphoneX':''}}">
+            <view catchtap="addPoiToVote" class="voteItem " data-vote="{{voteItem}}" data-voteid="{{voteItem.voteId}}" wx:for="{{myValidVoteList}}" wx:for-item="voteItem" wx:key="{{index}}">
+                <view class="voteItemLeft">
+                    <text class="voteTitle">{{voteItem.voteTitle}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

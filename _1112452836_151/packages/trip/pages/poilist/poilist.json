@@ -1,0 +1,13 @@
+{
+    "enablePullDownRefresh": false,
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "component-loading": "../../components/native-com/loading/loading",
+        "poi-card": "../../components/business-relevant-components/poi-card/poi-card",
+        "poi-album": "../../components/business-relevant-components/poi-album/poi-album",
+        "filter-tab": "../../components/business-relevant-components/filter-tab/filter-tab",
+        "empty-list": "../../components/native-com/empty-list/empty-list",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

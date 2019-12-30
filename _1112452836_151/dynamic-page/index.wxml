@@ -1,0 +1,4 @@
+<top-parent id="topParent">
+    <exception bindexceptionevent="onExceptionEvent" exceptionDetail="{{exceptionDetail}}" wx:if="{{isError}}"></exception>
+    <dynamic binderror="dynamicComponentError" case="{{case}}" id="{{case}}"></dynamic>
+</top-parent>

@@ -1,0 +1,152 @@
+.categoryWrap {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 8rpx 30rpx 12rpx;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 28rpx;
+    background-color: #fff;
+}
+
+.categoryItem {
+    position: relative;
+    width: 20%;
+    padding: 20rpx 0 0;
+    box-sizing: border-box;
+    color: #111;
+}
+
+.categoryName {
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 26rpx;
+}
+
+.smallName {
+    font-size: 22rpx;
+}
+
+.categoryIcon {
+    position: relative;
+    background-color: #f6f6f6;
+    border-radius: 50%;
+    width: 100rpx;
+    height: 100rpx;
+    margin: 0 auto;
+}
+
+.categoryItem-bd {
+    position: relative;
+    width: 20%;
+    padding: 40rpx 0 0;
+    box-sizing: border-box;
+    color: #111;
+}
+
+.categoryBigIcon {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 0 auto;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.categoryBigIcon-bd {
+    width: 120rpx;
+    height: 120rpx;
+    margin: 0 auto;
+    background-color: transparent;
+    border-radius: 0;
+    margin-bottom: -20rpx;
+}
+
+.categorySmallIcon {
+    width: 48rpx;
+    height: 48rpx;
+    margin: 0 auto 10rpx;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.categorySmallIcon-bd {
+    width: 60rpx;
+    height: 60rpx;
+    margin: 0 auto 12rpx;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.categoryCorner {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    left: 72rpx;
+    border-style: solid;
+    height: 28rpx;
+    padding: 0 6rpx;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.corner-text {
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 50rpx;
+    overflow: hidden;
+}
+
+.newItem {
+    position: relative;
+    padding: 20rpx 0 0;
+    box-sizing: border-box;
+    color: #111;
+    width: 200rpx;
+    font-size: 26rpx;
+    margin-left: 30rpx;
+    padding-top: 40rpx;
+}
+
+.first {
+    margin-top: 40rpx;
+    padding-top: 0;
+}
+
+.newWrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.newIcon {
+    width: 46rpx;
+    height: 46rpx;
+    display: block;
+}
+
+.newName {
+    margin-left: 20rpx;
+}
+
+.itemBorder {
+    position: relative;
+}
+
+.itemBorder:before {
+    content: '';
+    border-right: solid #E1E1E1;
+    border-width: 1px;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}

@@ -1,0 +1,184 @@
+@import "../../../../__wuBaseWxss__/1.wxss";
+
+.service-contain {
+    background: #fff;
+}
+
+.service-wrap {
+    padding: 0 30rpx;
+    display: flex;
+}
+
+.shopService {
+    display: flex;
+    height: 110rpx;
+    position: relative;
+    flex: 1;
+}
+
+.shopService:before {
+    content: '';
+    border: solid #e1e1e1;
+    border-width: 1px 0 0 0;
+    border-radius: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.service-type2 {
+    position: relative;
+}
+
+.service-type2:before {
+    content: '';
+    border: solid #e1e1e1;
+    border-width: 1px 1px 0 0;
+    border-radius: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.last-service:before {
+    border-right: 0;
+}
+
+.shopService .serviceType {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.shopService .serviceType .service-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.servie-icon {
+    width: 48rpx;
+    height: 46rpx;
+}
+
+.shopService .queue-icon {
+    width: 46rpx;
+    height: 46rpx;
+}
+
+.shopService .take-icon {
+    width: 48rpx;
+    height: 34rpx;
+}
+
+.shopService .serviceType .service-item .service-name {
+    color: #111111;
+    padding-left: 16rpx;
+    font-size: 32rpx;
+}
+
+.shopService .serviceType .service-item .service-tips {
+    position: absolute;
+    top: -20rpx;
+    left: 18rpx;
+    font-size: 18rpx;
+    color: #fff;
+    border-radius: 14rpx;
+    background: #FF4638;
+    padding: 4rpx 8rpx;
+    height: 20rpx;
+    line-height: 20rpx;
+}
+
+.shopService .serviceType .info-txt {
+    font-size: 26rpx;
+    color: #999;
+    margin-right: 10rpx;
+    max-width: 200rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.service-type2 .serviceType .info-txt {
+    max-width: 170rpx;
+    margin-right: 4rpx;
+}
+
+.service-type1,.service-type2 {
+    padding: 0;
+}
+
+.service-type1 .serviceType,.service-type2 .serviceType {
+    justify-content: space-between;
+    padding: 0 10rpx 0 0rpx;
+    align-items: center;
+}
+
+.service-type2:last-child .serviceType {
+    padding-left: 30rpx;
+}
+
+.service-type1 .serviceType .service-item .service-tips {
+    position: relative;
+    margin-left: 16rpx;
+    top: 0;
+    left: 0;
+}
+
+.service-type1 {
+    align-items: center;
+}
+
+.service-type1 .serviceType {
+    border-right: none;
+}
+
+.service-type1 .info-txt {
+    padding-right: 10rpx;
+}
+
+.service-type3 .serviceType {
+    justify-content: center;
+}
+
+.service-type3 .serviceType .service-item .service-tips {
+    top: 10rpx;
+}
+
+.service-type4 {
+    height: 130rpx;
+}
+
+.service-type4 .serviceType {
+    justify-content: center;
+}
+
+.service-type4 .serviceType .service-item {
+    flex-direction: column;
+    min-width: 120rpx;
+}
+
+.service-type4 .serviceType .service-item .service-name {
+    padding-top: 10rpx;
+    padding-left: 0rpx;
+    font-size: 24rpx;
+}
+
+.service-type4 .serviceType .service-item .service-tips {
+    top: 10rpx;
+    left: 50rpx;
+}

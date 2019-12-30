@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "report-formid": "../report-formid/report-formid",
+        "star": "../nebula-star/index"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "宠物百科",
+    "usingComponents": {
+        "evaluatestar": "../../../components/evaluatestar/index",
+        "quick-nav": "../../../../../components/quick-nav/quick-nav"
+    }
+}

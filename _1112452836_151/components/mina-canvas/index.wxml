@@ -1,0 +1,1 @@
+<canvas canvasId="{{canvasConfig.canvasId||'myCanvas'}}" style="height: {{canvasConfig.height||168}}px; width: {{canvasConfig.width||210}}px; position: {{canvasConfig.showCanvas?'relative':'absolute'}}; left: {{canvasConfig.showCanvas?'0':'-20000px'}}; top: {{canvasConfig.showCanvas?'0':'-20000px'}};"></canvas>

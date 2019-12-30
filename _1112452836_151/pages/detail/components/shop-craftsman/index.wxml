@@ -1,0 +1,31 @@
+<view class="groupItem" style="margin:{{moduleConfig.margin}}" wx:if="{{craftData.techDetailDtoList&&craftData.techDetailDtoList.length}}">
+    <view bindtap="carftsListTap" class="groupTitle noBorder">
+        <view class="crafts-title">
+{{craftData.title}}      <text class="crafts-count" wx:if="{{craftData.count}}">{{'('+craftData.count+')'}}</text>
+        </view>
+        <view class="entry"></view>
+    </view>
+    <view class="dishPics">
+        <scroll-view scrollX bindscroll="onHorizontalScroll" class="scrollcraftsPics">
+            <view class="picsWrap" style="width:{{craftData.techDetailDtoList.length*218}}rpx">
+                <view bindtap="carftsDetailTap" class="itemWrap" data-url="{{item.detailUrl}}" wx:for="{{craftData.techDetailDtoList}}" wx:key="{{index}}">
+                    <view class="picInfo">
+                        <view class="bg-tag" wx:if="{{item.managerName}}">{{item.managerName}}</view>
+                        <lazy-img class="_lazyLoadImage" imgClass="{{imgClass}}" imgMode="{{'aspectFill'}}" imgSrc="{{item.photoUrl}}"></lazy-img>
+                        <view class="work-year" wx:if="{{item.workYears}}">
+                            <text class="year-txt">{{item.workYears}}</text>
+                        </view>
+                    </view>
+                    <view class="descPanel">
+                        <view class="topPanel">
+                            <text class="name">{{item.name}}</text>
+                            <view class="certificate" wx:if="{{item.certificateStatus}}"></view>
+                        </view>
+                        <view class="title" wx:if="{{item.title}}">{{item.title}}</view>
+                        <view class="special" wx:if="{{item.specialInfo}}">{{item.specialInfo}}</view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

@@ -1,0 +1,24 @@
+@import "../../../../__wuBaseWxss__/1.wxss";
+
+.shop-quality {
+    margin-top: 20rpx;
+    display: flex;
+    align-items: center;
+    height: 110rpx;
+    min-height: 110rpx;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    background-color: #ffffff;
+}
+
+.quality-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #333;
+    font-size: 32rpx;
+    max-width: 650rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,12 @@
+{
+    "navigationBarTitleText": "大众点评",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff",
+    "frontColor": "#000000",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "myvideo": "../../components/video/video"
+    }
+}

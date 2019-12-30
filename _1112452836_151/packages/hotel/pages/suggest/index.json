@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "搜索",
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#181818",
+    "backgroundTextStyle": "light",
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

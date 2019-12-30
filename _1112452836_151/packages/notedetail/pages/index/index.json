@@ -1,0 +1,22 @@
+{
+    "navigationBarTitleText": "大众点评",
+    "backgroundColor": "#efefef",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "usingComponents": {
+        "exception": "../../../../components/wx-exception/wx-exception",
+        "loading-icon": "../../components/loading-icon/loading-icon",
+        "swiper-img": "../../components/body/swiper-img/swiper-img",
+        "feed-user": "../../components/body/feed-user/feed-user",
+        "general-evaluation": "../../components/body/general-evaluation/general-evaluation",
+        "recommend-dish": "../../components/body/recommend-dish/recommend-dish",
+        "decision-img": "../../components/body/decision-img/decision-img",
+        "poi": "../../components/body/poi/poi",
+        "like-wrap": "../../components/like-wrap/like-wrap",
+        "feed-reply": "../../components/feed-reply/feed-reply",
+        "footer-bar": "../../components/footer-bar/footer-bar",
+        "mask-input": "../../components/mask-input/mask-input",
+        "quick-nav": "../../../../components/quick-nav/quick-nav",
+        "yellow-bar": "../../components/body/yellow-bar/yellow-bar"
+    }
+}

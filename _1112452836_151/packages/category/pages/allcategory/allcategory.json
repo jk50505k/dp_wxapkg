@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "全部分类",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

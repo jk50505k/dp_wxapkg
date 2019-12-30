@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "休闲娱乐",
+    "usingComponents": {
+        "nav": "../../components/nav/nav",
+        "list": "../../components/list/list",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

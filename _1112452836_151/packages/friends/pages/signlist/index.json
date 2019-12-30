@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "打卡",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "list-view": "../../../../components/list-view/list-view",
+        "rich-card": "../../../../components/rich-card/rich-card",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

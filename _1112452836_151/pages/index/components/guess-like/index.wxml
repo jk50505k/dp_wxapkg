@@ -1,0 +1,22 @@
+<view class="guessLike {{listView.listError&&listView.listError.iconType?'guessLikeError':''}}" wx:if="{{showModule}}">
+    <view class="guessTitle" wx:if="{{listView.list&&listView.list.length}}">猜你喜欢</view>
+    <view class="guessList">
+        <view class="sceneList" wx:if="{{sceneData.length>0&&listView.list.length>0}}">
+            <scroll-view class="sceneListContainer" scrollX="true">
+                <view catchtap="tapScene" class="sceneListItem {{sceneIdx===0?'sceneListItem-first':''}} {{sceneIdx===sceneData.length-1?'sceneListItem-last':''}}" data-url="{{sceneItem.url}}" wx:for="{{sceneData}}" wx:for-index="sceneIdx" wx:for-item="sceneItem" wx:key="{{sceneIdx}}">
+                    <text class="sceneListItem-title" url="title">{{sceneItem.title}}</text>
+                    <text class="sceneListItem-subtitle" url="subtitle">{{sceneItem.hitcount}}家商户</text>
+                    <image class="sceneListItem-pic" src="{{sceneItem.newpic}}" url="image"></image>
+                </view>
+            </scroll-view>
+        </view>
+        <list-view bindexception="onExceptionTap" bindtryagain="onPageExceptionTap" listview="{{listView}}">
+            <view slot="list-card">
+                <block wx:for="{{listView.list}}" wx:for-index="cardIndex" wx:for-item="card" wx:key="{{cardIndex}}">
+                    <midas-card bindmygrouptap="tapGroup" bindmytap="tapShop" card="{{card}}" idx="{{cardIndex}}" needborderbottom="{{true}}" needbottom="{{false}}" wx:if="{{card.groupInfo&&card.groupInfo.adShop}}"></midas-card>
+                    <shop-card bindmygrouptap="tapGroup" bindmytap="tapShop" card="{{card}}" needborderbottom="{{true}}" needbottom="{{false}}" wx:else></shop-card>
+                </block>
+            </view>
+        </list-view>
+    </view>
+</view>

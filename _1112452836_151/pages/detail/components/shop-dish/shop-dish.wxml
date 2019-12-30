@@ -1,0 +1,61 @@
+<view class="skeleton" style="margin:{{moduleConfig.margin}}" wx:if="{{showModule===1&&dishData}}">
+    <view class="skeleton_top">
+        <view class="skeleton_title baseLine"></view>
+    </view>
+    <view class="skeleton_wrap">
+        <view class="skeleton_item" wx:for="{{'abc'}}" wx:key="{{index}}">
+            <view class="line1 baseLine"></view>
+            <view class="line2 baseLine"></view>
+            <view class="line2 baseLine"></view>
+        </view>
+    </view>
+</view>
+<view style="margin:{{moduleConfig.margin}}" wx:if="{{showModule===2&&dishData}}">
+    <view class="launch-wrap">
+        <view class="groupItem dishInfo">
+            <app-launch appConfig="{{appConfig}}" bind:launcherror="launchAppError" bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp}}" hasApp="{{hasApp}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+                <view slot="app-launch">
+                    <view bindtap="shopAllDishTap" class="groupTitle noBorder" data-url="{{dishData.recommendUrl}}">
+                        <text class="dish-title">{{dishData.dishTitle}}</text>
+                        <view class="entry"></view>
+                    </view>
+                </view>
+            </app-launch>
+            <view class="recommendHead">
+                <text class="textBorder"></text>
+                <view class="text">
+                    <text class="dish-recommend">{{dishData.recommendTitle}}</text>
+                    <text class="count">({{dishData.recommendDishCount}})</text>
+                </view>
+                <text class="textBorder"></text>
+            </view>
+            <view class="dishPics" wx:if="{{dishData.dishTags&&dishData.dishTags.length}}">
+                <scroll-view scrollX bindscroll="onHorizontalScroll" class="scrolldishPics">
+                    <view class="picsWrap" style="width:{{dishData.dishTags.length*307+74}}rpx">
+                        <app-launch appConfig="{{appConfig}}" bind:launcherror="launchAppError" bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp}}" hasApp="{{hasApp}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+                            <view slot="app-launch">
+                                <view bindtap="shopSingleDishTap" class="recommendWrap" data-url="{{picItem.singleDishUrl}}" wx:for="{{dishData.dishTags}}" wx:for-item="picItem" wx:key="{{picIndex}}">
+                                    <lazy-img class="_lazyLoadImage" id="{{picIndex}}" imgClass="{{imgClass}}" imgMode="{{'aspectFill'}}" imgSrc="{{picItem.picUrl}}"></lazy-img>
+                                    <view class="recommendInfo" wx:if="{{picItem.recommendCount}}">
+                                        <view class="iconGood"></view>
+                                        <text class="recomment-text" wx:if="{{picItem.recommendCount}}">{{picItem.recommendCount}}人推荐</text>
+                                    </view>
+                                </view>
+                                <view bindtap="shopAllDishTap" class="more-txt">查看更多</view>
+                                <view class="dishName" wx:for="{{dishData.dishTags}}" wx:for-item="picItem" wx:key="{{picIndex}}">{{picItem.dishName}}</view>
+                            </view>
+                        </app-launch>
+                    </view>
+                </scroll-view>
+            </view>
+            <app-launch appConfig="{{appConfig}}" bind:launcherror="launchAppError" bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp}}" hasApp="{{hasApp}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+                <view slot="app-launch">
+                    <view bindtap="shopAllDishTap" class="groupList foodList">
+                        <text class="food" wx:for="{{dishData.tags}}" wx:key="{{index}}">{{item.dishName}}</text>
+                    </view>
+                </view>
+            </app-launch>
+        </view>
+    </view>
+    <contact-card cardData="{{cardData}}" lxData="{{lxData}}"></contact-card>
+</view>

@@ -1,0 +1,8 @@
+<template name="error">
+    <view bindtap="bindReload" class="page-error">
+        <image class="error-img" mode="widthFix" src="{{icon}}" wx:if="{{icon}}"></image>
+        <view class="error-icon" wx:else></view>
+        <view class="error-title">{{title||'网络出错了，再试一次'}}</view>
+        <view class="error-subTitle">{{subTitle}}</view>
+    </view>
+</template>

@@ -1,0 +1,7 @@
+<report-form bindtap="onSearchShow" bizType="biz_platform" categoryId="{{0}}" data-keyword="{{keyword}}" data-source="0" hoverClass="none">
+    <view class="searchEntry {{keyword?'keyword-entry':''}}" slot="business">
+        <view class="searchIcon"></view>
+        <text class="searchKeyword" wx:if="{{keyword}}">{{keyword}}</text>
+        <text class="searchText" wx:if="{{!keyword}}">输入商户名、地点、找优惠</text>
+    </view>
+</report-form>

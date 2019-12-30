@@ -1,0 +1,33 @@
+<view class="login-component" wx:if="{{showLoginModal}}">
+    <view class="auth-userinfo" wx:if="{{showAuthModal}}">
+        <image class="bg" mode="widthFix" src="{{bgImage}}"></image>
+        <view class="auth-subtitle">* 我们需要获得您的授权，以关联您的点评账号</view>
+        <view class="auth-actions">
+            <button bindtap="onTapCancelUserInfo" class="btn-userinfo userinfo-cancel">拒绝</button>
+            <button bindgetuserinfo="onTapGetUserInfo" class="btn-userinfo userinfo-confirm" openType="getUserInfo">接受</button>
+        </view>
+    </view>
+    <view class="login-mobile" wx:if="{{showAuthPhoneModal}}">
+        <image class="bg" mode="widthFix" src="{{bgImage}}"></image>
+        <button bindgetphonenumber="onAuthPhoneNumber" class="btn-mobile" openType="getPhoneNumber" wx:if="{{needMobileAuth}}">微信用户快速登录</button>
+        <view bindtap="cancelAuthPhone" class="btn-login">输入手机号码登录/注册</view>
+    </view>
+    <view class="loginForm" wx:if="{{showSMSModal}}">
+        <view class="loginMobile">
+            <view class="loginRow">
+                <view class="EasyLogin_Mobile_tit loginCountry">
+                    <view class="login_Mobile_Arrow"></view>
+                </view>
+                <input bindinput="getInputMobile" class="loginInput" placeholder="请输入手机号" placeholderClass="inputPlaceholder" type="text"></input>
+                <view class="btnSend" ontap="getBindUUID" wx:if="{{!codeSend}}">发送验证码</view>
+                <view class="btnSending" wx:if="{{codeSend}}">重新发送({{timeRemain}})</view>
+            </view>
+            <view class="loginRow">
+                <view class="inputLabel">验证码</view>
+                <input bindinput="getInputCode" class="loginInput" name="vcode" placeholder="请输入验证码" placeholderClass="inputPlaceholder" type="text"></input>
+            </view>
+        </view>
+        <view bindtap="bindPhone" class="btnLogin">登录</view>
+        <yodaSlider bindsliderEvent="sliderCallBack" id="slider" title="身份验证"></yodaSlider>
+    </view>
+</view>

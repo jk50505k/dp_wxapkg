@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "找优惠",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "waterfall-view": "../../components/waterfall-view/index",
+        "group-waterfall-card": "../../components/group-waterfall-card/index",
+        "exception": "../../components/wx-exception/wx-exception"
+    }
+}

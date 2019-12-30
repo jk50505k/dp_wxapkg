@@ -1,0 +1,14 @@
+<view class="seed-tag seed-tag-{{type}} seed-tag-{{type}}-{{value}}" wx:if="{{type==='service'}}">{{serviceTextMap[value]||''}}</view>
+<view class="seed-tag seed-tag-{{type}} seed-tag-ranking-{{value<4?'red':'yellow'}}" wx:if="{{type==='ranking-horizontal'}}">TOP {{value}}</view>
+<view class="seed-tag seed-tag-{{type}} seed-tag-ranking-{{value<4?'red':'yellow'}}" wx:if="{{type==='ranking-vertical'}}">
+    <view class="seed-tag-ranking-vertical-top">TOP</view>
+    <view class="seed-tag-ranking-vertical-ranking">{{value}}</view>
+</view>
+<view class="seed-tag seed-tag-{{type}}" wx:if="{{type==='black-pearl'}}"></view>
+<view class="seed-tag seed-tag-{{type}}" wx:if="{{type==='must-eat-list'||type==='must-live-list'||type==='must-stroll-list'||type==='must-play-list'||type==='must-go-list'}}"></view>
+<view class="seed-tag seed-tag-{{type}} seed-tag-{{type}}-{{size}}" wx:if="{{type==='primary'}}">
+    <slot></slot>
+</view>
+<view class="seed-tag seed-tag-{{type}} seed-tag-{{type}}-{{size}}" wx:if="{{type==='disabled'}}">
+    <slot></slot>
+</view>

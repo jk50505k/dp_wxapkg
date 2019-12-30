@@ -1,0 +1,1 @@
+<ad bindclose="onClose" bindnoscroll="onScroll" isSupportMiniPro="{{isSupportMiniPro}}" promotionData="{{ad}}" wx:if="{{ad}}"></ad>

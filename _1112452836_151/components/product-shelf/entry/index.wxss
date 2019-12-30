@@ -1,0 +1,23 @@
+.general-product-shelf {
+    background: #ffffff;
+    padding-bottom: 20rpx;
+}
+
+.general-product-shelf.listpage {
+    height: 100vh;
+}
+
+.shelf-filter-nav-wrapper.navBarFixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #ffffff;
+    padding-bottom: 20rpx;
+}
+
+.general-product-shelf .shelf-filter-one-level .shelf-filter-nav-second {
+    padding: 0;
+    padding-left: 20rpx;
+}

@@ -1,0 +1,10 @@
+module.exports.log = (function(obj, msg) {
+    msg = msg || 'wxs log: ';
+    console.log(msg, obj && JSON.stringify(obj, null, 4) || obj)
+});
+module.exports.typeOf = (function(variable) {
+    return (typeof variable)
+});
+module.exports.tri = (function(val, dval) {
+    return (val == null ? dval : val)
+});

@@ -1,0 +1,262 @@
+<view bindtap="gotoNote" class="card-item my-class">
+    <view class="publisher-con">
+        <report-formid bizType="biz_dp_timeline" catchtap="gotoUser">
+            <view slot="business">
+                <view class="p-pic">
+                    <image class="p-pic-img" lazyLoad="{{true}}" src="{{carditem.user?carditem.user.userFace:''}}"></image>
+                    <image class="p-vip-img" src="{{carditem.user.vip}}" wx:if="{{carditem.user.vip}}"></image>
+                </view>
+            </view>
+        </report-formid>
+        <view class="p-info">
+            <report-formid bizType="biz_dp_timeline" catchtap="gotoUser">
+                <view slot="business">
+                    <view class="p-name">
+                        <view class="p-name-text">{{carditem.user?carditem.user.nickname:''}}</view>
+                        <view class="p-name-tag">
+                            <image class="p-level-img" mode="aspectFit" src="{{carditem.user.level}}" wx:if="{{carditem.user.level}}"></image>
+                        </view>
+                    </view>
+                    <view class="p-other">
+                        <text class="p-other-time">{{carditem.addTime||''}}</text>
+                        <text class="p-other-type">{{tool.getTypeCN(carditem.bizType)}}</text>
+                    </view>
+                </view>
+            </report-formid>
+        </view>
+        <block wx:if="{{pageType===5&&config.showFollow}}">
+            <view catchtap="addFollow" class="p-follow" data-add-follow="{{true}}" wx:if="{{carditem.user&&!carditem.user.isFollow&&carditem.user.isFollow!==undefined}}">
+                <text class="p-f-text">关注</text>
+            </view>
+            <view catchtap="addFollow" class="p-follow followed" data-add-follow="{{false}}" wx:if="{{carditem.user&&carditem.user.isFollow&&carditem.user.isFollow==='temp'}}">
+                <text class="p-f-text">已关注</text>
+            </view>
+        </block>
+    </view>
+    <view class="media-con{{!!carditem.video?'':' n-'+(carditem.pics&&carditem.pics.length>=5?5:carditem.pics.length)}}" wx:if="{{carditem.video||carditem.pics&&carditem.pics.length}}">
+        <view class="media-box">
+            <view class="media-item item-video" style="{{'height:'+tool.getVideoHeight(carditem.video,conWidth)+'rpx'}}" wx:if="{{!!carditem.video}}">
+                <view catchtap="onVideoPreviewTap" class="media-video-preview">
+                    <image class="video-cover" lazyLoad="{{true}}" mode="aspectFill" src="{{carditem.video.cover}}"></image>
+                </view>
+            </view>
+            <block wx:if="{{!carditem.video}}">
+                <view catchtap="onPhotoTap" class="media-item item-{{index}}" data-item-index="{{index}}" wx:if="{{index<5}}" wx:for="{{carditem.pics}}" wx:for-item="pic" wx:key="m-img-{{index}}">
+                    <view class="media-img" style="padding-bottom: {{tool.paddingBottom(pic.width||100,pic.height||100,carditem.pics.length,index)}}%;">
+                        <image class="media-overlay" lazyLoad="{{true}}" mode="aspectFill" src="{{pic.bigPicture}}"></image>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class="media-sub-longimg" wx:if="{{!carditem.video&&carditem.pics&&carditem.pics.length===1&&carditem.pics[0].width<carditem.pics[0].height}}"></view>
+        <block wx:if="{{carditem.pics&&carditem.pics.length}}">
+            <view class="media-sub-count" wx:if="{{!!carditem.video&&carditem.pics.length>1||carditem.pics.length>5}}">{{carditem.pics.length+(carditem.video?1:0)}}
+        </view>
+        </block>
+    </view>
+    <report-formid bizType="biz_dp_timeline">
+        <view slot="business">
+            <view class="copy-con" wx:if="{{carditem.bizType!=40}}">
+                <rich-text class="c-title" nodes="{{carditem.title.children}}" wx:if="{{carditem.title&&carditem.title.children}}"></rich-text>
+                <block wx:else>
+                    <view class="c-title" wx:if="{{carditem.title}}">{{carditem.title}}</view>
+                </block>
+                <view class="c-desc" wx:if="{{carditem.content}}">
+                    <view class="c-ghost">
+                        <view class="c-wrapper">
+                            <rich-text nodes="{{carditem.contentNodeInfo.children}}" wx:if="{{carditem.contentNodeInfo&&carditem.contentNodeInfo.children}}"></rich-text>
+                            <text wx:else>{{carditem.content}}</text>
+                        </view>
+                        <view class="c-more">全文</view>
+                    </view>
+                </view>
+                <view class="c-content">
+                    <rich-text class="c-title" nodes="{{carditem.title.children}}" wx:if="{{carditem.title&&carditem.title.children}}"></rich-text>
+                    <block wx:else>
+                        <view class="c-title" wx:if="{{carditem.title}}">{{carditem.title}}</view>
+                    </block>
+                    <rich-text class="c-richtext" nodes="{{carditem.contentNodeInfo.children}}" wx:if="{{carditem.contentNodeInfo&&carditem.contentNodeInfo.children}}"></rich-text>
+                    <text wx:else>{{carditem.content}}</text>
+                </view>
+            </view>
+        </view>
+    </report-formid>
+    <view class="impression" wx:if="{{!!carditem.shopImpression&&carditem.shopImpression.length>1}}">
+【印象】
+        <text class="text" wx:for="{{carditem.shopImpression}}" wx:key="impress-{{index}}">{{item}}</text>
+    </view>
+    <view class="location-con" wx:if="{{carditem.location&&carditem.location.locationName}}">
+        <view class="l-track">{{carditem.location.locationName==carditem.location.cityName?carditem.location.locationName:carditem.location.cityName+' '+carditem.location.locationName}}
+    </view>
+    </view>
+    <view class="score-con" wx:if="{{carditem.bizType==10&&carditem.star}}">
+        <text class="score-title">打分</text>
+        <star isold="{{false}}" size="30" star="{{carditem.star.accurateValue||0}}"></star>
+    </view>
+    <report-formid bizType="biz_dp_timeline" catchtap="gotoShop">
+        <view slot="business">
+            <view class="poi-con" wx:if="{{carditem.shop&&carditem.shop.shopName}}">
+                <view class="poi-bar">
+                    <view class="poi-c-pic {{carditem.rankType==3||carditem.rankType==9||carditem.rankType==10||carditem.rankType==11||carditem.isSupportBlackPearl?'poi-c-pic-border':''}}" style="background-image:url({{carditem.shop.defaultPic}})">
+                        <block wx:if="{{!carditem.isSupportBlackPearl}}">
+                            <image class="must-img" src="https://p1.meituan.net/dpgroup/73f47beb3d73f54575e9d12254b981122584.png" wx:if="{{carditem.rankType==3}}"></image>
+                            <image class="must-img" src="https://p0.meituan.net/dpgroup/1a38834a561cf211bc59151cf4aa65322698.png" wx:if="{{carditem.rankType==9}}"></image>
+                            <image class="must-img" src="https://p1.meituan.net/dpgroup/0df93c8407a7a3884a5ec4daa0c612d62645.png" wx:if="{{carditem.rankType==10}}"></image>
+                            <image class="must-img" src="https://p1.meituan.net/dpgroup/b4e04b3f60528f2a86dfbb16637eedce2626.png" wx:if="{{carditem.rankType==11}}"></image>
+                        </block>
+                        <image class="must-img" src="http://p0.meituan.net/scarlett/01bc00c0bf70e7bbb7e03a73bd015e503970.png" wx:else></image>
+                    </view>
+                    <view class="poi-c-info">
+                        <view class="poi-c-name">{{carditem.shop.shopName}}</view>
+                        <view class="poi-c-tags" wx:if="{{carditem.shop.mainRegionName||carditem.shop.mainCategoryName}}">
+                            <text class="tag" wx:if="{{carditem.shop.mainRegionName}}">{{carditem.shop.mainRegionName}}</text>
+                            <text class="tag">{{carditem.shop.mainCategoryName}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="poi-con" wx:if="{{carditem.spuType&&carditem.spuType===8||carditem.spuType===9}}">
+                <view class="poi-bar">
+                    <view class="poi-c-pic" style="background-image:url({{carditem.spuInfo.picUrl}})"></view>
+                    <view class="poi-c-info">
+                        <view class="poi-c-name">{{carditem.spuInfo.name}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </report-formid>
+    <view class="action-con">
+        <view class="a-like">
+            <report-formid bizType="biz_dp_timeline" catchtap="doSendFlower" class="btn-like {{carditem.isSendFlower?'liked':''}}">
+                <view slot="business">
+                    <view class="btn-like {{carditem.isSendFlower?'liked':''}}"></view>
+                </view>
+            </report-formid>
+            <view class="a-blank-like" wx:if="{{!carditem.flowerCount}}">成为第一个点赞的人</view>
+            <view class="a-like-icons" wx:if="{{carditem.flowerCount}}">
+                <view class="a-like-avatar" wx:if="{{index<3}}" wx:for="{{carditem.flowerUsers}}" wx:key="a-likeuser-{{index}}">
+                    <image class="a-like-aimg" lazyLoad="{{true}}" mode="aspectFill" src="{{item.userFace}}"></image>
+                </view>
+            </view>
+            <view class="a-like-num" wx:if="{{carditem.flowerCount}}">{{carditem.flowerCount}}人赞</view>
+        </view>
+        <report-formid bizType="biz_dp_timeline" catchtap="gotoNote" class="a-comment" data-comment="{{true}}">
+            <view slot="business">
+                <view class="a-comment">
+                    <view class="btn-comment">{{carditem.replyCount||''}}</view>
+                </view>
+            </view>
+        </report-formid>
+        <button catchtap="preventTap" class="btn-share" data-desc="{{carditem.share&&carditem.share.shareDesc||tool.getShareDesc(carditem.content)}}" data-imageurl="{{carditem.shareImage||''}}" data-lx="b_0941dxhl" data-path="{{carditem.share&&carditem.share.sharePath||tool.getShareUrl(carditem.noteId,carditem.bizType)}}" data-title="{{carditem.share&&carditem.share.shareTitle||tool.getShareTitle(carditem.user.nickname,carditem.bizType,carditem.shop,carditem.star)}}" openType="share" wx:if="{{pageType==4}}"></button>
+    </view>
+    <view catchtap="gotoNote" class="comments-con" data-comment="{{true}}" wx:if="{{carditem.replyPreviewList&&carditem.replyPreviewList.length}}">
+        <view class="c-item" wx:for="{{carditem.replyPreviewList}}" wx:key="reply-preview-{{index}}">
+            <text class="c-item-n">{{item.replyType!=0?'商家回应':item.user&&item.user.nickname?item.user.nickname:''}}</text>
+            <block wx:if="{{item.followComment}}">
+回复         <text class="c-item-n">{{item.followComment.replyType!=0?'商家回应':item.followComment.user&&item.followComment.user.nickname?item.followComment.user.nickname:''}}</text>
+            </block>
+            <text class="c-item-n">：</text>
+            <rich-text class="reply-con" nodes="{{item.contentNodeInfo.children}}" wx:if="{{item.contentNodeInfo&&item.contentNodeInfo.children}}"></rich-text>
+            <text wx:else>{{item.replyBody}}</text>
+        </view>
+        <view class="c-more" wx:if="{{carditem.replyPreviewList.length<carditem.replyCount}}">查看更多评论
+    </view>
+    </view>
+</view>
+<wxs module="tool">
+var getVideoHeight = (function(video, conWidth) {
+    var width = video.width || 720;
+    var height = video.height || 1280;
+    var _vHeight;
+    if (width / height >= 16 / 9) {
+        _vHeight = conWidth * 9 / 16
+    } else if (width / height < 1) {
+        _vHeight = conWidth
+    } else {
+        _vHeight = conWidth * height / width
+    };
+    return (_vHeight)
+});
+module.exports.getVideoHeight = getVideoHeight;
+var isLargeImage = (function(picLength, index) {
+    if (picLength == 1 || (picLength == 4 && index == 0)) {
+        return (true)
+    };
+    return (false)
+});
+module.exports.isLargeImage = isLargeImage;
+var paddingBottom = (function(width, height, picLength, index) {
+    var bottom = 100;
+    if (isLargeImage(picLength, index)) {
+        if (height / width < 0.56) {
+            bottom = 56
+        } else if (height / width < 1) {
+            bottom = 100 * height / width
+        }
+    };
+    return (bottom)
+});
+module.exports.paddingBottom = paddingBottom;
+var getTypeCN = (function(bizType) {
+    var cn = '';
+    switch (bizType) {
+        case 40:
+            cn = '打卡成功';
+            break;
+        case 10:
+            cn = '发布点评';
+            break;
+        case 110:
+            cn = '发布点评';
+            break;
+    };
+    return (cn)
+});
+module.exports.getTypeCN = getTypeCN;
+var getShareDesc = (function(content) {
+    if (content && content.length > 10) {
+        return (content.slice(0, 10) + '...')
+    };
+    return (content || '')
+});
+module.exports.getShareDesc = getShareDesc;
+var starMap = ({
+    '0': '非常糟，对【shopName】感到不满意哦~',
+    '5': '非常糟，对【shopName】感到不满意哦',
+    '10': '非常糟糕，对【shopName】感到不满意哦',
+    '15': '有些糟糕，感觉【shopName】一般般吧~',
+    '20': '有些糟糕，感觉【shopName】一般般吧~',
+    '25': '可以尝试，感觉【shopName】一般般吧~',
+    '30': '可以尝试，【shopName】感觉不错，大家一起来评一评！',
+    '35': '可以尝试，【shopName】感觉不错，大家一起来评一评！',
+    '40': '推荐前往，【shopName】还是很赞的，有机会可以尝试一下！',
+    '45': '推荐前往，【shopName】还是很赞的，有机会可以尝试一下！',
+    '50': '极力推荐，【shopName】必须点个赞，强烈推荐！',
+});
+var getShareTitle = (function(name, bizType, shop, star) {
+    if (bizType == 40) {
+        if (shop) {
+            return (name + '在' + shop.shopName + '打卡成功！')
+        }
+    } else if (bizType == 10) {
+        if (shop && star) {
+            return (starMap[((nt_0 = ('' + star.value), null == nt_0 ? undefined : 'number' === typeof nt_0 ? nt_0 : "" + nt_0))].replace('【shopName】', shop.shopName))
+        }
+    } else if (bizType == 110) {
+        return (name + '正在大众点评分享自己的潮流生活，快来围观！')
+    };
+    var _type = '足迹';
+    return ('分享' + name + '的' + _type)
+});
+module.exports.getShareTitle = getShareTitle;
+var getShareUrl = (function(noteId, bizType) {
+    var fbmap = ({
+        '110': 29,
+        '10': 1,
+        '40': 3,
+    });
+    var url = '/packages/notedetail/pages/index/index?noteId\x3d' + noteId + '\x26bizType\x3d' + bizType + '\x26rMode\x3d0\x26bType\x3d' + bizType + '\x26fType\x3d' + fbmap[((nt_1 = (bizType + ''), null == nt_1 ? undefined : 'number' === typeof nt_1 ? nt_1 : "" + nt_1))];
+    return (url)
+});
+module.exports.getShareUrl = getShareUrl;
+</wxs>

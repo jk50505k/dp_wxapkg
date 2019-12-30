@@ -1,0 +1,2 @@
+<dynamic binderror="dynamicComponentError" case="tab-my-index" context="{{info}}" id="tab-my-index"></dynamic>
+<exception bindexceptionevent="onException" exceptionDetail="{{exceptionDetail}}" wx:if="{{dynamicComponentError}}"></exception>

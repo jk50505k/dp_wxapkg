@@ -1,0 +1,208 @@
+.exception {
+    position: relative;
+    min-height: 400rpx;
+}
+
+.detailContainer {
+    position: relative;
+    height: 100%;
+}
+
+.noScroll {
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0rpx;
+    bottom: 0rpx;
+    left: 0rpx;
+    right: 0rpx;
+}
+
+.detailWrap {
+    padding-bottom: 110rpx;
+}
+
+.shop-wed-dress {
+    margin-top: 20rpx;
+}
+
+.groupTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28rpx;
+    height: 90rpx;
+    color: #111;
+    padding-right: 30rpx;
+    border-bottom: 1rpx solid #e1e1e1;
+}
+
+.more-review {
+    background-color: #fff;
+    padding-left: 30rpx;
+}
+
+.down-review-title {
+    border-bottom: none;
+    position: relative;
+}
+
+.down-review-title:before {
+    content: '';
+    border: solid #e1e1e1;
+    border-width: 1px 0 0 0;
+    border-radius: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.voteContainerWrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1002;
+    top: 0;
+    left: 0;
+}
+
+.voteContainer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.voteContainer .voteHeader {
+    height: 130rpx;
+    background: #ffffff;
+    line-height: 130rpx;
+    border-top-left-radius: 50rpx;
+    border-top-right-radius: 50rpx;
+    padding-left: 40rpx;
+    padding-right: 45.5rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.voteContainer .voteHeader .voteHeaderText {
+    font-family: PingFangSC-Medium;
+    font-size: 36rpx;
+    color: #111111;
+}
+
+.voteContainer .voteHeader .voteHeaderClose {
+    font-family: PingFangSC-Medium;
+    font-size: 36rpx;
+    color: #111111;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAXCAYAAAD+4+QTAAAAAXNSR0IArs4c6QAAAQRJREFUSA21lUEOhSAMRPGfgHhLTeRSulXvo9eQNd/RQIqCtiZ0oYDtvHQwaeX2UIXjV1j/kA8Qa60yxqhpmj5z53k+NKAVBexCLMvitNaurmvX9/15KHgOwxDq13WNKhXd0UQJiNZhfY0Igo+0gAOi+SkANG8QCYgDyEI4IHTp7zDXAXQQyU7OT3nrJIBXCBKoJRCnAKw58diJF6AgbxEXAA0WBIlN0xx3AEjbtjhiBwtCLSrSCQVgTa3jWvbYyRXg/ZGCspAc4AsoCXkDSEE3CBcgAUUQKYALChDMgC+/ZwqUnSfbtrmu69w4jr5O/EYtNPbJGNVW2EWjssAmzPgC2kHyDzlrFrxc4SRjAAAAAElFTkSuQmCC');
+    background-size: 37rpx 37rpx;
+    background-repeat: no-repeat;
+    width: 37rpx;
+    height: 37rpx;
+    position: absolute;
+    top: 45.5rpx;
+    right: 45.5rpx;
+}
+
+.voteContainer .voteBody {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.voteList {
+    display: flex;
+    flex-direction: column;
+}
+
+.voteList .voteItem {
+    display: flex;
+    flex-direction: row;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+}
+
+.voteList .voteItem .voteItemLeft {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.voteList .voteItem .voteItemLeft .tagme {
+    background: #FFEFEA;
+    border-radius: 6rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 26rpx;
+    color: #FF6633;
+    text-align: center;
+    height: 42rpx;
+    line-height: 42rpx;
+    width: 123rpx;
+    margin-right: 10rpx;
+    padding-left: 9.5rpx;
+    padding-right: 9.5rpx;
+    align-self: center;
+}
+
+.voteList .voteItem .voteItemLeft .tagme {
+    background: #FFEFEA;
+    border-radius: 6rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 26rpx;
+    color: #FF6633;
+    text-align: center;
+    height: 42rpx;
+    line-height: 42rpx;
+    width: 123rpx;
+    margin-right: 10rpx;
+    padding-left: 9.5rpx;
+    padding-right: 9.5rpx;
+}
+
+.voteList .voteItem .voteItemLeft .voteTitle {
+    font-family: PingFangSC-Medium;
+    font-size: 26rpx;
+    color: #111111;
+    letter-spacing: 0.22px;
+    flex: 1;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.bottom-border {
+    position: relative;
+}
+
+.bottom-border:before {
+    content: '';
+    position: absolute;
+    width: 89.3%;
+    transform: scaleY(0.5);
+    transform-origin: 0 0;
+    border-bottom: 1px solid #E1E1E1;
+    left: 5.3%;
+    top: 0;
+}
+
+.iphoneX {
+    padding-bottom: 68rpx;
+}

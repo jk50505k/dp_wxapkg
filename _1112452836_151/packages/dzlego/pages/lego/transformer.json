@@ -1,0 +1,13 @@
+{
+    "usingComponents": {
+        "review-list": "../../../../components/review-list/review-list",
+        "quick-nav": "../../../../components/quick-nav/quick-nav",
+        "midas-dp-deal-list": "../../../../components/midas-dp-deal-list/midas-dp-deal-list",
+        "top-parent": "../../../../components/top-parent/top-parent",
+        "report-form": "../../../../components/report-formid/report-formid",
+        "rainbow": "../../../../components/rainbow/index",
+        "core": "./child/child",
+        "exception": "./wx-exception/wx-exception",
+        "dynamic": "../dynamic/dynamic"
+    }
+}

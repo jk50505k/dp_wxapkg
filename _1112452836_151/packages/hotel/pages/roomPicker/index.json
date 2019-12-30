@@ -1,0 +1,7 @@
+{
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "num-picker": "./components/picker/picker",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

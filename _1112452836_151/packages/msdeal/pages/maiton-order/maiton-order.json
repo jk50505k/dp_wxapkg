@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "买单",
+    "backgroundColor": "#ffffff",
+    "usingComponents": {
+        "dialog": "../components/dialog/dialog",
+        "loading": "../components/loading/loading",
+        "maiton-hui": "../components/maiton-hui/maiton-hui",
+        "maiton-bcoupon": "../components/maiton-bcoupon/maiton-bcoupon",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

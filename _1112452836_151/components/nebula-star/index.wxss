@@ -1,0 +1,215 @@
+.nebula_star {
+    display: inline-block;
+    font-size: 0;
+}
+
+.nebula_star .star_icon {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.nebula_star .star {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24rpx;
+    height: 24rpx;
+    margin-right: 3rpx;
+    background-repeat: no-repeat;
+    background-image: url("https://p0.meituan.net/dpgroup/8dc7cdf35cf9453accc40bfa4610db231766.png");
+    background-size: 100%;
+}
+
+.nebula_star .star:last-child {
+    margin-right: 0;
+}
+
+.nebula_star .star.star_0 {
+    background-repeat: no-repeat;
+    background-image: url("https://p0.meituan.net/dpgroup/8dc7cdf35cf9453accc40bfa4610db231766.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_5:nth-child(1) {
+    background-repeat: no-repeat;
+    background-image: url("http://p0.meituan.net/scarlett/57b898469bd5dc8ef34d73e636bb2fc02069.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_10:nth-child(1) {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/4c394c15d67bfa0ebaf0b96081b82ba42282.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_15:nth-child(1) {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/4c394c15d67bfa0ebaf0b96081b82ba42282.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_15:nth-child(2) {
+    background-repeat: no-repeat;
+    background-image: url("http://p0.meituan.net/scarlett/57b898469bd5dc8ef34d73e636bb2fc02069.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_20:nth-child(1),.nebula_star .star.star_20:nth-child(2) {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/4c394c15d67bfa0ebaf0b96081b82ba42282.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_25:nth-child(1),.nebula_star .star.star_25:nth-child(2) {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/4c394c15d67bfa0ebaf0b96081b82ba42282.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_25:nth-child(3) {
+    background-repeat: no-repeat;
+    background-image: url("http://p0.meituan.net/scarlett/57b898469bd5dc8ef34d73e636bb2fc02069.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_30:nth-child(1),.nebula_star .star.star_30:nth-child(2),.nebula_star .star.star_30:nth-child(3) {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/4c394c15d67bfa0ebaf0b96081b82ba42282.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_35:nth-child(1),.nebula_star .star.star_35:nth-child(2),.nebula_star .star.star_35:nth-child(3) {
+    background-repeat: no-repeat;
+    background-image: url("https://p0.meituan.net/dpgroup/7395c576e5815c20e3627c8a8ecfc03d2148.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_35:nth-child(4) {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/e3132d779f1446e35c454dc9261105f82089.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_40 {
+    background-repeat: no-repeat;
+    background-image: url("https://p0.meituan.net/dpgroup/7d12350351ebda84f2a6768159655d492148.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_40:nth-child(5) {
+    background-repeat: no-repeat;
+    background-image: url("https://p0.meituan.net/dpgroup/8dc7cdf35cf9453accc40bfa4610db231766.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_45 {
+    background-repeat: no-repeat;
+    background-image: url("https://p0.meituan.net/dpgroup/a4549ddc7307b2a15fe790e43d322dbf2116.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_45:nth-child(5) {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/05c8719cda2dec5aa4c42a601ed37ec02081.png");
+    background-size: 100%;
+}
+
+.nebula_star .star.star_50 {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/0c7b06d86f0c61d6c17c7b8bdcac39902323.png");
+    background-size: 100%;
+}
+
+.nebula_star .star_score {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6rpx;
+    font-size: 26rpx;
+}
+
+.nebula_star .star_score.score_0 {
+    color: #ddd;
+}
+
+.nebula_star .star_score.score_10,.nebula_star .star_score.score_20,.nebula_star .star_score.score_30 {
+    color: #F8C11E;
+}
+
+.nebula_star .star_score.score_35 {
+    color: #F99F21;
+}
+
+.nebula_star .star_score.score_40 {
+    color: #F68323;
+}
+
+.nebula_star .star_score.score_45 {
+    color: #F64922;
+}
+
+.nebula_star .star_score.score_50 {
+    color: #EA120E;
+}
+
+.nebula_star.nebula_star_old .star.star_10:nth-child(1) {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/c60690c68ac8bee31f6f461b75e9e2822149.png");
+    background-size: 100%;
+}
+
+.nebula_star.nebula_star_old .star.star_20:nth-child(1),.nebula_star.nebula_star_old .star.star_20:nth-child(2) {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/c60690c68ac8bee31f6f461b75e9e2822149.png");
+    background-size: 100%;
+}
+
+.nebula_star.nebula_star_old .star.star_30:nth-child(1),.nebula_star.nebula_star_old .star.star_30:nth-child(2),.nebula_star.nebula_star_old .star.star_30:nth-child(3) {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/c60690c68ac8bee31f6f461b75e9e2822149.png");
+    background-size: 100%;
+}
+
+.nebula_star.nebula_star_old .star.star_35:nth-child(1),.nebula_star.nebula_star_old .star.star_35:nth-child(2),.nebula_star.nebula_star_old .star.star_35:nth-child(3) {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/c60690c68ac8bee31f6f461b75e9e2822149.png");
+    background-size: 100%;
+}
+
+.nebula_star.nebula_star_old .star.star_35:nth-child(4) {
+    background-repeat: no-repeat;
+    background-image: url("https://p0.meituan.net/dpgroup/283525136324c746cccd28ff073381b51915.png");
+    background-size: 100%;
+}
+
+.nebula_star.nebula_star_old .star.star_40 {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/c60690c68ac8bee31f6f461b75e9e2822149.png");
+    background-size: 100%;
+}
+
+.nebula_star.nebula_star_old .star.star_40:nth-child(5) {
+    background-repeat: no-repeat;
+    background-image: url("https://p0.meituan.net/dpgroup/8dc7cdf35cf9453accc40bfa4610db231766.png");
+    background-size: 100%;
+}
+
+.nebula_star.nebula_star_old .star.star_45 {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/c60690c68ac8bee31f6f461b75e9e2822149.png");
+    background-size: 100%;
+}
+
+.nebula_star.nebula_star_old .star.star_45:nth-child(5) {
+    background-repeat: no-repeat;
+    background-image: url("https://p0.meituan.net/dpgroup/283525136324c746cccd28ff073381b51915.png");
+    background-size: 100%;
+}
+
+.nebula_star.nebula_star_old .star.star_50 {
+    background-repeat: no-repeat;
+    background-image: url("https://p1.meituan.net/dpgroup/c60690c68ac8bee31f6f461b75e9e2822149.png");
+    background-size: 100%;
+}
+
+.nebula_star.nebula_star_old .star_score {
+    color: #fc673d;
+}

@@ -1,0 +1,43 @@
+<view class="groups" wx:if="{{showModule}}">
+    <view class="top">
+        <view class="title">美食超值拼团</view>
+        <view bindtap="onMoreTap" class="more">
+            <view>查看全部</view>
+            <view class="icon"></view>
+        </view>
+    </view>
+    <swiper class="container" nextMargin="60rpx" previousMargin="30rpx">
+        <swiper-item wx:for="{{list}}" wx:key="{{index}}">
+            <view class="group">
+                <view bindtap="onShopTap" class="shop" data-id="{{item.shopId}}">
+                    <view class="shop-name" wx:if="{{item.shopName}}">
+                        <view class="shop-icon"></view>
+                        <view class="poi">{{item.shopName}}</view>
+                    </view>
+                    <view class="distance">
+                        <view wx:if="{{item.distance}}">{{item.distance}}</view>
+                        <view class="icon"></view>
+                    </view>
+                </view>
+                <view bindtap="onGroupTap" class="desc" data-group="{{item}}">
+                    <mina-image class="img" mode="aspectFill" src="{{item.image}}"></mina-image>
+                    <view class="info">
+                        <view class="name" wx:if="{{item.title}}">{{item.title}}</view>
+                        <view class="price">
+                            <view class="basic" wx:if="{{item.ptNumber||item.discount}}">
+                                <view class="number {{item.discount?'next':''}}" wx:if="{{item.ptNumber}}">{{item.ptNumber}}</view>
+                                <view class="discount" wx:if="{{item.discount}}">{{item.discount}}</view>
+                            </view>
+                            <view class="now-price">￥{{item.ptPrice}}
+                            </view>
+                        </view>
+                        <view class="other">
+                            <view class="single">单独买 ￥{{item.singlePrice}}</view>
+                            <view class="num" wx:if="{{item.ptOrderCount}}">{{item.ptOrderCount}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

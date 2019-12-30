@@ -1,0 +1,106 @@
+.food-ranklist {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding-bottom: 19rpx;
+    margin-bottom: 20rpx;
+}
+
+.food-title-wrap {
+    box-sizing: border-box;
+    display: flex;
+    padding-left: 30rpx;
+    margin-bottom: 28rpx;
+    align-items: center;
+    padding-top: 34rpx;
+}
+
+.food-icon {
+    box-sizing: border-box;
+    width: 40rpx;
+    height: 40rpx;
+    background-image: url('//p1.meituan.net/dpgroup/7acc1abf9b2410ce24322a81feb777fe800.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.food-title {
+    font-family: PingFangSC-Semibold;
+    font-size: 38rpx;
+    font-weight: bold;
+    color: #111111;
+    line-height: 43rpx;
+    margin-left: 5rpx;
+}
+
+.food-card-wrap {
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    padding-left: 30rpx;
+    height: 160rpx;
+}
+
+.food-card {
+    width: 221rpx;
+    height: 147rpx;
+    box-sizing: border-box;
+    box-shadow: 0 7rpx 8rpx 0 rgba(0,0,0,0.06);
+    border-radius: 10rpx;
+    position: relative;
+    padding: 24rpx 20rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+}
+
+.food-card:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(153,153,153,0.18);
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    border-radius: 10rpx;
+    transform: scale(0.5);
+    transform-origin: left top;
+}
+
+.last-food-card {
+    margin-right: 30rpx!important;
+}
+
+.title {
+    font-family: PingFangSC-Semibold;
+    font-weight: bold;
+    font-size: 28rpx;
+    color: #111111;
+    line-height: 28rpx;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.subtitle {
+    position: absolute;
+    font-family: PingFangSC-Regular;
+    font-size: 22rpx;
+    color: #777777;
+    line-height: 26rpx;
+    top: 59rpx;
+}
+
+.food-img-wrap {
+    width: 92rpx;
+    height: 72rpx;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0rpx;
+    right: 0rpx;
+    border-bottom-right-radius: 10rpx;
+    background-size: 100rpx 100rpx;
+    background-position-x: 10rpx;
+    background-repeat: no-repeat;
+}

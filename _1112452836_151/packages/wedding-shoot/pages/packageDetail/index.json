@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "套餐详情",
+    "usingComponents": {
+        "app": "../../components/packageDetail/index",
+        "book-area": "../../components/bookArea/index",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "团购下单",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "error": "../components/error/error",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

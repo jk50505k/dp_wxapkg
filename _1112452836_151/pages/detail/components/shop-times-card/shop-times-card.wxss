@@ -1,0 +1,349 @@
+.times-card-container {
+    margin: 20rpx 0;
+    background: #ffffff;
+}
+
+.times-card-container .header {
+    display: flex;
+    align-items: center;
+    padding: 30rpx 0 20rpx 30rpx;
+}
+
+.times-card-container .header .icon {
+    display: inline-block;
+    width: 40rpx;
+    height: 40rpx;
+    background: linear-gradient(-162deg,#ECD8B1 0%,#D1AC75 82%);
+    border-radius: 2rpx;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    text-align: center;
+    color: #ffffff;
+}
+
+.times-card-container .header .title {
+    display: inline;
+    font-size: 38rpx;
+    line-height: 45rpx;
+    color: #111111;
+    font-weight: bold;
+    margin-left: 20rpx;
+}
+
+.times-card-container .card-content {
+    padding-bottom: 40rpx;
+}
+
+.times-card-container .times-card {
+    position: relative;
+    color: #F9D8A6;
+    border-radius: 14rpx;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 178rpx;
+    padding: 30rpx;
+    box-sizing: border-box;
+    margin: 0 30rpx;
+    overflow: hidden;
+}
+
+.times-card-container .times-card .detail-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    max-width: 500rpx;
+}
+
+.times-card-container .times-card .detail-info .title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.times-card-container .times-card .detail-info .name {
+    font-size: 30rpx;
+    font-weight: bold;
+    line-height: 42rpx;
+}
+
+.times-card-container .times-card .detail-info .limit {
+    position: relative;
+    top: 2rpx;
+    padding: 0 6rpx;
+    margin-left: 9rpx;
+    font-size: 22rpx;
+    border-radius: 2rpx;
+    border: 1px solid rgba(249,216,166,0.6);
+}
+
+.times-card-container .times-card .detail-info .sub-title {
+    height: 30rpx;
+    line-height: 30rpx;
+    margin-top: 2rpx;
+    font-size: 22rpx;
+    color: #ECD8BC;
+}
+
+.times-card-container .times-card .detail-info .price {
+    font-size: 32rpx;
+    display: flex;
+    align-items: baseline;
+}
+
+.times-card-container .times-card .detail-info .price .total-price {
+    font-size: 48rpx;
+    font-weight: bold;
+}
+
+.times-card-container .times-card .detail-info .price .total-price::before {
+    content: '¥';
+    font-size: 32rpx;
+    font-weight: normal;
+}
+
+.times-card-container .times-card .detail-info .price .times {
+    font-size: 26rpx;
+    flex-shrink: 0;
+}
+
+.times-card-container .times-card .detail-info .price .promo-desc {
+    position: relative;
+    top: -3rpx;
+    font-size: 20rpx;
+    border: 1px solid rgba(249,216,166,0.6);
+    padding: 0 10rpx;
+    margin-left: 9rpx;
+    border-radius: 2rpx;
+}
+
+.times-card-container .times-card .detail-info .price .per-price {
+    font-size: 26rpx;
+    opacity: 0.5;
+    margin-left: 12rpx;
+}
+
+.times-card-container .times-card .detail-info .benefit {
+    margin-top: 22rpx;
+    color: #ECD8BC;
+}
+
+.times-card-container .times-card .detail-info .benefit .type,.times-card-container .times-card .detail-info .benefit .amount {
+    font-size: 26rpx;
+}
+
+.times-card-container .times-card .detail-info .benefit .number {
+    margin: 0 4rpx;
+    position: relative;
+    top: 2rpx;
+    font-size: 48rpx;
+    font-weight: bold;
+    line-height: 48rpx;
+}
+
+.times-card-container .times-card .card-sell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.times-card-container .times-card .card-sell .action {
+    font-size: 26rpx;
+    padding: 0 37rpx;
+    width: 130rpx;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 50rpx;
+    border-radius: 100px;
+    background: #F9D8A6;
+    color: black;
+    margin-bottom: 16rpx;
+}
+
+.times-card-container .times-card .card-sell .sold-count {
+    font-size: 26rpx;
+    color: #F9D8A6;
+    opacity: 0.5;
+}
+
+.times-card-container .times-card .detail-activity {
+    position: absolute;
+    right: -30rpx;
+    top: 15rpx;
+    background: #f63;
+    color: #fff;
+    font-size: 15rpx;
+    text-align: center;
+    transform: rotate(45deg);
+    text-shadow: 0 1px 2px #C5451B;
+    height: 26rpx;
+    line-height: 28rpx;
+    width: 120rpx;
+}
+
+.times-card-container .refund {
+    display: inline-block;
+}
+
+.times-card-container .refund .icon-refund {
+    display: inline-block;
+    margin-right: 6rpx;
+    width: 16rpx;
+    height: 24rpx;
+    background: url(https://p0.meituan.net/dprainbow/06a388d75dd37066480441755ed1d2361058.png) no-repeat;
+    background-size: 100% auto;
+    vertical-align: middle;
+}
+
+.times-card-container .overflow-fix {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.times-card-container .flex-end {
+    justify-content: flex-end;
+}
+
+.times-card-container .flex-center {
+    justify-content: center;
+}
+
+.times-card-container .biserial {
+    padding: 0 30rpx;
+}
+
+.times-card-container .biserial .card-content-item {
+    float: left;
+}
+
+.times-card-container .biserial .card-content-item:nth-child(2n) {
+    margin-left: 20rpx;
+}
+
+.times-card-container .biserial .card-content-item.Hide {
+    display: none;
+}
+
+.times-card-container .biserial .card-content-item .times-card {
+    display: block;
+    margin: 0;
+    padding: 24rpx;
+    width: 325rpx;
+    height: 182.8rpx;
+    border-radius: 14rpx;
+    box-shadow: 2rpx 10rpx 16rpx #ccc;
+    overflow: hidden;
+}
+
+.times-card-container .biserial .card-content-item .times-card .detail-info .main-title {
+    display: flex;
+    align-items: center;
+}
+
+.times-card-container .biserial .card-content-item .times-card .detail-info .main-title .title {
+    width: 240rpx;
+}
+
+.times-card-container .biserial .card-content-item .times-card .detail-info .name {
+    font-weight: bold;
+}
+
+.times-card-container .biserial .card-content-item .times-card .detail-info .limit {
+    font-size: 18rpx;
+}
+
+.times-card-container .biserial .card-content-item .times-card .detail-info .icon-arrow {
+    margin-right: 6rpx;
+    width: 28rpx;
+    height: 28rpx;
+    background: url(https://p0.meituan.net/dprainbow/afcbb55638bf6bb58e1a33f381eb96c81693.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.times-card-container .biserial .card-content-item .times-card .detail-info .price {
+    font-size: 48rpx;
+    margin-top: 13rpx;
+}
+
+.times-card-container .biserial .card-content-item .times-card .detail-info .price.no-subTitle {
+    margin-top: 45rpx;
+}
+
+.times-card-container .biserial .card-content-item .times-card .detail-info .price .total-price {
+    font-size: 48rpx;
+    margin: 0 4rpx;
+    font-weight: bold;
+    line-height: 48rpx;
+}
+
+.times-card-container .biserial .card-content-item .times-card .detail-info .price .total-price::before {
+    content: '¥';
+    font-size: 30rpx;
+    font-weight: normal;
+}
+
+.times-card-container .biserial .card-content-item .times-card .detail-info .price .times {
+    font-size: 26rpx;
+}
+
+.times-card-container .biserial .card-content-item .times-card .detail-info .benefit {
+    margin-top: 45rpx;
+}
+
+.times-card-container .biserial .card-content-item .other {
+    padding: 12rpx 0 30rpx;
+    display: flex;
+    align-items: center;
+    color: #777;
+    font-size: 26rpx;
+    justify-content: space-between;
+}
+
+.times-card-container .biserial .card-content-item .refund .icon-refund {
+    vertical-align: inherit;
+}
+
+.times-card-container .see-more {
+    padding: 0 30rpx;
+}
+
+.times-card-container .see-more .btn-box {
+    display: flex;
+    height: 90rpx;
+    cursor: pointer;
+    font-size: 30rpx;
+    color: #777;
+    text-align: center;
+    border-top: 1rpx solid #e1e1e1;
+    justify-content: center;
+    align-items: center;
+}
+
+.times-card-container .see-more .icon-arrow__down {
+    width: 16rpx;
+    height: 16rpx;
+    margin: -10rpx 0 0 10rpx;
+    border-right: 4rpx solid #bbb;
+    border-bottom: 4rpx solid #bbb;
+    transform: rotate(45deg);
+}
+
+.times-card-container .see-more .icon-arrow__down.pack-up {
+    margin: 10rpx 0 0 10rpx;
+    border-left: 2px solid #bbb;
+    border-top: 2px solid #bbb;
+    border-right: none;
+    border-bottom: none;
+}
+
+.clearfix:before,.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}

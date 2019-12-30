@@ -1,0 +1,55 @@
+<view class="triggerList border-bottom {{activeIndex!==-1?'fixTop':''}}" wx:if="{{trigger&&trigger.length}}">
+    <view bindtap="handleTrigger" class="triggerItem" data-index="{{triggerIndex}}" wx:for="{{trigger}}" wx:for-index="triggerIndex" wx:for-item="triggerItem" wx:key="{{triggerIndex}}">
+        <view class="triggerItemText" wx:if="{{triggerItem.name}}">{{triggerItem.triggerName||triggerItem.name}}</view>
+        <view class="iconDrop {{activeIndex===triggerIndex?'triggerActive':''}}"></view>
+        <view class="white-arrow" wx:if="{{activeIndex===triggerIndex}}"></view>
+    </view>
+</view>
+<view bindtap="hideTrigger" catchtouchmove="preventScroll" class="overlay" wx:if="{{activeIndex!==-1}}"></view>
+<view class="selectorContainer" wx:if="{{activeIndex!==-1&&!isSearching}}">
+    <view class="metroSelector border-bottom" wx:if="{{(activeIndex===0||activeIndex===4)&&hasmetro}}">
+        <view bindtap="closeMetro" class="metro-menu {{!activeMetro?'active-metroMenu':''}}">商区</view>
+        <view class="split-line"></view>
+        <view bindtap="openMetro" class="metro-menu {{activeMetro?'active-metroMenu':''}}">地铁</view>
+    </view>
+    <view class="selector-body">
+        <view catchtouchmove="preventScroll" class="mainSelector" style="height: 720rpx;" wx:if="{{activeIndex===INDEX_REGION||activeIndex===INDEX_CATEGORY||activeIndex===INDEX_METRO}}">
+            <scroll-view class="scrollView" scrollIntoView="{{mainToView}}" scrollY="true">
+                <view bindtap="handleMainSelector" class="mainSelectorItem {{item.id==activeMainSelectorId?'activeMainSelector':''}}" data-itemid="{{item.id}}" data-parentid="{{item.parentId}}" id="main-{{item.id}}" wx:for="{{mainSelector}}" wx:key="{{index}}">{{item.name}}</view>
+            </scroll-view>
+        </view>
+        <view catchtouchmove="preventScroll" class="subSelector {{activeIndex!==2?'bkg-subSelector':''}}" style="height: 720rpx;" wx:if="{{subSelector&&subSelector.length}}">
+            <scroll-view class="scrollView" scrollIntoView="{{subToView}}" scrollY="true">
+                <view bindtap="handleSubSelector" class="subSelectorItem" data-itemid="{{item.id}}" data-parentid="{{item.parentId}}" id="sub-{{item.id}}" wx:for="{{subSelector}}" wx:key="{{index}}">
+                    <text class="{{item.id===(activeSubSelector&&activeSubSelector.id)?'activeSubSelector':''}}">{{item.name}}</text>
+                    <text class="subSelectorNum" wx:if="{{item.num}}">{{item.num}}</text>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="choiceSelector" wx:if="{{choiceSelectors&&choiceSelectors.length}}">
+        <view catchtouchmove="preventScroll" class="choice-scroll" style="height: 540rpx;">
+            <scroll-view class="scrollView" scrollY="true">
+                <view class="choice-container margin-border" wx:for="{{choiceSelectors}}" wx:key="choiceItem">
+                    <view class="title-container">
+                        <text class="choice-title">{{item.name}}</text>
+                        <view class="choice-label" wx:if="{{item.label}}">
+                            <view class="label-tri"></view>
+                            <text class="label-text">{{item.label}}</text>
+                        </view>
+                    </view>
+                    <view class="choice-item-container">
+                        <view catchtap="tapChoice" class="choice-item {{filter.selected?'selected-choice-item':''}}" data-choiceid="{{filter.id}}" data-ismulti="{{item.multiSelectable}}" data-name="{{filter.name}}" data-parent="{{item.name}}" wx:for="{{item.filters}}" wx:for-item="filter" wx:key="filterItem">
+                            <text class="filter-text">{{filter.name}}</text>
+                            <text class="filter-service {{filter.selected?'selected-filter-service':''}}" wx:if="{{filter.desc}}">{{filter.desc}}</text>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="choice-options">
+            <view catchtap="resetChoice" class="choice-btn choice-reset">重置</view>
+            <view catchtap="sureChoice" class="choice-btn choice-sure">确定</view>
+        </view>
+    </view>
+</view>

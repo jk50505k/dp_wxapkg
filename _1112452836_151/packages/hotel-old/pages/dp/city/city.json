@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "选择城市",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "city": "../../../npm/@dp/sparrow-component-city/city",
+        "quick-nav": "../../../../../components/quick-nav/quick-nav"
+    }
+}

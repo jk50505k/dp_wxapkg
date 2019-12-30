@@ -1,0 +1,20 @@
+{
+    "navigationBarTitleText": "大众点评酒店",
+    "onReachBottomDistance": 50,
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "poi": "../../components/dp/poi/poi",
+        "go-top": "../../components/go-top/go-top",
+        "loading-more": "./components/loading-more/loading-more",
+        "header": "./components/header/header",
+        "filter-area": "./components/filter-area/filter-area",
+        "filter-price": "./components/filter-price/filter-price",
+        "filter-price-slider": "./components/filter-price-slider/filter-price-slider",
+        "filter-sort": "./components/filter-sort/filter-sort",
+        "filter-fast": "./components/filter-fast/filter-fast",
+        "filter": "./components/filter/filter",
+        "no-result": "./components/dp/no-result/no-result",
+        "go-history": "./components/dp/go-history/go-history",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

@@ -1,0 +1,65 @@
+@import "../../../../__wuBaseWxss__/1.wxss";
+
+.shop-promo {
+    background: #fff;
+}
+
+.promo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 30rpx;
+    height: 110rpx;
+    line-height: 110rpx;
+    position: relative;
+}
+
+.promo:before {
+    content: '';
+    border: solid #e1e1e1;
+    border-width: 1px 0 0 0;
+    border-radius: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.promo-tag {
+    height: 40rpx;
+    line-height: 40rpx;
+    padding: 2rpx 8rpx;
+}
+
+.promo-title {
+    color: #777;
+    font-size: 26rpx;
+    display: inline-block;
+    max-width: 390rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 26rpx;
+}
+
+.promo-txt {
+    color: #777;
+    font-size: 26rpx;
+    margin-right: 26rpx;
+}
+
+.promo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-right {
+    display: flex;
+    align-items: center;
+}

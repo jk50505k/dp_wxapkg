@@ -1,0 +1,12 @@
+{
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "参加拼团",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "usingComponents": {
+        "collage": "../components/deal-collage-new/collage-new",
+        "collage-card": "../components/deal-collage-card/collage-card",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

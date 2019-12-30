@@ -1,0 +1,13 @@
+{
+    "navigationBarTitleText": "个人主页",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "list-view": "../../../../components/list-view/list-view",
+        "component-user-info": "../../components/user-info/user-info",
+        "parent": "../../../../components/top-parent/top-parent",
+        "exception": "../../../../components/wx-exception/wx-exception",
+        "rich-card": "../../../../components/rich-card/rich-card",
+        "share-canvas": "../../../../components/mina-canvas/index",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

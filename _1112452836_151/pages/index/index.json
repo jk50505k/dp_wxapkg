@@ -1,0 +1,14 @@
+{
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "category": "./components/category/category",
+        "index-activity": "./components/index-activity/index",
+        "pop-up": "./components/pop-up/index",
+        "exception": "../../components/wx-exception/wx-exception",
+        "guess-like": "./components/guess-like/index",
+        "mymini-tip": "../../components/mymini-tip/index",
+        "search-entry": "../../components/search-entry/search-entry",
+        "group": "./components/index-groupseckill/index",
+        "app-download": "../../components/app-download/index"
+    }
+}

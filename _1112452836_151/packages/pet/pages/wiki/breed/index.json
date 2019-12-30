@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "宠物百科",
+    "usingComponents": {
+        "filter": "../../../components/filter/index",
+        "breedgrid": "../components/breedgrid/index",
+        "quick-nav": "../../../../../components/quick-nav/quick-nav"
+    }
+}

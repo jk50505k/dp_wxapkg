@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "report-form": "../../../../components/report-formid/report-formid"
+    }
+}

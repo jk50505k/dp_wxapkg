@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "商品详情",
+    "backgroundColor": "#f6f6f6",
+    "usingComponents": {
+        "shop-list": "../../components/shop-list/shop-list",
+        "modal": "../../components/modal/modal",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

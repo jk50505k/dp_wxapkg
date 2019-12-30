@@ -1,0 +1,38 @@
+<view bindtap="showMe" class="containery" style="margin:{{moduleConfig.margin}}" wx:if="{{list.length>0}}">
+    <view class="flex subtitle">
+        <view class="major brief title flex">
+            <image class="mark" src="{{mark}}"></image>
+            <view class="title-text">{{title}}</view>
+        </view>
+        <view>{{entry}}</view>
+        <view class="entry"></view>
+    </view>
+</view>
+<view bindtap="off" catchtouchmove="hijack" class="backdrop" wx:if="{{popup}}"></view>
+<view catchtap="hijack" class="coupon-modal" wx:if="{{popup}}">
+    <view bindtap="off" class="flex head">
+        <view class="major">{{modalTitle}}</view>
+X      </view>
+    <view class="coupon-list">
+        <view class="coupon-item flex" wx:for="{{list}}">
+            <view class="amount">
+                <view class="price">
+￥          <text class="bigger">{{item.amount}}</text>
+                </view>
+                <view class="subtitle">{{item.amountDesc}}</view>
+            </view>
+            <view class="major flex">
+                <view class="major">
+                    <view class="content">{{item.title}}</view>
+                    <view class="flex">
+                        <view class="major subtitle">{{item.desc}}</view>
+                        <view catchtap="check" data-index="{{index}}" data-item="{{item}}" wx:if="{{item.status.status===0}}">
+                            <button class="go">{{item.issueButtonText}}</button>
+                        </view>
+                    </view>
+                </view>
+                <image class="settled" src="{{item.issuedIcon}}" wx:if="{{item.status.status!==0}}"></image>
+            </view>
+        </view>
+    </view>
+</view>

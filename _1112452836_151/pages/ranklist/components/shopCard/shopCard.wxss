@@ -1,0 +1,32 @@
+.spread-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90rpx;
+    background-color: #ffffff;
+    margin-bottom: 10rpx;
+}
+
+.spread-btn {
+    font-family: PingFangSC-Regular;
+    font-size: 30rpx;
+    color: #777777;
+    text-align: right;
+    margin-right: 10rpx;
+}
+
+.arrow-up {
+    width: 26rpx;
+    height: 15rpx;
+    background-image: url('//p1.meituan.net/dpgroup/f0d5d2f0e68e1eb22a21f0d0bf622e871399.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.arrow-down {
+    width: 26rpx;
+    height: 15rpx;
+    background-image: url('//p0.meituan.net/dpgroup/edb234e5bf5afdfa720d5b7902082c961394.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

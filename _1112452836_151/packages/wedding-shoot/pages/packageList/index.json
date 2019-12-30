@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "套餐列表",
+    "usingComponents": {
+        "app": "../../components/packageList/index",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

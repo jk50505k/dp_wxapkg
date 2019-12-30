@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "订单详情",
+    "backgroundColor": "#f6f6f6",
+    "usingComponents": {
+        "modal": "../../components/modal/modal",
+        "product-list": "../../components/product-list/product-list",
+        "product-order": "../../components/product-order/product-order",
+        "coupon": "../../components/coupon/coupon",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

@@ -1,0 +1,15 @@
+<view class="good-ranklist">
+    <view class="good-title-wrap">
+        <view class="good-icon"></view>
+        <view class="good-title">精品榜单</view>
+    </view>
+    <view class="good-ranklist-wrap">
+        <view bindtap="gotoRank" class="{{goodRankList.length>=3?'ranklist-item-normal':'ranklist-item-special'}}" data-type="{{item.rankType}}" wx:for="{{goodRankList}}" wx:key="goodranklist-img-{{index}}">
+            <image class="ranklist-item-img" mode="scaleToFill" src="{{item.imgUrl}}"></image>
+            <image class="ranklist-item-title {{item.rankType==6?'popular-item-title':''}} {{item.rankName=='人气菜品榜'?'specital-item-title':''}}" mode="scaleToFill" src="{{item.titleUrl}}"></image>
+            <view class="ranklist-item-subtitle" wx:if="{{item.rankType==3||item.rankType==8}}">{{item.shopCount}}家餐厅上榜</view>
+            <view class="ranklist-item-subtitle" wx:if="{{item.rankType==6}}">{{item.shopCount}}家商户上榜</view>
+            <view class="ranklist-item-subtitle" wx:if="{{item.rankType=='default'}}">热搜菜品</view>
+        </view>
+    </view>
+</view>

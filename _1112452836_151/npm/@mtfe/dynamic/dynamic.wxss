@@ -1,0 +1,15 @@
+core {
+    display: block;
+    background-color: transparent;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button.noborder:after {
+    border: 0;
+}
+
+button.noafter:after {
+    content: "";
+    display: none;
+}

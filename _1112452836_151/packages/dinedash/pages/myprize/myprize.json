@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "活动中奖确认",
+    "backgroundColor": "#181818",
+    "backgroundTextStyle": "light",
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

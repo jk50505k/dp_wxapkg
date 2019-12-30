@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "景区大砍价",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "formid-wrap": "../../../components/native-com/formid-wrap/formid-wrap",
+        "component-ugc": "../../../components/native-com/ugc/ugc-list/ugc-list",
+        "webp-detect": "../../../components/native-com/webp-detect/webp-detect",
+        "bargain-share-img": "../../../components/native-com/bargain-share-img/bargain-share-img",
+        "quick-nav": "../../../../../components/quick-nav/quick-nav"
+    }
+}

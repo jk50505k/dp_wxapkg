@@ -1,0 +1,10 @@
+<view class="seed-star-wrap {{classname}}">
+    <view class="seed-star-icon">
+        <view bindtap="onTapStar" class="seed-star seed-star-{{star}}" data-index="10" style="width: {{starStyle.width}}; height: {{starStyle.height}}; margin-right: {{starStyle.marginRight}}"></view>
+        <view bindtap="onTapStar" class="seed-star seed-star-{{star}}" data-index="20" style="width: {{starStyle.width}}; height: {{starStyle.height}}; margin-right: {{starStyle.marginRight}}"></view>
+        <view bindtap="onTapStar" class="seed-star seed-star-{{star}}" data-index="30" style="width: {{starStyle.width}}; height: {{starStyle.height}}; margin-right: {{starStyle.marginRight}}"></view>
+        <view bindtap="onTapStar" class="seed-star seed-star-{{star}}" data-index="40" style="width: {{starStyle.width}}; height: {{starStyle.height}}; margin-right: {{starStyle.marginRight}}"></view>
+        <view bindtap="onTapStar" class="seed-star seed-star-{{star}}" data-index="50" style="width: {{starStyle.width}}; height: {{starStyle.height}}; margin-right: {{starStyle.marginRight}}"></view>
+    </view>
+    <view class="seed-star-score seed-score-{{star}}" style="fontSize: {{textStyle.fontSize}}; margin-left: {{textStyle.marginLeft}}" wx:if="{{score}}">{{score}}</view>
+</view>

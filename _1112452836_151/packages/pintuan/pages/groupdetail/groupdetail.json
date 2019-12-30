@@ -1,0 +1,12 @@
+{
+    "navigationBarTitleText": "拼团详情",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "modal": "../../components/modal/modal",
+        "product-card": "../../components/product-card/product-card",
+        "group-member": "../../components/group-member/group-member",
+        "product-list": "../../components/product-list/product-list",
+        "coupon": "../../components/coupon/coupon",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

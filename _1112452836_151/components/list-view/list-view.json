@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "exception": "../../components/wx-exception/wx-exception"
+    }
+}

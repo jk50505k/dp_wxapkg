@@ -1,0 +1,11 @@
+{
+    "enablePullDownRefresh": true,
+    "window": {
+        "navigationBarTitleText": "美食超值拼团"
+    },
+    "usingComponents": {
+        "list-view": "../../../../components/list-view/list-view",
+        "mina-image": "../../../../components/mina-image/index",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

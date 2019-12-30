@@ -1,0 +1,15 @@
+{
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "订单详情",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "error": "../components/error/error",
+        "collage": "../components/collage-odetail/collage-odetail",
+        "order-btn": "../components/order-btn/order-btn",
+        "custom": "../components/custom/custom",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

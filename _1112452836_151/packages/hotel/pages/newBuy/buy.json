@@ -1,0 +1,9 @@
+{
+    "navigationBarBackgroundColor": "#FF5452",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "",
+    "usingComponents": {
+        "brand": "../../components/brand/brand",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

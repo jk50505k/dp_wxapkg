@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "支付结果",
+    "usingComponents": {
+        "voucher": "../../components/detail/voucher/voucher",
+        "header": "../../components/detail/header/header",
+        "orderdetail": "../../components/detail/orderdetail/orderdetail",
+        "promotiontoast": "../../components/detail/promotiontoast/promotiontoast",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

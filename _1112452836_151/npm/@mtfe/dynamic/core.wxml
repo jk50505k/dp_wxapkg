@@ -1,0 +1,721 @@
+<template name="ri16">
+    <block wx:if="{{!c[2]}}">{{c[1]}}</block>
+    <template is="a2" data="{{c:c,a:a,mode:mode}}" wx:else></template>
+</template>
+<template name="ri15">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri16" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri16" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri16'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri16" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri16'}}" wx:else></template>
+</template>
+<template name="ri14">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri15" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri15" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri15'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri15" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri15'}}" wx:else></template>
+</template>
+<template name="ri13">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri14" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri14" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri14'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri14" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri14'}}" wx:else></template>
+</template>
+<template name="ri12">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri13" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri13" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri13'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri13" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri13'}}" wx:else></template>
+</template>
+<template name="ri11">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri12" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri12" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri12'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri12" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri12'}}" wx:else></template>
+</template>
+<template name="ri10">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri11" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri11" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri11'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri11" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri11'}}" wx:else></template>
+</template>
+<template name="ri9">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri10" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri10" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri10'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri10" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri10'}}" wx:else></template>
+</template>
+<template name="ri8">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri9" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri9" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri9'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri9" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri9'}}" wx:else></template>
+</template>
+<template name="ri7">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri8" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri8" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri8'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri8" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri8'}}" wx:else></template>
+</template>
+<template name="ri6">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri7" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri7" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri7'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri7" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri7'}}" wx:else></template>
+</template>
+<template name="ri5">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri6" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri6" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri6'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri6" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri6'}}" wx:else></template>
+</template>
+<template name="ri4">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri5" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri5" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri5'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri5" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri5'}}" wx:else></template>
+</template>
+<template name="ri3">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri4" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri4" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri4'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri4" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri4'}}" wx:else></template>
+</template>
+<template name="ri2">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri3" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri3" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri3'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri3" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri3'}}" wx:else></template>
+</template>
+<template name="ri1">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri2" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri2" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri2'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri2" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri2'}}" wx:else></template>
+</template>
+<template name="ri0">
+    <view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slot="{{a.slot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{t==='a2'&&a.core===false}}">
+        <template is="ri1" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </view>
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='c2'}}">
+        <template is="ri1" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+    <core animation="{{a.animation}}" bind:casterevproxy="casterEvent" binderror="{{(a.binderror||a.catcherror)&&'d'}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" case="{{c[1].case}}" caseData="{{c[1].caseData}}" class="{{a.class}}" context="{{c[1].context}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" snapshot="{{c[1].snapshot}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:elif="{{t==='a1'}}">
+        <template is="{{'ri1'}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </core>
+    <block wx:elif="{{t==='bk'}}">
+        <template is="ri1" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="{{t}}" data="{{c:c,a:a,l:'ri1'}}" wx:else></template>
+</template>
+<template name="rc0">
+    <block wx:if="{{h.typeOf(c)!='string'&&mode!='self'}}">
+        <template is="ri1" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </block>
+    <template is="ri0" data="{{ c:c,a:c[1],t:c[0] }}" wx:else></template>
+</template>
+<template name="c40">
+    <open-data animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lang="{{h.tri(a[10],'en')}}" openGid="{{h.tri(a[9],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" type="{{h.tri(a[8],'')}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </open-data>
+</template>
+<template name="c39">
+    <official-account animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </official-account>
+</template>
+<template name="c38">
+    <ad adIntervals="{{h.tri(a[9],0)}}" animation="{{a.animation}}" bindclose="{{a[12]}}" binderror="{{a[11]}}" bindload="{{a[10]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" unitId="{{h.tri(a[8],'')}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </ad>
+</template>
+<template name="c37">
+    <web-view animation="{{a.animation}}" binderror="{{a[11]}}" bindload="{{a[10]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindmessage="{{a[9]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" src="{{h.tri(a[8],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </web-view>
+</template>
+<template name="c36">
+    <canvas animation="{{a.animation}}" binderror="{{a[16]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" canvasId="{{h.tri(a[9],'')}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" disableScroll="{{h.tri(a[10],false)}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" type="{{h.tri(a[8],'')}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </canvas>
+</template>
+<template name="c35">
+    <map animation="{{a.animation}}" bindcallouttap="{{a[34]}}" bindcontroltap="{{a[33]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindmarkertap="{{a[32]}}" bindpoitap="{{a[37]}}" bindregionchange="{{a[36]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" bindupdated="{{a[35]}}" circles="{{h.tri( a[14] )}}" class="{{a.class}}" controls="{{h.tri( a[15] )}}" covers="{{h.tri( a[12] )}}" data-attr="{{a}}" data-selector="{{c[3]}}" enable3D="{{h.tri(a[23],false)}}" enableOverlooking="{{h.tri(a[25],false)}}" enableRotate="{{h.tri(a[28],false)}}" enableSatellite="{{h.tri(a[29],false)}}" enableScroll="{{h.tri(a[27],true)}}" enableTraffic="{{h.tri(a[30],false)}}" enableZoom="{{h.tri(a[26],true)}}" id="{{a.id}}" includePoints="{{h.tri( a[16] )}}" latitude="{{h.tri(a[9],0)}}" layerStyle="{{h.tri(a[20],1)}}" longitude="{{h.tri(a[8],0)}}" markers="{{h.tri( a[11] )}}" polygons="{{h.tri( a[18] )}}" polyline="{{h.tri( a[13] )}}" rotate="{{h.tri(a[21],0)}}" scale="{{h.tri(a[10],16)}}" showCompass="{{h.tri(a[24],false)}}" showLocation="{{h.tri(a[17],false)}}" skew="{{h.tri(a[22],0)}}" style="{{w.getStyle(c[3],a,a.rid)}}" subkey="{{h.tri(a[19],'')}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </map>
+</template>
+<template name="c34">
+    <video animation="{{a.animation}}" autoPauseIfNavigate="{{h.tri(a[31],true)}}" autoPauseIfOpenNative="{{h.tri(a[32],true)}}" autoplay="{{h.tri(a[14],false)}}" bindended="{{a[37]}}" binderror="{{a[41]}}" bindfullscreenchange="{{a[39]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindpause="{{a[36]}}" bindplay="{{a[35]}}" bindprogress="{{a[42]}}" bindtap="{{a[5]}}" bindtimeupdate="{{a[38]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" bindwaiting="{{a[40]}}" class="{{a.class}}" controls="{{h.tri(a[10],true)}}" danmuBtn="{{h.tri(a[12],false)}}" danmuList="{{h.tri( a[11] )}}" data-attr="{{a}}" data-selector="{{c[3]}}" direction="{{h.tri(a[19],0)}}" duration="{{h.tri(a[9],0)}}" enableDanmu="{{h.tri(a[13],false)}}" enablePlayGesture="{{h.tri(a[30],false)}}" enableProgressGesture="{{h.tri(a[24],true)}}" id="{{a.id}}" initialTime="{{h.tri(a[17],0)}}" loop="{{h.tri(a[15],false)}}" muted="{{h.tri(a[16],false)}}" objectFit="{{h.tri(a[25],'contain')}}" pageGesture="{{h.tri(a[18],false)}}" playBtnPosition="{{h.tri(a[29],'bottom')}}" poster="{{h.tri(a[26],'')}}" showCenterPlayBtn="{{h.tri(a[23],true)}}" showFullscreenBtn="{{h.tri(a[21],true)}}" showMuteBtn="{{h.tri(a[27],false)}}" showPlayBtn="{{h.tri(a[22],true)}}" showProgress="{{h.tri(a[20],true)}}" src="{{h.tri(a[8],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" title="{{h.tri(a[28],'')}}" vslideGesture="{{h.tri(a[33],false)}}" vslideGestureInFullscreen="{{h.tri(a[34],true)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </video>
+</template>
+<template name="c31">
+    <image animation="{{a.animation}}" binderror="{{a[12]}}" bindload="{{a[13]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lazyLoad="{{h.tri(a[10],false)}}" mode="{{h.tri(a[9],'scaleToFill')}}" showMenuByLongpress="{{h.tri(a[11],false)}}" src="{{h.tri(a[8],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </image>
+</template>
+<template name="c30">
+    <camera animation="{{a.animation}}" binderror="{{a[13]}}" bindinitdone="{{a[14]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindscancode="{{a[15]}}" bindstop="{{a[12]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" devicePosition="{{h.tri(a[9],'back')}}" flash="{{h.tri(a[10],'auto')}}" frameSize="{{h.tri(a[11],'medium')}}" id="{{a.id}}" mode="{{h.tri(a[8],'normal')}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </camera>
+</template>
+<template name="c29">
+    <audio animation="{{a.animation}}" author="{{h.tri(a[14],'')}}" bindended="{{a[19]}}" binderror="{{a[15]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindpause="{{a[17]}}" bindplay="{{a[16]}}" bindtap="{{a[5]}}" bindtimeupdate="{{a[18]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" controls="{{h.tri(a[11],false)}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" loop="{{h.tri(a[10],false)}}" name="{{h.tri(a[13],'')}}" poster="{{h.tri(a[12],'')}}" src="{{h.tri(a[9],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </audio>
+</template>
+<template name="c28">
+    <navigator animation="{{a.animation}}" appId="{{h.tri(a[12],'')}}" bindcomplete="{{a[22]}}" bindfail="{{a[21]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindsuccess="{{a[20]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" delta="{{h.tri(a[11],1)}}" extraData="{{h.tri( a[14] )}}" hoverClass="{{h.tri(a[16],'navigator-hover')}}" hoverStartTime="{{h.tri(a[18],50)}}" hoverStayTime="{{h.tri(a[19],600)}}" hoverStopPropagation="{{h.tri(a[17],false)}}" id="{{a.id}}" openType="{{h.tri(a[10],'navigate')}}" path="{{h.tri(a[13],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" target="{{h.tri(a[8],'self')}}" url="{{h.tri(a[9],'')}}" version="{{h.tri(a[15],'release')}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </navigator>
+</template>
+<template name="c26">
+    <textarea adjustPosition="{{h.tri(a[23],true)}}" animation="{{a.animation}}" autoFocus="{{h.tri(a[14],false)}}" autoHeight="{{h.tri(a[16],false)}}" bindblur="{{a[25]}}" bindconfirm="{{a[28]}}" bindfocus="{{a[24]}}" bindinput="{{a[27]}}" bindkeyboardheightchange="{{a[29]}}" bindlinechange="{{a[26]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" cursor="{{h.tri(a[19],-1)}}" cursorSpacing="{{h.tri(a[18],0)}}" data-attr="{{a}}" data-selector="{{c[3]}}" disabled="{{h.tri(a[12],false)}}" fixed="{{h.tri(a[17],false)}}" focus="{{h.tri(a[24],false)}}" id="{{a.id}}" maxlength="{{h.tri(a[13],140)}}" placeholder="{{h.tri(a[9],'')}}" placeholderClass="{{h.tri(a[11],'textarea-placeholder')}}" placeholderStyle="{{h.tri(a[10],'')}}" selectionEnd="{{h.tri(a[22],-1)}}" selectionStart="{{h.tri(a[21],-1)}}" showConfirmBar="{{h.tri(a[20],true)}}" style="{{w.getStyle(c[3],a,a.rid)}}" value="{{h.tri(a[8],'')}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </textarea>
+</template>
+<template name="c25">
+    <switch animation="{{a.animation}}" bindchange="{{a[13]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" checked="{{h.tri(a[8],false)}}" class="{{a.class}}" color="{{h.tri(a[12],'#04BE02')}}" data-attr="{{a}}" data-selector="{{c[3]}}" disabled="{{h.tri(a[9],false)}}" id="{{a.id}}" name="{{h.tri(a[11],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" type="{{h.tri(a[10],'switch')}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </switch>
+</template>
+<template name="c24">
+    <slider activeColor="{{h.tri(a[16],'#1aad19')}}" animation="{{a.animation}}" backgroundColor="{{h.tri(a[17],'#e9e9e9')}}" bindchange="{{a[21]}}" bindchanging="{{a[22]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" blockColor="{{h.tri(a[19],'#ffffff')}}" blockSize="{{h.tri(a[18],28)}}" class="{{a.class}}" color="{{h.tri(a[14],'#e9e9e9')}}" data-attr="{{a}}" data-selector="{{c[3]}}" disabled="{{h.tri(a[12],false)}}" id="{{a.id}}" max="{{h.tri(a[10],100)}}" min="{{h.tri(a[9],0)}}" name="{{h.tri(a[8],'')}}" selectedColor="{{h.tri(a[15],'#1aad19')}}" showValue="{{h.tri(a[20],false)}}" step="{{h.tri(a[11],1)}}" style="{{w.getStyle(c[3],a,a.rid)}}" value="{{h.tri(a[13],0)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </slider>
+</template>
+<template name="c23">
+    <radio-group animation="{{a.animation}}" bindchange="{{a[8]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" name="{{h.tri(a[9],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </radio-group>
+</template>
+<template name="c22">
+    <radio animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" checked="{{h.tri(a[10],false)}}" class="{{a.class}}" color="{{h.tri(a[12],'#09BB07')}}" data-attr="{{a}}" data-selector="{{c[3]}}" disabled="{{h.tri(a[11],false)}}" id="{{a.id}}" name="{{h.tri(a[9],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" value="{{h.tri(a[8],'')}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </radio>
+</template>
+<template name="c21">
+    <picker-view-column animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </picker-view-column>
+</template>
+<template name="c20">
+    <picker-view animation="{{a.animation}}" bindchange="{{a[13]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindpickend="{{a[15]}}" bindpickstart="{{a[14]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" indicatorClass="{{h.tri(a[10],'')}}" indicatorStyle="{{h.tri(a[9],'')}}" maskClass="{{h.tri(a[12],'')}}" maskStyle="{{h.tri(a[11],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" value="{{h.tri( a[8] )}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </picker-view>
+</template>
+<template name="c19">
+    <picker animation="{{a.animation}}" bindcancel="{{a[11]}}" bindchange="{{a[15]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" disabled="{{h.tri(a[10],false)}}" id="{{a.id}}" mode="{{h.tri(a[8],'selector')}}" name="{{h.tri(a[9],'')}}" range="{{h.tri( a[12],[] )}}" rangeKey="{{h.tri(a[13],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" value="{{h.tri(a[14],0)}}" wx:if="{{!a[8]||a[8]==='selector'}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </picker>
+    <picker animation="{{a.animation}}" bindcancel="{{a[11]}}" bindchange="{{a[15]}}" bindcolumnchange="{{a[16]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" disabled="{{h.tri(a[10],false)}}" id="{{a.id}}" mode="{{h.tri(a[8],'selector')}}" name="{{h.tri(a[9],'')}}" range="{{h.tri( a[12],[] )}}" rangeKey="{{h.tri(a[13],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" value="{{h.tri(a[14],0)}}" wx:if="{{a[8]==='multiSelector'}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </picker>
+    <picker animation="{{a.animation}}" bindcancel="{{a[11]}}" bindchange="{{a[15]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" disabled="{{h.tri(a[10],false)}}" end="{{h.tri(a[18],'')}}" id="{{a.id}}" mode="{{h.tri(a[8],'selector')}}" name="{{h.tri(a[9],'')}}" start="{{h.tri(a[17],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" value="{{h.tri(a[14],'')}}" wx:if="{{a[8]==='time'}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </picker>
+    <picker animation="{{a.animation}}" bindcancel="{{a[11]}}" bindchange="{{a[15]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" disabled="{{h.tri(a[10],false)}}" end="{{h.tri(a[18],'')}}" fields="{{h.tri(a[19],'day')}}" id="{{a.id}}" mode="{{h.tri(a[8],'selector')}}" name="{{h.tri(a[9],'')}}" start="{{h.tri(a[17],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" value="{{h.tri(a[14],'0')}}" wx:if="{{a[8]==='date'}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </picker>
+    <picker animation="{{a.animation}}" bindcancel="{{a[11]}}" bindchange="{{a[15]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" customItem="{{h.tri(a[20],'')}}" data-attr="{{a}}" data-selector="{{c[3]}}" disabled="{{h.tri(a[10],false)}}" id="{{a.id}}" mode="{{h.tri(a[8],'selector')}}" name="{{h.tri(a[9],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" value="{{h.tri( a[14],[] )}}" wx:if="{{a[8]==='region'}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </picker>
+</template>
+<template name="c18">
+    <label animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" for="{{h.tri(a[8],'')}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </label>
+</template>
+<template name="c17">
+    <input adjustPosition="{{h.tri(a[25],true)}}" animation="{{a.animation}}" autoFocus="{{h.tri(a[18],false)}}" bindblur="{{a[28]}}" bindconfirm="{{a[29]}}" bindfocus="{{a[27]}}" bindinput="{{a[26]}}" bindkeyboardheightchange="{{a[30]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" confirmHold="{{h.tri(a[21],false)}}" confirmType="{{h.tri(a[20],'done')}}" cursor="{{h.tri(a[22],0)}}" cursorSpacing="{{h.tri(a[17],0)}}" data-attr="{{a}}" data-selector="{{c[3]}}" disabled="{{h.tri(a[15],false)}}" focus="{{h.tri(a[27],false)}}" id="{{a.id}}" maxlength="{{h.tri(a[16],140)}}" name="{{h.tri(a[9],'')}}" password="{{h.tri(a[11],false)}}" placeholder="{{h.tri(a[12],'')}}" placeholderClass="{{h.tri(a[14],'input-placeholder')}}" placeholderStyle="{{h.tri(a[13],'')}}" selectionEnd="{{h.tri(a[24],-1)}}" selectionStart="{{h.tri(a[23],-1)}}" style="{{w.getStyle(c[3],a,a.rid)}}" type="{{h.tri(a[10],'text')}}" value="{{h.tri(a[8],'')}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </input>
+</template>
+<template name="c16">
+    <form animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindreset="{{a[11]}}" bindsubmit="{{a[10]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" reportSubmit="{{h.tri(a[8],false)}}" reportSubmitTimeout="{{h.tri(a[9],0)}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </form>
+</template>
+<template name="c15">
+    <editor animation="{{a.animation}}" bindblur="{{a[15]}}" bindfocus="{{a[14]}}" bindinput="{{a[16]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindready="{{a[13]}}" bindstatuschange="{{a[17]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" placeholder="{{h.tri(a[9],'')}}" readOnly="{{h.tri(a[8],false)}}" showImgResize="{{h.tri(a[12],false)}}" showImgSize="{{h.tri(a[10],false)}}" showImgToolbar="{{h.tri(a[11],false)}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </editor>
+</template>
+<template name="c14">
+    <checkbox-group animation="{{a.animation}}" bindchange="{{a[8]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" name="{{h.tri(a[9],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </checkbox-group>
+</template>
+<template name="c13">
+    <checkbox animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" checked="{{h.tri(a[11],false)}}" class="{{a.class}}" color="{{h.tri(a[12],'#09BB07')}}" data-attr="{{a}}" data-selector="{{c[3]}}" disabled="{{h.tri(a[10],false)}}" id="{{a.id}}" name="{{h.tri(a[9],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" value="{{h.tri(a[8],'')}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </checkbox>
+</template>
+<template name="c12">
+    <button animation="{{a.animation}}" appParameter="{{h.tri(a[24],'')}}" bindcontact="{{a[27]}}" binderror="{{a[29]}}" bindgetphonenumber="{{a[28]}}" bindgetuserinfo="{{a[26]}}" bindlaunchapp="{{a[31]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindopensetting="{{a[30]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" disabled="{{h.tri(a[11],false)}}" formType="{{h.tri(a[13],'')}}" hoverClass="{{h.tri(a[15],'button-hover')}}" hoverStartTime="{{h.tri(a[17],20)}}" hoverStayTime="{{h.tri(a[18],70)}}" hoverStopPropagation="{{h.tri(a[16],false)}}" id="{{a.id}}" lang="{{h.tri(a[19],'en')}}" loading="{{h.tri(a[12],false)}}" openType="{{h.tri(a[14],'')}}" plain="{{h.tri(a[10],false)}}" sendMessageImg="{{h.tri(a[23],'')}}" sendMessagePath="{{h.tri(a[22],'')}}" sendMessageTitle="{{h.tri(a[21],'')}}" sessionFrom="{{h.tri(a[20],'')}}" showMessageCard="{{h.tri(a[25],false)}}" size="{{h.tri(a[8],'default')}}" style="{{w.getStyle(c[3],a,a.rid)}}" type="{{h.tri(a[9],'default')}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </button>
+</template>
+<template name="c11">
+    <text animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" decode="{{h.tri(a[10],false)}}" id="{{a.id}}" selectable="{{h.tri(a[8],false)}}" space="{{h.tri(a[9],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </text>
+</template>
+<template name="c10">
+    <rich-text animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" nodes="{{h.tri( a[8],[] )}}" space="{{h.tri(a[9],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </rich-text>
+</template>
+<template name="c9">
+    <progress active="{{h.tri(a[16],false)}}" activeMode="{{h.tri(a[17],'backwards')}}" activeColor="{{h.tri(a[14],'#09BB07')}}" animation="{{a.animation}}" backgroundColor="{{h.tri(a[15],'#EBEBEB')}}" bindactiveend="{{a[18]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" borderRadius="{{h.tri(a[10],0)}}" class="{{a.class}}" color="{{h.tri(a[13],'#09BB07')}}" data-attr="{{a}}" data-selector="{{c[3]}}" fontSize="{{h.tri(a[11],16)}}" id="{{a.id}}" percent="{{h.tri(a[8],0)}}" showInfo="{{h.tri(a[9],false)}}" strokeWidth="{{h.tri(a[12],6)}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </progress>
+</template>
+<template name="c8">
+    <icon animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" color="{{h.tri(a[10],'')}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" size="{{h.tri(a[9],23)}}" style="{{w.getStyle(c[3],a,a.rid)}}" type="{{h.tri(a[8],'')}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </icon>
+</template>
+<template name="c6">
+    <swiper-item animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchstart="{{a[1]}}" catchtouchmove="d" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" itemId="{{h.tri(a[8],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:if="{{a.catchtouchmove}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </swiper-item>
+    <swiper-item animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" itemId="{{h.tri(a[8],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}" wx:else>
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </swiper-item>
+</template>
+<template name="c5">
+    <swiper animation="{{a.animation}}" autoplay="{{h.tri(a[11],false)}}" bindanimationfinish="{{a[24]}}" bindchange="{{a[22]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" bindtransition="{{a[23]}}" circular="{{h.tri(a[15],false)}}" class="{{a.class}}" current="{{h.tri(a[12],0)}}" data-attr="{{a}}" data-selector="{{c[3]}}" displayMultipleItems="{{h.tri(a[19],1)}}" duration="{{h.tri(a[14],500)}}" easingFunction="{{h.tri(a[21],'default')}}" id="{{a.id}}" indicatorActiveColor="{{h.tri(a[10],'#000000')}}" indicatorColor="{{h.tri(a[9],'rgba(0, 0, 0, .3)')}}" indicatorDots="{{h.tri(a[8],false)}}" interval="{{h.tri(a[13],5000)}}" nextMargin="{{h.tri(a[18],'0px')}}" previousMargin="{{h.tri(a[17],'0px')}}" skipHiddenItemLayout="{{h.tri(a[20],false)}}" style="{{w.getStyle(c[3],a,a.rid)}}" vertical="{{h.tri(a[16],false)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </swiper>
+</template>
+<template name="c4">
+    <scroll-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindscroll="{{a[20]}}" bindscrolltolower="{{a[19]}}" bindscrolltoupper="{{a[18]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" enableBackToTop="{{h.tri(a[16],false)}}" enableFlex="{{h.tri(a[17],false)}}" id="{{a.id}}" lowerThreshold="{{h.tri(a[11],50)}}" scrollIntoView="{{h.tri(a[14],'')}}" scrollLeft="{{h.tri(a[13],0)}}" scrollTop="{{h.tri(a[12],0)}}" scrollWithAnimation="{{h.tri(a[15],false)}}" scrollX="{{h.tri(a[8],false)}}" scrollY="{{h.tri(a[9],false)}}" style="{{w.getStyle(c[3],a,a.rid)}}" upperThreshold="{{h.tri(a[10],50)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </scroll-view>
+</template>
+<template name="c3">
+    <movable-area animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" scaleArea="{{h.tri(a[8],false)}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </movable-area>
+</template>
+<template name="c2">
+    <cover-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" scrollTop="{{h.tri(a[8],0)}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-view>
+</template>
+<template name="c1">
+    <cover-image animation="{{a.animation}}" binderror="{{a[10]}}" bindload="{{a[9]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" src="{{h.tri(a[8],'')}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </cover-image>
+</template>
+<template name="c0">
+    <movable-view animation="{{a.animation}}" bindchange="{{a[21]}}" bindhtouchmove="{{a[23]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindscale="{{a[22]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" bindvtouchmove="{{a[24]}}" class="{{a.class}}" damping="{{h.tri(a[13],20)}}" data-attr="{{a}}" data-selector="{{c[3]}}" direction="{{h.tri(a[8],'none')}}" disabled="{{h.tri(a[15],false)}}" friction="{{h.tri(a[14],2)}}" id="{{a.id}}" inertia="{{h.tri(a[9],false)}}" outOfBounds="{{h.tri(a[10],false)}}" scale="{{h.tri(a[22],false)}}" scaleMax="{{h.tri(a[18],10)}}" scaleMin="{{h.tri(a[17],0.5)}}" scaleValue="{{h.tri(a[19],1)}}" style="{{w.getStyle(c[3],a,a.rid)}}" x="{{h.tri(a[11],0)}}" y="{{h.tri(a[12],0)}}">
+        <template is="{{l}}" data="{{ c:item,a:item[1],t:item[0] }}" wx:for="{{c[2]}}" wx:key="{{item[4]||item[3]}}"></template>
+    </movable-view>
+</template>
+<template name="n80">
+    <shopItem animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" categoryId="{{a[9]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" hasBrandShop="{{a[10]}}" id="{{a.id}}" item="{{a[8]}}" lastChildShop="{{a[12]}}" parentShop="{{a[11]}}" spreadParentShop="{{a[13]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shopItem>
+</template>
+<template name="n79">
+    <shopCard animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" categoryId="{{a[9]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" item="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shopCard>
+</template>
+<template name="n78">
+    <foodList animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" foodRankList="{{a[9]}}" id="{{a.id}}" item="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></foodList>
+</template>
+<template name="n77">
+    <choosenList animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" goodRankList="{{a[8]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}"></choosenList>
+</template>
+<template name="n76">
+    <pop-up animation="{{a.animation}}" bindclose="{{a[12]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindnoscroll="{{a[11]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" hasTip="{{a[9]}}" id="{{a.id}}" isSupportMiniPro="{{a[10]}}" options="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></pop-up>
+</template>
+<template name="n75">
+    <index-groupseckill animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" initFinishTime="{{a[10]}}" isFirstLoad="{{a[9]}}" options="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></index-groupseckill>
+</template>
+<template name="n74">
+    <index-ad animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" isSupportMiniPro="{{a[9]}}" options="{{a[10]}}" promoResources="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></index-ad>
+</template>
+<template name="n73">
+    <index-activity animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" initFinishTime="{{a[10]}}" isFirstLoad="{{a[9]}}" isSupportMiniPro="{{a[11]}}" options="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></index-activity>
+</template>
+<template name="n72">
+    <guess-like animation="{{a.animation}}" bindlistexceptionreload="{{a[13]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" initFinishTime="{{a[11]}}" isFirstLoad="{{a[10]}}" lastCity="{{a[9]}}" options="{{a[8]}}" reachBottom="{{a[12]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></guess-like>
+</template>
+<template name="n71">
+    <group animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" initFinishTime="{{a[10]}}" isFirstLoad="{{a[9]}}" options="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></group>
+</template>
+<template name="n70">
+    <category animation="{{a.animation}}" bindcatefail="{{a[13]}}" bindchangecatestate="{{a[11]}}" bindclose="{{a[15]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindnoscroll="{{a[14]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" initFinishTime="{{a[10]}}" isFirstLoad="{{a[9]}}" options="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></category>
+</template>
+<template name="n69">
+    <shop-widely-order animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" moduleConfig="{{a[9]}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-widely-order>
+</template>
+<template name="n68">
+    <shop-tuan animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" isFromApp="{{a[11]}}" lxData="{{a[9]}}" moduleConfig="{{a[10]}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-tuan>
+</template>
+<template name="n67">
+    <shop-times-card animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-times-card>
+</template>
+<template name="n66">
+    <shop-slot animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" slotItems="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="a2" data="{{c:c}}" wx:if="{{c[2].length}}"></template>
+    </shop-slot>
+</template>
+<template name="n65">
+    <shop-service animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[9]}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-service>
+</template>
+<template name="n64">
+    <shop-reserve animation="{{a.animation}}" bindhideMask="{{a[11]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindpromptMask="{{a[12]}}" bindreserveItemTap="{{a[13]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[9]}}" moduleConfig="{{a[10]}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-reserve>
+</template>
+<template name="n63">
+    <shop-rank animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindsharetitle="{{a[12]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[10]}}" moduleConfig="{{a[9]}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-rank>
+</template>
+<template name="n62">
+    <shop-quality animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[10]}}" moduleConfig="{{a[8]}}" shopOptions="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-quality>
+</template>
+<template name="n61">
+    <shop-promo animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" moduleConfig="{{a[9]}}" promoData="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-promo>
+</template>
+<template name="n60">
+    <shop-oversea-businesshours animation="{{a.animation}}" bindhideMask="{{a[11]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindpromptMask="{{a[10]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" moduleConfig="{{a[9]}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-oversea-businesshours>
+</template>
+<template name="n59">
+    <shop-operate animation="{{a.animation}}" bindhideMask="{{a[11]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindpromptMask="{{a[10]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[9]}}" moduleConfig="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-operate>
+</template>
+<template name="n58">
+    <shop-map animation="{{a.animation}}" bindlaunchtap="{{a[17]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" canLaunchApp="{{a[14]}}" canLaunchPoi="{{a[13]}}" carData="{{a[9]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[15]}}" moduleConfig="{{a[8]}}" needLogin="{{a[12]}}" route="{{a[16]}}" shopMapData="{{a[10]}}" shopOptions="{{a[11]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-map>
+</template>
+<template name="n57">
+    <shop-maiton animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" cityId="{{a[11]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[12]}}" moduleConfig="{{a[9]}}" shopId="{{a[10]}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-maiton>
+</template>
+<template name="n56">
+    <shop-ktv-book animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" bookData="{{a[8]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[11]}}" moduleConfig="{{a[10]}}" shopOptions="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-ktv-book>
+</template>
+<template name="n55">
+    <shop-info animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[11]}}" moduleConfig="{{a[10]}}" shopInfoData="{{a[8]}}" shopOptions="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-info>
+</template>
+<template name="n54">
+    <shop-head animation="{{a.animation}}" bindaddToVote="{{a[21]}}" bindhandleReLoad="{{a[18]}}" bindheadhide="{{a[16]}}" bindheadshow="{{a[17]}}" bindhorizontalscroll="{{a[19]}}" bindlaunchtap="{{a[20]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" canLaunchApp="{{a[13]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[11]}}" mapiError="{{a[14]}}" moduleConfig="{{a[10]}}" needLogin="{{a[12]}}" shopHeadData="{{a[8]}}" shopOptions="{{a[9]}}" showAddToVoteBtn="{{a[15]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-head>
+</template>
+<template name="n53">
+    <shop-friendlike animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[10]}}" moduleConfig="{{a[9]}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-friendlike>
+</template>
+<template name="n52">
+    <shop-follow animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[11]}}" moduleConfig="{{a[9]}}" offuserid="{{a[8]}}" shopOptions="{{a[10]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-follow>
+</template>
+<template name="n51">
+    <shop-dish animation="{{a.animation}}" bindhorizontalscroll="{{a[15]}}" bindlaunchtap="{{a[16]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" canLaunchApp="{{a[12]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" dishData="{{a[9]}}" hasApp="{{a[8]}}" id="{{a.id}}" lxData="{{a[14]}}" moduleConfig="{{a[11]}}" needLogin="{{a[13]}}" shopOptions="{{a[10]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-dish>
+</template>
+<template name="n50">
+    <shop-dinevote animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" moduleConfig="{{a[9]}}" scene="{{a[10]}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-dinevote>
+</template>
+<template name="n49">
+    <shop-craftsman animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[10]}}" moduleConfig="{{a[9]}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-craftsman>
+</template>
+<template name="n48">
+    <shop-comment animation="{{a.animation}}" bindhideMask="{{a[20]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" branchName="{{a[17]}}" categoryId="{{a[13]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" imData="{{a[10]}}" isFavorite="{{a[12]}}" lxData="{{a[11]}}" moduleConfig="{{a[9]}}" reviewCount="{{a[14]}}" shopGeo="{{a[19]}}" shopName="{{a[15]}}" shopOptions="{{a[8]}}" shopPic="{{a[18]}}" shopType="{{a[16]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-comment>
+</template>
+<template name="n47">
+    <friends-come animation="{{a.animation}}" bindhorizontalscroll="{{a[11]}}" bindlazyload="{{a[12]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[10]}}" moduleConfig="{{a[9]}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></friends-come>
+</template>
+<template name="n46">
+    <coupon-bag animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[10]}}" moduleConfig="{{a[9]}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></coupon-bag>
+</template>
+<template name="n45">
+    <activity-banner-component animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" shopOptions="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></activity-banner-component>
+</template>
+<template name="n44">
+    <slider-1 animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindsliderEvent="{{a[15]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" imgButton="{{a[10]}}" imgTitle="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}" title="{{a[8]}}"></slider-1>
+</template>
+<template name="n43">
+    <login animation="{{a.animation}}" bgImage="{{a[10]}}" bindloginend="{{a[19]}}" bindlogining="{{a[22]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" cx="{{a[8]}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" loginDomain="{{a[13]}}" loginSourceType="{{a[12]}}" loginStep="{{a[11]}}" loginType="{{a[15]}}" mergeFailover="{{a[18]}}" needLogin="{{a[14]}}" needMerge="{{a[17]}}" openid="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}" thirdUidInfo="{{a[16]}}"></login>
+</template>
+<template name="n42">
+    <exception animation="{{a.animation}}" bindexceptionevent="{{a[9]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" exceptionDetail="{{a[8]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}"></exception>
+</template>
+<template name="n41">
+    <webview accountDomain="{{a[8]}}" animation="{{a.animation}}" appName="{{a[12]}}" appVersion="{{a[13]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" bindwebviewMsg="{{a[18]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" initWebview="{{a[9]}}" lxsdkParams="{{a[15]}}" openUrl="{{a[10]}}" style="{{w.getStyle(c[3],a,a.rid)}}" tokenDomain="{{a[11]}}" tokenUrl="{{a[14]}}"></webview>
+</template>
+<template name="n40">
+    <waterfall-view animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindnextpage="{{a[16]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data="{{a[9]}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" isEnd="{{a[13]}}" loadHeight="{{a[10]}}" loadMore="{{a[12]}}" pageError="{{a[14]}}" refresh="{{a[11]}}" style="{{w.getStyle(c[3],a,a.rid)}}" styleConfig="{{a[8]}}"></waterfall-view>
+</template>
+<template name="n39">
+    <vote-bar animation="{{a.animation}}" bindaddToVote="{{a[13]}}" bindhandleVoteList="{{a[14]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" shopIntro="{{a[11]}}" shopName="{{a[10]}}" shopOptions="{{a[8]}}" showAddBtn="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}" voteShopInfo="{{a[12]}}"></vote-bar>
+</template>
+<template name="n38">
+    <top-parent animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="a2" data="{{c:c}}" wx:if="{{c[2].length}}"></template>
+    </top-parent>
+</template>
+<template name="n37">
+    <shop-review animation="{{a.animation}}" bindlaunchtap="{{a[22]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindpreviewImage="{{a[21]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" canLaunchApp="{{a[19]}}" class="{{a.class}}" config="{{a[9]}}" data-attr="{{a}}" data-selector="{{c[3]}}" hasApp="{{a[20]}}" id="{{a.id}}" lastReview="{{a[17]}}" lxData="{{a[11]}}" needLogin="{{a[18]}}" pageName="{{a[15]}}" reviewBid="{{a[10]}}" reviewList="{{a[8]}}" shopId="{{a[13]}}" shopOptions="{{a[16]}}" shopUuid="{{a[14]}}" showReviewBottom="{{a[12]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-review>
+</template>
+<template name="n36">
+    <shop-review-tag animation="{{a.animation}}" bindallReviewTap="{{a[23]}}" bindclickAllReview="{{a[22]}}" bindlaunchtap="{{a[24]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindreviewTagAction="{{a[21]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" canLaunchApp="{{a[19]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" hitTag="{{a[12]}}" id="{{a.id}}" isAndroid="{{a[15]}}" isList="{{a[16]}}" launchAppUrl="{{a[11]}}" lxData="{{a[14]}}" moduleConfig="{{a[13]}}" needLogin="{{a[18]}}" pageName="{{a[8]}}" reviewCount="{{a[10]}}" reviewTags="{{a[9]}}" shopOptions="{{a[17]}}" showRightArrow="{{a[20]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-review-tag>
+</template>
+<template name="n35">
+    <shop-card active="{{a[9]}}" animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindmidascb="{{a[13]}}" bindmygrouptap="{{a[12]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" card="{{a[8]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" needborderbottom="{{a[11]}}" needbottom="{{a[10]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></shop-card>
+</template>
+<template name="n34">
+    <seed-tag animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" size="{{a[10]}}" style="{{w.getStyle(c[3],a,a.rid)}}" type="{{a[8]}}" value="{{a[9]}}">
+        <template is="a2" data="{{c:c}}" wx:if="{{c[2].length}}"></template>
+    </seed-tag>
+</template>
+<template name="n33">
+    <seed-star animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtapStar="{{a[14]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" canClick="{{a[13]}}" class="{{a.class}}" classname="{{a[10]}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" score="{{a[9]}}" star="{{a[8]}}" starStyle="{{a[11]}}" style="{{w.getStyle(c[3],a,a.rid)}}" textStyle="{{a[12]}}"></seed-star>
+</template>
+<template name="n32">
+    <seed-related-content animation="{{a.animation}}" bindlaunchtap="{{a[16]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtapAdditional="{{a[14]}}" bindtapButton="{{a[13]}}" bindtapConent="{{a[11]}}" bindtapCurrentBar="{{a[15]}}" bindtapPicture="{{a[12]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" canLaunchApp="{{a[10]}}" class="{{a.class}}" content="{{a[9]}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" viewType="{{a[8]}}">
+        <template is="a2" data="{{c:c}}" wx:if="{{c[2].length}}"></template>
+    </seed-related-content>
+</template>
+<template name="n31">
+    <seed-icon animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" name="{{a[8]}}" selected="{{a[11]}}" size="{{a[10]}}" style="{{w.getStyle(c[3],a,a.rid)}}" type="{{a[9]}}"></seed-icon>
+</template>
+<template name="n30">
+    <search-entry animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindsearchshow="{{a[9]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" keyword="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></search-entry>
+</template>
+<template name="n29">
+    <rich-card animation="{{a.animation}}" bindcardpreview="{{a[15]}}" bindfollowuser="{{a[14]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" cardidx="{{a[10]}}" carditem="{{a[9]}}" cityId="{{a[12]}}" class="{{a.class}}" config="{{a[8]}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" isNearby="{{a[13]}}" pageType="{{a[11]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></rich-card>
+</template>
+<template name="n28">
+    <review-list animation="{{a.animation}}" bindhorizontalscroll="{{a[17]}}" bindlaunchtap="{{a[19]}}" bindlazyload="{{a[18]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindrevieweventlisten="{{a[16]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" canLaunchApp="{{a[11]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" hasApp="{{a[13]}}" id="{{a.id}}" lxData="{{a[9]}}" needLogin="{{a[10]}}" reviewListParams="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}" tagConfig="{{a[12]}}"></review-list>
+</template>
+<template name="n27">
+    <review-dish animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lxData="{{a[9]}}" reviewDish="{{a[8]}}" shopId="{{a[10]}}" shopUuid="{{a[11]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></review-dish>
+</template>
+<template name="n26">
+    <report-formid animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" bizType="{{a[8]}}" categoryId="{{a[10]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" zIndex="{{a[9]}}">
+        <template is="a2" data="{{c:c}}" wx:if="{{c[2].length}}"></template>
+    </report-formid>
+</template>
+<template name="n25">
+    <rainbow animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" loadOptions="{{a[8]}}" rainBowData="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></rainbow>
+</template>
+<template name="n24">
+    <quick-nav animation="{{a.animation}}" bindclose="{{a[15]}}" bindlaunchtap="{{a[14]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" launchAppUrl="{{a[8]}}" lxData="{{a[11]}}" position="{{a[13]}}" scene="{{a[10]}}" shopOptions="{{a[9]}}" showMore="{{a[12]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></quick-nav>
+</template>
+<template name="n23">
+    <promotion-pop animation="{{a.animation}}" bindclose="{{a[12]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindnoscroll="{{a[10]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" isSupportMiniPro="{{a[9]}}" promotionData="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></promotion-pop>
+</template>
+<template name="n22">
+    <entry animation="{{a.animation}}" bindgoToMoreProducts="{{a[23]}}" bindgoToProductDetail="{{a[22]}}" bindlXAnalytics="{{a[19]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindlxFirstNav="{{a[20]}}" bindlxFirstNavMv="{{a[17]}}" bindlxSecondNav="{{a[21]}}" bindlxSecondNavMv="{{a[18]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" channel="{{a[14]}}" cityid="{{a[10]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" env="{{a[15]}}" id="{{a.id}}" isListPage="{{a[13]}}" lat="{{a[12]}}" lng="{{a[11]}}" poiid="{{a[8]}}" shelfnavtagid="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></entry>
+</template>
+<template name="n21">
+    <product animation="{{a.animation}}" bindgoToProductDetail="{{a[12]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" channel="{{a[9]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" picAspectRatio="{{a[11]}}" productLineCount="{{a[10]}}" products="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></product>
+</template>
+<template name="n20">
+    <nav animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindselectCatalog="{{a[12]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" channel="{{a[10]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" isListPage="{{a[11]}}" level="{{a[9]}}" shelfNavTags="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></nav>
+</template>
+<template name="n19">
+    <header animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" isListPage="{{a[9]}}" navData="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></header>
+</template>
+<template name="n18">
+    <footer animation="{{a.animation}}" bindgoToMoreProducts="{{a[13]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" channel="{{a[9]}}" class="{{a.class}}" currentNavTagId="{{a[12]}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" moreRedirectText="{{a[8]}}" poiid="{{a[11]}}" product="{{a[10]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></footer>
+</template>
+<template name="n17">
+    <nebula-star animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" classname="{{a[12]}}" data-attr="{{a}}" data-selector="{{c[3]}}" fontSize="{{a[11]}}" id="{{a.id}}" isold="{{a[13]}}" score="{{a[9]}}" size="{{a[10]}}" star="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></nebula-star>
+</template>
+<template name="n16">
+    <mymini-tip animation="{{a.animation}}" bindclose="{{a[13]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindnominitip="{{a[12]}}" bindnoscroll="{{a[11]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" hasPopup="{{a[9]}}" id="{{a.id}}" pageUrl="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></mymini-tip>
+</template>
+<template name="n15">
+    <mina-toast animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}" toastConfig="{{a[8]}}"></mina-toast>
+</template>
+<template name="n14">
+    <mina-image animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" componentName="{{a[11]}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" lazyLoad="{{a[10]}}" mode="{{a[9]}}" src="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></mina-image>
+</template>
+<template name="n13">
+    <mina-canvas animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindsavecanvas="{{a[10]}}" bindsavesuccess="{{a[11]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" canvasConfig="{{a[8]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" savetoalbum="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></mina-canvas>
+</template>
+<template name="n12">
+    <mina_lazyload_img animation="{{a.animation}}" bindlazyloaderror="{{a[12]}}" bindlazyloadsuccess="{{a[11]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" imgClass="{{a[10]}}" imgMode="{{a[9]}}" imgSrc="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></mina_lazyload_img>
+</template>
+<template name="n11">
+    <midas adidx="{{a[13]}}" animation="{{a.animation}}" bindclickend="{{a[22]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" callbackParams="{{a[16]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" env="{{a[8]}}" extra="{{a[15]}}" feedback="{{a[14]}}" id="{{a.id}}" ishttps="{{a[10]}}" jumpLink="{{a[17]}}" paddingBottom="{{a[20]}}" paddingLeft="{{a[21]}}" paddingRight="{{a[19]}}" paddingTop="{{a[18]}}" sendLoadPoint="{{a[11]}}" sendReachPoint="{{a[12]}}" serverType="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="a2" data="{{c:c}}" wx:if="{{c[2].length}}"></template>
+    </midas>
+</template>
+<template name="n10">
+    <midas-dp-deal-list animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" categoryIds="{{a[14]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" dealGroupId="{{a[8]}}" id="{{a.id}}" needStarAd="{{a[15]}}" shopCityId="{{a[12]}}" shopId="{{a[10]}}" shopType="{{a[13]}}" shopUuid="{{a[11]}}" slotId="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></midas-dp-deal-list>
+</template>
+<template name="n9">
+    <midas-card animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindmidascb="{{a[13]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" card="{{a[8]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" idx="{{a[10]}}" needborderbottom="{{a[9]}}" needbottom="{{a[11]}}" showtag="{{a[12]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></midas-card>
+</template>
+<template name="n8">
+    <list-view animation="{{a.animation}}" bindexception="{{a[14]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindpulldown="{{a[12]}}" bindreachbottom="{{a[13]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" bindtryagain="{{a[15]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" listview="{{a[8]}}" pulldown="{{a[12]}}" queryid="{{a[11]}}" reachbottom="{{a[13]}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="a2" data="{{c:c}}" wx:if="{{c[2].length}}"></template>
+    </list-view>
+</template>
+<template name="n7">
+    <list-filter animation="{{a.animation}}" bindfilterlist="{{a[14]}}" bindhandletrigger="{{a[15]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindsurechoice="{{a[16]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" hasmetro="{{a[10]}}" id="{{a.id}}" selector="{{a[8]}}" showmetro="{{a[11]}}" style="{{w.getStyle(c[3],a,a.rid)}}" trigger="{{a[9]}}"></list-filter>
+</template>
+<template name="n6">
+    <group-waterfall-card animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" index="{{a[9]}}" item="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></group-waterfall-card>
+</template>
+<template name="n5">
+    <dish animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindmoreclick="{{a[10]}}" bindopendish="{{a[11]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" dishlist="{{a[8]}}" id="{{a.id}}" shopuuid="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></dish>
+</template>
+<template name="n4">
+    <coupon-card animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindnavpage="{{a[9]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" card="{{a[8]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}"></coupon-card>
+</template>
+<template name="n3">
+    <contact-card animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindshowpop="{{a[12]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" cardData="{{a[10]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" gotoApp="{{a[9]}}" id="{{a.id}}" lxData="{{a[8]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></contact-card>
+</template>
+<template name="n2">
+    <card animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindmytap="{{a[10]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" shopinfo="{{a[8]}}" showtag="{{a[9]}}" style="{{w.getStyle(c[3],a,a.rid)}}"></card>
+</template>
+<template name="n1">
+    <app-launch animation="{{a.animation}}" appConfig="{{a[10]}}" bindlauncherror="{{a[15]}}" bindlaunchtap="{{a[16]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" canLaunchApp="{{a[11]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" errorParams="{{a[14]}}" failLaunchUrl="{{a[9]}}" hasApp="{{a[12]}}" id="{{a.id}}" launchAppUrl="{{a[8]}}" needLogin="{{a[13]}}" style="{{w.getStyle(c[3],a,a.rid)}}">
+        <template is="a2" data="{{c:c}}" wx:if="{{c[2].length}}"></template>
+    </app-launch>
+</template>
+<template name="n0">
+    <app-download animation="{{a.animation}}" bindclose="{{a[15]}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindnoscroll="{{a[17]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" class="{{a.class}}" data-attr="{{a}}" data-selector="{{c[3]}}" hongBaoData="{{a[8]}}" id="{{a.id}}" style="{{w.getStyle(c[3],a,a.rid)}}"></app-download>
+</template>
+<template name="b"></template>
+<template name="s">{{c[1]}}</template>
+<template name="other">Not implement: {{c[0]}} {{h.log(c)}} </template>
+<template name="a3">
+    <slot name="{{a.name}}" wx:if="{{a.name}}"></slot>
+    <slot wx:else></slot>
+</template>
+<template name="a2">
+    <core animation="{{a.animation}}" bindlongpress="{{a[6]}}" bindlongtap="{{a[7]}}" bindtap="{{a[5]}}" bindtouchcancel="{{a[3]}}" bindtouchend="{{a[4]}}" bindtouchmove="{{a[2]}}" bindtouchstart="{{a[1]}}" catch:bind="onBind" catch:life="onLifeCycle" class="{{a.class}}" coreView="{{c}}" data-attr="{{a}}" data-selector="{{c[3]}}" id="{{a.id}}" mode="{{mode}}" style="{{w.getStyle(c[3],a,a.rid)}}"></core>
+</template>
+<wxs module="h" src="helper.wxs" />
+<wxs module="w" src="inline-wxss.wxs" />

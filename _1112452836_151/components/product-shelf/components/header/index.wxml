@@ -1,0 +1,14 @@
+<view class="shelf-header-wrapper" wx:if="{{!isListPage}}">
+    <view class="header-left">
+        <view class="header-title-icon" style="background: url({{navData.icon}}) no-repeat;background-size: contain;" wx:if="{{navData.icon}}"></view>
+        <view class="header-title">{{navData.name}}</view>
+    </view>
+    <view class="header-right">
+        <view class="shelf-tags-wrapper">
+            <view class="shelf-tag-item" wx:for="{{navData.shelfComponentTags}}" wx:key="index">
+                <view class="item-icon" style="background: url({{item.icon}}) no-repeat;background-size: contain;"></view>
+                <view class="item-desc">{{item.desc}}</view>
+            </view>
+        </view>
+    </view>
+</view>

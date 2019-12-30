@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+        "exception": "../../../../components/wx-exception/wx-exception",
+        "lazy-img": "../../../../components/mina_lazyload_img/mina_lazyload_img",
+        "app-launch": "../../../../components/app-launch/index"
+    }
+}

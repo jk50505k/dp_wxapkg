@@ -1,0 +1,19 @@
+{
+    "navigationBarBackgroundColor": "#f9f9f9",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "限时秒杀",
+    "backgroundColor": "#f9f9f9",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "midas-dp-deal-list": "../../../../components/midas-dp-deal-list/midas-dp-deal-list",
+        "error": "../components/error/error",
+        "sec-kill-filter": "../components/sec-kill-filter/sec-kill-filter",
+        "sec-kill-ka": "../components/sec-kill-ka/sec-kill-ka",
+        "sec-kill-poi": "../components/sec-kill-poi/sec-kill-poi",
+        "sec-kill-showtime": "../components/sec-kill-showtime/sec-kill-showtime",
+        "sec-kill-timedown": "../components/sec-kill-timedown/sec-kill-timedown",
+        "sec-kill-list-footer": "../components/sec-kill-list-footer/sec-kill-list-footer",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

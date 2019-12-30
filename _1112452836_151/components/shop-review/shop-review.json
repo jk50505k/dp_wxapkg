@@ -1,0 +1,9 @@
+{
+    "component": true,
+    "usingComponents": {
+        "review-dish": "../review-dish/review-dish",
+        "mina-lazyload-img": "../mina_lazyload_img/mina_lazyload_img",
+        "app-launch": "../app-launch/index",
+        "star": "../seed-ui-components-weapp/seed-star/index"
+    }
+}

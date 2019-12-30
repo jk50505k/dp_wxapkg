@@ -1,0 +1,23 @@
+<view bindtap="rainBowTap" class="rainbow" data-url="{{rainBowData.activityUrl}}" wx:if="{{rainBowData.showModule}}">
+    <view class="left-img">
+        <image class="img" src="{{rainBowData.urls[0]}}" wx:if="{{rainBowData.urls[0]}}"></image>
+    </view>
+    <view class="right-img">
+        <image class="img" src="{{rainBowData.urls[1]}}" wx:if="{{rainBowData.urls[1]}}"></image>
+        <view class="timer" wx:if="{{rainBowData.timeDisplayFlag}}">
+            <view class="end-txt">距结束还剩</view>
+            <view class="time-txt" wx:if="{{dayModel}}">
+                <span class="time">{{dayStr}}</span>
+天        <span class="time">{{hrStr}}</span>
+时      </view>
+            <view class="time-txt" wx:if="{{hourModel}}">
+                <span class="time">{{hrStr}}</span>
+时        <span class="time">{{minStr}}</span>
+分      </view>
+            <view class="time-txt" wx:if="{{minModel}}">
+                <span class="time">{{minStr}}</span>
+分        <span class="time">{{secStr}}</span>
+秒      </view>
+        </view>
+    </view>
+</view>

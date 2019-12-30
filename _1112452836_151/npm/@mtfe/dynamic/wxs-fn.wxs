@@ -1,0 +1,260 @@
+module.exports = (function(tags) {
+    function getSiblings(elem) {
+        var parent = elem[(5)];
+        return (parent ? parent[(2)] : [elem])
+    };
+
+    function getAttributeValue(elem, name) {
+        return (elem[(1)] && elem[(1)][((nt_3 = (name), null == nt_3 ? undefined : 'number' === typeof nt_3 ? nt_3 : "" + nt_3))])
+    };
+
+    function hasAttrib(elem, name) {
+        return (!!elem[(1)] && !!elem[(1)][((nt_5 = (name), null == nt_5 ? undefined : 'number' === typeof nt_5 ? nt_5 : "" + nt_5))])
+    };
+
+    function getName(elem) {
+        return (tags[((nt_6 = (elem[(0)]), null == nt_6 ? undefined : 'number' === typeof nt_6 ? nt_6 : "" + nt_6))])
+    };
+
+    function isTag(elem) {
+        return (typeof elem !== 'string')
+    };
+
+    function trueFunc() {
+        return (true)
+    };
+
+    function falseFunc() {
+        return (false)
+    };
+    var reChars = getRegExp('[-[\x5c]{}()*+?.,\\x5c^$|#\x5cs]', 'g');
+    var attributeRules = ({
+        __proto__: null,
+        equals: (function(next, data) {
+            var name = data.name;
+            var value = data.value;
+            return (function equals(elem) {
+                return (getAttributeValue(elem, name) === value && next(elem))
+            })
+        }),
+        hyphen: (function(next, data) {
+            var name = data.name;
+            var value = data.value;
+            var len = value.length;
+            return (function hyphen(elem) {
+                var attr = getAttributeValue(elem, name);
+                return (attr != null && attr.substring(0, len + 1) === value && (attr.length === len || attr.charAt(len) === "-") && next(elem))
+            })
+        }),
+        element: (function(next, data) {
+            var name = data.name;
+            var value = data.value;
+            if (getRegExp('\x5cs').test(value)) {
+                return (falseFunc)
+            };
+            var pattern = "(?:^|\x5cs)" + value + "(?:$|\x5cs)";
+            var flags = data.ignoreCase ? "i" : "";
+            var regex = getRegExp(pattern, flags);
+            return (function element(elem) {
+                var attr = getAttributeValue(elem, name);
+                return (attr != null && regex.test(attr) && next(elem))
+            })
+        }),
+        exists: (function(next, data) {
+            var name = data.name;
+            return (function exists(elem) {
+                return (hasAttrib(elem, name) && next(elem))
+            })
+        }),
+        start: (function(next, data) {
+            var name = data.name;
+            var value = data.value;
+            var len = value.length;
+            if (len === 0) {
+                return (falseFunc)
+            };
+            return (function start(elem) {
+                var attr = getAttributeValue(elem, name);
+                return (attr != null && attr.substring(0, len + 1) === value && next(elem))
+            })
+        }),
+        end: (function(next, data) {
+            var name = data.name;
+            var value = data.value;
+            var len = -value.length;
+            if (len === 0) {
+                return (falseFunc)
+            };
+            return (function end(elem) {
+                var attr = getAttributeValue(elem, name);
+                return (attr != null && attr.substring(len) === value && next(elem))
+            })
+        }),
+        any: (function(next, data) {
+            var name = data.name;
+            var value = data.value;
+            if (value === "") {
+                return (falseFunc)
+            };
+            return (function any(elem) {
+                var attr = getAttributeValue(elem, name);
+                return (attr != null && attr.indexOf(value) >= 0 && next(elem))
+            })
+        }),
+        not: (function(next, data) {
+            var name = data.name;
+            var value = data.value;
+            if (value === "") {
+                return (function notEmpty(elem) {
+                    return (!!getAttributeValue(elem, name) && next(elem))
+                })
+            };
+            return (function not(elem) {
+                return (getAttributeValue(elem, name) !== value && next(elem))
+            })
+        }),
+    });
+    var attrCompile = ({
+        compile: (function(next, data) {
+            if (data.ignoreCase || data.action === "not") {
+                throw;
+                SyntaxError("Unsupported attribute selector")
+            };
+            return (attributeRules[((nt_8 = (data.action), null == nt_8 ? undefined : 'number' === typeof nt_8 ? nt_8 : "" + nt_8))](next, data))
+        }),
+        rules: attributeRules,
+    });
+    var RuleMatch = ({
+        __proto__: null,
+        attribute: attrCompile.compile,
+        pseudo: (function() {
+            return ((function() {
+                return (false)
+            }))
+        }),
+        tag: (function(next, data) {
+            var name = data.name;
+            return (function tag(elem) {
+                return (getName(elem) === name && next(elem))
+            })
+        }),
+        descendant: (function(next) {
+            return (function descendant(elem) {
+                var found = false;
+                while (!found && (elem = elem[(5)])) {
+                    found = next(elem)
+                };
+                return (found)
+            })
+        }),
+        parent: (function(next) {
+            function test(elem) {
+                return (isTag(elem) && next(elem))
+            };
+            return (function parent(elem) {
+                return (elem[(2)].some(test))
+            })
+        }),
+        child: (function(next) {
+            return (function child(elem) {
+                var parent = elem[(5)];
+                return (!!parent && next(parent))
+            })
+        }),
+        sibling: (function(next) {
+            return (function sibling(elem) {
+                var siblings = getSiblings(elem);
+                for (var i = 0; i < siblings.length; i++) {
+                    if (isTag(siblings[((nt_12 = (i), null == nt_12 ? undefined : 'number' === typeof nt_12 ? nt_12 : "" + nt_12))])) {
+                        if (siblings[((nt_13 = (i), null == nt_13 ? undefined : 'number' === typeof nt_13 ? nt_13 : "" + nt_13))] === elem) {
+                            break
+                        };
+                        if (next(siblings[((nt_14 = (i), null == nt_14 ? undefined : 'number' === typeof nt_14 ? nt_14 : "" + nt_14))])) {
+                            return (true)
+                        }
+                    }
+                };
+                return (false)
+            })
+        }),
+        adjacent: (function(next) {
+            return (function adjacent(elem) {
+                var siblings = getSiblings(elem);
+                var lastElement;
+                for (var i = 0; i < siblings.length; i++) {
+                    if (isTag(siblings[((nt_15 = (i), null == nt_15 ? undefined : 'number' === typeof nt_15 ? nt_15 : "" + nt_15))])) {
+                        if (siblings[((nt_16 = (i), null == nt_16 ? undefined : 'number' === typeof nt_16 ? nt_16 : "" + nt_16))] === elem) {
+                            break
+                        };
+                        lastElement = siblings[((nt_17 = (i), null == nt_17 ? undefined : 'number' === typeof nt_17 ? nt_17 : "" + nt_17))]
+                    }
+                };
+                return (!!lastElement && next(lastElement))
+            })
+        }),
+        universal: (function(next) {
+            return (next)
+        }),
+    });
+
+    function compileRules(rules) {
+        rules.forEach((function(rule) {
+            rule.query = rule.selector.reduce((function(preFunc, selector) {
+                if (preFunc === falseFunc) {
+                    return (preFunc)
+                };
+                if (RuleMatch[((nt_18 = (selector.type), null == nt_18 ? undefined : 'number' === typeof nt_18 ? nt_18 : "" + nt_18))]) {
+                    return (RuleMatch[((nt_19 = (selector.type), null == nt_19 ? undefined : 'number' === typeof nt_19 ? nt_19 : "" + nt_19))](preFunc, selector))
+                } else {
+                    return (falseFunc)
+                }
+            }), trueFunc)
+        }));
+        return (rules)
+    };
+
+    function _inlineWxss(rules, elems) {
+        rules = compileRules(rules);
+        rules.forEach((function(rule) {
+            var _traversal = (function(doms) {
+                doms.forEach((function(elem) {
+                    if (!elem[(2)]) {
+                        return
+                    };
+                    if (rule.query && rule.query(elem)) {
+                        elem[(1)].style = rule.cssText + (elem[(1)].style || '')
+                    };
+                    styleMap[((nt_23 = (elem[(3)]), null == nt_23 ? undefined : 'number' === typeof nt_23 ? nt_23 : "" + nt_23))] = elem[(1)].style;
+                    _traversal(elem[(2)])
+                }))
+            });
+            _traversal(elems)
+        }));
+        return (elems)
+    };
+    var styleMap = ({});
+    var inlineWxss = (function(wxss, elems) {
+        if (!wxss) {
+            return (true)
+        };
+        var addParent = (function(elem) {
+            elem[(2)] && elem[(2)].forEach((function(c) {
+                c[(5)] = elem;
+                if (c[(2)]) {
+                    addParent(c)
+                }
+            }))
+        });
+        addParent(elems);
+        elems[(2)] = _inlineWxss(wxss, elems[(2)]);
+        return (true)
+    });
+    var getStyle = (function(c, a) {
+        var wxss = styleMap[((nt_33 = (c), null == nt_33 ? undefined : 'number' === typeof nt_33 ? nt_33 : "" + nt_33))] || (a && a.style);
+        return (wxss)
+    });
+    return (({
+        getStyle: getStyle,
+        inlineWxss: inlineWxss,
+    }))
+});

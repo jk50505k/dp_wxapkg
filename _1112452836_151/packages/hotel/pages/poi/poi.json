@@ -1,0 +1,31 @@
+{
+    "navigationBarTitleText": "商家详情",
+    "enablePullDownRefresh": false,
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "coupon-banner": "../../components/coupon-banner/index",
+        "top-album": "./components/top-album/top-album",
+        "book-room": "./components/book-room/book-room",
+        "comment": "./components/comment/comment",
+        "book-room-detail": "./components/book-room-detail/book-room-detail",
+        "skeleton": "./components/skeleton/skeleton",
+        "service-desc": "./components/service-desc/service-desc",
+        "advertisement": "./components/advertisement/advertisement",
+        "ticket-recommend": "../../components/ticket-recommend/index",
+        "show-more-b": "./components/show-more-b/show-more",
+        "date-box": "./components/book-room/components/date-box/date-box",
+        "select-options": "./components/select-options/select-options",
+        "brand": "../../components/brand/brand",
+        "yodaImage": "./yoda/component/image/image",
+        "yodaSlider": "./yoda/component/slider/slider",
+        "app-backflow": "../../components/app-backflow/index",
+        "login-comp": "../../components/login-comp/login-comp",
+        "coupon-popup": "../../components/coupon-popup/coupon-popup",
+        "modal": "../../components/modal/modal",
+        "page-header": "./components/page-header/page-header",
+        "voucher-detail": "../../components/voucher-detail/voucher-detail",
+        "nearby-recommand": "./components/nearby-recommand/nearby-recommand",
+        "filter-room": "./components/filter-room/filter-room",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

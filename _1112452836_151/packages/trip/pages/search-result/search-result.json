@@ -1,0 +1,10 @@
+{
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "poi-card": "../../components/business-relevant-components/poi-card/poi-card",
+        "empty-list": "../../components/native-com/empty-list/empty-list",
+        "component-loading": "../../components/native-com/loading/loading",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

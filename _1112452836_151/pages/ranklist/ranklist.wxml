@@ -1,0 +1,53 @@
+<top-parent id="topParent">
+    <foodList class="food-list-wrapper" foodRankList="{{foodRankList}}" id="foodCard"></foodList>
+    <choosenList goodRankList="{{goodRankList}}" rankInfo="{{rankInfo}}" wx:if="{{hasChoosenRank}}"></choosenList>
+    <view class="ranklist-shoplist" id="shop-list">
+        <view class="tabbar-wrap {{isFixed?'fixed-tabbar':''}}">
+            <view class="tab-btn-wrap" wx:if="{{isLocal}}">
+                <view bindtap="changeCurrentIndex" class="tab-btn {{currentIndex==index?'active-tab':''}}" id="{{index}}" wx:for="{{tabList}}" wx:key="tab-{{index}}">
+{{item}}
+                                    <view class="bottom-line" wx:if="{{currentIndex==index}}"></view>
+                </view>
+            </view>
+            <view class="all-city-wrap" wx:if="{{!isLocal}}">
+                <view class="all-city" hidden="{{isFixed}}">
+                    <view class="all-city-icon"></view>
+                    <view class="all-city-title">全城上榜</view>
+                </view>
+            </view>
+            <scroll-view class="tag-btn-wrap" scrollX="true">
+                <view bindtap="changeTag" class="tag-btn {{currentTagIndex==index?'active-tag':''}} {{index==tagList.length-1?'last-tag':''}}" data-tag-id="{{item.tagId}}" data-tag-index="{{index}}" wx:for="{{tagList}}" wx:key="tag-{{index}}">{{item.tagName}}</view>
+            </scroll-view>
+        </view>
+        <view class="ghost {{isLocal?'normal-ghost':'small-ghost'}}" hidden="{{!isFixed}}"></view>
+        <view hidden="{{!(currentIndex==0&&isLocal)}}">
+            <view class="shop-card-wrap {{currentTagIndex==wrapIndex?'shop-card-wrap-active':''}}" hidden="{{currentTagIndex!==wrapIndex}}" wx:for="{{tagList}}" wx:for-index="wrapIndex" wx:for-item="tagItem" wx:key="shoplist-wrap-{{index}}">
+                <view class="shop-card" wx:for="{{nearbyObj[tagItem.tagId].list}}" wx:key="near-shopitem-{{index}}-{{tagItem.tagName}}">
+                    <shopCard categoryId="{{tagList[this.currentTagIndex].tagId}}" item="{{item}}"></shopCard>
+                </view>
+            </view>
+        </view>
+        <view hidden="{{!(currentIndex==1&&isLocal||!isLocal)}}">
+            <view class="shop-card-wrap {{currentTagIndex==wrapIndex?'shop-card-wrap-city-active':''}}" hidden="{{currentTagIndex!==wrapIndex}}" wx:for="{{tagList}}" wx:for-index="wrapIndex" wx:for-item="tagItem" wx:key="shoplist-wrap-{{index}}">
+                <view class="shop-card" wx:for="{{allCityObj[tagItem.tagId].list}}" wx:key="all-shopitem-{{index}}-{{tagItem.tagName}}">
+                    <shopCard categoryId="{{tagList[this.currentTagIndex].tagId}}" item="{{item}}"></shopCard>
+                </view>
+            </view>
+        </view>
+        <view class="shop-list-empty" wx:if="{{isEmpty&&render_isEnd&&!render_isLoading}}">
+            <image class="empty-img" src="//p0.meituan.net/dpgroup/44d2a225f06134233d3032d082e720e05273.png"></image>
+            <view class="empty-word">没有上榜{{tagList[currentTagIndex].tagName}}哦</view>
+            <view class="empty-word">看看其他品类吧</view>
+        </view>
+    </view>
+    <view class="list-loading" hidden="{{!render_isLoading}}">
+        <view class="loading-icon"></view>
+    </view>
+    <view class="end-wrap" wx:if="{{render_isEnd&&!isEmpty&&!render_isLoading}}">没有更多的店铺了～
+        </view>
+    <view class="page-error" wx:if="{{!hasFoodRank&&inited}}">
+        <image class="error-img" mode="aspectFill" src="//p0.meituan.net/dpgroup/44d2a225f06134233d3032d082e720e05273.png"></image>
+        <view class="error-word">当前城市暂时没有排行榜哦</view>
+        <view bindtap="goIndex" class="search-btn">探索其他城市</view>
+    </view>
+</top-parent>

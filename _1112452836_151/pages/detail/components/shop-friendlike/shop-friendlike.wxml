@@ -1,0 +1,83 @@
+<view class="groupItem" style="margin:{{moduleConfig.margin}}" wx:if="{{recordList.length}}">
+    <view class="groupTitle noBorder">
+        <text class="friends-title">小伙伴们还喜欢</text>
+        <text class="ad-mode" wx:if="{{adMode}}">广告</text>
+    </view>
+    <view class="recordList">
+        <view class="{{recordList&&recordList.length>0&&recordList[0]&&recordList[0].bizId==='508'?'shopInfo hasPoiShop':'shopInfo hasNotPoiShop'}}" wx:for="{{recordList}}" wx:key="{{index}}">
+            <view class="starPoiPanel" wx:if="{{index===0&&item.bizId==='508'}}">
+                <midas sendLoadPoint adidx="{{index+1}}" bindclickend="adShopTap" callbackParams="{{index}}" feedback="{{item.feedback}}">
+                    <view class="spIcon"></view>
+                    <view class="starPoi">
+                        <view class="spPicPanel">
+                            <lazy-img class="_lazyLoadImage" data-src="{{item.defaultPic}}" imgClass="{{spImgClass}}" imgMode="{{'aspectFill'}}" imgSrc="{{item.defaultPic}}"></lazy-img>
+                            <view class="spAd-tag ad-tag" wx:if="{{item.isAdShop}}">广告</view>
+                        </view>
+                        <view class="spDescPanel">
+                            <view class="spTopPanel topPanel">{{item.shopName}}{{item.branchName?'('+item.branchName+')':''}}</view>
+                            <view class="spMiddelPanel">
+                                <view class="shopStar star star-{{item.shopStar}}" wx:if="{{item.shopStar}}"></view>
+                                <view class="spRegion text">
+                                    <text class="spRegionText" wx:if="{{item.categoryName}}">{{item.categoryName}}</text>
+                                </view>
+                                <view class="spDistance text" wx:if="{{item.distance}}">{{item.distance}}</view>
+                            </view>
+                            <view class="reviewPanel" wx:if="{{item.comment}}">
+                                <view class="reviewPaneltext">{{item.comment}}</view>
+                            </view>
+                            <view class="sptag" wx:if="{{item.recreason}}">{{item.recreason}}</view>
+                        </view>
+                    </view>
+                </midas>
+            </view>
+            <view wx:elif="{{item.bizType==2&&item.feedback}}">
+                <midas sendLoadPoint adidx="{{index+1}}" bindclickend="adShopTap" callbackParams="{{index}}" feedback="{{item.feedback}}">
+                    <view class="shopItem">
+                        <view class="picPanel">
+                            <lazy-img class="_lazyLoadImage" data-src="{{item.defaultPic}}" imgClass="{{imgClass}}" imgMode="{{'aspectFill'}}" imgSrc="{{item.defaultPic}}"></lazy-img>
+                            <view class="ad-tag" wx:if="{{item.isAdShop}}">广告</view>
+                        </view>
+                        <view class="descPanel">
+                            <text class="topPanel">{{item.shopName}}{{item.branchName?'('+item.branchName+')':''}}</text>
+                            <view class="middlePanel" wx:if="{{item.shopStar}}">
+                                <view class="shopStar star star-{{item.shopStar}}"></view>
+                                <text class="price" wx:if="{{item.avgPrice}}">{{item.avgPrice}}</text>
+                            </view>
+                            <view class="bottomPanel">
+                                <view class="leftText">
+                                    <text class="region" wx:if="{{item.regionName}}">{{item.regionName}}</text>
+                                    <text class="category" wx:if="{{item.categoryName}}">{{item.categoryName}}</text>
+                                </view>
+                                <view class="distance">
+                                    <text class="dist-txt" wx:if="{{item.distance}}">{{item.distance}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </midas>
+            </view>
+            <view bindtap="shopItemTap" data-index="{{index}}" data-item="{{item}}" wx:else>
+                <view class="picPanel">
+                    <lazy-img class="_lazyLoadImage" data-src="{{item.defaultPic}}" imgClass="{{imgClass}}" imgMode="{{'aspectFill'}}" imgSrc="{{item.defaultPic}}"></lazy-img>
+                    <view class="ad-tag" wx:if="{{item.isAdShop}}">广告</view>
+                </view>
+                <view class="descPanel">
+                    <text class="topPanel">{{item.shopName}}{{item.branchName?'('+item.branchName+')':''}}</text>
+                    <view class="middlePanel" wx:if="{{item.shopStar}}">
+                        <view class="shopStar star star-{{item.shopStar}}"></view>
+                        <text class="price" wx:if="{{item.avgPrice}}">{{item.avgPrice}}</text>
+                    </view>
+                    <view class="bottomPanel">
+                        <view class="leftText">
+                            <text class="region" wx:if="{{item.regionName}}">{{item.regionName}}</text>
+                            <text class="category" wx:if="{{item.categoryName}}">{{item.categoryName}}</text>
+                        </view>
+                        <view class="distance">
+                            <text class="dist-txt" wx:if="{{item.distance}}">{{item.distance}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,14 @@
+{
+    "navigationBarTitleText": "美团门票",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "friends-help-list": "./components/friendsHelpList/friendsHelpList",
+        "button-content": "./components/buttonContent/buttonContent",
+        "activity-status": "./components/activityStatus/activityStatus",
+        "popup": "./components/popup/popup",
+        "tips-popup": "./components/tipsPopup/tipsPopup",
+        "share-tips-popup": "./components/shareTipsPopup/shareTipsPopup",
+        "formid-wrap": "../../components/native-com/formid-wrap/formid-wrap",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

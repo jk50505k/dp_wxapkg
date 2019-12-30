@@ -1,0 +1,54 @@
+<view class="midas-template-wrapper" wx:if="{{adItems&&adItems.length>0}}">
+    <view class="midas-template-title">
+        <view class="midas-title">{{moduleTitle}}</view>
+        <view class="midas-tip">{{adMark}}</view>
+    </view>
+    <view class="midas-content">
+        <view class="midas-content-item-wrapper" wx:for="{{adItems}}" wx:for-index="idx" wx:key="idx">
+            <midas sendLoadPoint sendReachPoint adidx="{{idx+1}}" feedback="{{item.adLog.feedback}}" jumpLink="{{item.jumpLink}}">
+                <view class="midas-template-content-star-shop" id="{{idx}}" wx:if="{{item.creative.starAd}}">
+                    <lazy-img class="_lazyLoadImage" imgClass="{{starImgClass}}" imgMode="{{'aspectFill'}}" imgSrc="{{item.creative.picUrl?item.creative.picUrl:defaultImgUrl}}"></lazy-img>
+                    <image class="midas-star-shop-mark" src="http://p1.meituan.net/scarlett/b68c64c274d2d8bdf5e1cff03df0a1b73903.png"></image>
+                    <view class="midas-right">
+                        <view class="midas-star-shop-name">{{item.creative.title}}</view>
+                        <view class="midas-star-shop-info">
+                            <view class="midas-shop-detail">
+                                <view class="midas-rank-stars midas-star-{{item.creative.score}}"></view>
+                                <view class="midas-shop-category" wx:if="{{item.creative.shopCategory}}">{{item.creative.shopCategory}}</view>
+                            </view>
+                            <view class="midas-shop-distance" wx:if="{{item.creative.distance}}">{{item.creative.distance}}</view>
+                        </view>
+                        <view class="midas-shop-desc">{{item.creative.description}}</view>
+                        <view class="midas-star-shop-price">
+                            <text class="midas-deal-price-symbol midas-star-deal-price-symbol" decode="true" wx:if="{{item.creative.currentPrice}}">¥&nbsp;</text>
+                            <view class="midas-deal-price midas-star-deal-price">{{item.creative.currentPrice}}</view>
+                            <text class="midas-deal-market-price-symbol" decode="true" wx:if="{{item.creative.marketPrice}}">¥&nbsp;</text>
+                            <text class="midas-deal-market-price">{{item.creative.marketPrice}}</text>
+                            <text class="midas-star-shop-count" wx:if="{{item.creative.discount}}">{{item.creative.discount}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="midas-template-content" id="{{idx}}" wx:else>
+                    <lazy-img class="_lazyLoadImage" imgClass="{{imgClass}}" imgMode="{{'aspectFill'}}" imgSrc="{{item.creative.picUrl?item.creative.picUrl:defaultImgUrl}}"></lazy-img>
+                    <view class="midas-left-content">
+                        <view class="midas-shop-info">
+                            <view class="midas-shop-name">{{item.creative.title}}</view>
+                            <view class="midas-shop-distance">{{item.creative.distance}}</view>
+                        </view>
+                        <view class="midas-deal-detail">{{item.creative.subTitle}}</view>
+                        <view class="midas-deal-info">
+                            <view class="midas-price">
+                                <text class="midas-deal-price-symbol" decode="true" wx:if="{{item.creative.currentPrice}}">¥&nbsp;</text>
+                                <view class="midas-deal-price">{{item.creative.currentPrice}}</view>
+                                <text class="midas-deal-market-price-symbol" decode="true" wx:if="{{item.creative.marketPrice}}">¥&nbsp;</text>
+                                <view class="midas-deal-market-price">{{item.creative.marketPrice}}</view>
+                            </view>
+                            <view class="midas-deal-count" wx:if="{{item.creative.saleCount}}">已售{{item.creative.saleCount}}</view>
+                        </view>
+                    </view>
+                </view>
+            </midas>
+            <view class="midas-split-line"></view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+{
+    "navigationBarTitleText": "向商户付款",
+    "usingComponents": {
+        "shopinfo": "../../components/submit/shopinfo/shopinfo",
+        "price": "../../components/submit/price/price",
+        "promodesk": "../../npm/@gfe/wx-promodesk-component/build/wx-promodesk-component/entry/index",
+        "confirmbtn": "../../components/submit/confirmbtn/confirmbtn",
+        "toast": "../../components/common/toast/toast",
+        "violation": "../../components/submit/violation/violation",
+        "compliance": "../../components/submit/compliance/compliance",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

@@ -1,0 +1,7 @@
+<view class="detailWrap">
+    <shop-slot class="shop-slot" id="shop-slot" slotItems="{{slotItems}}">
+        <include src="./common-module.wxml"></include>
+        <include src="./business-module.wxml"></include>
+    </shop-slot>
+    <include src="./noconfig-module.wxml"></include>
+</view>

@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "focus-wx": "../../components/focus-wx/focus-wx",
+        "guide-add": "../../components/guide-add/guide-add",
+        "show-more": "./components/show-more/show-more",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

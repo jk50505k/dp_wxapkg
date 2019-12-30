@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "quick-nav": "../../../../../components/quick-nav/quick-nav"
+    }
+}

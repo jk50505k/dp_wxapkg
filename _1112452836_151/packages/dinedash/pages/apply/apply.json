@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "霸王餐",
+    "backgroundColor": "#f6f6f6",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "apply-result": "../../components/apply-result/apply-result",
+        "passcard": "../../components/passcard/passcard",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

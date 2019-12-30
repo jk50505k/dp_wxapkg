@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "mina-image": "../mina-image/index"
+    }
+}

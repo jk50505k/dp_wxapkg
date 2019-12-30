@@ -1,0 +1,21 @@
+.review-dish {
+    margin-top: 10rpx;
+}
+
+.dish-con {
+    overflow: hidden;
+    max-height: 40rpx;
+}
+
+.recomm {
+    color: #777;
+    margin-right: 13rpx;
+    display: inline-flex;
+}
+
+.dish-item {
+    margin-right: 16rpx;
+    color: #446889;
+    display: inline-flex;
+    margin-bottom: 15rpx;
+}

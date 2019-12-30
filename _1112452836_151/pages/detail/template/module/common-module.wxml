@@ -1,0 +1,66 @@
+<view class="shop-follow" slot="shop-follow" wx:if="{{shopModules['shop-follow']}}">
+    <shop-follow id="shop-follow" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-follow']}}" offuserid="{{offuserId}}" shopOptions="{{loadOptions}}"></shop-follow>
+</view>
+<view class="shop-head" slot="shop-head" wx:if="{{shopModules['shop-head']}}">
+    <shop-head bind:addToVote="addToVote" bind:handleReLoad="handleReLoad" bind:headhide="headHide" bind:headshow="headShow" bind:horizontalscroll="onHorizontalScroll" bind:launchtap="launchAppTap" bind:lazyload="findLazyLoadComponents" canLaunchApp="{{canLaunchApp&&shopModules['shop-head'].launchAppSwitch}}" id="shop-head" lxData="{{lxdata}}" mapiError="{{mapiError}}" moduleConfig="{{shopModules['shop-head']}}" needLogin="{{needLogin}}" shopHeadData="{{mApiShopInfo}}" shopOptions="{{loadOptions}}" showAddToVoteBtn="{{showAddToVoteBtn}}"></shop-head>
+</view>
+<view class="shop-info" slot="shop-info" wx:if="{{shopModules['shop-info']}}">
+    <shop-info bind:shopInfoTap="shopInfoTap" id="shop-info" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-info']}}" shopInfoData="{{mApiShopInfo}}" shopOptions="{{loadOptions}}"></shop-info>
+</view>
+<view class="shop-oversea-businesshours" slot="shop-oversea-businesshours" wx:if="{{shopModules['shop-oversea-businesshours']&&mApiShopInfo.isForeignShop}}">
+    <shop-oversea-businesshours bind:hideMask="hideMask" bind:promptMask="promptMask" id="shop-oversea-businesshours" shopOptions="{{loadOptions}}"></shop-oversea-businesshours>
+</view>
+<view class="shop-map" slot="shop-map" wx:if="{{shopModules['shop-map']}}">
+    <shop-map bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp&&shopModules['shop-map'].launchAppSwitch}}" canLaunchPoi="{{canLaunchApp&&shopModules['shop-map'].launchPoiSwitch}}" carData="{{otherShopInfo.daCheData}}" id="shop-map" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-map']}}" needLogin="{{needLogin}}" route="{{route}}" shopMapData="{{mApiShopInfo}}" shopOptions="{{loadOptions}}"></shop-map>
+</view>
+<view class="shop-promo" slot="shop-promo" wx:if="{{shopModules['shop-promo']}}">
+    <shop-promo id="shop-promo" moduleConfig="{{shopModules['shop-promo']}}" promoData="{{otherShopInfo.promoData}}"></shop-promo>
+</view>
+<view class="coupon-bag" slot="coupon-bag" wx:if="{{shopModules['coupon-bag']}}">
+    <coupon-bag id="coupon-bag" lxData="{{lxdata}}" moduleConfig="{{shopModules['coupon-bag']}}" shopOptions="{{loadOptions}}"></coupon-bag>
+</view>
+<view class="dz-banner" slot="dz-banner" wx:if="{{shopModules['dz-banner']}}">
+    <dz-banner id="dz-banner" lxData="{{lxdata}}" moduleConfig="{{shopModules['dz-banner']}}" shopOptions="{{loadOptions}}"></dz-banner>
+</view>
+<view class="shop-times-card" slot="shop-times-card" wx:if="{{shopModules['shop-times-card']}}">
+    <shop-times-card id="shop-times-card" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-times-card']}}" shopOptions="{{loadOptions}}"></shop-times-card>
+</view>
+<view class="common-reserve" slot="common_reserve" wx:if="{{shopModules['common_reserve']}}">
+    <common-reserve id="common-reserve" lxData="{{lxdata}}" moduleConfig="{{shopModules['common_reserve']}}" shopOptions="{{loadOptions}}"></common-reserve>
+</view>
+<view class="shop-operate" slot="shop-operate" wx:if="{{shopModules['shop-operate']}}">
+    <shop-operate id="shop-operate" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-operate']}}"></shop-operate>
+</view>
+<view class="shop-tuan" slot="shop-tuan" wx:if="{{shopModules['shop-tuan']}}">
+    <shop-tuan id="shop-tuan" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-tuan']}}" shopOptions="{{loadOptions}}"></shop-tuan>
+</view>
+<view class="shop-tuan" slot="shop-craftsman" wx:if="{{shopModules['shop-craftsman']}}">
+    <shop-craftsman bind:horizontalscroll="onHorizontalScroll" bind:lazyload="findLazyLoadComponents" id="shop-craftsman" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-craftsman']}}" shopOptions="{{loadOptions}}"></shop-craftsman>
+</view>
+<view class="friends-come" slot="friends-come" wx:if="{{shopModules['friends-come']}}">
+    <friends-come bind:horizontalscroll="onHorizontalScroll" bind:lazyload="findLazyLoadComponents" lxData="{{lxdata}}" moduleConfig="{{shopModules['friends-come']}}" shopOptions="{{loadOptions}}"></friends-come>
+</view>
+<view class="shop-quality" slot="shop-quality" wx:if="{{shopModules['shop-quality']}}">
+    <shop-quality lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-quality']}}" shopOptions="{{loadOptions}}"></shop-quality>
+</view>
+<view class="shop-review" slot="shop-review" wx:if="{{shopModules['shop-review']}}">
+    <review-list bind:horizontalscroll="onHorizontalScroll" bind:launchtap="launchAppTap" bind:lazyload="findLazyLoadComponents" canLaunchApp="{{canLaunchApp&&shopModules['shop-review-tag'].launchAppSwitch}}" hasApp="{{hasApp}}" lxData="{{lxdata}}" needLogin="{{needLogin}}" reviewListParams="{{reviewListParams}}" tagConfig="{{shopModules['shop-review-tag']}}"></review-list>
+</view>
+<view class="shop-mall" slot="shop-mall" wx:if="{{dyShowModule['shop-mall']}}">
+    <dynamic case="shop-mall" context="{{dyShopInfo}}"></dynamic>
+</view>
+<view class="shop-branch" slot="shop-branch" wx:if="{{dyShowModule['shop-branch']}}">
+    <dynamic case="shop-branch" context="{{dyShopInfo}}"></dynamic>
+</view>
+<view class="shop-nearby" slot="shop-nearby" wx:if="{{dyShowModule['shop-nearby']&&hasLocation}}">
+    <dynamic case="shop-nearby" context="{{dyShopInfo}}"></dynamic>
+</view>
+<view class="shop-friendlike" slot="shop-friendlike" wx:if="{{shopModules['shop-friendlike']}}">
+    <shop-friendlike bind:lazyload="findLazyLoadComponents" id="shop-friendlike" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-friendlike']}}" shopOptions="{{loadOptions}}"></shop-friendlike>
+</view>
+<view class="shop-comment" slot="shop-comment" wx:if="{{shopModules['shop-comment']}}">
+    <shop-comment branchName="{{mApiShopInfo.branchName}}" categoryId="{{otherShopInfo.categoryId}}" id="shop-comment" imData="{{otherShopInfo.imData}}" isFavorite="{{otherShopInfo.isFavorite}}" lxData="{{lxdata}}" moduleConfig="{{shopModules['shop-comment']}}" reviewCount="{{mApiShopInfo.voteTotal}}" shopGeo="{{mApiShopInfo.geoPoint}}" shopName="{{mApiShopInfo.name}}" shopOptions="{{loadOptions}}" shopPic="{{mApiShopInfo.advancedPics&&mApiShopInfo.advancedPics.length?mApiShopInfo.advancedPics:[mApiShopInfo.defaultPic]}}" shopType="{{mApiShopInfo.shopType}}"></shop-comment>
+</view>
+<view class="exception" slot="info-err" wx:if="{{isInfoError}}">
+    <exception bindexceptionevent="handleReLoad" data-module="shopinfo" exceptionDetail="{{infoError}}"></exception>
+</view>

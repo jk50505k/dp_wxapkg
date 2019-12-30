@@ -1,0 +1,7 @@
+<view class="review-dish" wx:if="{{reviewDish&&reviewDish.length}}">
+    <view class="dish-con">
+        <view class="recomm">推荐:</view>
+        <view catch:tap="torecommend" class="dish-item" data-id="{{item.id}}" data-name="{{item.dishName}}" data-shopid="{{shopId}}" data-shopuuid="{{shopUuid}}" wx:for="{{reviewDish}}" wx:key="{{index}}">{{item.dishName}}
+        </view>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "商户评论列表",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "top-parent": "../../../../components/top-parent/top-parent",
+        "shop-review-tag": "../../../../components/shop-review-tag/shop-review-tag",
+        "shop-review": "../../../../components/shop-review/shop-review",
+        "list-view": "../../../../components/list-view/list-view",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

@@ -1,0 +1,29 @@
+<view class="skeleton" style="margin:{{moduleConfig.margin}}" wx:if="{{showModule===1}}">
+    <view class="baseLine"></view>
+    <view class="baseLine baseLine2"></view>
+</view>
+<view class="shopmap" wx:if="{{showModule===2}}">
+    <view class="shopmap-wrap">
+        <view class="desc-content" wx:if="{{shopMapData.address}}">
+            <app-launch bind:launcherror="launchAppError" bind:launchtap="launchAppTap" canLaunchApp="{{canLaunchApp}}" launchAppUrl="{{launchAppUrl}}" needLogin="{{needLogin}}">
+                <view slot="app-launch">
+                    <view bindtap="openShopMap" class="desc-left">
+                        <view class="desc-info" wx:if="{{shopMapData.address}}">
+                            <view class="iconAddress"></view>
+                            <text class="addressText">{{shopMapData.address}}{{shopMapData.crossRoad?'('+shopMapData.crossRoad+')':''}}</text>
+                        </view>
+                        <view class="desc-addr" wx:if="{{route}}">
+                            <text class="desc-addr-txt">{{route}}</text>
+                        </view>
+                    </view>
+                </view>
+            </app-launch>
+            <view class="desc-right">
+                <view bindtap="callCar" class="desc-car" wx:if="{{carData.hasDache&&moduleConfig.hasDache}}">
+                    <text class="tips">{{carData.tips}}</text>
+                </view>
+                <view bindtap="callPhone" class="desc-phone" wx:if="{{shopMapData.phoneNos.length>0}}"></view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,84 @@
+<view class="shop-follow-container border-top" style="margin:{{moduleConfig.margin}}" wx:if="{{showFollow&&!mutiType}}">
+    <view class="follow-top">
+        <view class="follow-top-left">
+            <text class="follow-title">{{userInfo.followTitle}}</text>
+        </view>
+        <view bindtap="closeShare" class="follow-close"></view>
+    </view>
+    <view class="follow-bottom">
+        <view bindtap="seeItspage" class="follow-bottom-left">
+            <image class="btm-left-image" src="{{userInfo.bigFacepicurl}}" wx:if="{{userInfo.bigFacepicurl}}"></image>
+            <image class="btm-vip-image" src="{{userInfo.vippic}}" wx:if="{{userInfo.vippic}}"></image>
+            <text class="btm-user-name" wx:if="{{userInfo.userNickName}}">{{userInfo.userNickName}}</text>
+            <image class="btm-level-image" src="{{userInfo.roundurl}}" wx:if="userInfo.roundurl"></image>
+        </view>
+        <view class="follow-bottom-right" wx:if="{{!noButton}}">
+            <view bindtap="triggerFollow" class="follow" wx:if="{{hasFollowed}}">
+                <text class="follow-text">已关注</text>
+            </view>
+            <view bindtap="triggerFollow" class="unfollow" wx:else>
+                <view class="unfollow-image"></view>
+                <text class="unfollow-text">关注</text>
+            </view>
+        </view>
+        <view bindtap="gotoMyCenter" class="my-center" wx:else>
+            <text class="my-text" style="color:{{userInfo.myData.color}}">我的主页</text>
+            <view class="entry"></view>
+        </view>
+    </view>
+</view>
+<view class="{{couponData.couponList.length===1?'single-coupon':'muti-coupon'}}" wx:if="{{couponData&&couponData.showModule}}">
+    <view class="share-title" wx:if="{{couponData.showHead&&!mutiType}}">
+        <view class="title-left">{{couponData.userName}}</view>
+        <view bindtap="ruleTap" class="title-right" wx:if="{{couponData.showRule}}">
+            <view class="rule-text">{{couponData.ruleText}}</view>
+            <view class="arrow" wx:if="{{couponData.ruleText}}"></view>
+        </view>
+    </view>
+    <view class="shop-follow-container mutiType" wx:if="{{showFollow&&mutiType}}">
+        <view class="follow-bottom">
+            <view bindtap="seeItspage" class="follow-bottom-left">
+                <image class="btm-left-image" src="{{userInfo.bigFacepicurl}}" wx:if="{{userInfo.bigFacepicurl}}"></image>
+                <image class="btm-vip-image" src="{{userInfo.vippic}}" wx:if="{{userInfo.vippic}}"></image>
+                <text class="user-name" wx:if="{{userInfo.userNickName}}">{{userInfo.userNickName}}</text>
+                <text class="coupon-text">分享给你一份优惠券</text>
+                <text catchtap="ruleTap" class="coupon-icon"></text>
+            </view>
+            <view class="follow-bottom-right" wx:if="{{!noButton}}">
+                <view bindtap="triggerFollow" class="follow" wx:if="{{hasFollowed}}">
+                    <text class="follow-text">已关注</text>
+                </view>
+                <view bindtap="triggerFollow" class="unfollow" wx:else>
+                    <view class="unfollow-image"></view>
+                    <text class="unfollow-text">关注</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <scroll-view scrollX class="coupon-wrap">
+        <view class="list-wrap" style="width:{{couponData.couponList.length==1?710:couponData.couponList.length*700}}rpx">
+            <view class="list" wx:for="{{couponData.couponList}}" wx:key="{{index}}">
+                <view class="left">
+                    <view class="coupon-price">
+                        <view class="price">{{item.discountAmount}}</view>
+                        <view class="unit">元</view>
+                    </view>
+                    <view class="limit">{{item.priceLimit}}</view>
+                </view>
+                <view class="middle {{item.middleName}}">
+                    <view class="coupon-name">{{item.couponName}}</view>
+                    <view class="coupon-shop" wx:if="{{item.couponDesc}}">{{item.couponDesc}}</view>
+                    <view class="coupon-date" wx:if="{{item.status===4}}">{{item.date}}</view>
+                </view>
+                <view class="right">
+                    <view bindtap="couponTap" class="btn" data-index="{{index}}" data-type="{{item.couponType}}" wx:if="{{item.status==1}}">立即领取</view>
+                    <view class="statusImg" style="background: url({{item.statusImg}}) no-repeat;background-size:110rpx auto;" wx:if="{{item.statusImg}}"></view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+<view class="model" wx:if="{{showModal&&couponIssue.msg}}">
+    <view class="msg" wx:if="{{couponIssue.msg}}">{{couponIssue.msg}}</view>
+    <view class="msg2" wx:if="{{couponIssue.msg2}}">{{couponIssue.msg2}}</view>
+</view>

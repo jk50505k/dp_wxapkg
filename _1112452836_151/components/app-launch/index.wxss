@@ -1,0 +1,13 @@
+.launch-wrap {
+    position: relative;
+    display: block;
+}
+
+.launch-btn,.login-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: none!important;
+}

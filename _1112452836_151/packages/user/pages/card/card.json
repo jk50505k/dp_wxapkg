@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "点评名片",
+    "usingComponents": {
+        "share-canvas": "../../../../components/mina-canvas/index",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

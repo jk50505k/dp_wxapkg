@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "shop-review": "../../../../components/shop-review/shop-review"
+    }
+}

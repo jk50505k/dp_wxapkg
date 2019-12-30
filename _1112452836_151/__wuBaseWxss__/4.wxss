@@ -1,0 +1,56 @@
+.booking-icon,.card-icon,.group-icon,.hui-icon,.promo-icon,.takeaway-icon,.queue-icon,.dian-icon,.mopay-icon,.prefer-icon,.coupon-icon,.shopping-icon {
+    width: 32rpx;
+    height: 32rpx;
+    margin: 0 4rpx;
+    border-radius: 2rpx;
+}
+
+.booking-icon {
+    background: url(https://www.dpfile.com/app/app-m-module-img/icons/book.png);
+    background-size: cover;
+}
+
+.takeaway-icon {
+    background: url(https://www.dpfile.com/app/app-m-module-img/icons/takeaway.png);
+    background-size: cover;
+}
+
+.group-icon {
+    background: url(https://www.dpfile.com/app/app-m-module-img/icons/group.png);
+    background-size: cover;
+}
+
+.queue-icon {
+    background: url(https://www.dpfile.com/app/app-m-module-img/icons/queue.png);
+    background-size: cover;
+}
+
+.dian-icon {
+    background: url(https://www.dpfile.com/app/app-m-module-img/icons/order.png);
+    background-size: cover;
+}
+
+.mopay-icon {
+    background: url(https://www.dpfile.com/app/app-m-module-img/icons/buy.png);
+    background-size: cover;
+}
+
+.prefer-icon {
+    background: url(https://www.dpfile.com/app/app-m-module-img/icons/prefer.png);
+    background-size: cover;
+}
+
+.shopping-icon {
+    background: url(https://www.dpfile.com/app/app-m-module-img/icons/shopping.png);
+    background-size: cover;
+}
+
+.quan-icon,.coupon-icon {
+    background: url(https://www.dpfile.com/app/app-m-module-img/icons/coupon.png);
+    background-size: cover;
+}
+
+.promo-icon {
+    background: url(https://www.dpfile.com/sc/mobile/mapi-dp-web/search_list_promo.png);
+    background-size: cover;
+}

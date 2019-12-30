@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "案例详情",
+    "usingComponents": {
+        "case-detail": "../../components/caseDetailCategoryPhotography/index",
+        "book-area": "../../components/bookArea/index",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

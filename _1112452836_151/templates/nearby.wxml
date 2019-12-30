@@ -1,0 +1,14 @@
+<template name="nearby">
+    <view class="nearby_list" wx:if="{{shopList&&shopList.length}}">
+        <view class="list_name">{{title}}</view>
+        <view class="list_view">
+            <view class="list_item" wx:for="{{shopList}}" wx:key="{{index}}">
+                <view bindtap="tapNearbyShop" class="list_item_view borders" data-url="{{item.nextUrl}}">
+                    <view class="list_item_icon" style="background-image: url({{item.icon}})"></view>
+                    <view class="list_item_name">{{item.categoryName}}</view>
+                    <view class="list_item_number">{{item.shopCount}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

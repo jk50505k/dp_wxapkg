@@ -1,0 +1,13 @@
+<view class="food-ranklist">
+    <view class="food-title-wrap">
+        <view class="food-icon"></view>
+        <view class="food-title">美食排行</view>
+    </view>
+    <scroll-view bindscroll="scrollHandler" class="food-card-wrap" scrollX="true">
+        <view bindtap="gotoRank" class="food-card {{index==foodRankList.length-1?'last-food-card':''}}" data-index="{{index}}" data-name="{{item.categoryId==10?item.sortName:item.categoryName}}" data-url="{{item.url}}" id="food-{{index}}" wx:for="{{foodRankList}}" wx:key="food-list-{{index}}">
+            <view class="title">{{item.categoryId==10?item.sortName:item.categoryName}}榜</view>
+            <view class="subtitle">{{item.subtitle}}</view>
+            <view class="food-img-wrap" style="background-image:url('{{item.imgUrl}}')"></view>
+        </view>
+    </scroll-view>
+</view>

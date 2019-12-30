@@ -1,0 +1,132 @@
+<midas sendLoadPoint sendReachPoint bindclickend="midasCB" callbackParams="{{bannerAd.creative&&bannerAd.creative.landingPage}}" env="{{env}}" feedback="{{bannerAd.adLog&&bannerAd.adLog.feedback}}" wx:if="{{bannerAd&&bannerAd.adLog&&bannerAd.adLog.feedback}}">
+    <view class="promoResourceWrap singlePromo">
+        <view class="singleResourceItem">
+            <view bindtap="bannerAdTap" class="singleResourcePanel" data-type="0" hoverClass="none">
+                <view class="ad-mark" wx:if="{{bannerAd.adMark}}">{{bannerAd.adMark}}</view>
+                <mina-image class="singleResourcePic" componentName="index ad" src="{{bannerAd.creative&&bannerAd.creative.picUrl}}"></mina-image>
+            </view>
+        </view>
+    </view>
+</midas>
+<view class="promoResourceWrap doublePromo" wx:elif="{{ad.num&&(ad.num===2||ad.num===4)}}">
+    <view class="doubleResourceItem {{index%2===0?'firstOfDouble':''}} {{index>1?'hasMargin':''}}" wx:for="{{ad.resources}}" wx:for-item="resource" wx:key="{{index}}">
+        <navigator appId="{{resource.urlData.appId}}" bindtap="adTap" class="resourcePanel" data-type="{{index+2}}" data-url="{{resource.url}}" data-url-data="{{resource.urlData}}" hoverClass="none" path="{{resource.urlData.url}}" style="background:{{resource.backgroundColor||'#FFFFFF'}}" target="miniProgram" wx:if="{{isSupportMiniPro&&resource.urlData.appId}}">
+            <view class="main">
+                <view class="columnTitle" style="background-image:url({{resource.titleImage}})"></view>
+                <view class="mainTitleWrap">
+                    <view class="mainTitle" style="color:{{resource.titleColor}}">
+                        <text class="txt">{{resource.title}}</text>
+                    </view>
+                </view>
+                <view class="subTitleWrap">
+                    <view class="subTitle" style="color:{{resource.subTitleColor}}">
+                        <text class="txt subTxt">{{resource.subTitle}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="right">
+                <mina-image class="resourcePic" componentName="index ad" src="{{resource.image}}"></mina-image>
+            </view>
+        </navigator>
+        <view bindtap="adTap" class="resourcePanel" data-type="{{index+2}}" data-url="{{resource.url}}" data-url-data="{{resource.urlData}}" hoverClass="none" style="background:{{resource.backgroundColor||'#FFFFFF'}}" wx:else>
+            <view class="main">
+                <view class="columnTitle" style="background-image:url({{resource.titleImage}})"></view>
+                <view class="mainTitleWrap">
+                    <view class="mainTitle" style="color:{{resource.titleColor}}">
+                        <text class="txt">{{resource.title}}</text>
+                    </view>
+                </view>
+                <view class="subTitleWrap">
+                    <view class="subTitle" style="color:{{resource.subTitleColor}}">
+                        <text class="txt subTxt">{{resource.subTitle}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="right">
+                <mina-image class="resourcePic" componentName="index ad" src="{{resource.image}}"></mina-image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="promoResourceWrap threePromo" wx:elif="{{ad.num&&ad.num===3}}">
+    <view class="bigPromoPanel">
+        <view class="bigResourceItem">
+            <navigator appId="{{ad.bigResource.urlData.appId}}" bindtap="adTap" class="resourcePanel" data-type="1" data-url="{{ad.bigResource.url}}" data-url-data="{{ad.bigResource.urlData}}" hoverClass="none" path="{{ad.bigResource.urlData.url}}" style="background:{{ad.bigResource.backgroundColor||'#FFFFFF'}}" target="miniProgram" wx:if="{{isSupportMiniPro&&ad.bigResource.urlData.appId}}">
+                <view class="main">
+                    <view class="columnTitle" style="background-image:url({{ad.bigResource.titleImage}})"></view>
+                    <view class="mainTitleWrap">
+                        <view class="mainTitle bigMainTitle" style="color:{{ad.bigResource.titleColor}}">
+                            <text class="txt">{{ad.bigResource.title}}</text>
+                        </view>
+                    </view>
+                    <view class="subTitleWrap">
+                        <view class="subTitle bigSubTitle" style="color:{{ad.bigResource.subTitleColor}}">
+                            <text class="txt bigSubTxt">{{ad.bigResource.subTitle}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <mina-image class="bottomResourcePic" componentName="index ad" src="{{ad.bigResource.image}}"></mina-image>
+                </view>
+            </navigator>
+            <view bindtap="adTap" class="resourcePanel" data-type="1" data-url="{{ad.bigResource.url}}" data-url-data="{{ad.bigResource.urlData}}" hoverClass="none" style="background:{{ad.bigResource.backgroundColor||'#FFFFFF'}}" wx:else>
+                <view class="main">
+                    <view class="columnTitle" style="background-image:url({{ad.bigResource.titleImage}})"></view>
+                    <view class="mainTitleWrap">
+                        <view class="mainTitle bigMainTitle" style="color:{{ad.bigResource.titleColor}}">
+                            <text class="txt">{{ad.bigResource.title}}</text>
+                        </view>
+                    </view>
+                    <view class="subTitleWrap">
+                        <view class="subTitle bigSubTitle" style="color:{{ad.bigResource.subTitleColor}}">
+                            <text class="txt bigSubTxt">{{ad.bigResource.subTitle}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <mina-image class="bottomResourcePic" componentName="index ad" src="{{ad.bigResource.image}}"></mina-image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="commonPromoPanel">
+        <view class="commonResourceItem {{index===0?'firstCommonOfThree':''}}" wx:for="{{ad.commonResources}}" wx:for-item="resource" wx:key="{{index}}">
+            <navigator appId="{{resource.urlData.appId}}" bindtap="adTap" class="resourcePanel" data-type="{{index+2}}" data-url="{{resource.url}}" data-url-data="{{resource.urlData}}" hoverClass="none" path="{{resource.urlData.url}}" style="background:{{resource.backgroundColor||'#FFFFFF'}}" target="miniProgram" wx:if="{{isSupportMiniPro&&resource.urlData.appId}}">
+                <view class="main">
+                    <view class="columnTitle" style="background-image:url({{resource.titleImage}})"></view>
+                    <view class="mainTitleWrap">
+                        <view class="mainTitle" style="color:{{resource.titleColor}}">
+                            <text class="txt">{{resource.title}}</text>
+                        </view>
+                    </view>
+                    <view class="subTitleWrap">
+                        <view class="subTitle" style="color:{{resource.subTitleColor}}">
+                            <text class="txt subTxt">{{resource.subTitle}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="right">
+                    <mina-image class="resourcePic" componentName="index ad" src="{{resource.image}}"></mina-image>
+                </view>
+            </navigator>
+            <view bindtap="adTap" class="resourcePanel" data-type="{{index+2}}" data-url="{{resource.url}}" data-url-data="{{resource.urlData}}" hoverClass="none" style="background:{{resource.backgroundColor||'#FFFFFF'}}" wx:else>
+                <view class="main">
+                    <view class="columnTitle" style="background-image:url({{resource.titleImage}})"></view>
+                    <view class="mainTitleWrap">
+                        <view class="mainTitle" style="color:{{resource.titleColor}}">
+                            <text class="txt">{{resource.title}}</text>
+                        </view>
+                    </view>
+                    <view class="subTitleWrap">
+                        <view class="subTitle" style="color:{{resource.subTitleColor}}">
+                            <text class="txt subTxt">{{resource.subTitle}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="right">
+                    <mina-image class="resourcePic" componentName="index ad" src="{{resource.image}}"></mina-image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

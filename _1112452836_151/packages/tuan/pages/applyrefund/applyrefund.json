@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "申请退款",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

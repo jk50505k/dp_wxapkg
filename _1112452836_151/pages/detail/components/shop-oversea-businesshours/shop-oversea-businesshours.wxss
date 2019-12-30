@@ -1,0 +1,206 @@
+@import "../../../../__wuBaseWxss__/1.wxss";
+
+.module-info {
+    background-color: #fff;
+    padding: 0 30rpx;
+}
+
+.module-info .top-separator-line {
+    position: relative;
+}
+
+.module-info .top-separator-line:before {
+    content: '';
+    border: solid #e1e1e1;
+    border-width: 1px 0 0 0;
+    border-radius: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.module-info .businesshours {
+    height: 110rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.module-info .businesshours .businesshours-info {
+    display: flex;
+    align-items: center;
+}
+
+.module-info .businesshours .businesshours-info .businesshours-icon {
+    width: 32rpx;
+    height: 32rpx;
+    background-image: url('http://www.dpfile.com/sc/eleconfig/shopiconimgconfig/20171213141113icon_businessTime3x.png');
+    background-size: 32rpx 32rpx;
+    background-repeat: no-repeat;
+}
+
+.module-info .businesshours .businesshours-info .businesshours-title {
+    font-size: 32rpx;
+    color: #111;
+    margin-left: 12rpx;
+    max-width: 610rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.module-info .show-right-arrow {
+    justify-content: space-between;
+}
+
+.module-info .hidden-right-arrow {
+    justify-content: flex-start;
+}
+
+.popMask {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.7;
+    position: fixed;
+    top: 0rpx;
+    left: 0rpx;
+    z-index: 101;
+}
+
+.popContent {
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    bottom: 0rpx;
+    left: 0rpx;
+    height: 934rpx;
+    z-index: 102;
+}
+
+.iphoneX {
+    height: 1002rpx;
+    padding-bottom: 68rpx;
+}
+
+.pop-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pop-header .title {
+    margin-left: 30rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333333;
+}
+
+.pop-header .close-icon {
+    width: 103rpx;
+    height: 100rpx;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAAAFVBMVEUAAACqqqqZmZmampqampqampqZmZmhnUz6AAAABnRSTlMAA26NpuUzL3g6AAAAbklEQVR42u3VOw4AIAhEQRDZ+x/ZWG35QmOljUIm8RdCrK4MHFm9oqWdKLfUUbqWpepOYE1sQXrJ0gFLhyydYOkUSE5OtkLLl0XJj81fiNaSrCVaS7SWbFky5QPwtVjmr81fmw9rc9A2Bs1o0OIOIIgIiXX0ZDMAAAAASUVORK5CYII=');
+    background-size: 28rpx 28rpx;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.separator-line-title {
+    width: 100%;
+    height: 1rpx;
+    background-color: #e1e1e1;
+}
+
+.scroll-container {
+    height: 845rpx;
+}
+
+.separator-line-time {
+    width: 100%;
+    height: 30rpx;
+    background-color: #fff;
+}
+
+.detail-time-containner {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-time-containner .month-title {
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333;
+    margin-left: 30rpx;
+    margin-bottom: 20rpx;
+}
+
+.detail-time-containner .month-containner {
+    width: 200%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16rpx;
+}
+
+.detail-time-containner .month-containner .dayText {
+    font-size: 28rpx;
+    line-height: 44rpx;
+    min-width: 168rpx;
+    margin-left: 30rpx;
+}
+
+.detail-time-containner .month-containner .hourText,.detail-time-containner .month-containner .mealText {
+    font-size: 28rpx;
+    line-height: 44rpx;
+    margin-left: 30rpx;
+    white-space: pre-line;
+}
+
+.detail-time-containner .month-containner .normal {
+    color: #666;
+    font-weight: normal;
+}
+
+.detail-time-containner .month-containner .high-light {
+    color: #ff6633;
+    font-weight: bold;
+}
+
+.separator-line-tip {
+    width: 690rpx;
+    height: 1rpx;
+    margin-left: 30rpx;
+    background-color: #e1e1e1;
+    margin-top: 12rpx;
+    margin-bottom: 36rpx;
+}
+
+.warm-tip-containner {
+    display: flex;
+    flex-direction: column;
+    justify-content: 'flex-start';
+    padding-bottom: 22rpx;
+}
+
+.warm-tip-containner .titleText {
+    color: #666;
+    font-size: 24rpx;
+    font-weight: bold;
+    margin-left: 30rpx;
+    margin-bottom: 19rpx;
+}
+
+.warm-tip-containner .tipText {
+    color: #666;
+    font-size: 24rpx;
+    line-height: 30rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    margin-bottom: 19rpx;
+}

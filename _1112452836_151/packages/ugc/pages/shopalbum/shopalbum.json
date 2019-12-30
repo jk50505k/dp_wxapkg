@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "album-nav": "./components/album-nav/album-nav",
+        "album-list": "./components/album-list/album-list",
+        "list-view": "../../../../components/list-view/list-view",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

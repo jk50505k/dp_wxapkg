@@ -1,0 +1,21 @@
+{
+    "enablePullDownRefresh": false,
+    "navigationBarBackgroundColor": "#26A4FF",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "提交订单",
+    "usingComponents": {
+        "deal": "./components/deal/index",
+        "horizontal-calendar": "./components/horizontal-calendar/index",
+        "purchase-tips": "./components/purchase-tips/index",
+        "purchase-number": "./components/purchase-number/index",
+        "discounts": "./components/discounts/index",
+        "footer": "./components/footer/index",
+        "pop-purchase-notes": "./components/pop-purchase-notes/index",
+        "pop-calendar": "../../components/native-com/calendar/calendar",
+        "pop-order-detail": "./components/pop-order-detail/index",
+        "formid-wrap": "../../components/native-com/formid-wrap/formid-wrap",
+        "combined-tickets": "./components/combined-tickets/index",
+        "visitors-module": "./components/visitors-module/index",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

@@ -1,0 +1,11 @@
+.activity-banner {
+    display: flex;
+    background: #ffffff;
+}
+
+.pedicure-activity {
+    background-size: contain;
+    width: 678rpx;
+    height: 100rpx;
+    margin: 20rpx auto;
+}

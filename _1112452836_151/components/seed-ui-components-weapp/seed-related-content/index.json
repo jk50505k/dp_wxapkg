@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+        "Star": "../seed-star/index",
+        "Icon": "../seed-icon/index",
+        "Tag": "../seed-tag/index"
+    }
+}

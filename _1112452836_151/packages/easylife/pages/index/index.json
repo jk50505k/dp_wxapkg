@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "大众点评",
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

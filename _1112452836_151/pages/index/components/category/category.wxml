@@ -1,0 +1,11 @@
+<view class="categoryWrap" wx:if="{{categoryList&&categoryList.length}}">
+    <app-download bindclose="onPopupClose" hongBaoData="{{hongBaoData}}" wx:if="{{showBig}}"></app-download>
+    <view bindtap="oldTap" bizType="biz_platform" categoryId="{{0}}" class="categoryItem" data-id="{{item.categoryId}}" data-index="{{index}}" data-name="{{item.name}}" data-type="{{item.type}}" data-url="{{item.url}}" hoverClass="none" wx:for="{{categoryList}}" wx:key="{{index}}">
+        <image class="categoryIcon" wx:if="{{!item.picUrl}}"></image>
+        <image class="categoryIcon {{index<10?'categoryBigIcon':'categorySmallIcon'}}" src="{{item.picUrl}}" wx:else></image>
+        <view class="categoryName {{index<10?'':'smallName'}}">{{item.name||''}}</view>
+        <view class="categoryCorner" style="background-color:{{item.icon.labelColor}};border-width:{{item.icon.borderWidth}}rpx;border-color:{{item.icon.borderColor}};border-radius:{{item.icon.borderRadius}}rpx;color:{{item.icon.textColor}};font-size:{{item.icon.textSize}}rpx;" wx:if="{{item.icon}}">
+            <text class="corner-text">{{item.icon.text}}</text>
+        </view>
+    </view>
+</view>

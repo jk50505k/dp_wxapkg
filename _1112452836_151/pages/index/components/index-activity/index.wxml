@@ -1,0 +1,1 @@
+<index-ad isSupportMiniPro="{{isSupportMiniPro}}" options="{{options}}" promoResources="{{ads}}"></index-ad>

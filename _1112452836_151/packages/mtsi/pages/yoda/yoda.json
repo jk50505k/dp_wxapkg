@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "验证页面",
+    "usingComponents": {
+        "yodaSlider": "../../components/slider/slider",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

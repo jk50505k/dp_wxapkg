@@ -1,0 +1,10 @@
+<view bind:tap="_handleTap" class="dineVote" data-type="{{type}}" wx:if="{{showVote}}">
+    <view class="quickCover" wx:if="{{type==2}}">
+        <navigator appId="{{wdData.appId}}" class="icon-wrap" hoverClass="none" openType="navigate" path="{{wdData.path}}" target="miniProgram" version="release">
+            <image class="icon" mode="aspectFill" src="{{wdData.url}}"></image>
+        </navigator>
+    </view>
+    <view class="quickCover" wx:else>
+        <view class="cover-txt">{{text}}</view>
+    </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="list-view">
+    <view class="list-view-first-load" wx:if="{{firstLoading}}">
+        <view class="first-load-icon"></view>
+        <view class="first-load-title">正在加载中</view>
+    </view>
+    <view class="list-view-data {{needBottom?'border-bottom':''}}">
+        <view class="list">
+            <slot name="list-card"></slot>
+        </view>
+        <exception bindexceptionevent="onExceptionEvent" exceptionDetail="{{listError}}"></exception>
+    </view>
+    <view class="list-view-state">
+        <view class="list-view-load-end" wx:if="{{listview.isEnd}}">
+            <view style="height: 90rpx;" wx:if="{{listview.list.length>9}}">亲，已经到底了哦...</view>
+        </view>
+        <view class="list-view-loading" wx:elif="{{listview.showLoading}}">
+            <view class="list-view-loading-icon"></view>
+            <view class="list-view-loading-title">正在加载中...</view>
+        </view>
+        <view bindtap="tryAgain" class="list-view-loading" wx:elif="{{listview.tryAgain}}">
+            <view class="list-view-loading-icon"></view>
+            <view class="list-view-loading-title">网络错误, 请点击重试...</view>
+        </view>
+    </view>
+</view>

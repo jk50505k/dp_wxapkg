@@ -1,0 +1,91 @@
+.guessLike {
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+
+.guessLikeError {
+    background-color: transparent;
+    position: relative;
+    height: 600rpx;
+}
+
+.guessTitle {
+    padding-top: 24rpx;
+    padding-left: 30rpx;
+    padding-bottom: 2rpx;
+    font-size: 30rpx;
+    line-height: 30rpx;
+    color: #777;
+    background-color: #fff;
+    font-weight: 500;
+}
+
+.sceneList {
+    margin-top: 20rpx;
+    box-sizing: border-box;
+}
+
+.sceneListContainer {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.sceneListItem {
+    width: 218rpx;
+    height: 156rpx;
+    margin-right: 10rpx;
+    display: inline-block;
+    position: relative;
+    border-radius: 10rpx;
+    box-shadow: 0 4rpx 12rpx 0 rgba(88,88,88,0.08);
+}
+
+.sceneListItem:before {
+    content: '';
+    border: solid #E7E7E7;
+    border-width: 1px;
+    border-radius: 20rpx;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.sceneListItem-first {
+    margin-left: 30rpx;
+}
+
+.sceneListItem-last {
+    margin-right: 30rpx;
+}
+
+.sceneListItem-title {
+    font-family: PingFangSC-Semibold;
+    font-size: 32rpx;
+    color: #111111;
+    position: absolute;
+    top: 16rpx;
+    left: 18rpx;
+}
+
+.sceneListItem-subtitle {
+    font-family: PingFangSC-Regular;
+    font-size: 24rpx;
+    color: #111111;
+    position: absolute;
+    top: 65rpx;
+    left: 18rpx;
+}
+
+.sceneListItem-pic {
+    width: 218rpx;
+    height: 156rpx;
+    position: absolute;
+    right: 0rpx;
+    bottom: 0rpx;
+}

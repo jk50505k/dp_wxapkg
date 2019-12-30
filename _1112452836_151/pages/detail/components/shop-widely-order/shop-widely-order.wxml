@@ -1,0 +1,136 @@
+<view class="widely-order-container" style="margin:{{moduleConfig.margin?moduleConfig.margin:'20rpx 0 0 0'}}" wx:if="{{showModule}}">
+    <view class="widely-order-title">
+        <view class="booking-icon"></view>
+        <text class="booking-txt">{{bookData.bookTitle}}</text>
+        <view class="booking-tips">
+            <view class="tip" wx:for="{{bookData.tips}}" wx:key="{{index}}">
+                <view class="tip-icon"></view>
+                <text class="tip-txt">{{item}}</text>
+            </view>
+        </view>
+        <text class="booking-num" wx:if="{{bookData.saleCount}}">{{bookData.saleCount}}</text>
+    </view>
+    <view class="widely-order-daytab">
+        <view class="scroll-wrapper">
+            <view bindtap="dateSelect" class="item {{item.dateIndex===bookData.dateIndex?'active':''}}" data-dateindex="{{item.dateIndex}}" data-index="{{index}}" wx:for="{{bookData.bookDates}}" wx:key="{{index}}">
+                <view class="main">
+{{item.week}}          <view class="promo" wx:if="{{item.promo}}">{{item.promo}}</view>
+                </view>
+                <view class="sub">{{item.date}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="widely-order-selectpanel" wx:if="{{!isFetching&&bookDate&&bookDate.displayUnitGroup&&bookDate.displayUnitGroup.length}}">
+        <view class="scroll-wrapper">
+            <view class="item-container">
+                <view bindtap="groupSelect" class="item {{index===bookDate.bookTableItemIndex?'active':''}}" data-index="{{index}}" wx:for="{{bookDate.displayUnitGroup}}" wx:key="{{index}}">{{item}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="widely-order-bklist" wx:if="{{!isFetching&&bookDate}}">
+        <view class="bklist-wrap">
+            <view bindtap="bookBtnClick" class="bklist-item" data-clickType="{{item.clickType}}" data-clickable="{{item.clickable}}" data-itemId="{{item.productItemId}}" data-productId="{{item.productId}}" data-urlSuffix="{{item.bookUrlSuffix}}" wx:for="{{bookDate.displayTableUnits}}" wx:key="{{index}}">
+                <view class="bk-info">
+                    <view class="row1">
+                        <view class="name">{{item.name}}</view>
+                        <view class="sub-name" wx:if="{{item.subName}}">({{item.subName}})</view>
+                        <view class="tag" wx:if="{{item.tag}}">{{item.tag}}</view>
+                    </view>
+                    <view class="row2" wx:if="{{item.description}}">
+                        <view class="desc">{{item.description}}</view>
+                    </view>
+                </view>
+                <view class="bk-price">
+                    <view class="row1">
+                        <text class="yang-icon">￥</text>
+{{item.price}}            <text class="unit-icon" wx:if="{{item.priceUnit}}">{{item.priceUnit}}</text>
+                    </view>
+                    <view class="row2" wx:if="{{item.promo||item.priceDesc}}">
+                        <view class="promo" wx:if="{{item.promo}}">{{item.promo}}</view>
+                        <view class="desc" wx:if="{{item.priceDesc}}">{{item.priceDesc}}</view>
+                    </view>
+                </view>
+                <view class="bk-btn-group {{item.buttonSubName?'has-sub':''}}">
+                    <view class="bk-btn" wx:if="{{item.clickable}}">{{item.buttonName}}</view>
+                    <view class="bk-btn disable-btn" wx:else>{{item.buttonName}}</view>
+                    <view class="bk-sub-btn {{item.clickable?'':'disable-btn'}}" wx:if="{{item.buttonSubName}}">{{item.buttonSubName}}</view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="showMore" class="bklist-footer" wx:if="{{bookDate.needViewMore&&bookDate.isFolded}}">
+            <view class="view-more">
+查看更多        <view class="open-icon close"></view>
+            </view>
+        </view>
+        <view bindtap="hideMore" class="bklist-footer" wx:if="{{bookDate.needViewMore&&!bookDate.isFolded}}">
+            <view class="view-more">
+收起        <view class="open-icon"></view>
+            </view>
+        </view>
+    </view>
+    <view class="widely-order-emptypanel" wx:if="{{!isFetching&&!bookDate}}">
+        <view class="empty-txt">{{bookData.dateDisableTip}}</view>
+    </view>
+    <view class="widely-order-fetchpanel" wx:if="{{isFetching}}">
+        <view class="loading">
+            <view class="loading-icon"></view>
+加载中...
+          </view>
+    </view>
+    <view catchtouchmove="doNothing" class="dialog-container" wx:if="{{barDialogVisible&&bookPackageData}}">
+        <view bindtap="closeDialog" class="mask" data-flag="package"></view>
+        <view class="body">
+            <view class="bkp-title">
+                <view>{{bookPackageData.title}}</view>
+                <view class="bkp-tip">{{bookPackageData.tip}}</view>
+            </view>
+            <scroll-view class="bkplist" scrollY="true">
+                <view class="bkplist-item" wx:for="{{bookPackageData.barBookPackageUnits}}" wx:key="{{index}}">
+                    <image class="bkp-head-pic" src="{{item.headPic}}"></image>
+                    <view class="bkp-info">
+                        <view class="bkp-info-title">{{item.title}}</view>
+                        <view class="bkp-info-desc-wrap">
+                            <view class="bkp-info-desc" wx:for="{{item.descItems}}" wx:key="{{index}}">{{item}}</view>
+                        </view>
+                    </view>
+                    <view class="bk-price bkp-price">
+                        <view class="price" wx:if="{{item.price}}">￥{{item.price}}</view>
+                        <view class="market-price" wx:if="{{item.marketPrice}}">￥{{item.marketPrice}}</view>
+                    </view>
+                    <view bindtap="dialogBookBtnClick" class="bk-btn-group {{item.buttonSubName?'has-sub':''}}" data-url="{{item.bookUrl}}">
+                        <view class="bk-btn">{{item.buttonName}}</view>
+                        <view class="bk-sub-btn" wx:if="{{item.buttonSubName}}">{{item.buttonSubName}}</view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view catchtouchmove="doNothing" class="dialog-container" wx:if="{{inventoryDialogVisible&&inventoryData}}">
+        <view bindtap="closeDialog" class="mask" data-flag="inventory"></view>
+        <view class="body">
+            <view class="period-title-wrap">
+                <view class="period-title-content">
+                    <view>选择到店时间</view>
+                    <view class="period-day">{{currentdate.displayName}}</view>
+                </view>
+                <view bindtap="closeDialog" class="period-close"></view>
+            </view>
+            <view wx:if="{{inventoryTimeRange.length}}">
+                <view class="period-time-range-wrap">
+                    <view bindtap="inventoryTimeRangeSelect" class="period-time-range-content {{index==currentInventoryTimeIndex?'active':''}}" data-index="{{index}}" wx:for="{{inventoryTimeRange}}" wx:key="{{index}}">
+                        <view class="period-time-range">{{item.name}}</view>
+                    </view>
+                </view>
+                <view class="period-wrap" wx:if="{{inventoryTimeRange[currentInventoryTimeIndex].list.length}}">
+                    <view bindtap="inventorySelect" class="period-content" data-id="{{item.appPeriodId}}" data-index="{{index}}" data-usable="{{item.usable}}" wx:for="{{inventoryTimeRange[currentInventoryTimeIndex].list}}" wx:key="{{index}}">
+                        <view class="period-date {{item.usable?'':'disable'}} {{item.appPeriodId==periodId?'active':''}}">{{item.periodName}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="period-btn-wrap">
+                <view bindtap="inventoryReturn" class="period-btn period-return-btn">上一步</view>
+                <view bindtap="inventoryConfirm" class="period-btn period-confirm-btn {{periodId?'':'disabled'}}">确认预订</view>
+            </view>
+        </view>
+    </view>
+</view>

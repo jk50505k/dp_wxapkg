@@ -1,0 +1,107 @@
+@import "../../../../__wuBaseWxss__/1.wxss";
+
+.skeleton {
+    height: 110rpx;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+}
+
+.baseLine {
+    height: 30rpx;
+    margin: 0 10rpx;
+    background-color: #f0f0f0;
+    margin-bottom: 10rpx;
+    width: 210rpx;
+}
+
+.shopinfo {
+    background-color: #fff;
+}
+
+.shopinf-wrap {
+    padding: 0 30rpx;
+}
+
+.shop-info-head {
+    font-size: 28rpx;
+}
+
+.shop-info-head .shop-info-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shop-info-title {
+    padding: 30rpx 0 0 0;
+}
+
+.key-services {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    height: 110rpx;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+.key-services:before {
+    content: '';
+    border: solid #e1e1e1;
+    border-width: 1px 0 0 0;
+    border-radius: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.hasHead::before {
+    border: none;
+}
+
+.key-services .left-service {
+    display: flex;
+    align-items: center;
+}
+
+.key-services .shop-feature {
+    display: flex;
+    align-items: center;
+    margin-left: 40rpx;
+}
+
+.key-services .shop-feature:first-child {
+    margin-left: 0;
+}
+
+.key-services .shop-feature .feature-img {
+    width: 32rpx;
+    height: 32rpx;
+    display: inline-block;
+}
+
+.key-services .shop-feature .feature-txt {
+    font-size: 32rpx;
+    color: #111;
+    margin-left: 12rpx;
+    max-width: 590rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-top: 1rpx;
+}
+
+.info-txt {
+    font-size: 38rpx;
+    color: #111;
+    font-weight: bold;
+}

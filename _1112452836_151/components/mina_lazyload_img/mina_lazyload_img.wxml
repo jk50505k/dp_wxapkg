@@ -1,0 +1,7 @@
+<view class="lazyload-base">
+    <block wx:if="{{minaEnv!=='bd'}}">
+        <image binderror="bindError" bindload="bindLoad" class="{{'img-class showImgStart '+(show?'showImgEnd':'')}}" mode="{{imgMode}}" src="{{imgSrc?imgSrc:default}}" style="{{imgClass}}"></image>
+        <image class="{{'img-class defaultImg showDefaultStart '+(show?'showDefaultEnd':'')}}" mode="{{imgMode}}" src="{{default}}" style="{{imgClass}}"></image>
+    </block>
+    <image binderror="bindError" bindload="bindLoad" class="img-class" mode="{{imgMode}}" src="{{imgSrc}}" style="{{imgClass}}" wx:else></image>
+</view>

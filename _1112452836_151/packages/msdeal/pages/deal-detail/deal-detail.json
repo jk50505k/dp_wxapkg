@@ -1,0 +1,22 @@
+{
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "团购详情",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "midas-dp-deal-list": "../../../../components/midas-dp-deal-list/midas-dp-deal-list",
+        "error": "../components/error/error",
+        "deal-main": "../components/deal-main/deal-main",
+        "deal-food": "../components/deal-food/deal-food",
+        "deal-hint": "../components/deal-hint/deal-hint",
+        "deal-voucher": "../components/deal-voucher/deal-voucher",
+        "deal-poi": "../components/deal-poi/deal-poi",
+        "deal-btn": "../components/deal-btn/deal-btn",
+        "top-parent": "../../../../components/top-parent/top-parent",
+        "review-list": "../../../../components/review-list/review-list",
+        "coupon": "../components/coupon/coupon",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

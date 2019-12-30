@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "dynamic": "../../dynamic/dynamic",
+        "quick-nav": "../../../components/quick-nav/quick-nav"
+    }
+}

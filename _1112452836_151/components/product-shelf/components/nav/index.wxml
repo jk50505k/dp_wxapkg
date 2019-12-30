@@ -1,0 +1,3 @@
+<scroll-view class="shelf-filter-nav-{{level===1?'first':'second'}}" scrollX="true">
+    <view bindtap="selectCatalog" class="item-{{level===1?'first':'second'}} {{item.selected&&channel==='dp'?'selected-dp':''}} {{item.selected&&channel==='mt'?'selected-mt':''}}" data-nav="{{item}}" wx:for="{{shelfNavTags}}" wx:key="item.navTagId">{{item.name}}</view>
+</scroll-view>

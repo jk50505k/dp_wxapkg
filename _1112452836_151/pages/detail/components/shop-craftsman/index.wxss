@@ -1,0 +1,157 @@
+@import "../../../../__wuBaseWxss__/1.wxss";
+
+.crafts-count {
+    font-size: 30rpx;
+    margin-left: 10rpx;
+    color: #777;
+}
+
+.groupItem {
+    padding-left: 30rpx;
+    padding-bottom: 26rpx;
+    font-size: 28rpx;
+    background-color: #fff;
+}
+
+.groupTitle {
+    padding: 30rpx 30rpx 20rpx 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 38rpx;
+    color: #111;
+}
+
+.crafts-title {
+    font-size: 38rpx;
+    font-weight: bold;
+    color: #111;
+    display: flex;
+    align-items: center;
+}
+
+.scrollcraftsPics {
+    width: 100%;
+    position: relative;
+}
+
+.itemWrap {
+    display: inline-block;
+    margin-right: 14rpx;
+    padding: 1rpx;
+    position: relative;
+}
+
+.itemWrap:before {
+    content: '';
+    border: solid #e1e1e1;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 14rpx;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.descPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10rpx;
+    padding-top: 10rpx;
+}
+
+.title {
+    color: #777;
+    font-size: 24rpx;
+    display: inline-block;
+    max-width: 170rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 40rpx;
+}
+
+.topPanel {
+    height: 46rpx;
+    display: flex;
+    align-items: center;
+}
+
+.special {
+    color: #777;
+    font-size: 24rpx;
+    display: inline-block;
+    max-width: 180rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 40rpx;
+}
+
+.name {
+    display: inline-block;
+    max-width: 160rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.certificate {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAZlBMVEUAAADjt4rouI7juIrjtonjtonjt4rlt4nitonhtYb/+vP//vrgs4H++Oz/9ub36tb/9ODkvZLfsX388uT57uHw17jpyqT57Nr/8dn66tL25s714MTy3cLsz7Dox5zmw5zdr3jiuouDOOsXAAAACHRSTlMA8xts2babTk78UQYAAADfSURBVCjPfZLpkoMwDINJSKhtcnD33Lb7/i+5NpsmTJn2+6NBImhGpEro2hqljK11tUU3kGk20UHBBnV4+TW8Uaf3Ycd6Rqt9oKSHe/c0fIBlopaZxOmp9aJamnG4sx8HZCO2F1bpt8CJi0Q3eX4QoSjYyojgD/lRjCPNCIKp1Bo478MDYKFx+A8UB4K7UpgBJ1oQUmBWxZ7CmT8YXQqMlAsuhq4/+j75YF9D4eK7S3fDMpdOgRu70xlzoPMkOIfT3eVJyoj4G64Oy4hldvd8YpldyP2l+dOv/XoZPl6fP9hREUG081pgAAAAAElFTkSuQmCC);
+    background-size: cover;
+    width: 24rpx;
+    height: 24rpx;
+    margin-left: 4rpx;
+    background-repeat: no-repeat;
+}
+
+.bg-tag {
+    background: url(https://www.dpfile.com/app/app-m-module-img/minashop/bgtag.png);
+    background-size: cover;
+    width: 78rpx;
+    height: 40rpx;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    color: #fff;
+}
+
+.picInfo {
+    position: relative;
+}
+
+.work-year {
+    height: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.year-txt {
+    color: #fff;
+    font-size: 22rpx;
+    padding: 0 12rpx;
+    bottom: 0;
+    background-image: linear-gradient(-45deg,#1D1D1D 0%,#7E7E7E 100%);
+    border-radius: 2rpx;
+    display: inline-block;
+    max-width: 150rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

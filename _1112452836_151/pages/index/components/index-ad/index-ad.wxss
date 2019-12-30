@@ -1,0 +1,222 @@
+.promoResourceWrap {
+    margin-top: 20rpx;
+}
+
+.singlePromo {
+    text-align: center;
+    height: 200rpx;
+}
+
+.ad-mark {
+    position: absolute;
+    bottom: 10rpx;
+    left: 10rpx;
+    color: #fff;
+    font-size: 16rpx;
+    text-shadow: 0 0 4rpx #000;
+}
+
+.doublePromo,.threePromo {
+    padding: 0 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.doublePromo {
+    flex-wrap: wrap;
+}
+
+.singleResourceItem {
+    display: inline-block;
+    width: 690rpx;
+    height: 100%;
+}
+
+.singleResourcePanel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.resourcePanel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+    box-shadow: 0 4rpx 12rpx 0 rgba(88,88,88,0.08);
+}
+
+.resourcePanel:before {
+    content: '';
+    border: solid #E7E7E7;
+    border-width: 1px;
+    border-radius: 20rpx;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.doubleResourceItem {
+    width: 335rpx;
+    height: 190rpx;
+}
+
+.firstOfDouble {
+    margin-right: 20rpx;
+}
+
+.bigPromoPanel {
+    flex: 1;
+    margin-right: 20rpx;
+    height: 390rpx;
+}
+
+.commonPromoPanel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.commonResourceItem {
+    flex: 1;
+    height: 190rpx;
+}
+
+.firstCommonOfThree {
+    margin-bottom: 10rpx;
+}
+
+.bigResourceItem {
+    height: 100%;
+}
+
+.columnTitle {
+    height: 28rpx;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.mainTitle,.subTxt,.bigSubTxt {
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.mainTitleWrap,.subTitleWrap {
+    display: flex;
+    align-items: center;
+}
+
+.mainTitleWrap {
+    margin-top: 15rpx;
+    height: 37rpx;
+}
+
+.subTitleWrap {
+    margin-top: 15rpx;
+}
+
+.mainTitle {
+    font-family: PingFangSC-Thin;
+    font-size: 26rpx;
+    max-width: 162rpx;
+}
+
+.subTitle {
+    height: 32rpx;
+    padding: 0 15rpx;
+    font-size: 20rpx;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subTxt {
+    display: block;
+    max-width: 130rpx;
+}
+
+.subTitle:before {
+    content: '';
+    border: solid rgba(255,102,51,0.4);
+    border-width: 1px;
+    border-radius: 36rpx;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.resourcePic {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 0 10rpx 10rpx 0;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    padding: 30rpx 20rpx;
+    box-sizing: border-box;
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 136rpx;
+    height: 100%;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 190rpx;
+    overflow: hidden;
+}
+
+.bottomResourcePic {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 10rpx 10rpx;
+}
+
+.bigMainTitle {
+    max-width: 210rpx;
+}
+
+.bigSubTxt {
+    display: block;
+    max-width: 150rpx;
+}
+
+.hasMargin {
+    margin-top: 10rpx;
+}
+
+.singleResourcePic {
+    width: 100%;
+    height: 100%;
+    display: block;
+}

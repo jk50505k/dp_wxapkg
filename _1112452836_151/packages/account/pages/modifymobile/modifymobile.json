@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "修改手机号",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "login": "../../npm/@dp/sparrow-component-login/login",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "提交订单",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "promodesk": "../../components/promodesk/index",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "category": "./components/category/category",
+        "rbt-entry": "./components/rbt-entry/rbt-entry",
+        "bargain-entry": "./components/bargain-entry/bargain-entry",
+        "hot-scenic": "./components/hot-scenic/hot-scenic",
+        "surroundings": "./components/surroundings/index",
+        "filter-tab": "../../components/business-relevant-components/filter-tab/filter-tab",
+        "poi-card": "../../components/business-relevant-components/poi-card/poi-card",
+        "poi-album": "../../components/business-relevant-components/poi-album/poi-album",
+        "component-loading": "../../components/native-com/loading/loading",
+        "entry-title": "./components/entry-title/entry-title",
+        "mine-guide": "../../components/business-relevant-components/mine-guide/mine-guide",
+        "activity-popup": "../../components/native-com/activityPopup/activityPopup",
+        "side-float-ad": "../../components/native-com/sideFloatAd/index",
+        "coupon-notice-popup": "../../components/native-com/couponNoticePopup/index",
+        "webp-detect": "../../components/native-com/webp-detect/webp-detect",
+        "empty-list": "../../components/native-com/empty-list/empty-list",
+        "formid-wrap": "../../components/native-com/formid-wrap/formid-wrap",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    },
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black"
+}

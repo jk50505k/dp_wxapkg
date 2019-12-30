@@ -1,0 +1,66 @@
+<view bind:tap="onTapContent" class="related-content-wrap related-content-wrap-{{viewType}} related-content-wrap-special" wx:if="{{content&&content.simpleLabel&&content.simpleLabel.status}}">
+    <view class="content-warp">
+        <view class="content-left">
+            <image class="picture-image picture-image-abnormal" lazyLoad="true" mode="aspectFill" src="{{defaultShopPic}}"></image>
+        </view>
+        <view class="content-right">
+            <view class="content-status">{{content.simpleLabel.text}}</view>
+        </view>
+    </view>
+</view>
+<view bind:tap="onTapContent" class="related-content-wrap related-content-wrap-{{viewType}}" wx:elif="{{content&&content.title}}">
+    <view class="content-warp">
+        <view catch:tap="onTapPicture" class="content-left">
+            <image class="picture-image picture-image-type{{content.showType}} {{content.pendant&&content.pendant.type?'picture-image-pendant':''}} picture-image-color{{content.itemLabel.picColor}}" lazyLoad="true" mode="aspectFill" src="{{content.picture}}"></image>
+            <Tag class="picture-pendant" type="{{content.pendant.type}}" wx:if="{{content.pendant&&content.pendant.type}}"></Tag>
+            <slot name="pendant-node"></slot>
+        </view>
+        <view class="content-right">
+            <view class="content-title-line">
+                <view class="content-title-left">
+                    <Tag class="label-name" size="lg" type="{{labelColorMap[content.itemLabel.labelColor]}}" wx:if="{{content.itemLabel&&content.itemLabel.text}}">{{content.itemLabel.text}}</Tag>
+                    <view class="content-title content-title-color{{content.itemLabel.titleColor}}">{{content.title}}</view>
+                </view>
+                <Tag class="content-tag" type="{{tag.type}}" value="{{tag.value}}" wx:if="{{content.shopTags&&content.shopTags.length}}" wx:for="{{content.shopTags}}" wx:for-item="tag" wx:key="{{index}}"></Tag>
+            </view>
+            <view class="content-subtitle-line" wx:if="{{(content.star!==null||content.subtitle||content.subtitleAttach)&&viewType===1}}">
+                <Star class="content-star" score="{{content.score}}" star="{{content.star}}" wx:if="{{content.star!==null&&content.star>=0}}"></Star>
+                <view class="content-subtitle" wx:if="{{content.subtitle}}">{{content.subtitle}}</view>
+                <view class="content-subtitle-color {{content.subtitleAttachBold?'content-subtitle-color-bold':''}}" wx:if="{{content.subtitleAttach}}">{{content.subtitleAttach}}</view>
+            </view>
+            <view class="content-detail-line">
+                <block wx:if="{{content.detail||content.distance}}">
+                    <view class="content-detail content-detail-type{{content.detailType}}" wx:if="{{content.detail}}">{{content.detail}}</view>
+                    <view class="content-distance" wx:if="{{content.distance}}">{{content.distance}}</view>
+                </block>
+                <slot name="detail-node"></slot>
+            </view>
+        </view>
+        <view>
+            <view catch:tap="onTapButton" class="content-button-collect" wx:if="{{content.button&&content.button.type==='collect'}}">
+                <Icon class="icon-collection" name="collection" selected="{{content.button.collect}}"></Icon>
+                <view class="collect-count" wx:if="{{content.button.collectCount}}">{{content.button.collectCount}}</view>
+            </view>
+            <slot name="button-node"></slot>
+        </view>
+        <button appParameter="{{content.jumpUrl}}" binderror="launchAppError" catch:tap="launchAppTap" class="launch-btn" hoverClass="none" openType="launchApp" plain="{{true}}" style="z-index:5" wx:if="{{canLaunchApp}}"></button>
+    </view>
+    <view class="additionalInfo-wrap" wx:if="{{content.additionalInfo&&viewType===1}}">
+        <block wx:if="{{content.additionalInfo.length}}" wx:for="{{content.additionalInfo}}" wx:for-item="additional" wx:key="{{index}}">
+            <view catch:tap="onTapAdditional" class="additional-item" data-id="{{additional.id}}" wx:if="{{additional}}">
+                <Tag class="additional-tag" type="service" value="{{additional.value}}" wx:if="{{additional.value}}"></Tag>
+                <view class="additional-content" wx:if="{{additional.content}}">{{additional.content}}</view>
+            </view>
+        </block>
+        <slot name="additionalInfo-node"></slot>
+    </view>
+    <view class="extendInfo-warp" wx:if="{{content.extendInfo&&viewType===1}}">
+        <view class="extendInfo-current-bar" wx:if="{{content.extendInfo.type==='currentBar'}}">
+            <view class="left">{{content.extendInfo.content.left}}</view>
+            <view catch:tap="onTapCurrentBar" class="right">
+{{content.extendInfo.content.right}}          <Icon class="current-close-icon" name="close"></Icon>
+            </view>
+        </view>
+        <slot name="extendInfo-node"></slot>
+    </view>
+</view>

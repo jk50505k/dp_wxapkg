@@ -1,0 +1,63 @@
+<view bindtap="onMiniTap" class="jgw" wx:if="{{info.type=='search'}}">
+    <image class="search-img" src="{{smallImgUrl}}" wx:if="{{smallImgUrl}}"></image>
+</view>
+<view bindtap="onMiniTap" class="wrapper" style="{{style}}" wx:elif="{{info.type=='list-side'||info.type=='detail-side'||info.type=='index-side'}}">
+    <image class="small-img {{isActivity?'side-img':''}}" src="{{smallImgUrl}}" wx:if="{{!showBig&&smallImgUrl}}"></image>
+</view>
+<view bindtap="onMiniTap" class="detail-img" wx:elif="{{info.type=='detail-share'}}">
+    <image class="detail-icon" src="{{smallImgUrl}}" wx:if="{{smallImgUrl}}"></image>
+    <text wx:if="{{info.text}}">{{info.text}}</text>
+</view>
+<view class="{{showBig?'mask':''}}">
+    <view class="{{isActivity?'activity-wrapper':'big-wrapper'}}" wx:if="{{showBig}}">
+        <view bindtap="onCloseTap" class="{{isActivity?'activity-close':'close'}}">
+            <view class="icon"></view>
+        </view>
+        <view bindtap="onActivityTap" class="activity-container" wx:if="{{isActivity}}">
+            <view class="activity-content">
+                <view class="banner-time" wx:if="{{cutdownData}}">
+                    <text>距结束：</text>
+                    <text class="time">{{cutdownData.days}}</text>
+                    <text>天</text>
+                    <text class="time">{{cutdownData.hours}}</text>
+                    <text>时</text>
+                    <text class="time">{{cutdownData.mins}}</text>
+                    <text>分</text>
+                    <text class="time">{{cutdownData.secs}}</text>
+                    <text>秒</text>
+                </view>
+                <image class="activity-img" mode="widthFix" src="{{bigImgUrl}}" wx:if="{{bigImgUrl}}"></image>
+            </view>
+        </view>
+        <view class="container" wx:else>
+            <view class="header" wx:if="{{popData.title}}">
+                <view class="title">{{popData.title}}</view>
+                <view class="subtitle" wx:if="{{popData.subtitle}}">{{popData.subtitle}}</view>
+                <view class="desc" wx:if="{{popData.content}}">
+                    <view class="desc-bg"></view>
+                    <text class="desc-txt">{{popData.content}}</text>
+                </view>
+            </view>
+            <view class="content">
+                <image class="gif" src="{{popData.img}}" wx:if="{{popData.img}}"></image>
+            </view>
+            <view class="footer">
+                <button bindcontact="handleContact" class="gotoCustomer" hoverClass="none" openType="contact" sendMessageImg="{{popData.shareImg}}" sendMessagePath="{{cardData}}" sessionFrom="{{cardData}}" showMessageCard="{{true}}">{{popData.btnText}}</button>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="wrapper mask" wx:if="{{showLoginPop}}">
+    <view class="login-wrapper">
+        <view catchtap="onLoginClose" class="login-close">
+            <view class="icon"></view>
+        </view>
+        <view bindtap="gotoLogin" class="main" data-source="pop">
+            <image class="login-img" src="https://p0.meituan.net/scarlett/97aabb4920b5b6dd80bf872dc3b8969645266.png"></image>
+        </view>
+    </view>
+</view>
+<view bindtap="gotoLogin" class="bottom" data-source="layer" wx:if="{{showBottomLogin}}">
+    <text class="tips">我会一直在这等你登录，不离不弃</text>
+    <text class="login-btn">立即登录</text>
+</view>

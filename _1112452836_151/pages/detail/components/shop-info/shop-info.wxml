@@ -1,0 +1,23 @@
+<view class="skeleton" style="margin:{{moduleConfig.margin}}" wx:if="{{showModule===1}}">
+    <view class="baseLine"></view>
+    <view class="baseLine"></view>
+</view>
+<view class="shopinfo" style="margin:{{moduleConfig.margin}}" wx:if="{{showModule===2}}">
+    <view class="shopinf-wrap">
+        <view bindtap="shopInfoTap" class="shop-info-head" wx:if="{{moduleConfig.showHead&&shopInfoData.keyServices.length>0}}">
+            <view class="shop-info-title">
+                <text class="info-txt">商户信息</text>
+                <view class="entry" wx:if="{{shopInfoData.shopServeInfoUrl}}"></view>
+            </view>
+        </view>
+        <view bindtap="shopInfoTap" class="key-services retina-boder-top {{moduleConfig.showHead?'hasHead':''}}" data-url="{{shopInfoData.shopServeInfoUrl}}" wx:if="{{shopInfoData.keyServices.length>0}}">
+            <view class="left-service">
+                <view class="shop-feature" wx:for="{{shopInfoData.keyServices}}" wx:for-item="feature" wx:key="{{index}}">
+                    <image class="feature-img" src="{{feature.pictureUrl}}"></image>
+                    <text class="feature-txt">{{feature.title}}</text>
+                </view>
+            </view>
+            <view class="entry" wx:if="{{shopInfoData.shopServeInfoUrl&&!moduleConfig.showHead}}"></view>
+        </view>
+    </view>
+</view>

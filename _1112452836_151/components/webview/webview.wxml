@@ -1,0 +1,4 @@
+<view>
+    <login bindloginend="{{loginConfig.onloginHandler}}" cx="{{loginConfig.cx}}" loginDomain="{{loginConfig.domain}}" loginSourceType="{{loginConfig.sourceType}}" loginStep="{{loginConfig.loginStep}}" loginType="{{loginConfig.loginType}}" needLogin="{{loginConfig.needLogin}}" wx:if="{{showArea==1}}"></login>
+    <web-view binderror="errorHander" bindload="loadHander" bindmessage="messageHandler" class="webview" src="{{url}}" wx:if="{{showArea==2}}"></web-view>
+</view>

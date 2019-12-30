@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "酒店相册",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

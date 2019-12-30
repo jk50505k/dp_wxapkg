@@ -1,0 +1,12 @@
+<view bindtap="promoTap" class="shop-promo" style="margin:{{moduleConfig.margin}}" wx:if="{{promoData&&promoData.showModule}}">
+    <view class="promo">
+        <view class="promo-wrap">
+            <view class="promo-tag" style="{{promoData.tagStyle}}">{{promoData.tag}}</view>
+            <view class="promo-title">{{promoData.title}}</view>
+        </view>
+        <view class="promo-right">
+            <view class="promo-txt">{{promoData.moreTxt}}</view>
+            <view class="entry"></view>
+        </view>
+    </view>
+</view>

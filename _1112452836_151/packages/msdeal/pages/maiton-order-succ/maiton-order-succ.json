@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "买单结果",
+    "backgroundColor": "#ffffff",
+    "usingComponents": {
+        "dialog": "../components/dialog/dialog",
+        "loading": "../components/loading/loading",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

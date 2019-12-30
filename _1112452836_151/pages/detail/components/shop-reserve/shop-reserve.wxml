@@ -1,0 +1,121 @@
+<view class="play-reserve-box" style="margin:{{moduleConfig.margin}}" wx:if="{{reserveList&&reserveList.length}}">
+    <view class="play-reserve-main">
+        <view class="play-reserve-top">
+            <view class="item-left">
+                <view class="booking-icon" style="background-image:url({{reserveData.icon}})"></view>
+                <view class="play-reserve-title">{{reserveData.title}}</view>
+            </view>
+            <view class="item-right-flex-1 joy-icon-tip-box">
+                <view class="joy-icon-tip-item" wx:for="{{reserveData.joyIconTips}}" wx:for-index="joyIndex" wx:for-item="joyIconTip" wx:key="{{joyIndex}}">
+                    <view class="icon-serve" style="background-image:url({{joyIconTip.icon}})"></view>
+                    <view class="play-text" style="color:{{joyIconTip.tip.textcolor}}" wx:if="{{joyIconTip.tip&&joyIconTip.tip.text}}">{{joyIconTip.tip.text}}
+          </view>
+                    <view class="play-text" style="color:{{refund.textcolor}}" wx:if="{{joyIconTip.tip.length}}" wx:for="{{joyIconTip.tip}}" wx:for-index="refundIndex" wx:for-item="refund" wx:key="{{refundIndex}}">{{refund.text}}
+          </view>
+                </view>
+            </view>
+        </view>
+        <view class="play-reserve-list">
+            <view bindtap="openSpuPage" class="play-reserve-item flex-box {{!toMore&&index==reserveList.length-1?'no-border':''}}" data-serviceId="{{item.serviceId}}" wx:for="{{reserveList}}" wx:key="{{index}}">
+                <view class="item-left flex-1">
+                    <view class="flex-box">
+                        <view class="flex-box align-center row-item flex-1">
+                            <view class="icon-fire" style="background-image:url({{item.icon}})" wx:if="{{item.icon}}"></view>
+                            <view class="sku-title" wx:if="{{item.title}}">{{item.title}}</view>
+                        </view>
+                        <view class="sku-price {{item.originalPrice&&item.originalPrice>item.minPrice?'':'middle'}}">
+{{item.minPrice}}              <view class="sku-price-after" wx:if="{{item.maxPrice>item.minPrice}}">起</view>
+                        </view>
+                    </view>
+                    <view class="flex-box">
+                        <view class="row-item">
+                            <view class="bath-time" wx:if="{{item.duration}}">{{item.duration}}</view>
+                            <view class="bath-tags" wx:if="{{item.tags&&item.tags.length}}">
+                                <view class="bath-tag" wx:for="{{item.tags}}" wx:for-index="tagIndex" wx:for-item="tag" wx:key="{{tagIndex}}">{{tag}}</view>
+                            </view>
+                        </view>
+                        <view class="sku-origin-price flex-1" wx:if="{{item.originalPrice&&item.originalPrice>item.minPrice}}">
+                            <view class="sku-origin-before">￥</view>
+                            <view class="sku-origin-price-text">{{item.originalPrice}}</view>
+                        </view>
+                    </view>
+                    <view class="flex-box">
+                        <view class="row-item bath-booking-row" wx:if="{{item.firstAvailableDate}}">
+                            <view class="bath-booking-text" style="color:{{booking.textcolor}}" wx:for="{{item.firstAvailableDate}}" wx:for-index="bookingIndex" wx:for-item="booking" wx:key="{{bookingIndex}}">{{booking.text}}</view>
+                        </view>
+                        <view class="new-reduce flex-1">
+                            <view class="new-reduce-tag" wx:if="{{item.promoTags&&item.promoTags[0]&&item.promoTags[0].title}}">{{item.promoTags[0].title}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="" data-serviceId="{{item.serviceId}}">
+                    <view class="flex-box reserve-tcl">
+                        <view class="item-right">
+                            <view catchtap="showModal" class="reserve-btn" data-serviceId="{{item.serviceId}}" wx:if="{{item.buttonText}}">{{item.buttonText}}</view>
+                            <view class="has-ordered" wx:if="{{item.saleCount}}">
+                                <view class="ordered-count">{{item.saleCount}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="toMoreOrLess" class="toMore" wx:if="{{toMore}}">
+{{toMoreText}}
+        <view class="{{showClose?'iconOpen':'iconClose'}}"></view>
+    </view>
+    <view catchtap="closeModal" class="reserve-time-wrapper" wx:if="{{selectTimeVisible}}">
+        <view catchtap="catchEvent" class="reserve-time-box">
+            <view class="reserve-select-top">
+                <view class="reserve-select-title">{{serviceData.title}}</view>
+                <view catchtap="closeModal" class="reserve-select-close"></view>
+            </view>
+            <view class="week-list">
+                <view bindtap="changeDayIndex" class="week-item  {{dayIndex==currentDayIndex?'active':''}}" data-dayIndex="{{dayIndex}}" wx:for="{{serviceData.list}}" wx:for-index="dayIndex" wx:for-item="dayItem" wx:key="{{dayIndex}}">
+                    <view class="week-title">{{dayItem.week}}</view>
+                    <view class="week-day">{{dayItem.day}}</view>
+                    <view class="week-promo-icon" style="background-image:url({{dayItem.promoIcon}})" wx:if="{{dayItem.promoIcon}}"></view>
+                </view>
+            </view>
+            <view class="halfday-ctl" wx:if="{{currentDayItem.list&&currentDayItem.list.length>1}}">
+                <view bindtap="changHalfDayIndex" class="halfday-item {{halfDayIndex==currentHalfDayIndex?'active':''}}" data-halfdayindex="{{halfDayIndex}}" wx:for="{{currentDayItem.list}}" wx:for-index="halfDayIndex" wx:for-item="halfdayItem" wx:key="{{halfDayIndex}}">
+                    <view class="halfday-tab-bottom {{'half-'+currentHalfDayIndex}} {{halfDayIndex==currentHalfDayIndex?'active':''}}"></view>
+                    <view class="halfday-icon" style="background-image:url({{halfDayIndex==currentHalfDayIndex?halfdayItem.activeIcon:halfdayItem.inactiveIcon}})"></view>
+                    <view class="halfday-text" wx:if="{{halfdayItem.timeRange}}">{{halfdayItem.timeRange}}
+          </view>
+                </view>
+            </view>
+            <view class="time-price-box empty-box" wx:if="{{currentDayItem.list[currentHalfDayIndex].emptyMsg}}">
+                <view class="time-empty-msg">{{currentDayItem.list[currentHalfDayIndex].emptyMsg}}</view>
+                <view class="time-empty-icon" style="background-image:url({{currentDayItem.list[currentHalfDayIndex].emptyListIcon}})"></view>
+            </view>
+            <view class="time-price-box" wx:else>
+                <scroll-view scrollY style="height:{{currentDayItem.list[currentHalfDayIndex].list.length>12?'500rpx':''}}">
+                    <view bindtap="selectTime" class="time-price-item {{currentTimePriceIndex==itemPriceIndex?'active':''}}" data-latestCurrentTimeItem="{{currentDayItem}}" data-timePrice="{{timePrice}}" data-timepriceindex="{{itemPriceIndex}}" wx:for="{{currentDayItem.list[currentHalfDayIndex].list}}" wx:for-index="itemPriceIndex" wx:for-item="timePrice" wx:key="{{itemPriceIndex}}">
+                        <view class="display-time {{!timePrice.status?'full':''}}">{{timePrice.displayTime}}</view>
+                        <view class="display-price {{!timePrice.status?'full':''}}">￥{{timePrice.price}}</view>
+                        <view class="display-stock-desc" wx:if="{{!timePrice.status&&timePrice.stockDesc}}">{{timePrice.stockDesc}}</view>
+                        <view class="display-stock-desc warn" wx:if="{{timePrice.status&&timePrice.stockDesc}}">{{timePrice.stockDesc}}</view>
+                        <view class="display-next-day" wx:if="{{timePrice.nextDayText}}">{{timePrice.nextDayText}}</view>
+                        <view class="display-price-promo" style="background-image:url({{timePrice.promoIcon}})" wx:if="{{timePrice.promoIcon}}"></view>
+                    </view>
+                    <view class="padding-20"></view>
+                </scroll-view>
+            </view>
+            <view class="reserve-next-step">
+                <view class="reserve-sku-title">{{serviceData.serviceTitle}}</view>
+                <view class="reserve-sku-price">{{currentTimePrice&&currentTimePrice.price||currentDayItem.minPrice}}</view>
+                <view class="reserve-sku-max-price" wx:if="{{(!currentTimePrice||!currentTimePrice.price)&&currentDayItem.maxPrice>currentDayItem.minPrice}}">{{currentDayItem.maxPrice}}</view>
+                <view class="reserve-time-info" wx:if="{{currentTimePrice&&currentTimePrice.displayTime}}">
+                    <view class="reserve-time-day">{{latestCurrentTimeItem.week}}{{latestCurrentTimeItem.day}}
+          </view>
+                    <view class="reserve-time-hour">{{currentTimePrice.displayTime}}</view>
+                    <view class="reserve-time-duration">{{serviceData.duration}}</view>
+                </view>
+                <view class="reserve-time-info" wx:else>尚未选择预订时间</view>
+                <view bindtap="goNextStep" class="next-step-btn {{currentTimePrice.status?'active':''}}">{{serviceData.buttonText}}</view>
+            </view>
+        </view>
+    </view>
+</view>

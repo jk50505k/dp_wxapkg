@@ -1,0 +1,70 @@
+<view class="share-panel" wx:if="{{showSharePanel}}">
+    <view bindtap="triggerSharePanel" class="overlay"></view>
+    <view class="share-container">
+        <text class="share-title">分享到</text>
+        <view class="share-menu-container">
+            <button bindtap="shareFriends" class="share-menu" hoverClass="none" openType="share">
+                <view class="share-menu-icon friends-icon"></view>
+                <text class="share-text">微信好友</text>
+            </button>
+        </view>
+    </view>
+</view>
+<view class="shop-comment-container column {{isIpx?'ipx-bottom':''}}" style="margin:{{moduleConfig.margin}}" wx:elif="{{showModule}}">
+    <view class="shop-comment" wx:if="{{moduleConfig.hasShopFavor}}">
+        <navigator appId="{{miniData.appId}}" bindtap="gotoCommentWxApp" class="write-comment" extraData="{{miniData.extraData}}" hoverClass="none" openType="navigate" path="{{miniData.path}}" target="miniProgram" version="release">
+            <image class="comment-icon"></image>
+            <text class="comment-txt">写点评</text>
+        </navigator>
+    </view>
+    <view class="my-favorite row-border" wx:if="{{moduleConfig.hasShopFavor}}">
+        <report-form bindtap="triggerFavor" bizType="biz_dp_plat_bottomtab" categoryId="{{categoryId}}" class="column" wx:if="{{moduleConfig.hasShopFavor}}">
+            <view slot="business">
+                <view class="favor-item" wx:if="{{isFavorite}}">
+                    <view class="already-star"></view>
+                    <text class="favorite-text">已收藏</text>
+                </view>
+                <view class="favor-item" wx:else>
+                    <view class="not-star"></view>
+                    <text class="favorite-text">收藏</text>
+                </view>
+            </view>
+        </report-form>
+    </view>
+    <view bindtap="triggerSharePanel" class="shop-share {{imData.hasIM?'right-border':''}}" wx:if="{{moduleConfig.hasShare}}">
+        <view class="share-item">
+            <image class="share-icon"></image>
+            <text class="share-txt">分享</text>
+        </view>
+    </view>
+    <view class="im" wx:if="{{imData.hasIM}}">
+        <form bindsubmit="formSubmit" class="form-submit" id="form" reportSubmit="{{true}}">
+            <view class="im-item">
+                <view class="msg-bg" style="background-image: url(http://p1.meituan.net/wxfood/0acfd2918e905daddfd1c0ff3e06ee9e1011.png)" wx:if="{{imData.unReadMsg}}">
+                    <text class="msg-num">
+                        <text>{{imData.unReadMsg}}</text>
+                    </text>
+                </view>
+                <view class="im-bg"></view>
+                <text class="im-text">{{imData.btnText}}</text>
+            </view>
+            <button class="btn-submit" formType="submit" hoverClass="none" id="form-bnt" plain="{{true}}" style="z-index:{{zIndex?zIndex:5}}"></button>
+        </form>
+    </view>
+    <view wx:if="{{moduleConfig.hasBook&&showDyBook}}">
+        <dynamic case="shop-booking" context="{{dyShopInfo}}"></dynamic>
+    </view>
+    <view bindtap="shareToGoods" class="shop-share left-border" wx:if="{{supportGoods&&moduleConfig.hasGoods}}">
+        <view class="share-item">
+            <view class="newGoodsIcon"></view>
+            <text class="share-txt">推荐到好物圈</text>
+        </view>
+        <view wx:if="{{showPopTip}}">
+            <view class="poptip">
+                <text>可以向小伙伴推荐好店哦～</text>
+                <view catchtap="closePopTip" class="popclose"></view>
+            </view>
+            <view class="poptipArrow"></view>
+        </view>
+    </view>
+</view>

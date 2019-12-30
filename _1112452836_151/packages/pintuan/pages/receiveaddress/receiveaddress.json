@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "收货地址",
+    "backgroundColor": "#f6f6f6",
+    "usingComponents": {
+        "address-list": "../../components/address-list/address-list",
+        "add-address": "../../components/add-address/add-address",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

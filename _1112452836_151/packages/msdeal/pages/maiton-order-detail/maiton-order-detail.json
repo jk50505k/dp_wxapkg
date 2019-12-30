@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "订单详情",
+    "backgroundColor": "#ffffff",
+    "usingComponents": {
+        "dialog": "../components/dialog/dialog",
+        "loading": "../components/loading/loading",
+        "custom": "../components/custom/custom",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

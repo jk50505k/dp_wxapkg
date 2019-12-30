@@ -1,0 +1,17 @@
+<view class="wrap" style="padding: {{paddingStyle||0}}">
+    <view class="list" id="list">
+        <view class="left">
+            <waterfall-item index="{{2*index+1}}" item="{{item}}" style="margin: {{itemGapStyle||0}}" wx:for="{{leftList}}" wx:key="{{index}}"></waterfall-item>
+        </view>
+        <view class="right">
+            <waterfall-item index="{{2*index+2}}" item="{{item}}" style="margin: {{itemGapStyle||0}}" wx:for="{{rightList}}" wx:key="{{index}}"></waterfall-item>
+        </view>
+    </view>
+    <view class="load" wx:if="{{!isEnd&&loadMore&&!pageError}}">
+        <view class="load-icon"></view>
+        <view class="load-text">正在加载中</view>
+    </view>
+    <view bindtap="pageErrTap" class="page-error" wx:if="{{pageError}}">
+        <view class="err-text">网络错误, 请点击重试...</view>
+    </view>
+</view>

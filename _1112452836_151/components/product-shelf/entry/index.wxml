@@ -1,0 +1,16 @@
+<scroll-view bindscroll="scrollShelf" bindscrolltolower="scrollToLower" class="general-product-shelf {{isListPage?'listpage':''}}" scrollTop="{{topNum}}" scrollY="true" upperThreshold="50rpx">
+    <view class="general-product-shelf-item" wx:for="{{currentProductList}}" wx:key="index">
+        <header isListPage="{{isListPage}}" navData="{{navData}}"></header>
+        <view class="shelf-filter-nav-wrapper {{navBarFixed?'navBarFixed':''}}">
+            <view class="shelf-filter-one-level" wx:if="{{shelfNavLevel===1}}">
+                <nav bind:selectCatalog="selectFirstCatalog" channel="{{channel}}" isListPage="{{isListPage}}" level="{{2}}" shelfNavTags="{{shelfNavTags}}"></nav>
+            </view>
+            <view class="shelf-filter-two-level" wx:else>
+                <nav bind:selectCatalog="selectFirstCatalog" channel="{{channel}}" level="{{1}}" shelfNavTags="{{shelfNavTags}}"></nav>
+                <nav bind:selectCatalog="selectSecondCatalog" channel="{{channel}}" level="{{2}}" shelfNavTags="{{currentCatalog.childNavTags}}" wx:if="{{currentCatalog.childNavTags.length>2}}"></nav>
+            </view>
+        </view>
+        <product bind:goToProductDetail="goToProductDetail" channel="{{channel}}" picAspectRatio="{{picAspectRatio}}" productLineCount="{{item.productLineCount}}" products="{{item.products}}"></product>
+        <footer bind:goToMoreProducts="goToMoreProducts" channel="{{channel}}" currentNavTagId="{{currentNavTagId}}" moreRedirectText="{{item.moreRedirectText}}" poiid="{{poiid}}" product="{{item}}" wx:if="{{!isListPage}}"></footer>
+    </view>
+</scroll-view>

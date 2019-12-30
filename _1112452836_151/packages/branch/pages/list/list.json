@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "商户分店",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "list-view": "../../../../components/list-view/list-view",
+        "shop-card": "../../../../components/shop-card/shop-card",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

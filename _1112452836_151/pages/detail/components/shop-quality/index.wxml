@@ -1,0 +1,4 @@
+<view bindtap="qualityTap" class="shop-quality" style="margin:{{moduleConfig.margin}}" wx:if="{{showModule}}">
+    <view class="quality-title">{{title}}</view>
+    <view class="entry"></view>
+</view>

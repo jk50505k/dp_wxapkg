@@ -1,0 +1,417 @@
+.bottom {
+    position: fixed;
+    display: flex;
+    bottom: 0rpx;
+    margin: 0 auto;
+    width: 710rpx;
+    height: 88rpx;
+    align-items: center;
+    color: #FFFFFF;
+    justify-content: space-around;
+    background: rgba(0,0,0,0.8);
+    border-radius: 44rpx;
+    left: 0rpx;
+    right: 0rpx;
+}
+
+.container {
+    max-width: 500rpx;
+}
+
+.activity-container {
+    width: 100%;
+}
+
+.background {
+    background: rgba(0,0,0,0.50);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2000;
+}
+
+.close {
+    position: fixed;
+    top: 16%;
+    right: 50rpx;
+    width: 56rpx;
+    height: 56rpx;
+}
+
+.content {
+    margin-bottom: 40rpx;
+    letter-spacing: 0rpx;
+    color: #111111;
+}
+
+.activity-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-img {
+    position: relative;
+    width: 520rpx;
+    height: auto;
+}
+
+.banner-time {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    font-size: 22rpx;
+    display: flex;
+    flex-direction: row;
+    top: 180rpx;
+    z-index: 1;
+    color: #fff;
+}
+
+.time {
+    min-width: 30rpx;
+    color: #fef17e;
+    font-weight: bold;
+    background: rgba(17,17,17,0.5);
+    font-size: 24rpx;
+    padding: 2rpx 6rpx;
+    margin: 4rpx;
+    border: 1rpx solid rgb(160,32,32);
+    border-radius: 6rpx;
+}
+
+.banner-time text {
+    text-align: center;
+    vertical-align: center;
+}
+
+.btn-img {
+    position: absolute;
+    width: 458rpx;
+    height: 140rpx;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.desc {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20rpx;
+    margin-bottom: 10rpx;
+    line-height: 40rpx;
+}
+
+.desc-bg {
+    background: url('https://p0.meituan.net/scarlett/8205b689432b0104166cced5b1618d93732.png') no-repeat;
+    width: 294rpx;
+    height: 4rpx;
+    background-size: 100%;
+    position: absolute;
+    top: 22rpx;
+}
+
+.desc-txt {
+    font-size: 32rpx;
+    color: #fff;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20rpx;
+    line-height: 70rpx;
+    margin-top: 24rpx;
+}
+
+.title,.subtitle {
+    font-family: PingFangSC-Semibold;
+    font-size: 44rpx;
+    color: #FFF3E4;
+}
+
+.gif {
+    width: 500rpx;
+    height: 375rpx;
+}
+
+.container .content .method {
+    font-family: PingFangSC-Semibold;
+    font-size: 28rpx;
+    margin-top: 40rpx;
+    margin-bottom: 10rpx;
+    display: flex;
+    flex-direction: row;
+}
+
+.container .content .line {
+    border-top: solid 1rpx #e1e1e1;
+    width: 100rpx;
+    height: 1rpx;
+    margin-top: 19rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+.container .content .row {
+    font-family: PingFangSC-Regular;
+    font-size: 28rpx;
+}
+
+.container .content .row .oringe-text {
+    color: #FF6633;
+}
+
+.container .footer {
+    height: 80rpx;
+    width: 400rpx;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+.container .footer .gotoCustomer {
+    font-family: PingFangSC-Regular;
+    font-size: 32rpx;
+    color: #AB0100;
+    text-align: center;
+    border-radius: 100rpx;
+    background-color: #FBF0AE;
+}
+
+.app-img {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.app-cover {
+    width: 96rpx;
+    height: 96rpx;
+    color: #111;
+    font-size: 22rpx;
+    text-align: center;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.2s;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.detail-app {
+    position: fixed;
+    bottom: 270rpx;
+    right: 30rpx;
+    font-weight: 500;
+    z-index: 9;
+    border: solid 1rpx #e1e1e1;
+    border-radius: 50rpx;
+    background: #fff;
+    box-shadow: 0px 2px 8px 0px #e1e1e1;
+}
+
+.detail-img {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.detail-icon {
+    width: 44rpx;
+    height: 44rpx;
+}
+
+.tips {
+    display: flex;
+    flex: 1;
+    font-size: 30rpx;
+    margin-left: 34rpx;
+}
+
+.login-btn {
+    font-size: 26rpx;
+    background: #f63;
+    border-radius: 44rpx;
+    padding: 8rpx 26rpx;
+    margin-right: 30rpx;
+}
+
+.wrapper {
+    position: fixed;
+    right: 30rpx;
+    bottom: 260rpx;
+    z-index: 600;
+    background: none;
+}
+
+.search-img {
+    width: 690rpx;
+    height: 140rpx;
+    margin: 0rpx 30rpx;
+    margin-top: 20rpx;
+    margin-bottom: -20rpx;
+}
+
+.add-bottom {
+    bottom: 286rpx;
+}
+
+.detail-bottom {
+    bottom: 400rpx;
+}
+
+.mask {
+    z-index: 5000;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.dynamic-img {
+    position: relative;
+    width: 160rpx;
+    height: 218rpx;
+    display: block;
+    background: none;
+    animation: myRotate 1.2s ease 1;
+    animation-fill-mode: forwards;
+}
+
+.small-img {
+    position: relative;
+    width: 108rpx;
+    height: 144rpx;
+    display: block;
+    background: none;
+}
+
+.side-img {
+    width: 110rpx;
+    height: 108rpx;
+}
+
+.big-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.jgw-small-img {
+    position: relative;
+    background-color: #f6f6f6;
+    width: 48rpx;
+    height: 48rpx;
+    margin: 0 auto 10rpx;
+    border-radius: 0;
+}
+
+.jgw-name {
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 22rpx;
+}
+
+.big-wrapper {
+    padding: 50rpx 30rpx;
+    background: url('https://p0.meituan.net/scarlett/f646f0875d663dfd4ee76b4c90a5e10813913.png') no-repeat;
+    height: 932rpx;
+    width: 500rpx;
+    background-size: 560rpx auto;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 8%;
+}
+
+.activity-wrapper {
+    height: 100%;
+    margin: 0 50rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.login-wrapper {
+    position: relative;
+    width: 566rpx;
+    margin: 0 auto;
+    height: 1000rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 12rpx;
+}
+
+.login-wrapper {
+    width: 560rpx;
+}
+
+.login-img {
+    width: 560rpx;
+    height: 730rpx;
+}
+
+.close,.activity-close,.login-close {
+    width: 52rpx;
+    height: 52rpx;
+    border: 2rpx solid rgba(255,255,255,0.6);
+    border-radius: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close {
+    position: absolute;
+    top: -3%;
+    right: -8%;
+}
+
+.login-close {
+    position: relative;
+    top: 6rpx;
+    right: -40rpx;
+}
+
+.icon {
+    width: 26rpx;
+    height: 26rpx;
+    background-image: url(data:img/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASBAMAAACk4JNkAAAAElBMVEUAAAD///////////////////8+Uq06AAAABnRSTlMArhTMoYy1bcspAAAASklEQVQI12MIUWAAASZXBmchMEvRhEHRUAEkJCwExgwgPpiAcEEkmAeWUQIJgQUFQUJgQWOQEIKFkEXoQJiCMBlhG8IFCFchXAoAseEKf/QErGsAAAAASUVORK5CYII=);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main {
+    width: 100%;
+}
+
+.bg {
+    width: 483rpx;
+    height: 773rpx;
+    margin: 0 auto;
+    padding: 0;
+    background: none;
+}
+
+.bg:before,.bg:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: none;
+}
+
+.light {
+    color: #FF6633;
+}

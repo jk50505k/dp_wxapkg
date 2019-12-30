@@ -1,0 +1,98 @@
+<view bindtap="tapShop" class="shoplist-item {{hasBrandShop?'hasBrandShop':''}} {{parentShop?'parentShop':''}} {{lastChildShop?'lastChildShop':''}} {{spreadParentShop?'spreadParentShop':''}}" data-shopid="{{item.shopId}}" data-shopname="{{item.shopName}}" data-shopuuid="{{item.shopUuid}}" id="{{item.shopId}}">
+    <view class="shop-img-wrap">
+        <view class="{{tool.isSpecialShop(item.shopRankType)?'special-shop':''}}"></view>
+        <lazy-img class="_lazyLoadImage" imgClass="{{shopPicStyle}}" imgMode="aspectFill" imgSrc="{{item.shopPicUrl}}"></lazy-img>
+        <image bindload="imageLoad" class="shop-ranktype" mode="scaleToFill" src="{{tool.getIconUrl(item.shopRankType)}}" style="width: {{imgwidth}}rpx; height:{{imgheight}}rpx;"></image>
+    </view>
+    <view class="shop-right-wrap">
+        <view class="shop-info-wrap {{item.rankName||item.shopRank?'':'shop-info-notag'}} {{tool.hasDiscountInfo(item)?'shop-info-wrap-add-padding':''}}">
+            <view class="shop-name">{{item.shopName||''}}{{item.branchName?'('+item.branchName+')':''}}</view>
+            <view class="shop-sub">
+                <view class="star {{tool.calc(item.shopStar)}}"></view>
+                <view class="shop-price" wx:if="{{item.avgPrice}}">¥{{item.avgPrice}}/人</view>
+            </view>
+            <view class="shop-desc">
+                <view class="shop-left">
+                    <view class="shop-region" wx:if="{{item.mainRegionName}}">{{item.mainRegionName}}</view>
+                    <view class="shop-type" wx:if="{{item.mainCategoryName}}">{{item.mainCategoryName}}</view>
+                </view>
+                <view class="shop-right" wx:if="{{item.distance}}">{{tool.formatDistance(item.distance)}}</view>
+            </view>
+            <text class="shop-tag" wx:if="{{item.rankName||item.shopRank}}">{{item.rankName?item.rankName:item.shopRank}}</text>
+        </view>
+        <view class="quan-wrap {{!parentShop&&!lastChildShop&&!spreadParentShop?'add-minus-margin':''}} {{spreadParentShop?'add-minus-margin':''}}" wx:if="{{tool.hasDiscountInfo(item)}}">
+            <view class="quan-item {{item.ticket?'':'delete-margin'}}" wx:if="{{item.group}}">
+                <image class="quan-icon" mode="aspectFill" src="//p0.meituan.net/dpgroup/0aefe435578a09b4a10aa8877f4ef6d8403.png"></image>
+                <view class="quan-content">{{item.group}}</view>
+            </view>
+            <view class="quan-item delete-margin" wx:if="{{item.ticket}}">
+                <image class="quan-icon" mode="aspectFill" src="//p0.meituan.net/dpgroup/5da3211abd5ba5d94f7e144ef0859f0b571.png"></image>
+                <view class="quan-content">{{item.ticket}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<wxs module="tool">
+var filters = ({
+    toFix: (function(value, digit) {
+        if (!digit) digit = 0;;
+        return (Number)(value).toFixed(digit)
+    }),
+    hasDiscountInfo: (function(item) {
+        return ((item.ticket && item.ticket.length) || (item.group && item.group.length))
+    }),
+    formatDistance: (function(distance) {
+        if (distance < 100) return ('\x3c100m');;
+        if (distance < 1000) return (Math.round(distance) + 'm');;
+        if (distance < 1000 * 100) return (Math.round(distance / 100.0) / 10.0 + 'km');;
+        return ('')
+    }),
+    calc: (function(score) {
+        if (score > 0 && score <= 10) {
+            return ('star-10')
+        } else if (score > 10 && score < 30) {
+            return ('star-20')
+        } else if (score >= 30 && score < 35) {
+            return ('star-30')
+        } else if (score >= 35 && score < 40) {
+            return ('star-35')
+        } else if (score >= 40 && score < 45) {
+            return ('star-40')
+        } else if (score >= 45 && score < 48) {
+            return ('star-45')
+        } else if (score >= 48) {
+            return ('star-50')
+        } else {
+            return ('star-0')
+        }
+    }),
+    isSpecialShop: (function(shopRankType) {
+        return (shopRankType == 3 || shopRankType == 4 || shopRankType == 5 || shopRankType == 8 || shopRankType == 9 || shopRankType == 10 || shopRankType == 11 || shopRankType == 12)
+    }),
+    getIconUrl: (function(shopRankType) {
+        if (shopRankType == 3) {
+            return ('https://p0.meituan.net/dpgroup/f84605a624e12faf2584c52897b00ae73131.png')
+        } else if (shopRankType == 4 || shopRankType == 5 || shopRankType == 8) {
+            return ('https://p0.meituan.net/dpgroup/801b2dbc75212c325b052e72e3c4a8983795.png')
+        } else if (shopRankType == 9) {
+            return ('https://p0.meituan.net/dpgroup/4f50548e80e7cf807fa15efd07ce2d0d2363.png')
+        } else if (shopRankType == 10) {
+            return ('https://p0.meituan.net/dpgroup/0847f6378e527907eba8902074d469e02372.png')
+        } else if (shopRankType == 11) {
+            return ('https://p0.meituan.net/dpgroup/e2583a6c03672eec74d57787500fdb822330.png')
+        } else if (shopRankType == 12) {
+            return ('https://p1.meituan.net/dpgroup/1fc826244615f71a7ae182df1964b0912933.png')
+        } else {
+            return ('')
+        }
+    }),
+});
+module.exports = ({
+    toFix: filters.toFix,
+    hasDiscountInfo: filters.hasDiscountInfo,
+    formatDistance: filters.formatDistance,
+    calc: filters.calc,
+    isSpecialShop: filters.isSpecialShop,
+    getIconUrl: filters.getIconUrl,
+});
+</wxs>

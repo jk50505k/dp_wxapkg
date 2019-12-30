@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "login": "../../npm/@dp/sparrow-component-login/login"
+    }
+}

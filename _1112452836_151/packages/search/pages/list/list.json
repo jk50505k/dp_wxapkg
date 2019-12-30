@@ -1,0 +1,20 @@
+{
+    "navigationBarTitleText": "大众点评",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "list-filter": "../../../../components/list-filter/list-filter",
+        "list-view": "../../../../components/list-view/list-view",
+        "shop-card": "../../../../components/shop-card/shop-card",
+        "midas-card": "../../../../components/midas-card/midas-card",
+        "search-entry": "../../../../components/search-entry/search-entry",
+        "list-direct": "../../components/list-direct/list-direct",
+        "list-global": "../../components/list-global/list-global",
+        "list-source": "../../components/list-source/list-source",
+        "no-result-shop": "../../components/no-result-shop/no-result-shop",
+        "guide-words": "../../components/guide-words/guide-words",
+        "smart-general-bar": "../../components/smart-general-bar/smart-general-bar",
+        "smart-poi-bar": "../../components/smart-poi-bar/smart-poi-bar",
+        "app-download": "../../../../components/app-download/index",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

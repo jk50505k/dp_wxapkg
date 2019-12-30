@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "我的订单",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "list-view": "../../../../components/list-view/list-view",
+        "order-card": "../../components/order-card/order-card",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

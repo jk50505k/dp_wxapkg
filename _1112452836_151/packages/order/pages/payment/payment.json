@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "支付结果",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "payment-bonus": "../../components/payment-bonus/payment-bonus",
+        "payment-coupon": "../../components/payment-coupon/payment-coupon",
+        "payment-nearby": "../../components/payment-nearby/payment-nearby",
+        "mymini-tip": "../../../../components/mymini-tip/index",
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

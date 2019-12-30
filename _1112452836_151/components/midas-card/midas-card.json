@@ -1,0 +1,9 @@
+{
+    "component": true,
+    "usingComponents": {
+        "midas": "../midas/index",
+        "mina-image": "../mina-image/index",
+        "card": "../card/card",
+        "dish": "../dish/dish"
+    }
+}

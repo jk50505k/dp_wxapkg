@@ -1,0 +1,3 @@
+<view class="webviewbox">
+    <webview accountDomain="{{webviewInfo.accountDomain}}" appName="{{webviewInfo.appName}}" appVersion="{{webviewInfo.appVersion}}" bindwebviewMsg="{{webviewInfo.webviewHandler}}" initWebview="{{webviewInfo.initWebview}}" lxsdkParams="{{lxParas}}" openUrl="{{webviewInfo.openUrl}}" tokenDomain="{{webviewInfo.tokenDomain}}" tokenUrl="{{webviewInfo.tokenUrl}}"></webview>
+</view>

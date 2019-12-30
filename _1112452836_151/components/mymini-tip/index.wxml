@@ -1,0 +1,16 @@
+<view class="tip" wx:if="{{showModule}}">
+    <view class="mask-tip" wx:if="{{type==1}}">
+        <view class="arrow"></view>
+        <view class="title"></view>
+        <view class="sub-title"></view>
+        <view class="img"></view>
+        <view bindtap="closeTap" class="btn"></view>
+    </view>
+    <view class="bubble-tip {{hasPopup?'disappear':''}}" wx:if="{{type==2}}">
+        <view class="tail"></view>
+        <view class="bubble">
+            <view class="bubble-text">{{text}}</view>
+            <view bindtap="closeTap" class="bubble-btn"></view>
+        </view>
+    </view>
+</view>

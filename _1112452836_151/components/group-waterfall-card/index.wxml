@@ -1,0 +1,1 @@
+<dynamic binderror="dynamicComponentError" case="group-waterfall-card" context="{{info}}" id="group-waterfall-card" wx:if="{{info}}"></dynamic>

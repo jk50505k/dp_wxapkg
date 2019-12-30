@@ -1,0 +1,1 @@
+<exception bind:exceptionevent="handleReLoad" data-module="page" exceptionDetail="{{infoError}}"></exception>

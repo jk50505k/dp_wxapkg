@@ -1,0 +1,46 @@
+<view catchtap="addToVote" class="fixedBar" wx:if="{{showAddBtn}}">
+    <view class="barWrap">
+        <view class="leftBar">
+            <view class="shopName">{{shopName}}</view>
+            <view class="shopIntro">{{shopIntro}}</view>
+        </view>
+        <view class="rightBar">
+            <view class="plus"></view>
+            <view class="addTextBtn">添加到群里的投票</view>
+        </view>
+    </view>
+</view>
+<view bindtap="toVotePage" class="makeVoteBtnWrap mt20-mb20" wx:if="{{showGuide}}">
+    <view class="makeVoteBtn">
+        <text class="voteText">群里可能在讨论</text>
+        <text class="voteShopNum">{{voteShopNum}}</text>
+        <text class="voteText">家商户，可以通过投票做出选择哦~</text>
+    </view>
+    <view class="entry"></view>
+</view>
+<view wx:if="{{showVoteList}}">
+    <view class="voteList mt20-mb20" wx:if="{{voteList.length>1}}">
+        <view class="voteHeader">
+            <text>群里正在进行</text>
+            <text class="voteShopNum">{{voteList.length}}</text>
+            <text>个投票</text>
+        </view>
+        <view catchtap="toVoteIndexPage" class="voteItem bottom-border" data-vote="{{voteItem}}" data-voteid="{{voteItem.voteId}}" wx:if="{{voteItem.show}}" wx:for="{{voteList}}" wx:for-item="voteItem" wx:key="{{index}}">
+            <view class="voteItemLeft">
+                <text class="voteTitle">{{voteItem.voteTitle}}</text>
+            </view>
+            <view class="entry"></view>
+        </view>
+        <view bind:tap="showMore" class="voteItem bottom-border showMoreBtn" wx:if="{{showAllBtn}}">{{showAllBtnTxt}}</view>
+    </view>
+    <view class="voteList mt20-mb20" wx:else>
+        <view catchtap="toVoteIndexPage" class="voteItem" data-vote="{{voteList[0]}}" data-voteid="{{voteList[0].voteId}}">
+            <view class="voteItemLeft">
+                <text>群里正在进行的投票：</text>
+                <text class="tagme" wx:if="{{voteList[0].masterGuestState===1}}">我创建的</text>
+                <text class="voteTitle">{{voteList[0].voteTitle}}</text>
+            </view>
+            <view class="entry"></view>
+        </view>
+    </view>
+</view>

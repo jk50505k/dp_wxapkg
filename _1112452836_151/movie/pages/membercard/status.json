@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "开卡状态查询",
+    "usingComponents": {
+        "quick-nav": "../../../components/quick-nav/quick-nav"
+    }
+}

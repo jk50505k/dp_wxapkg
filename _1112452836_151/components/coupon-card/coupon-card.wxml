@@ -1,0 +1,32 @@
+<view class="item" wx:if="{{card}}">
+    <navigator class="coupon-item" url="{{card.url}}" wx:if="{{card.isNative}}">
+        <view class="coupon-left">
+            <view class="coupon-price {{card.subHeader?'':'singleHeader'}}">
+                <view class="coupon-price-item" style="color:{{price.textcolor}};font-size:{{price.couponSize+'rpx'}};line-height:{{price.couponSize+'rpx'}};font-weight:{{price.textstyle}}" wx:if="{{card.header&&card.header.length>0}}" wx:for="{{card.header}}" wx:for-item="price" wx:key="{{index}}">{{price.text}}</view>
+            </view>
+            <view class="coupon-desc {{card.isExpired?'disable-coupon-desc':''}}" wx:if="{{card.subHeader}}">{{card.subHeader}}</view>
+        </view>
+        <view class="coupon-right">
+            <view class="coupon-tit {{card.isExpired?'disable-coupon-desc':''}}">{{card.title}}</view>
+            <view class="coupon-note">
+                <view class="coupon-type" style="color:{{card.subTitle.color}}">{{card.subTitle.name}}</view>
+                <view class="coupon-date" style="color:{{card.expireTitle.color}}">{{card.expireTitle.name}}</view>
+            </view>
+        </view>
+    </navigator>
+    <view bindtap="navPage" class="coupon-item" data-isnative="{{card.isNative}}" data-url="{{card.url}}" wx:else>
+        <view class="coupon-left">
+            <view class="coupon-price {{card.subHeader?'':'singleHeader'}}">
+                <view class="coupon-price-item" style="color:{{price.textcolor}};font-size:{{price.couponSize+'rpx'}};line-height:{{price.couponSize+'rpx'}};font-weight:{{price.textstyle}}" wx:if="{{card.header&&card.header.length>0}}" wx:for="{{card.header}}" wx:for-item="price" wx:key="{{index}}">{{price.text}}</view>
+            </view>
+            <view class="coupon-desc {{card.isExpired?'disable-coupon-desc':''}}" wx:if="{{card.subHeader}}">{{card.subHeader}}</view>
+        </view>
+        <view class="coupon-right">
+            <view class="coupon-tit {{card.isExpired?'disable-coupon-desc':''}}">{{card.title}}</view>
+            <view class="coupon-note">
+                <view class="coupon-type" style="color:{{card.subTitle.color}}">{{card.subTitle.name}}</view>
+                <view class="coupon-date" style="color:{{card.expireTitle.color}}">{{card.expireTitle.name}}</view>
+            </view>
+        </view>
+    </view>
+</view>

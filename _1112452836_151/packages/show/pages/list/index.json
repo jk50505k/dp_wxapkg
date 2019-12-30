@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "演出列表",
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}

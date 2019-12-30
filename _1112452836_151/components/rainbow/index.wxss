@@ -1,0 +1,53 @@
+.rainbow {
+    align-items: center;
+    position: relative;
+    height: 100rpx;
+}
+
+.left-img .img {
+    height: 100rpx;
+    width: 750rpx;
+}
+
+.right-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100rpx;
+    width: 210rpx;
+}
+
+.right-img .img {
+    height: 100rpx;
+    width: 210rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.timer {
+    font-size: 22rpx;
+    color: #777;
+    z-index: 1;
+    text-align: center;
+}
+
+.time {
+    color: #FFF;
+    background: #4D4135;
+    border-radius: 4rpx;
+    font-weight: lighter;
+    padding: 0 4rpx;
+    margin: 0 4rpx;
+    display: inline-block;
+}
+
+.time-txt {
+    font-size: 22rpx;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10rpx;
+}

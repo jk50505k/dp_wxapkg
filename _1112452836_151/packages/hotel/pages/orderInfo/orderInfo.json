@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "费用明细",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "quick-nav": "../../../../components/quick-nav/quick-nav"
+    }
+}
